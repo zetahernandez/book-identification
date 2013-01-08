@@ -1,7 +1,7 @@
 define(
-		[ "require", "ember", "controllers/VolumeInfoListController" ],
-		function(require, Ember, volumeInfoListController) {
-			var VolumeInfo = Ember.Object.extend({
+		[ "require", "ember","jquery", "controllers/VolumeInfoListController" ],
+		function(require, Ember, $, volumeInfoListController) {
+			var VolumeInfoModel = Ember.Object.extend({
 				entityId : null,
 				title : null,
 				subtitle : null,
@@ -19,13 +19,14 @@ define(
 				allVolumeInfo : [],
 				find : function() {
 					$.ajax({
-						url : '/volumeinfo',
+						url : 'rest/volumeinfo',
 						dataType : 'jsonp',
 						context : this,
 						success : function(response) {
+							alert("bla");
 							this.allVolumeInfo.addObjects(response.data
 									.map(function(raw) {
-										return App.Volumeinfo.create(raw);
+										return App.VolumeInfoModel.create(raw);
 									}));
 						}
 					});
@@ -34,5 +35,5 @@ define(
 
 			});
 
-			return VolumeInfo;
+			return VolumeInfoModel;
 			});

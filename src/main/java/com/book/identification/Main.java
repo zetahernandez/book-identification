@@ -18,17 +18,17 @@ public class Main {
 //		
 		HibernateUtil.getSessionFactory();
 ////		
-//		BookIdentificationWork bookIdentificationWork = new BookIdentificationWork("BookIdentificationWork",args);  
-//		bookIdentificationWork.start();
-//		try {
-//			bookIdentificationWork.join();
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		
-//		
-//		new CreateTreeOfCategories().execute();
+		BookIdentificationWork bookIdentificationWork = new BookIdentificationWork("BookIdentificationWork",args);  
+		bookIdentificationWork.start();
+		try {
+			bookIdentificationWork.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		new CreateTreeOfCategories().execute();
 		
 		
 	}
