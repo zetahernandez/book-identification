@@ -1,5 +1,6 @@
 <script type="text/x-handlebars" data-template-name="volumesTemplate">
+  asdasd
   {{#each book in controller}}
-    {{book}}
+    {{book.title}}
   {{/each}}
 </script>

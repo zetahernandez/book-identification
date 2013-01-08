@@ -3344,3 +3344,269 @@ ISBN-10
 2013-01-08 16:30:00,813  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Beginning iOS Application Development with HTML and JavaScript
 2013-01-08 16:30:00,893  INFO [main] (CreateTreeOfCategories.java:53) - class com.book.identification.task.CreateTreeOfCategories end at Tue Jan 08 16:30:00 ART 2013
 2013-01-08 16:30:00,894  INFO [main] (CreateTreeOfCategories.java:54) - class com.book.identification.task.CreateTreeOfCategories running 54seg
+2013-01-08 18:20:41,827  INFO [main] (Version.java:37) - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2013-01-08 18:20:41,836  INFO [main] (Version.java:41) - HHH000412: Hibernate Core {4.1.7.Final}
+2013-01-08 18:20:41,838  INFO [main] (Environment.java:239) - HHH000206: hibernate.properties not found
+2013-01-08 18:20:41,840  INFO [main] (Environment.java:342) - HHH000021: Bytecode provider name : javassist
+2013-01-08 18:20:41,863  INFO [main] (Configuration.java:1933) - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2013-01-08 18:20:41,863  INFO [main] (Configuration.java:1952) - HHH000040: Configuration resource: /hibernate.cfg.xml
+2013-01-08 18:20:41,889  WARN [main] (DTDEntityResolver.java:74) - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2013-01-08 18:20:41,924  INFO [main] (Configuration.java:2074) - HHH000041: Configured SessionFactory: 
+2013-01-08 18:20:42,200  INFO [main] (DriverManagerConnectionProviderImpl.java:96) - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2013-01-08 18:20:42,205  INFO [main] (DriverManagerConnectionProviderImpl.java:130) - HHH000115: Hibernate connection pool size: 1
+2013-01-08 18:20:42,205  INFO [main] (DriverManagerConnectionProviderImpl.java:133) - HHH000006: Autocommit mode: false
+2013-01-08 18:20:42,206  INFO [main] (DriverManagerConnectionProviderImpl.java:147) - HHH000401: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:db/ebook;shutdown=true;hsqldb.write_delay=false;]
+2013-01-08 18:20:42,206  INFO [main] (DriverManagerConnectionProviderImpl.java:152) - HHH000046: Connection properties: {user=sa, password=****}
+2013-01-08 18:20:42,899  INFO [main] (?:?) - checkpointClose start
+2013-01-08 18:20:43,139  INFO [main] (?:?) - checkpointClose end
+2013-01-08 18:20:43,251  INFO [main] (Dialect.java:125) - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2013-01-08 18:20:43,283  INFO [main] (TransactionFactoryInitiator.java:68) - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2013-01-08 18:20:43,289  INFO [main] (ASTQueryTranslatorFactory.java:48) - HHH000397: Using ASTQueryTranslatorFactory
+2013-01-08 18:20:43,334  INFO [main] (Version.java:39) - HSEARCH000034: Hibernate Search 4.1.1.Final
+2013-01-08 18:20:43,406  WARN [main] (ConfigContext.java:299) - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2013-01-08 18:20:43,555  INFO [main] (AvroSerializationProvider.java:73) - HSEARCH000079: Serialization protocol version 1.0
+2013-01-08 18:20:44,018  WARN [main] (SessionFactoryRegistry.java:102) - HHH000277: Could not bind factory to JNDI
+org.hibernate.service.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:92)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:108)
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:89)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:476)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at com.book.identification.HibernateUtil.<clinit>(HibernateUtil.java:23)
+	at com.book.identification.Main.main(Main.java:25)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:662)
+	at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:307)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(InitialContext.java:344)
+	at javax.naming.InitialContext.getNameParser(InitialContext.java:499)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:86)
+	... 6 more
+2013-01-08 18:20:44,027  INFO [main] (SchemaUpdate.java:182) - HHH000228: Running hbm2ddl schema update
+2013-01-08 18:20:44,027  INFO [main] (SchemaUpdate.java:193) - HHH000102: Fetching database metadata
+2013-01-08 18:20:44,029  INFO [main] (SchemaUpdate.java:205) - HHH000396: Updating schema
+2013-01-08 18:20:44,168  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.ACCESSINFO
+2013-01-08 18:20:44,168  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [viewability, publicdomain, embeddable, accessviewstatus, entityid, webreaderlink, pdf_entityid, vieworderurl, epub_entityid, texttospeechpermission, country]
+2013-01-08 18:20:44,169  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk32bb185260cb9f2a, fk32bb18527baa3db0]
+2013-01-08 18:20:44,169  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10140, sys_idx_10138, sys_idx_sys_pk_10026_10027]
+2013-01-08 18:20:44,219  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.AUTHOR
+2013-01-08 18:20:44,219  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, displayname]
+2013-01-08 18:20:44,220  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 18:20:44,220  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10029_10030]
+2013-01-08 18:20:44,245  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY
+2013-01-08 18:20:44,245  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [category, entityid, parent_entityid]
+2013-01-08 18:20:44,245  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6dd211e55d6dd3e]
+2013-01-08 18:20:44,246  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10034, sys_idx_sys_pk_10032_10033]
+2013-01-08 18:20:44,270  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY_CATEGORY
+2013-01-08 18:20:44,270  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [subcategories_entityid, category_entityid]
+2013-01-08 18:20:44,270  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk8635931f1502c76a, fk8635931fe152b9cc]
+2013-01-08 18:20:44,270  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_ct_10039_10041, sys_idx_10044, sys_idx_sys_pk_10038_10040, sys_idx_10042]
+2013-01-08 18:20:44,292  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.DIMENSIONS
+2013-01-08 18:20:44,293  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [height, entityid, width, thickness]
+2013-01-08 18:20:44,293  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 18:20:44,293  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10047_10048]
+2013-01-08 18:20:44,315  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.EPUB
+2013-01-08 18:20:44,315  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-08 18:20:44,315  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 18:20:44,316  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10050_10051]
+2013-01-08 18:20:44,352  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.IMAGELINKS
+2013-01-08 18:20:44,353  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [thumbnail, entityid, small, medium, large, extralarge, smallthumbnail]
+2013-01-08 18:20:44,353  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 18:20:44,353  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10053_10054]
+2013-01-08 18:20:44,378  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.INDUSTRYIDENTIFIERS
+2013-01-08 18:20:44,378  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, type, identifier]
+2013-01-08 18:20:44,378  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 18:20:44,378  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10056_10057]
+2013-01-08 18:20:44,398  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.LISTPRICE
+2013-01-08 18:20:44,399  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-08 18:20:44,399  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 18:20:44,399  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10059_10060]
+2013-01-08 18:20:44,418  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.PDF
+2013-01-08 18:20:44,418  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-08 18:20:44,418  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 18:20:44,419  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10062_10063]
+2013-01-08 18:20:44,448  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RECOMMENDEDINFO
+2013-01-08 18:20:44,448  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, explanation]
+2013-01-08 18:20:44,449  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 18:20:44,449  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10065_10066]
+2013-01-08 18:20:44,480  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RETAILPRICE
+2013-01-08 18:20:44,481  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-08 18:20:44,481  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 18:20:44,481  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10068_10069]
+2013-01-08 18:20:44,511  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.REVIEW
+2013-01-08 18:20:44,511  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [content, title, author_entityid, entityid, fulltexturl, volumeid, rating, type, date, kind, source_entityid]
+2013-01-08 18:20:44,513  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk91b3e3788c74974a, fk91b3e3788ed6354a]
+2013-01-08 18:20:44,514  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10142, sys_idx_sys_pk_10071_10072, sys_idx_10073]
+2013-01-08 18:20:44,550  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SALEINFO
+2013-01-08 18:20:44,551  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [isebook, saleability, entityid, listprice_entityid, retailprice_entityid, buylink, country]
+2013-01-08 18:20:44,551  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk773b81b5cc82e510, fk773b81b5ce559b70]
+2013-01-08 18:20:44,551  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10080, sys_idx_sys_pk_10076_10077, sys_idx_10078]
+2013-01-08 18:20:44,592  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SEARCHINFO
+2013-01-08 18:20:44,592  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [textsnippet, entityid]
+2013-01-08 18:20:44,592  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 18:20:44,593  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10083_10084]
+2013-01-08 18:20:44,626  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SOURCE
+2013-01-08 18:20:44,626  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [description, entityid, extradescription, url]
+2013-01-08 18:20:44,626  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 18:20:44,627  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10086_10087]
+2013-01-08 18:20:44,677  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.USERINFO
+2013-01-08 18:20:44,677  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, isinmybooks, ispreordered, review_entityid, ispurchased]
+2013-01-08 18:20:44,677  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkf3f34b395de56bea]
+2013-01-08 18:20:44,678  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10091, sys_idx_sys_pk_10089_10090]
+2013-01-08 18:20:44,714  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUME
+2013-01-08 18:20:44,714  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [etag, entityid, searchinfo_entityid, recommendedinfo_entityid, saleinfo_entityid, userinfo_entityid, kind, id, selflink, volumeinfo_entityid, path, filename, accessinfo_entityid]
+2013-01-08 18:20:44,715  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk990fd33a10e1516a, fk990fd33ac5a8a2ca, fk990fd33a3cd1cf8a, fk990fd33a5f566f4a, fk990fd33ae71c5ea, fk990fd33ab26ac730]
+2013-01-08 18:20:44,715  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10144, sys_idx_10096, sys_idx_10104, sys_idx_sys_pk_10094_10095, sys_idx_10098, sys_idx_10102, sys_idx_10100]
+2013-01-08 18:20:44,748  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO
+2013-01-08 18:20:44,749  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [printtype, previewlink, entityid, averagerating, maincategory, publisheddate, publisher, dimensions_entityid, title, ratingscount, description, pagecount, imagelinks_entityid, subtitle, canonicalvolumelink, infolink, language, contentversion]
+2013-01-08 18:20:44,749  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk1a427f08c32b10a, fk1a427f089212900a]
+2013-01-08 18:20:44,749  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10111, sys_idx_10109, sys_idx_sys_pk_10107_10108]
+2013-01-08 18:20:44,782  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORY
+2013-01-08 18:20:44,782  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categoriess_entityid]
+2013-01-08 18:20:44,783  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6daa3c753cd1cf8a, fk6daa3c75b53ceab1]
+2013-01-08 18:20:44,783  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10117, sys_idx_sys_pk_10115_10116, sys_idx_10119]
+2013-01-08 18:20:44,818  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_INDUSTRYIDENTIFIERS
+2013-01-08 18:20:44,819  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, industryidentifiers_entityid]
+2013-01-08 18:20:44,819  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk9b8418553cd1cf8a, fk9b841855a16084d0]
+2013-01-08 18:20:44,819  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_ct_10123_10125, sys_idx_10126, sys_idx_10128]
+2013-01-08 18:20:44,854  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_AUTHORS
+2013-01-08 18:20:44,855  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [authors, volumeinfo_entityid]
+2013-01-08 18:20:44,855  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkb37dae113cd1cf8a]
+2013-01-08 18:20:44,856  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10132]
+2013-01-08 18:20:44,948  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORIES
+2013-01-08 18:20:44,948  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categories]
+2013-01-08 18:20:44,949  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk353ae7b33cd1cf8a]
+2013-01-08 18:20:44,949  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10136]
+2013-01-08 18:20:44,951  INFO [main] (SchemaUpdate.java:240) - HHH000232: Schema update complete
+2013-01-08 19:08:31,181  INFO [main] (Version.java:37) - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2013-01-08 19:08:31,190  INFO [main] (Version.java:41) - HHH000412: Hibernate Core {4.1.7.Final}
+2013-01-08 19:08:31,192  INFO [main] (Environment.java:239) - HHH000206: hibernate.properties not found
+2013-01-08 19:08:31,194  INFO [main] (Environment.java:342) - HHH000021: Bytecode provider name : javassist
+2013-01-08 19:08:31,218  INFO [main] (Configuration.java:1933) - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2013-01-08 19:08:31,218  INFO [main] (Configuration.java:1952) - HHH000040: Configuration resource: /hibernate.cfg.xml
+2013-01-08 19:08:31,244  WARN [main] (DTDEntityResolver.java:74) - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2013-01-08 19:08:31,287  INFO [main] (Configuration.java:2074) - HHH000041: Configured SessionFactory: 
+2013-01-08 19:08:31,570  INFO [main] (DriverManagerConnectionProviderImpl.java:96) - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2013-01-08 19:08:31,576  INFO [main] (DriverManagerConnectionProviderImpl.java:130) - HHH000115: Hibernate connection pool size: 1
+2013-01-08 19:08:31,576  INFO [main] (DriverManagerConnectionProviderImpl.java:133) - HHH000006: Autocommit mode: false
+2013-01-08 19:08:31,576  INFO [main] (DriverManagerConnectionProviderImpl.java:147) - HHH000401: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:db/ebook;shutdown=true;hsqldb.write_delay=false;]
+2013-01-08 19:08:31,577  INFO [main] (DriverManagerConnectionProviderImpl.java:152) - HHH000046: Connection properties: {user=sa, password=****}
+2013-01-08 19:08:32,293  INFO [main] (?:?) - checkpointClose start
+2013-01-08 19:08:32,535  INFO [main] (?:?) - checkpointClose end
+2013-01-08 19:08:32,635  INFO [main] (Dialect.java:125) - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2013-01-08 19:08:32,665  INFO [main] (TransactionFactoryInitiator.java:68) - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2013-01-08 19:08:32,673  INFO [main] (ASTQueryTranslatorFactory.java:48) - HHH000397: Using ASTQueryTranslatorFactory
+2013-01-08 19:08:32,721  INFO [main] (Version.java:39) - HSEARCH000034: Hibernate Search 4.1.1.Final
+2013-01-08 19:08:32,794  WARN [main] (ConfigContext.java:299) - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2013-01-08 19:08:32,933  INFO [main] (AvroSerializationProvider.java:73) - HSEARCH000079: Serialization protocol version 1.0
+2013-01-08 19:08:33,457  WARN [main] (SessionFactoryRegistry.java:102) - HHH000277: Could not bind factory to JNDI
+org.hibernate.service.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:92)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:108)
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:89)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:476)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at com.book.identification.HibernateUtil.<clinit>(HibernateUtil.java:23)
+	at com.book.identification.Main.main(Main.java:25)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:662)
+	at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:307)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(InitialContext.java:344)
+	at javax.naming.InitialContext.getNameParser(InitialContext.java:499)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:86)
+	... 6 more
+2013-01-08 19:08:33,468  INFO [main] (SchemaUpdate.java:182) - HHH000228: Running hbm2ddl schema update
+2013-01-08 19:08:33,469  INFO [main] (SchemaUpdate.java:193) - HHH000102: Fetching database metadata
+2013-01-08 19:08:33,471  INFO [main] (SchemaUpdate.java:205) - HHH000396: Updating schema
+2013-01-08 19:08:33,619  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.ACCESSINFO
+2013-01-08 19:08:33,620  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [viewability, publicdomain, embeddable, accessviewstatus, entityid, webreaderlink, pdf_entityid, vieworderurl, epub_entityid, texttospeechpermission, country]
+2013-01-08 19:08:33,620  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk32bb185260cb9f2a, fk32bb18527baa3db0]
+2013-01-08 19:08:33,621  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10140, sys_idx_10138, sys_idx_sys_pk_10026_10027]
+2013-01-08 19:08:33,683  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.AUTHOR
+2013-01-08 19:08:33,683  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, displayname]
+2013-01-08 19:08:33,684  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 19:08:33,684  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10029_10030]
+2013-01-08 19:08:33,720  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY
+2013-01-08 19:08:33,720  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [category, entityid, parent_entityid]
+2013-01-08 19:08:33,720  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6dd211e55d6dd3e]
+2013-01-08 19:08:33,721  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10034, sys_idx_sys_pk_10032_10033]
+2013-01-08 19:08:33,761  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY_CATEGORY
+2013-01-08 19:08:33,762  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [subcategories_entityid, category_entityid]
+2013-01-08 19:08:33,762  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk8635931f1502c76a, fk8635931fe152b9cc]
+2013-01-08 19:08:33,762  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_ct_10039_10041, sys_idx_10044, sys_idx_sys_pk_10038_10040, sys_idx_10042]
+2013-01-08 19:08:33,788  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.DIMENSIONS
+2013-01-08 19:08:33,789  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [height, entityid, width, thickness]
+2013-01-08 19:08:33,789  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 19:08:33,789  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10047_10048]
+2013-01-08 19:08:33,828  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.EPUB
+2013-01-08 19:08:33,829  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-08 19:08:33,829  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 19:08:33,829  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10050_10051]
+2013-01-08 19:08:33,859  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.IMAGELINKS
+2013-01-08 19:08:33,860  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [thumbnail, entityid, small, medium, large, extralarge, smallthumbnail]
+2013-01-08 19:08:33,860  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 19:08:33,860  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10053_10054]
+2013-01-08 19:08:33,888  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.INDUSTRYIDENTIFIERS
+2013-01-08 19:08:33,888  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, type, identifier]
+2013-01-08 19:08:33,889  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 19:08:33,889  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10056_10057]
+2013-01-08 19:08:33,918  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.LISTPRICE
+2013-01-08 19:08:33,918  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-08 19:08:33,919  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 19:08:33,919  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10059_10060]
+2013-01-08 19:08:33,947  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.PDF
+2013-01-08 19:08:33,948  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-08 19:08:33,948  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 19:08:33,948  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10062_10063]
+2013-01-08 19:08:33,981  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RECOMMENDEDINFO
+2013-01-08 19:08:33,981  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, explanation]
+2013-01-08 19:08:33,982  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 19:08:33,982  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10065_10066]
+2013-01-08 19:08:34,014  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RETAILPRICE
+2013-01-08 19:08:34,014  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-08 19:08:34,015  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 19:08:34,015  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10068_10069]
+2013-01-08 19:08:34,048  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.REVIEW
+2013-01-08 19:08:34,048  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [content, title, author_entityid, entityid, fulltexturl, volumeid, rating, type, date, kind, source_entityid]
+2013-01-08 19:08:34,049  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk91b3e3788c74974a, fk91b3e3788ed6354a]
+2013-01-08 19:08:34,049  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10142, sys_idx_sys_pk_10071_10072, sys_idx_10073]
+2013-01-08 19:08:34,097  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SALEINFO
+2013-01-08 19:08:34,098  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [isebook, saleability, entityid, listprice_entityid, retailprice_entityid, buylink, country]
+2013-01-08 19:08:34,098  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk773b81b5cc82e510, fk773b81b5ce559b70]
+2013-01-08 19:08:34,098  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10080, sys_idx_sys_pk_10076_10077, sys_idx_10078]
+2013-01-08 19:08:34,144  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SEARCHINFO
+2013-01-08 19:08:34,145  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [textsnippet, entityid]
+2013-01-08 19:08:34,145  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 19:08:34,145  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10083_10084]
+2013-01-08 19:08:34,184  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SOURCE
+2013-01-08 19:08:34,185  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [description, entityid, extradescription, url]
+2013-01-08 19:08:34,185  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 19:08:34,185  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10086_10087]
+2013-01-08 19:08:34,233  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.USERINFO
+2013-01-08 19:08:34,234  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, isinmybooks, ispreordered, review_entityid, ispurchased]
+2013-01-08 19:08:34,234  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkf3f34b395de56bea]
+2013-01-08 19:08:34,235  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10091, sys_idx_sys_pk_10089_10090]
+2013-01-08 19:08:34,275  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUME
+2013-01-08 19:08:34,276  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [etag, entityid, searchinfo_entityid, recommendedinfo_entityid, saleinfo_entityid, userinfo_entityid, kind, id, selflink, volumeinfo_entityid, path, filename, accessinfo_entityid]
+2013-01-08 19:08:34,276  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk990fd33a10e1516a, fk990fd33ac5a8a2ca, fk990fd33a3cd1cf8a, fk990fd33a5f566f4a, fk990fd33ae71c5ea, fk990fd33ab26ac730]
+2013-01-08 19:08:34,276  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10144, sys_idx_10096, sys_idx_10104, sys_idx_sys_pk_10094_10095, sys_idx_10098, sys_idx_10102, sys_idx_10100]
+2013-01-08 19:08:34,316  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO
+2013-01-08 19:08:34,316  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [printtype, previewlink, entityid, averagerating, maincategory, publisheddate, publisher, dimensions_entityid, title, ratingscount, description, pagecount, imagelinks_entityid, subtitle, canonicalvolumelink, infolink, language, contentversion]
+2013-01-08 19:08:34,317  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk1a427f08c32b10a, fk1a427f089212900a]
+2013-01-08 19:08:34,317  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10111, sys_idx_10109, sys_idx_sys_pk_10107_10108]
+2013-01-08 19:08:34,358  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORY
+2013-01-08 19:08:34,358  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categoriess_entityid]
+2013-01-08 19:08:34,358  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6daa3c753cd1cf8a, fk6daa3c75b53ceab1]
+2013-01-08 19:08:34,359  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10117, sys_idx_sys_pk_10115_10116, sys_idx_10119]
+2013-01-08 19:08:34,404  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_INDUSTRYIDENTIFIERS
+2013-01-08 19:08:34,404  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, industryidentifiers_entityid]
+2013-01-08 19:08:34,404  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk9b8418553cd1cf8a, fk9b841855a16084d0]
+2013-01-08 19:08:34,405  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_ct_10123_10125, sys_idx_10126, sys_idx_10128]
+2013-01-08 19:08:34,437  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_AUTHORS
+2013-01-08 19:08:34,438  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [authors, volumeinfo_entityid]
+2013-01-08 19:08:34,438  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkb37dae113cd1cf8a]
+2013-01-08 19:08:34,438  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10132]
+2013-01-08 19:08:34,510  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORIES
+2013-01-08 19:08:34,510  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categories]
+2013-01-08 19:08:34,511  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk353ae7b33cd1cf8a]
+2013-01-08 19:08:34,511  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10136]
+2013-01-08 19:08:34,513  INFO [main] (SchemaUpdate.java:240) - HHH000232: Schema update complete

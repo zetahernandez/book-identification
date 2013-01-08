@@ -7,8 +7,8 @@ define([
 	    index: Ember.Route.extend({
 	      route: '/',
 	      connectOutlets : function(router, context) {
-	    	  var showAll=volumeInfoListController.showAll();
-//	          return router.get('applicationController').connectOutlet('volumes');
+	    	  volumeInfoListController.showAll();
+	          return router.get('applicationController').connectOutlet('volumes');
 	        }
 	    })
 	  })
