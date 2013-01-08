@@ -1,0 +1,9 @@
+#gedit files
+*~
+.hg/*
+.hgignore
+db/*
+.settings/*
+target/*
+bin/*
+.classpath

@@ -1,0 +1,1121 @@
+2013-01-08 11:07:59,058  INFO [main] (Version.java:37) - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2013-01-08 11:07:59,068  INFO [main] (Version.java:41) - HHH000412: Hibernate Core {4.1.7.Final}
+2013-01-08 11:07:59,070  INFO [main] (Environment.java:239) - HHH000206: hibernate.properties not found
+2013-01-08 11:07:59,072  INFO [main] (Environment.java:342) - HHH000021: Bytecode provider name : javassist
+2013-01-08 11:07:59,096  INFO [main] (Configuration.java:1933) - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2013-01-08 11:07:59,096  INFO [main] (Configuration.java:1952) - HHH000040: Configuration resource: /hibernate.cfg.xml
+2013-01-08 11:07:59,125  WARN [main] (DTDEntityResolver.java:74) - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2013-01-08 11:07:59,195  INFO [main] (Configuration.java:2074) - HHH000041: Configured SessionFactory: 
+2013-01-08 11:07:59,502  INFO [main] (DriverManagerConnectionProviderImpl.java:96) - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2013-01-08 11:07:59,507  INFO [main] (DriverManagerConnectionProviderImpl.java:130) - HHH000115: Hibernate connection pool size: 1
+2013-01-08 11:07:59,508  INFO [main] (DriverManagerConnectionProviderImpl.java:133) - HHH000006: Autocommit mode: false
+2013-01-08 11:07:59,508  INFO [main] (DriverManagerConnectionProviderImpl.java:147) - HHH000401: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:db/ebook;shutdown=true;hsqldb.write_delay=false;]
+2013-01-08 11:07:59,508  INFO [main] (DriverManagerConnectionProviderImpl.java:152) - HHH000046: Connection properties: {user=sa, password=****}
+2013-01-08 11:08:00,097  INFO [main] (?:?) - Checkpoint start
+2013-01-08 11:08:00,098  INFO [main] (?:?) - checkpointClose start
+2013-01-08 11:08:00,347  INFO [main] (?:?) - checkpointClose end
+2013-01-08 11:08:00,394  INFO [main] (?:?) - Checkpoint end
+2013-01-08 11:08:00,421  INFO [main] (Dialect.java:125) - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2013-01-08 11:08:00,456  INFO [main] (TransactionFactoryInitiator.java:68) - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2013-01-08 11:08:00,462  INFO [main] (ASTQueryTranslatorFactory.java:48) - HHH000397: Using ASTQueryTranslatorFactory
+2013-01-08 11:08:00,528  INFO [main] (Version.java:39) - HSEARCH000034: Hibernate Search 4.1.1.Final
+2013-01-08 11:08:00,694  WARN [main] (ConfigContext.java:299) - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2013-01-08 11:08:00,781  WARN [main] (DirectoryProviderHelper.java:258) - HSEARCH000041: Index directory not found, creating: 'C:\desarrollo\workspaces\threads\book-identification\db\indexes'
+2013-01-08 11:08:00,782  WARN [main] (DirectoryProviderHelper.java:258) - HSEARCH000041: Index directory not found, creating: 'C:\desarrollo\workspaces\threads\book-identification\db\indexes\com.book.identification.model.Volume'
+2013-01-08 11:08:01,355  INFO [main] (AvroSerializationProvider.java:73) - HSEARCH000079: Serialization protocol version 1.0
+2013-01-08 11:08:01,865  WARN [main] (SessionFactoryRegistry.java:102) - HHH000277: Could not bind factory to JNDI
+org.hibernate.service.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:92)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:108)
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:89)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:476)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at com.book.identification.HibernateUtil.<clinit>(HibernateUtil.java:23)
+	at com.book.identification.Main.main(Main.java:19)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:662)
+	at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:307)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(InitialContext.java:344)
+	at javax.naming.InitialContext.getNameParser(InitialContext.java:499)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:86)
+	... 6 more
+2013-01-08 11:08:01,877  INFO [main] (SchemaUpdate.java:182) - HHH000228: Running hbm2ddl schema update
+2013-01-08 11:08:01,878  INFO [main] (SchemaUpdate.java:193) - HHH000102: Fetching database metadata
+2013-01-08 11:08:01,881  INFO [main] (SchemaUpdate.java:205) - HHH000396: Updating schema
+2013-01-08 11:08:01,896  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: AccessInfo
+2013-01-08 11:08:01,901  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Author
+2013-01-08 11:08:01,906  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Category
+2013-01-08 11:08:01,913  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Category_Category
+2013-01-08 11:08:01,918  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Dimensions
+2013-01-08 11:08:01,924  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Epub
+2013-01-08 11:08:01,930  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: ImageLinks
+2013-01-08 11:08:01,935  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: IndustryIdentifiers
+2013-01-08 11:08:01,940  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: ListPrice
+2013-01-08 11:08:01,946  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Pdf
+2013-01-08 11:08:01,951  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: RecommendedInfo
+2013-01-08 11:08:01,956  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: RetailPrice
+2013-01-08 11:08:01,960  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Review
+2013-01-08 11:08:01,963  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: SaleInfo
+2013-01-08 11:08:01,967  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: SearchInfo
+2013-01-08 11:08:01,971  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Source
+2013-01-08 11:08:01,974  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: UserInfo
+2013-01-08 11:08:01,978  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Volume
+2013-01-08 11:08:01,985  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo
+2013-01-08 11:08:01,992  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_Category
+2013-01-08 11:08:01,998  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_IndustryIdentifiers
+2013-01-08 11:08:02,004  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_authors
+2013-01-08 11:08:02,008  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_categories
+2013-01-08 11:08:02,012  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: AccessInfo
+2013-01-08 11:08:02,041  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Author
+2013-01-08 11:08:02,045  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Category
+2013-01-08 11:08:02,050  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Category_Category
+2013-01-08 11:08:02,056  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Dimensions
+2013-01-08 11:08:02,059  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Epub
+2013-01-08 11:08:02,062  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: ImageLinks
+2013-01-08 11:08:02,064  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: IndustryIdentifiers
+2013-01-08 11:08:02,067  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: ListPrice
+2013-01-08 11:08:02,069  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Pdf
+2013-01-08 11:08:02,071  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: RecommendedInfo
+2013-01-08 11:08:02,073  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: RetailPrice
+2013-01-08 11:08:02,075  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Review
+2013-01-08 11:08:02,077  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: SaleInfo
+2013-01-08 11:08:02,080  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: SearchInfo
+2013-01-08 11:08:02,082  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Source
+2013-01-08 11:08:02,085  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: UserInfo
+2013-01-08 11:08:02,089  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Volume
+2013-01-08 11:08:02,092  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo
+2013-01-08 11:08:02,096  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_Category
+2013-01-08 11:08:02,100  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_IndustryIdentifiers
+2013-01-08 11:08:02,103  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_authors
+2013-01-08 11:08:02,105  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_categories
+2013-01-08 11:08:02,991  INFO [main] (SchemaUpdate.java:240) - HHH000232: Schema update complete
+2013-01-08 11:08:03,036  INFO [BookReaderThread] (ProducerConsumerManager.java:54) - Thread[BookReaderThread,5,main] start at Tue Jan 08 11:08:03 ART 2013
+2013-01-08 11:08:03,037  INFO [PersistVolumesThread] (ProducerConsumerManager.java:54) - Thread[PersistVolumesThread,5,main] start at Tue Jan 08 11:08:03 ART 2013
+2013-01-08 11:08:03,039  INFO [VolumeInfoSearchThread] (ProducerConsumerManager.java:54) - Thread[VolumeInfoSearchThread,5,main] start at Tue Jan 08 11:08:03 ART 2013
+2013-01-08 11:08:44,925  INFO [main] (Version.java:37) - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2013-01-08 11:08:44,934  INFO [main] (Version.java:41) - HHH000412: Hibernate Core {4.1.7.Final}
+2013-01-08 11:08:44,936  INFO [main] (Environment.java:239) - HHH000206: hibernate.properties not found
+2013-01-08 11:08:44,938  INFO [main] (Environment.java:342) - HHH000021: Bytecode provider name : javassist
+2013-01-08 11:08:44,961  INFO [main] (Configuration.java:1933) - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2013-01-08 11:08:44,962  INFO [main] (Configuration.java:1952) - HHH000040: Configuration resource: /hibernate.cfg.xml
+2013-01-08 11:08:44,988  WARN [main] (DTDEntityResolver.java:74) - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2013-01-08 11:08:45,034  INFO [main] (Configuration.java:2074) - HHH000041: Configured SessionFactory: 
+2013-01-08 11:08:45,313  INFO [main] (DriverManagerConnectionProviderImpl.java:96) - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2013-01-08 11:08:45,320  INFO [main] (DriverManagerConnectionProviderImpl.java:130) - HHH000115: Hibernate connection pool size: 1
+2013-01-08 11:08:45,320  INFO [main] (DriverManagerConnectionProviderImpl.java:133) - HHH000006: Autocommit mode: false
+2013-01-08 11:08:45,321  INFO [main] (DriverManagerConnectionProviderImpl.java:147) - HHH000401: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:db/ebook;shutdown=true;hsqldb.write_delay=false;]
+2013-01-08 11:08:45,321  INFO [main] (DriverManagerConnectionProviderImpl.java:152) - HHH000046: Connection properties: {user=sa, password=****}
+2013-01-08 11:08:45,690  INFO [main] (?:?) - checkpointClose start
+2013-01-08 11:08:45,958  INFO [main] (?:?) - checkpointClose end
+2013-01-08 11:08:46,163  INFO [main] (Dialect.java:125) - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2013-01-08 11:08:46,188  INFO [main] (TransactionFactoryInitiator.java:68) - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2013-01-08 11:08:46,193  INFO [main] (ASTQueryTranslatorFactory.java:48) - HHH000397: Using ASTQueryTranslatorFactory
+2013-01-08 11:08:46,269  INFO [main] (Version.java:39) - HSEARCH000034: Hibernate Search 4.1.1.Final
+2013-01-08 11:08:46,344  WARN [main] (ConfigContext.java:299) - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2013-01-08 11:08:46,485  INFO [main] (AvroSerializationProvider.java:73) - HSEARCH000079: Serialization protocol version 1.0
+2013-01-08 11:08:46,951  WARN [main] (SessionFactoryRegistry.java:102) - HHH000277: Could not bind factory to JNDI
+org.hibernate.service.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:92)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:108)
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:89)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:476)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at com.book.identification.HibernateUtil.<clinit>(HibernateUtil.java:23)
+	at com.book.identification.Main.main(Main.java:19)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:662)
+	at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:307)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(InitialContext.java:344)
+	at javax.naming.InitialContext.getNameParser(InitialContext.java:499)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:86)
+	... 6 more
+2013-01-08 11:08:46,958  INFO [main] (SchemaUpdate.java:182) - HHH000228: Running hbm2ddl schema update
+2013-01-08 11:08:46,959  INFO [main] (SchemaUpdate.java:193) - HHH000102: Fetching database metadata
+2013-01-08 11:08:46,961  INFO [main] (SchemaUpdate.java:205) - HHH000396: Updating schema
+2013-01-08 11:08:47,040  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.ACCESSINFO
+2013-01-08 11:08:47,041  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [viewability, publicdomain, embeddable, accessviewstatus, entityid, webreaderlink, pdf_entityid, vieworderurl, epub_entityid, texttospeechpermission, country]
+2013-01-08 11:08:47,041  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk32bb185260cb9f2a, fk32bb18527baa3db0]
+2013-01-08 11:08:47,041  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10082, sys_idx_10080, sys_idx_sys_pk_10025_10026]
+2013-01-08 11:08:47,081  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.AUTHOR
+2013-01-08 11:08:47,082  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, displayname]
+2013-01-08 11:08:47,082  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:08:47,083  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10027_10028]
+2013-01-08 11:08:47,159  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY
+2013-01-08 11:08:47,159  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [category, entityid, parent_entityid]
+2013-01-08 11:08:47,159  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6dd211e55d6dd3e]
+2013-01-08 11:08:47,160  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10029_10030, sys_idx_10084]
+2013-01-08 11:08:47,190  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY_CATEGORY
+2013-01-08 11:08:47,191  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [subcategories_entityid, category_entityid]
+2013-01-08 11:08:47,191  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk8635931f1502c76a, fk8635931fe152b9cc]
+2013-01-08 11:08:47,191  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10033_10035, sys_idx_10088, sys_idx_10086, sys_idx_sys_ct_10034_10036]
+2013-01-08 11:08:47,215  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.DIMENSIONS
+2013-01-08 11:08:47,215  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [height, entityid, width, thickness]
+2013-01-08 11:08:47,215  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:08:47,216  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10037_10038]
+2013-01-08 11:08:47,241  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.EPUB
+2013-01-08 11:08:47,242  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-08 11:08:47,242  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:08:47,242  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10039_10040]
+2013-01-08 11:08:47,271  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.IMAGELINKS
+2013-01-08 11:08:47,271  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [thumbnail, entityid, small, medium, large, extralarge, smallthumbnail]
+2013-01-08 11:08:47,271  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:08:47,272  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10041_10042]
+2013-01-08 11:08:47,299  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.INDUSTRYIDENTIFIERS
+2013-01-08 11:08:47,299  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, type, identifier]
+2013-01-08 11:08:47,299  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:08:47,300  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10043_10044]
+2013-01-08 11:08:47,321  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.LISTPRICE
+2013-01-08 11:08:47,321  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-08 11:08:47,321  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:08:47,322  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10045_10046]
+2013-01-08 11:08:47,351  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.PDF
+2013-01-08 11:08:47,352  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-08 11:08:47,352  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:08:47,353  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10047_10048]
+2013-01-08 11:08:47,384  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RECOMMENDEDINFO
+2013-01-08 11:08:47,385  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, explanation]
+2013-01-08 11:08:47,385  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:08:47,385  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10049_10050]
+2013-01-08 11:08:47,408  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RETAILPRICE
+2013-01-08 11:08:47,408  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-08 11:08:47,408  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:08:47,409  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10051_10052]
+2013-01-08 11:08:47,438  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.REVIEW
+2013-01-08 11:08:47,439  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [content, title, author_entityid, entityid, fulltexturl, volumeid, rating, type, date, kind, source_entityid]
+2013-01-08 11:08:47,439  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk91b3e3788c74974a, fk91b3e3788ed6354a]
+2013-01-08 11:08:47,439  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10090, sys_idx_10092, sys_idx_sys_pk_10053_10054]
+2013-01-08 11:08:47,489  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SALEINFO
+2013-01-08 11:08:47,490  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [isebook, saleability, entityid, listprice_entityid, retailprice_entityid, buylink, country]
+2013-01-08 11:08:47,490  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk773b81b5cc82e510, fk773b81b5ce559b70]
+2013-01-08 11:08:47,490  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10094, sys_idx_sys_pk_10055_10056, sys_idx_10096]
+2013-01-08 11:08:47,532  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SEARCHINFO
+2013-01-08 11:08:47,532  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [textsnippet, entityid]
+2013-01-08 11:08:47,533  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:08:47,533  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10057_10058]
+2013-01-08 11:08:47,576  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SOURCE
+2013-01-08 11:08:47,576  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [description, entityid, extradescription, url]
+2013-01-08 11:08:47,576  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:08:47,577  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10059_10060]
+2013-01-08 11:08:47,614  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.USERINFO
+2013-01-08 11:08:47,615  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, isinmybooks, ispreordered, review_entityid, ispurchased]
+2013-01-08 11:08:47,615  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkf3f34b395de56bea]
+2013-01-08 11:08:47,615  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10098, sys_idx_sys_pk_10061_10062]
+2013-01-08 11:08:47,654  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUME
+2013-01-08 11:08:47,654  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [etag, entityid, searchinfo_entityid, recommendedinfo_entityid, saleinfo_entityid, userinfo_entityid, kind, id, selflink, volumeinfo_entityid, path, filename, accessinfo_entityid]
+2013-01-08 11:08:47,655  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk990fd33a10e1516a, fk990fd33ac5a8a2ca, fk990fd33a3cd1cf8a, fk990fd33a5f566f4a, fk990fd33ae71c5ea, fk990fd33ab26ac730]
+2013-01-08 11:08:47,655  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10110, sys_idx_10108, sys_idx_10106, sys_idx_10104, sys_idx_10102, sys_idx_10100, sys_idx_sys_pk_10063_10064]
+2013-01-08 11:08:47,689  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO
+2013-01-08 11:08:47,690  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [printtype, previewlink, entityid, averagerating, maincategory, publisheddate, publisher, dimensions_entityid, title, ratingscount, description, pagecount, imagelinks_entityid, subtitle, canonicalvolumelink, infolink, language, contentversion]
+2013-01-08 11:08:47,690  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk1a427f08c32b10a, fk1a427f089212900a]
+2013-01-08 11:08:47,690  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10112, sys_idx_sys_pk_10065_10066, sys_idx_10114]
+2013-01-08 11:08:47,734  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORY
+2013-01-08 11:08:47,734  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categoriess_entityid]
+2013-01-08 11:08:47,734  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6daa3c753cd1cf8a, fk6daa3c75b53ceab1]
+2013-01-08 11:08:47,735  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10069_10070, sys_idx_10118, sys_idx_10116]
+2013-01-08 11:08:47,772  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_INDUSTRYIDENTIFIERS
+2013-01-08 11:08:47,773  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, industryidentifiers_entityid]
+2013-01-08 11:08:47,773  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk9b8418553cd1cf8a, fk9b841855a16084d0]
+2013-01-08 11:08:47,773  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10120, sys_idx_10122, sys_idx_sys_ct_10073_10075]
+2013-01-08 11:08:47,814  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_AUTHORS
+2013-01-08 11:08:47,814  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [authors, volumeinfo_entityid]
+2013-01-08 11:08:47,815  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkb37dae113cd1cf8a]
+2013-01-08 11:08:47,815  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10124]
+2013-01-08 11:08:47,849  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORIES
+2013-01-08 11:08:47,849  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categories]
+2013-01-08 11:08:47,849  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk353ae7b33cd1cf8a]
+2013-01-08 11:08:47,849  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10126]
+2013-01-08 11:08:47,851  INFO [main] (SchemaUpdate.java:240) - HHH000232: Schema update complete
+2013-01-08 11:08:56,315  INFO [BookReaderThread] (ProducerConsumerManager.java:54) - Thread[BookReaderThread,5,main] start at Tue Jan 08 11:08:56 ART 2013
+2013-01-08 11:08:57,710  INFO [VolumeInfoSearchThread] (ProducerConsumerManager.java:54) - Thread[VolumeInfoSearchThread,5,main] start at Tue Jan 08 11:08:57 ART 2013
+2013-01-08 11:08:58,071  INFO [PersistVolumesThread] (ProducerConsumerManager.java:54) - Thread[PersistVolumesThread,5,main] start at Tue Jan 08 11:08:58 ART 2013
+2013-01-08 11:09:51,748  INFO [main] (Version.java:37) - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2013-01-08 11:09:51,759  INFO [main] (Version.java:41) - HHH000412: Hibernate Core {4.1.7.Final}
+2013-01-08 11:09:51,761  INFO [main] (Environment.java:239) - HHH000206: hibernate.properties not found
+2013-01-08 11:09:51,763  INFO [main] (Environment.java:342) - HHH000021: Bytecode provider name : javassist
+2013-01-08 11:09:51,794  INFO [main] (Configuration.java:1933) - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2013-01-08 11:09:51,794  INFO [main] (Configuration.java:1952) - HHH000040: Configuration resource: /hibernate.cfg.xml
+2013-01-08 11:09:51,823  WARN [main] (DTDEntityResolver.java:74) - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2013-01-08 11:09:51,868  INFO [main] (Configuration.java:2074) - HHH000041: Configured SessionFactory: 
+2013-01-08 11:09:52,177  INFO [main] (DriverManagerConnectionProviderImpl.java:96) - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2013-01-08 11:09:52,186  INFO [main] (DriverManagerConnectionProviderImpl.java:130) - HHH000115: Hibernate connection pool size: 1
+2013-01-08 11:09:52,187  INFO [main] (DriverManagerConnectionProviderImpl.java:133) - HHH000006: Autocommit mode: false
+2013-01-08 11:09:52,187  INFO [main] (DriverManagerConnectionProviderImpl.java:147) - HHH000401: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:db/ebook;shutdown=true;hsqldb.write_delay=false;]
+2013-01-08 11:09:52,187  INFO [main] (DriverManagerConnectionProviderImpl.java:152) - HHH000046: Connection properties: {user=sa, password=****}
+2013-01-08 11:09:52,549  INFO [main] (?:?) - checkpointClose start
+2013-01-08 11:09:52,719  INFO [main] (?:?) - checkpointClose end
+2013-01-08 11:09:52,862  INFO [main] (Dialect.java:125) - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2013-01-08 11:09:52,887  INFO [main] (TransactionFactoryInitiator.java:68) - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2013-01-08 11:09:52,893  INFO [main] (ASTQueryTranslatorFactory.java:48) - HHH000397: Using ASTQueryTranslatorFactory
+2013-01-08 11:09:52,939  INFO [main] (Version.java:39) - HSEARCH000034: Hibernate Search 4.1.1.Final
+2013-01-08 11:09:53,039  WARN [main] (ConfigContext.java:299) - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2013-01-08 11:09:53,187  INFO [main] (AvroSerializationProvider.java:73) - HSEARCH000079: Serialization protocol version 1.0
+2013-01-08 11:09:53,659  WARN [main] (SessionFactoryRegistry.java:102) - HHH000277: Could not bind factory to JNDI
+org.hibernate.service.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:92)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:108)
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:89)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:476)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at com.book.identification.HibernateUtil.<clinit>(HibernateUtil.java:23)
+	at com.book.identification.Main.main(Main.java:19)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:662)
+	at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:307)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(InitialContext.java:344)
+	at javax.naming.InitialContext.getNameParser(InitialContext.java:499)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:86)
+	... 6 more
+2013-01-08 11:09:53,669  INFO [main] (SchemaUpdate.java:182) - HHH000228: Running hbm2ddl schema update
+2013-01-08 11:09:53,670  INFO [main] (SchemaUpdate.java:193) - HHH000102: Fetching database metadata
+2013-01-08 11:09:53,672  INFO [main] (SchemaUpdate.java:205) - HHH000396: Updating schema
+2013-01-08 11:09:53,778  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.ACCESSINFO
+2013-01-08 11:09:53,778  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [viewability, publicdomain, embeddable, accessviewstatus, entityid, webreaderlink, pdf_entityid, vieworderurl, epub_entityid, texttospeechpermission, country]
+2013-01-08 11:09:53,779  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk32bb185260cb9f2a, fk32bb18527baa3db0]
+2013-01-08 11:09:53,779  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10140, sys_idx_10138, sys_idx_sys_pk_10026_10027]
+2013-01-08 11:09:53,825  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.AUTHOR
+2013-01-08 11:09:53,826  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, displayname]
+2013-01-08 11:09:53,826  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:09:53,826  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10029_10030]
+2013-01-08 11:09:53,894  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY
+2013-01-08 11:09:53,895  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [category, entityid, parent_entityid]
+2013-01-08 11:09:53,895  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6dd211e55d6dd3e]
+2013-01-08 11:09:53,895  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10034, sys_idx_sys_pk_10032_10033]
+2013-01-08 11:09:53,940  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY_CATEGORY
+2013-01-08 11:09:53,940  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [subcategories_entityid, category_entityid]
+2013-01-08 11:09:53,940  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk8635931f1502c76a, fk8635931fe152b9cc]
+2013-01-08 11:09:53,940  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_ct_10039_10041, sys_idx_10044, sys_idx_sys_pk_10038_10040, sys_idx_10042]
+2013-01-08 11:09:53,964  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.DIMENSIONS
+2013-01-08 11:09:53,964  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [height, entityid, width, thickness]
+2013-01-08 11:09:53,964  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:09:53,964  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10047_10048]
+2013-01-08 11:09:53,987  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.EPUB
+2013-01-08 11:09:53,988  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-08 11:09:53,988  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:09:53,988  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10050_10051]
+2013-01-08 11:09:54,017  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.IMAGELINKS
+2013-01-08 11:09:54,017  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [thumbnail, entityid, small, medium, large, extralarge, smallthumbnail]
+2013-01-08 11:09:54,017  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:09:54,017  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10053_10054]
+2013-01-08 11:09:54,046  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.INDUSTRYIDENTIFIERS
+2013-01-08 11:09:54,046  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, type, identifier]
+2013-01-08 11:09:54,046  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:09:54,047  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10056_10057]
+2013-01-08 11:09:54,069  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.LISTPRICE
+2013-01-08 11:09:54,069  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-08 11:09:54,070  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:09:54,070  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10059_10060]
+2013-01-08 11:09:54,090  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.PDF
+2013-01-08 11:09:54,090  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-08 11:09:54,090  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:09:54,091  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10062_10063]
+2013-01-08 11:09:54,123  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RECOMMENDEDINFO
+2013-01-08 11:09:54,123  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, explanation]
+2013-01-08 11:09:54,124  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:09:54,124  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10065_10066]
+2013-01-08 11:09:54,155  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RETAILPRICE
+2013-01-08 11:09:54,156  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-08 11:09:54,156  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:09:54,156  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10068_10069]
+2013-01-08 11:09:54,182  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.REVIEW
+2013-01-08 11:09:54,183  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [content, title, author_entityid, entityid, fulltexturl, volumeid, rating, type, date, kind, source_entityid]
+2013-01-08 11:09:54,183  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk91b3e3788c74974a, fk91b3e3788ed6354a]
+2013-01-08 11:09:54,183  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10142, sys_idx_sys_pk_10071_10072, sys_idx_10073]
+2013-01-08 11:09:54,221  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SALEINFO
+2013-01-08 11:09:54,221  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [isebook, saleability, entityid, listprice_entityid, retailprice_entityid, buylink, country]
+2013-01-08 11:09:54,222  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk773b81b5cc82e510, fk773b81b5ce559b70]
+2013-01-08 11:09:54,222  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10080, sys_idx_sys_pk_10076_10077, sys_idx_10078]
+2013-01-08 11:09:54,269  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SEARCHINFO
+2013-01-08 11:09:54,269  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [textsnippet, entityid]
+2013-01-08 11:09:54,270  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:09:54,270  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10083_10084]
+2013-01-08 11:09:54,307  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SOURCE
+2013-01-08 11:09:54,308  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [description, entityid, extradescription, url]
+2013-01-08 11:09:54,308  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 11:09:54,308  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10086_10087]
+2013-01-08 11:09:54,350  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.USERINFO
+2013-01-08 11:09:54,350  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, isinmybooks, ispreordered, review_entityid, ispurchased]
+2013-01-08 11:09:54,351  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkf3f34b395de56bea]
+2013-01-08 11:09:54,351  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10091, sys_idx_sys_pk_10089_10090]
+2013-01-08 11:09:54,398  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUME
+2013-01-08 11:09:54,398  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [etag, entityid, searchinfo_entityid, recommendedinfo_entityid, saleinfo_entityid, userinfo_entityid, kind, id, selflink, volumeinfo_entityid, path, filename, accessinfo_entityid]
+2013-01-08 11:09:54,399  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk990fd33a10e1516a, fk990fd33ac5a8a2ca, fk990fd33a3cd1cf8a, fk990fd33a5f566f4a, fk990fd33ae71c5ea, fk990fd33ab26ac730]
+2013-01-08 11:09:54,399  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10144, sys_idx_10096, sys_idx_10104, sys_idx_sys_pk_10094_10095, sys_idx_10098, sys_idx_10102, sys_idx_10100]
+2013-01-08 11:09:54,442  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO
+2013-01-08 11:09:54,443  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [printtype, previewlink, entityid, averagerating, maincategory, publisheddate, publisher, dimensions_entityid, title, ratingscount, description, pagecount, imagelinks_entityid, subtitle, canonicalvolumelink, infolink, language, contentversion]
+2013-01-08 11:09:54,443  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk1a427f08c32b10a, fk1a427f089212900a]
+2013-01-08 11:09:54,444  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10111, sys_idx_10109, sys_idx_sys_pk_10107_10108]
+2013-01-08 11:09:54,481  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORY
+2013-01-08 11:09:54,481  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categoriess_entityid]
+2013-01-08 11:09:54,482  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6daa3c753cd1cf8a, fk6daa3c75b53ceab1]
+2013-01-08 11:09:54,482  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10117, sys_idx_sys_pk_10115_10116, sys_idx_10119]
+2013-01-08 11:09:54,524  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_INDUSTRYIDENTIFIERS
+2013-01-08 11:09:54,525  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, industryidentifiers_entityid]
+2013-01-08 11:09:54,525  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk9b8418553cd1cf8a, fk9b841855a16084d0]
+2013-01-08 11:09:54,525  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_ct_10123_10125, sys_idx_10126, sys_idx_10128]
+2013-01-08 11:09:54,559  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_AUTHORS
+2013-01-08 11:09:54,559  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [authors, volumeinfo_entityid]
+2013-01-08 11:09:54,560  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkb37dae113cd1cf8a]
+2013-01-08 11:09:54,560  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10132]
+2013-01-08 11:09:54,628  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORIES
+2013-01-08 11:09:54,629  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categories]
+2013-01-08 11:09:54,630  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk353ae7b33cd1cf8a]
+2013-01-08 11:09:54,630  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10136]
+2013-01-08 11:09:54,632  INFO [main] (SchemaUpdate.java:240) - HHH000232: Schema update complete
+2013-01-08 11:09:59,021  INFO [BookReaderThread] (ProducerConsumerManager.java:54) - Thread[BookReaderThread,5,main] start at Tue Jan 08 11:09:59 ART 2013
+2013-01-08 11:09:59,022  INFO [VolumeInfoSearchThread] (ProducerConsumerManager.java:54) - Thread[VolumeInfoSearchThread,5,main] start at Tue Jan 08 11:09:59 ART 2013
+2013-01-08 11:09:59,024  INFO [PersistVolumesThread] (ProducerConsumerManager.java:54) - Thread[PersistVolumesThread,5,main] start at Tue Jan 08 11:09:59 ART 2013
+2013-01-08 11:09:59,082  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: AddedBytes Cheat Sheets JavaScript.pdf
+2013-01-08 11:09:59,082  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Addison-Wesley Developing Hybrid Applications for the iPhone, Using HTML CSS and JavaScript to Build Dynamic Apps for the iPhone (2009).pdf
+2013-01-08 11:09:59,103  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Adobe Press Extending Acrobat Forms with JavaScript (2003) (no OCR).pdf
+2013-01-08 11:09:59,103  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Apress DOM Scripting, Web Design with JavaScript and the Document Object Model (2005).pdf
+2013-01-08 11:09:59,104  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Adobe Press Acrobat 7.0 JavaScript Scripting Reference (2005).pdf
+2013-01-08 11:09:59,104  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Apress Beginning Smartphone Web Development (2009).pdf
+2013-01-08 11:09:59,107  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Addison-Wesley Professional Dojo, Using the Dojo JavaScript Library to Build AJAX Applications (2009).pdf
+2013-01-08 11:09:59,107  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Apress Beginning PhoneGap, Mobile Web Framework for JavaScript and HTML5 (2012).pdf
+2013-01-08 11:09:59,107  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Addison-Wesley Dojo, Using the Dojo JavaScript Library to Build Ajax Applications (2009).pdf
+2013-01-08 11:09:59,114  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Apress Beginning iPhone and iPad Web Apps, Scripting with HTML5 CSS3 and JavaScript (2010).pdf
+2013-01-08 11:09:59,867 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:40) - AddedBytes Cheat Sheets JavaScript.pdf is open and contains 1 pages
+2013-01-08 11:09:59,870  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Apress DOM Scripting, Web Design with JavaScript and the Document Object Model 2nd (2010).pdf
+2013-01-08 11:10:00,560 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Addison-Wesley Professional Dojo, Using the Dojo JavaScript Library to Build AJAX Applications (2009).pdf is open and contains 317 pages
+2013-01-08 11:10:00,907 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - Apress DOM Scripting, Web Design with JavaScript and the Document Object Model (2005).pdf is open and contains 345 pages
+2013-01-08 11:10:00,989 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - Addison-Wesley Dojo, Using the Dojo JavaScript Library to Build Ajax Applications (2009).pdf is open and contains 334 pages
+2013-01-08 11:10:01,748 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Addison-Wesley Developing Hybrid Applications for the iPhone, Using HTML CSS and JavaScript to Build Dynamic Apps for the iPhone (2009).pdf is open and contains 214 pages
+2013-01-08 11:10:01,752 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:40) - Apress DOM Scripting, Web Design with JavaScript and the Document Object Model 2nd (2010).pdf is open and contains 337 pages
+2013-01-08 11:10:01,765 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Apress Beginning PhoneGap, Mobile Web Framework for JavaScript and HTML5 (2012).pdf is open and contains 346 pages
+2013-01-08 11:10:01,782 DEBUG [BookReaderThread-pool-9] (SearchISBN.java:40) - Apress Beginning Smartphone Web Development (2009).pdf is open and contains 366 pages
+2013-01-08 11:10:02,191 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - Adobe Press Acrobat 7.0 JavaScript Scripting Reference (2005).pdf is open and contains 680 pages
+2013-01-08 11:10:02,248  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Addison-Wesley Dojo, Using the Dojo JavaScript Library to Build Ajax Applications (2009).pdf: isbn found on page 5
+2013-01-08 11:10:02,468 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN 0-13-235804-2
+2013-01-08 11:10:02,471  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Apress Foundation HTML5 Animation with JavaScript (2011).pdf
+2013-01-08 11:10:02,473 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:40) - Apress Beginning iPhone and iPad Web Apps, Scripting with HTML5 CSS3 and JavaScript (2010).pdf is open and contains 513 pages
+2013-01-08 11:10:02,490  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Apress DOM Scripting, Web Design with JavaScript and the Document Object Model (2005).pdf: isbn found on page 3
+2013-01-08 11:10:02,500  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Addison-Wesley Professional Dojo, Using the Dojo JavaScript Library to Build AJAX Applications (2009).pdf: isbn found on page 2
+2013-01-08 11:10:02,501 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN 0-13-235804-2
+2013-01-08 11:10:02,502  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Apress Foundation Website Creation with CSS, XHTML and JavaScript (2008).pdf
+2013-01-08 11:10:02,504 ERROR [BookReaderThread-pool-5] (SearchISBN.java:66) - can't open pdf: Adobe Press Acrobat 7.0 JavaScript Scripting Reference (2005).pdf
+2013-01-08 11:10:02,846  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Apress Beginning iPhone and iPad Web Apps, Scripting with HTML5 CSS3 and JavaScript (2010).pdf: isbn found on page 4
+2013-01-08 11:10:02,675  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Addison-Wesley Developing Hybrid Applications for the iPhone, Using HTML CSS and JavaScript to Build Dynamic Apps for the iPhone (2009).pdf: isbn found on page 7
+2013-01-08 11:10:03,040 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN 978-0-321-60416-3
+2013-01-08 11:10:03,041  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Apress Metro Revealed, Building Windows 8 Apps with HTML5 and JavaScript (2012) (no OCR).pdf
+2013-01-08 11:10:02,641 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:81) - ISBN (pbk): 1-59059-533-5
+Printed
+2013-01-08 11:10:03,045  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Apress MooTools Essentials, The Official MooTools Reference for JavaScript and Ajax Development (2008).pdf
+2013-01-08 11:10:02,590  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Apress Beginning PhoneGap, Mobile Web Framework for JavaScript and HTML5 (2012).pdf: isbn found on page 9
+2013-01-08 11:10:03,056 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-4302-3903-1
+2013-01-08 11:10:03,057  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Apress Practical JavaScript, DOM Scripting and Ajax Projects (2007).pdf
+2013-01-08 11:10:02,569  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Apress Beginning Smartphone Web Development (2009).pdf: isbn found on page 4
+2013-01-08 11:10:03,062 DEBUG [BookReaderThread-pool-9] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-4302-2620-8
+2013-01-08 11:10:03,063  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Apress Pro Android Web Apps, Develop for Android Using HTML5 CSS3 and JavaScript (2011).pdf
+2013-01-08 11:10:02,514  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Apress DOM Scripting, Web Design with JavaScript and the Document Object Model 2nd (2010).pdf: isbn found on page 4
+2013-01-08 11:10:03,100 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-4302-3389-3
+2013-01-08 11:10:03,101  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Apress Pro iOS Web Design and Development, HTML5 CSS3 and JavaScript with Safari (2011).pdf
+2013-01-08 11:10:03,103 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-4302-3045-8
+2013-01-08 11:10:03,104  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Apress Pro JavaScript Design Patterns (2008).pdf
+2013-01-08 11:10:03,028  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Apress JavaScript for Absolute Beginners (2010).pdf
+2013-01-08 11:10:03,350 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - Apress Foundation HTML5 Animation with JavaScript (2011).pdf is open and contains 488 pages
+2013-01-08 11:10:03,430 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Apress Foundation Website Creation with CSS, XHTML and JavaScript (2008).pdf is open and contains 362 pages
+2013-01-08 11:10:03,473 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - Apress MooTools Essentials, The Official MooTools Reference for JavaScript and Ajax Development (2008).pdf is open and contains 275 pages
+2013-01-08 11:10:03,474 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Apress Practical JavaScript, DOM Scripting and Ajax Projects (2007).pdf is open and contains 553 pages
+2013-01-08 11:10:03,486 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Apress Metro Revealed, Building Windows 8 Apps with HTML5 and JavaScript (2012) (no OCR).pdf is open and contains 103 pages
+2013-01-08 11:10:03,499  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Apress Pro JavaScript RIA Techniques, Best Practices Performance and Presentation (2009).pdf
+2013-01-08 11:10:03,599  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Apress MooTools Essentials, The Official MooTools Reference for JavaScript and Ajax Development (2008).pdf: isbn found on page 1
+2013-01-08 11:10:03,601 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:81) - ISBN-13 (electronic):
+2013-01-08 11:10:03,601  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Apress Pro JavaScript with MooTools, Learning Advanced JavaScript Programming (2010).pdf
+2013-01-08 11:10:03,826  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Apress Foundation Website Creation with CSS, XHTML and JavaScript (2008).pdf: isbn found on page 1
+2013-01-08 11:10:03,827 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN 978-1-4302-0991- 1
+2013-01-08 11:10:03,827  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Apress The Essential Guide to HTML5, Using Games to Learn HTML5 and JavaScript (2010).pdf
+2013-01-08 11:10:03,911  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Apress Foundation HTML5 Animation with JavaScript (2011).pdf: isbn found on page 15
+2013-01-08 11:10:03,912 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-4302-3665-8
+2013-01-08 11:10:04,064 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:40) - Apress Pro JavaScript Design Patterns (2008).pdf is open and contains 280 pages
+2013-01-08 11:10:04,063 DEBUG [BookReaderThread-pool-9] (SearchISBN.java:40) - Apress Pro Android Web Apps, Develop for Android Using HTML5 CSS3 and JavaScript (2011).pdf is open and contains 382 pages
+2013-01-08 11:10:04,837  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Apress Pro JavaScript Design Patterns (2008).pdf: isbn found on page 2
+2013-01-08 11:10:04,857 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-59059-908-2
+ISBN-10
+2013-01-08 11:10:04,857  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Course Technology JavaScript 5th (2011).pdf
+2013-01-08 11:10:04,871  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Apress Pro Android Web Apps, Develop for Android Using HTML5 CSS3 and JavaScript (2011).pdf: isbn found on page 1
+2013-01-08 11:10:04,872 DEBUG [BookReaderThread-pool-9] (SearchISBN.java:81) - ISBN 978-1-4302-2629-1
+2013-01-08 11:10:04,943  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Hungry Minds JavaScript Bible 4th (2001).pdf
+2013-01-08 11:10:04,016 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Apress Pro JavaScript RIA Techniques, Best Practices Performance and Presentation (2009).pdf is open and contains 421 pages
+2013-01-08 11:10:04,958  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Apress Pro JavaScript RIA Techniques, Best Practices Performance and Presentation (2009).pdf: isbn found on page 2
+2013-01-08 11:10:04,961 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-4302-1934-7
+ISBN-13
+2013-01-08 11:10:04,014  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Apress Practical JavaScript, DOM Scripting and Ajax Projects (2007).pdf: isbn found on page 4
+2013-01-08 11:10:04,963 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-59059-816-0
+ISBN-10
+2013-01-08 11:10:04,963  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Hungry Minds Javascript Weekend Crash Course (2001).pdf
+2013-01-08 11:10:04,961  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Hungry Minds JavaScript Examples Bible, The Essential Companion to JavaScript Bible (2001).pdf
+2013-01-08 11:10:04,816  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Apress ZK, AJAX without JavaScript Framework (2007).pdf
+2013-01-08 11:10:05,225 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - Apress ZK, AJAX without JavaScript Framework (2007).pdf is open and contains 184 pages
+2013-01-08 11:10:05,242 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:40) - Apress Pro iOS Web Design and Development, HTML5 CSS3 and JavaScript with Safari (2011).pdf is open and contains 486 pages
+2013-01-08 11:10:05,244  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Apress ZK, AJAX without JavaScript Framework (2007).pdf: isbn found on page 3
+2013-01-08 11:10:05,246 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-59059-901-3
+ISBN-10
+2013-01-08 11:10:05,246  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne How to Do Everything with JavaScript (2003).pdf
+2013-01-08 11:10:05,257  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Apress Pro iOS Web Design and Development, HTML5 CSS3 and JavaScript with Safari (2011).pdf: isbn found on page 4
+2013-01-08 11:10:05,291 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Apress The Essential Guide to HTML5, Using Games to Learn HTML5 and JavaScript (2010).pdf is open and contains 377 pages
+2013-01-08 11:10:05,311  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Apress The Essential Guide to HTML5, Using Games to Learn HTML5 and JavaScript (2010).pdf: isbn found on page 4
+2013-01-08 11:10:05,329 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - Apress JavaScript for Absolute Beginners (2010).pdf is open and contains 505 pages
+2013-01-08 11:10:05,546 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-4302-3246-9
+2013-01-08 11:10:05,547  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne Javascript Demystified (2005).pdf
+2013-01-08 11:10:05,557  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Apress JavaScript for Absolute Beginners (2010).pdf: isbn found on page 1
+2013-01-08 11:10:05,557 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN 978-1-4302-7219-9
+2013-01-08 11:10:05,558  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne JavaScript, A Beginner's Guide 3rd (2010).pdf
+2013-01-08 11:10:05,580 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-4302-3383-1
+2013-01-08 11:10:05,580  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne Plug-In JavaScript, 100 Power Solutions (2011).pdf
+2013-01-08 11:10:05,596 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - Apress Pro JavaScript with MooTools, Learning Advanced JavaScript Programming (2010).pdf is open and contains 430 pages
+2013-01-08 11:10:05,686  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Apress Pro JavaScript with MooTools, Learning Advanced JavaScript Programming (2010).pdf: isbn found on page 4
+2013-01-08 11:10:05,687 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-4302-3054-0
+2013-01-08 11:10:05,688  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Microsoft Press JavaScript 2nd (2010).pdf
+2013-01-08 11:10:06,433 DEBUG [BookReaderThread-pool-9] (SearchISBN.java:40) - Hungry Minds JavaScript Bible 4th (2001).pdf is open and contains 2327 pages
+2013-01-08 11:10:06,440 ERROR [BookReaderThread-pool-9] (SearchISBN.java:66) - can't open pdf: Hungry Minds JavaScript Bible 4th (2001).pdf
+2013-01-08 11:10:06,440  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Microsoft Press JavaScript Step by Step 2nd (2010).pdf
+2013-01-08 11:10:06,453 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:40) - Course Technology JavaScript 5th (2011).pdf is open and contains 925 pages
+2013-01-08 11:10:06,562 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - Microsoft Press JavaScript 2nd (2010).pdf is open and contains 478 pages
+2013-01-08 11:10:06,667 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - MCGraw-Hill Osborne How to Do Everything with JavaScript (2003).pdf is open and contains 369 pages
+2013-01-08 11:10:06,682 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - MCGraw-Hill Osborne JavaScript, A Beginner's Guide 3rd (2010).pdf is open and contains 512 pages
+2013-01-08 11:10:06,746  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: New Riders Publishing JavaScript Design (2001).pdf
+2013-01-08 11:10:06,789  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Course Technology JavaScript 5th (2011).pdf: isbn found on page 5
+2013-01-08 11:10:06,790 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:81) - ISBN-13: 978-0-538-74887-2
+2013-01-08 11:10:06,790  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: New Riders Publishing Scriptin' with JavaScript and Ajax, A Designer’s Guide (2010).pdf
+2013-01-08 11:10:06,800  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - MCGraw-Hill Osborne JavaScript, A Beginner's Guide 3rd (2010).pdf: isbn found on page 5
+2013-01-08 11:10:06,801 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN: 978-0-07-163296-6
+2013-01-08 11:10:06,801  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: No Starch Press The Book of JavaScript, A Practical Guide to Interactive Web Pages (2000).pdf
+2013-01-08 11:10:06,903 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:40) - MCGraw-Hill Osborne Javascript Demystified (2005).pdf is open and contains 401 pages
+2013-01-08 11:10:07,065 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - New Riders Publishing JavaScript Design (2001).pdf is open and contains 368 pages
+2013-01-08 11:10:07,068  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - New Riders Publishing JavaScript Design (2001).pdf: isbn found on page 1
+2013-01-08 11:10:07,069 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN: 0-7357-1167-4
+2013-01-08 11:10:07,105 DEBUG [BookReaderThread-pool-9] (SearchISBN.java:40) - Microsoft Press JavaScript Step by Step 2nd (2010).pdf is open and contains 505 pages
+2013-01-08 11:10:07,154  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: OReilly Adobe Integrated Runtime (AIR) for JavaScript Developers, Pocket Guide (2007).pdf
+2013-01-08 11:10:07,072 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - No Starch Press The Book of JavaScript, A Practical Guide to Interactive Web Pages (2000).pdf is open and contains 333 pages
+2013-01-08 11:10:07,260  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - No Starch Press The Book of JavaScript, A Practical Guide to Interactive Web Pages (2000).pdf: isbn found on page 1
+2013-01-08 11:10:07,261 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN: 1886411360
+2013-01-08 11:10:07,262  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: OReilly Building Android Apps with HTML CSS and JavaScript (2010).pdf
+2013-01-08 11:10:07,253 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - Adobe Press Extending Acrobat Forms with JavaScript (2003) (no OCR).pdf is open and contains 281 pages
+2013-01-08 11:10:07,244 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - MCGraw-Hill Osborne Plug-In JavaScript, 100 Power Solutions (2011).pdf is open and contains 433 pages
+2013-01-08 11:10:07,370  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - MCGraw-Hill Osborne Plug-In JavaScript, 100 Power Solutions (2011).pdf: isbn found on page 3
+2013-01-08 11:10:07,371 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN: 978-0-07-173862-0
+2013-01-08 11:10:07,371  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: OReilly Building Android Apps with HTML CSS and JavaScript 2nd (2012).pdf
+2013-01-08 11:10:07,420 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Hungry Minds Javascript Weekend Crash Course (2001).pdf is open and contains 427 pages
+2013-01-08 11:10:07,425  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: OReilly JavaScript and DHTML Cookbook 2nd (2007).pdf
+2013-01-08 11:10:07,427 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Hungry Minds JavaScript Examples Bible, The Essential Companion to JavaScript Bible (2001).pdf is open and contains 631 pages
+2013-01-08 11:10:07,432  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Hungry Minds Javascript Weekend Crash Course (2001).pdf: isbn found on page 1
+2013-01-08 11:10:07,433 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN 0-7645-4804-2
+2013-01-08 11:10:07,433  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: OReilly JavaScript Application Cookbook (1999).pdf
+2013-01-08 11:10:07,436  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Hungry Minds JavaScript Examples Bible, The Essential Companion to JavaScript Bible (2001).pdf: isbn found on page 1
+2013-01-08 11:10:07,436 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN 0-7645-4855-7
+2013-01-08 11:10:07,676 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - OReilly Building Android Apps with HTML CSS and JavaScript (2010).pdf is open and contains 182 pages
+2013-01-08 11:10:07,648 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:40) - New Riders Publishing Scriptin' with JavaScript and Ajax, A Designer’s Guide (2010).pdf is open and contains 312 pages
+2013-01-08 11:10:07,717  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - New Riders Publishing Scriptin' with JavaScript and Ajax, A Designer’s Guide (2010).pdf: isbn found on page 1
+2013-01-08 11:10:07,719 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:81) - ISBN: 0321616952,
+2013-01-08 11:10:07,719  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: OReilly JavaScript Pocket Reference 3rd (2012).pdf
+2013-01-08 11:10:07,617 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - OReilly Adobe Integrated Runtime (AIR) for JavaScript Developers, Pocket Guide (2007).pdf is open and contains 176 pages
+2013-01-08 11:10:07,709  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: OReilly JavaScript Cookbook (2010).pdf
+2013-01-08 11:10:07,731  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - OReilly Building Android Apps with HTML CSS and JavaScript (2010).pdf: isbn found on page 6
+2013-01-08 11:10:07,731 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN: 978-1-449-38326-8
+2013-01-08 11:10:07,732  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: OReilly JavaScript, The Definitive Guide 6th (2011).pdf
+2013-01-08 11:10:07,834  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - OReilly Adobe Integrated Runtime (AIR) for JavaScript Developers, Pocket Guide (2007).pdf: isbn found on page 6
+2013-01-08 11:10:07,835 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN-10: 0-596-51519-7
+2013-01-08 11:10:07,835  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: OReilly JavaScript, The Missing Manual (2008).pdf
+2013-01-08 11:10:08,005 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - OReilly JavaScript Application Cookbook (1999).pdf is open and contains 444 pages
+2013-01-08 11:10:08,013  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - OReilly JavaScript Application Cookbook (1999).pdf: isbn found on page 1
+2013-01-08 11:10:08,013 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN: 1-56592-577-7
+2013-01-08 11:10:08,014  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: OReilly Learning JavaScript 2nd (2009).pdf
+2013-01-08 11:10:08,039 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - OReilly Building Android Apps with HTML CSS and JavaScript 2nd (2012).pdf is open and contains 176 pages
+2013-01-08 11:10:08,175  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - OReilly Building Android Apps with HTML CSS and JavaScript 2nd (2012).pdf: isbn found on page 4
+2013-01-08 11:10:08,176 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN: 978-1-449-31641-9
+2013-01-08 11:10:08,176  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: OReilly Learning the iOS 4 SDK for JavaScript Programmers (2011).pdf
+2013-01-08 11:10:08,154 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - OReilly JavaScript and DHTML Cookbook 2nd (2007).pdf is open and contains 606 pages
+2013-01-08 11:10:08,230  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - OReilly JavaScript and DHTML Cookbook 2nd (2007).pdf: isbn found on page 5
+2013-01-08 11:10:08,231 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:81) - ISBN-10:  0-596-51408-5
+2013-01-08 11:10:08,232  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: OReilly Scripting InDesign CS3-4 with JavaScript (2009).pdf
+2013-01-08 11:10:08,582  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - MCGraw-Hill Osborne Javascript Demystified (2005).pdf: isbn found on page 96
+2013-01-08 11:10:08,583 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:81) - ISBN: 0072254548
+2013-01-08 11:10:08,584  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: OReilly Supercharged JavaScript Graphics, With HTML5 Canvas and jQuery (2011).pdf
+2013-01-08 11:10:08,596 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - OReilly Learning JavaScript 2nd (2009).pdf is open and contains 398 pages
+2013-01-08 11:10:08,629  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - OReilly Learning JavaScript 2nd (2009).pdf: isbn found on page 6
+2013-01-08 11:10:08,630 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN: 978-0-596-52187-5
+2013-01-08 11:10:08,630  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Packt Publishing Django JavaScript Integration, AJAX and jQuery (2010).pdf
+2013-01-08 11:10:08,665 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - OReilly Scripting InDesign CS3-4 with JavaScript (2009).pdf is open and contains 74 pages
+2013-01-08 11:10:08,711 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - OReilly Learning the iOS 4 SDK for JavaScript Programmers (2011).pdf is open and contains 318 pages
+2013-01-08 11:10:08,729  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - OReilly Scripting InDesign CS3-4 with JavaScript (2009).pdf: isbn found on page 1
+2013-01-08 11:10:08,729 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:81) - ISBN: 978-0-596-80252-3
+2013-01-08 11:10:08,730  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Packt Publishing Drupal 6 JavaScript and jQuery (2009).pdf
+2013-01-08 11:10:08,712 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:40) - OReilly JavaScript Pocket Reference 3rd (2012).pdf is open and contains 280 pages
+2013-01-08 11:10:09,287 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - OReilly JavaScript, The Definitive Guide 6th (2011).pdf is open and contains 1098 pages
+2013-01-08 11:10:09,292  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - OReilly Learning the iOS 4 SDK for JavaScript Programmers (2011).pdf: isbn found on page 6
+2013-01-08 11:10:09,293 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN: 978-1-449-38845-4
+2013-01-08 11:10:09,293  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Packt Publishing iPhone JavaScript Cookbook (2011).pdf
+2013-01-08 11:10:09,306  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - OReilly JavaScript, The Definitive Guide 6th (2011).pdf: isbn found on page 6
+2013-01-08 11:10:09,326 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN: 978-0-596-80552-4
+2013-01-08 11:10:09,326  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Packt Publishing JavaScript Testing, Beginner's Guide (2010).pdf
+2013-01-08 11:10:09,328  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - OReilly JavaScript Pocket Reference 3rd (2012).pdf: isbn found on page 4
+2013-01-08 11:10:09,331 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:81) - ISBN: 978-1-449-31685-3
+2013-01-08 11:10:09,331  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Packt Publishing Joomla 1.5 JavaScript jQuery (2010).pdf
+2013-01-08 11:10:09,332 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - OReilly JavaScript Cookbook (2010).pdf is open and contains 554 pages
+2013-01-08 11:10:09,376  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - OReilly JavaScript Cookbook (2010).pdf: isbn found on page 5
+2013-01-08 11:10:09,377 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN: 978-0-596-80613-2
+2013-01-08 11:10:09,377  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Packt Publishing Moodle JavaScript Cookbook (2011).pdf
+2013-01-08 11:10:09,591 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:40) - Packt Publishing Joomla 1.5 JavaScript jQuery (2010).pdf is open and contains 292 pages
+2013-01-08 11:10:09,601  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Packt Publishing Joomla 1.5 JavaScript jQuery (2010).pdf: isbn found on page 1
+2013-01-08 11:10:09,602 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:81) - ISBN: 978-1-847192-50-9
+2013-01-08 11:10:09,602  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Packt Publishing Sencha Touch Mobile JavaScript Framework (2012).pdf
+2013-01-08 11:10:09,611 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - Packt Publishing Drupal 6 JavaScript and jQuery (2009).pdf is open and contains 333 pages
+2013-01-08 11:10:09,713  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Packt Publishing Drupal 6 JavaScript and jQuery (2009).pdf: isbn found on page 1
+2013-01-08 11:10:09,714 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:81) - ISBN: 978-1-847196-40-8
+2013-01-08 11:10:09,714  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Packt Publishing Unity 3.x Game Development Essentials, Game Development with C# and Javascript 2nd (2011).pdf
+2013-01-08 11:10:09,717 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Packt Publishing iPhone JavaScript Cookbook (2011).pdf is open and contains 328 pages
+2013-01-08 11:10:09,750 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:40) - OReilly Supercharged JavaScript Graphics, With HTML5 Canvas and jQuery (2011).pdf is open and contains 280 pages
+2013-01-08 11:10:09,770  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - OReilly Supercharged JavaScript Graphics, With HTML5 Canvas and jQuery (2011).pdf: isbn found on page 6
+2013-01-08 11:10:09,771 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:81) - ISBN: 978-1-449-39363-2
+2013-01-08 11:10:09,771  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Peachpit Press The JavaScript Pocket Guide (2010).pdf
+2013-01-08 11:10:09,964  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Packt Publishing iPhone JavaScript Cookbook (2011).pdf: isbn found on page 1
+2013-01-08 11:10:09,964 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN: 978-1-849691-14-7
+2013-01-08 11:10:09,965  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Peachpit Press Visual QuickStart Guide JavaScript 8th (2012).pdf
+2013-01-08 11:10:09,968 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Packt Publishing Django JavaScript Integration, AJAX and jQuery (2010).pdf is open and contains 324 pages
+2013-01-08 11:10:10,000 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Packt Publishing Moodle JavaScript Cookbook (2011).pdf is open and contains 180 pages
+2013-01-08 11:10:10,013  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Packt Publishing Moodle JavaScript Cookbook (2011).pdf: isbn found on page 1
+2013-01-08 11:10:10,014 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN: 978-1-849511-94-0
+2013-01-08 11:10:10,014  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Peachpit Press Visual QuickStart Guide JavaScript and Ajax for the Web 6th (2006).pdf
+2013-01-08 11:10:10,030 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:40) - Packt Publishing Sencha Touch Mobile JavaScript Framework (2012).pdf is open and contains 316 pages
+2013-01-08 11:10:10,040  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Packt Publishing Sencha Touch Mobile JavaScript Framework (2012).pdf: isbn found on page 1
+2013-01-08 11:10:10,041 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:81) - ISBN: 978-1-84951-004-2
+2013-01-08 11:10:10,041  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Pearson Education Publishing JavaScript for Programmers (2010).pdf
+2013-01-08 11:10:10,050  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Packt Publishing Django JavaScript Integration, AJAX and jQuery (2010).pdf: isbn found on page 1
+2013-01-08 11:10:10,051 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN: 978-1-847197-56-6
+2013-01-08 11:10:10,051  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Pragmatic Bookshelf Publishing Mastering Dojo, JavaScript and AJAX Tools for Great Web Experiences (2008).pdf
+2013-01-08 11:10:10,056 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - OReilly JavaScript, The Missing Manual (2008).pdf is open and contains 545 pages
+2013-01-08 11:10:10,104  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - OReilly JavaScript, The Missing Manual (2008).pdf: isbn found on page 4
+2013-01-08 11:10:10,105 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN:  978-0-596-51589-8
+2013-01-08 11:10:10,106  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Pragmatic Bookshelf Publishing Prototype and script.aculo.us, You Never Knew JavaScript Could Do This (2007).pdf
+2013-01-08 11:10:10,188 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:40) - Peachpit Press The JavaScript Pocket Guide (2010).pdf is open and contains 312 pages
+2013-01-08 11:10:10,309  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Peachpit Press The JavaScript Pocket Guide (2010).pdf: isbn found on page 3
+2013-01-08 11:10:10,309 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:81) - ISBN-13:   978-0-321-70095-7
+2013-01-08 11:10:10,310  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Prentice Hall AJAX, Creating Web Pages with Asynchronous JavaScript and XML (2006).pdf
+2013-01-08 11:10:10,327  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Microsoft Press JavaScript 2nd (2010).pdf: isbn found on page 102
+2013-01-08 11:10:10,330 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:81) - isbn publisher 
+MySQL
+2013-01-08 11:10:10,331  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Prentice Hall Essential JavaScript for Web Professionals (1999).pdf
+2013-01-08 11:10:10,406 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - Packt Publishing JavaScript Testing, Beginner's Guide (2010).pdf is open and contains 272 pages
+2013-01-08 11:10:10,411  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Packt Publishing JavaScript Testing, Beginner's Guide (2010).pdf: isbn found on page 1
+2013-01-08 11:10:10,412 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - Pragmatic Bookshelf Publishing Prototype and script.aculo.us, You Never Knew JavaScript Could Do This (2007).pdf is open and contains 427 pages
+2013-01-08 11:10:10,412 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN: 978-1-847197-24-5
+2013-01-08 11:10:10,412  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Prentice Hall JavaScript for Programmers (2010).pdf
+2013-01-08 11:10:10,710 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - Prentice Hall Essential JavaScript for Web Professionals (1999).pdf is open and contains 162 pages
+2013-01-08 11:10:10,714  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Prentice Hall Essential JavaScript for Web Professionals (1999).pdf: isbn found on page 1
+2013-01-08 11:10:10,715 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:81) - ISBN: 0-13-013056-7
+2013-01-08 11:10:10,716  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Prima Publishing JavaScript Programming for the Absolute Beginner (2001).pdf
+2013-01-08 11:10:10,716  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Pragmatic Bookshelf Publishing Prototype and script.aculo.us, You Never Knew JavaScript Could Do This (2007).pdf: isbn found on page 2
+2013-01-08 11:10:10,743 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN-10: 1-934356-01-8
+2013-01-08 11:10:10,744  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: QUE JavaScript 1.5 by Example (2001).pdf
+2013-01-08 11:10:10,989 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:40) - Pearson Education Publishing JavaScript for Programmers (2010).pdf is open and contains 436 pages
+2013-01-08 11:10:11,014 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Pragmatic Bookshelf Publishing Mastering Dojo, JavaScript and AJAX Tools for Great Web Experiences (2008).pdf is open and contains 546 pages
+2013-01-08 11:10:11,218  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Pearson Education Publishing JavaScript for Programmers (2010).pdf: isbn found on page 5
+2013-01-08 11:10:11,219 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:81) - ISBN 0-13-700131-2
+2013-01-08 11:10:11,219  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: QUE JavaScript Goodies 2nd (2002).pdf
+2013-01-08 11:10:11,298  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Pragmatic Bookshelf Publishing Mastering Dojo, JavaScript and AJAX Tools for Great Web Experiences (2008).pdf: isbn found on page 4
+2013-01-08 11:10:11,299 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN-10: 1-934356-11-5
+2013-01-08 11:10:11,300  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: QUE Special Edition Using JavaScript (2001).pdf
+2013-01-08 11:10:12,127 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - Prima Publishing JavaScript Programming for the Absolute Beginner (2001).pdf is open and contains 368 pages
+2013-01-08 11:10:12,147  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Prima Publishing JavaScript Programming for the Absolute Beginner (2001).pdf: isbn found on page 3
+2013-01-08 11:10:12,148 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:81) - ISBN: 0-7615-3410-5
+2013-01-08 11:10:12,148  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: QUE The Complete Idiot's Guide to JavaScript 2nd (1997).pdf
+2013-01-08 11:10:12,203 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - QUE The Complete Idiot's Guide to JavaScript 2nd (1997).pdf is open and contains 258 pages
+2013-01-08 11:10:12,254 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - QUE JavaScript 1.5 by Example (2001).pdf is open and contains 312 pages
+2013-01-08 11:10:12,258 ERROR [BookReaderThread-pool-3] (SearchISBN.java:66) - can't open pdf: QUE JavaScript 1.5 by Example (2001).pdf
+2013-01-08 11:10:12,259  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: SAMS JavaScript Phrasebook, Essential Code and Commands (2006).pdf
+2013-01-08 11:10:12,490 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - Prentice Hall JavaScript for Programmers (2010).pdf is open and contains 436 pages
+2013-01-08 11:10:12,754 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:40) - Prentice Hall AJAX, Creating Web Pages with Asynchronous JavaScript and XML (2006).pdf is open and contains 460 pages
+2013-01-08 11:10:12,759  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Prentice Hall AJAX, Creating Web Pages with Asynchronous JavaScript and XML (2006).pdf: isbn found on page 2
+2013-01-08 11:10:12,760 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:81) - ISBN-10: 0-13-227267-9
+2013-01-08 11:10:12,760  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: SAMS JavaScript, Developer's Dictionary (2002).pdf
+2013-01-08 11:10:12,882 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Peachpit Press Visual QuickStart Guide JavaScript and Ajax for the Web 6th (2006).pdf is open and contains 756 pages
+2013-01-08 11:10:12,891  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Peachpit Press Visual QuickStart Guide JavaScript and Ajax for the Web 6th (2006).pdf: isbn found on page 2
+2013-01-08 11:10:12,892 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN-10: 0-321-43032-8
+2013-01-08 11:10:12,892  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: SAMS Pure JavaScript (1999).pdf
+2013-01-08 11:10:13,080 DEBUG [BookReaderThread-pool-1] (SearchISBN.java:40) - SAMS JavaScript, Developer's Dictionary (2002).pdf is open and contains 1198 pages
+2013-01-08 11:10:13,085 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - SAMS JavaScript Phrasebook, Essential Code and Commands (2006).pdf is open and contains 273 pages
+2013-01-08 11:10:13,097 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - QUE Special Edition Using JavaScript (2001).pdf is open and contains 911 pages
+2013-01-08 11:10:13,110 ERROR [BookReaderThread-pool-8] (SearchISBN.java:66) - can't open pdf: QUE Special Edition Using JavaScript (2001).pdf
+2013-01-08 11:10:13,110  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: SAMS Pure JavaScript 2nd (2002).pdf
+2013-01-08 11:10:13,133  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Prentice Hall JavaScript for Programmers (2010).pdf: isbn found on page 5
+2013-01-08 11:10:13,134 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN 0-13-700131-2
+2013-01-08 11:10:13,134  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: SAMS Teach Yourself Ajax JavaScript and PHP, All in One (2009).pdf
+2013-01-08 11:10:13,513 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - SAMS Pure JavaScript (1999).pdf is open and contains 1438 pages
+2013-01-08 11:10:13,536  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - SAMS Pure JavaScript (1999).pdf: isbn found on page 2
+2013-01-08 11:10:13,538 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN: 
+0672315475
+
+2013-01-08 11:10:13,538  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: SAMS Teach Yourself JavaScript in 21 days (2002).pdf
+2013-01-08 11:10:13,904 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - SAMS Teach Yourself JavaScript in 21 days (2002).pdf is open and contains 778 pages
+2013-01-08 11:10:13,967 DEBUG [BookReaderThread-pool-7] (SearchISBN.java:40) - QUE JavaScript Goodies 2nd (2002).pdf is open and contains 496 pages
+2013-01-08 11:10:14,154 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - SAMS Pure JavaScript 2nd (2002).pdf is open and contains 2229 pages
+2013-01-08 11:10:14,246 ERROR [BookReaderThread-pool-8] (SearchISBN.java:66) - can't open pdf: SAMS Pure JavaScript 2nd (2002).pdf
+2013-01-08 11:10:14,246  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: SAMS Teach Yourself Javascript in 24 Hours 3rd (2002).pdf
+2013-01-08 11:10:14,274 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - SAMS Teach Yourself Ajax JavaScript and PHP, All in One (2009).pdf is open and contains 383 pages
+2013-01-08 11:10:14,298  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - SAMS Teach Yourself Ajax JavaScript and PHP, All in One (2009).pdf: isbn found on page 4
+2013-01-08 11:10:14,299 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN-13: 978-0-672-32965-4
+2013-01-08 11:10:14,299  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: SAMS Teach Yourself JavaScript in 24 Hours 4th (2007).pdf
+2013-01-08 11:10:14,633 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - SAMS Teach Yourself Javascript in 24 Hours 3rd (2002).pdf is open and contains 451 pages
+2013-01-08 11:10:14,884  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: SAMS Teach Yourself JavaScript in a Week (1996).pdf
+2013-01-08 11:10:14,976 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - SAMS Teach Yourself JavaScript in 24 Hours 4th (2007).pdf is open and contains 456 pages
+2013-01-08 11:10:15,024 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Peachpit Press Visual QuickStart Guide JavaScript 8th (2012).pdf is open and contains 544 pages
+2013-01-08 11:10:15,037  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Peachpit Press Visual QuickStart Guide JavaScript 8th (2012).pdf: isbn found on page 3
+2013-01-08 11:10:15,039 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN 13:  978-0-321-77297-8
+ISBN
+2013-01-08 11:10:15,039  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: SitePoint DHTML Utopia, Modern Web Design Using JavaScript and DOM (2005).pdf
+2013-01-08 11:10:15,846 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - SitePoint DHTML Utopia, Modern Web Design Using JavaScript and DOM (2005).pdf is open and contains 336 pages
+2013-01-08 11:10:15,916  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - SAMS Teach Yourself Javascript in 24 Hours 3rd (2002).pdf: isbn found on page 22
+2013-01-08 11:10:15,918 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN (excluding
+2013-01-08 11:10:15,918  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: SitePoint The Art and Science of JavaScript (2007).pdf
+2013-01-08 11:10:15,984 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - SAMS Teach Yourself JavaScript in a Week (1996).pdf is open and contains 161 pages
+2013-01-08 11:10:16,121  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - SitePoint DHTML Utopia, Modern Web Design Using JavaScript and DOM (2005).pdf: isbn found on page 2
+2013-01-08 11:10:16,123 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN 0–9579218–9–6
+Printed
+2013-01-08 11:10:16,123  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: SitePoint The JavaScript Anthology, 101 Essential Tips Tricks and Hacks (2006).pdf
+2013-01-08 11:10:16,370 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - SitePoint The JavaScript Anthology, 101 Essential Tips Tricks and Hacks (2006).pdf is open and contains 603 pages
+2013-01-08 11:10:16,374  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - SitePoint The JavaScript Anthology, 101 Essential Tips Tricks and Hacks (2006).pdf: isbn found on page 2
+2013-01-08 11:10:16,375 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN 0-9752402-6-9
+2013-01-08 11:10:16,375  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Springer Publishing An Introduction to HTML and JavaScript for Scientists and Engineers (2007).pdf
+2013-01-08 11:10:16,495 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Springer Publishing An Introduction to HTML and JavaScript for Scientists and Engineers (2007).pdf is open and contains 205 pages
+2013-01-08 11:10:16,495 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - SitePoint The Art and Science of JavaScript (2007).pdf is open and contains 276 pages
+2013-01-08 11:10:16,503  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Springer Publishing An Introduction to HTML and JavaScript for Scientists and Engineers (2007).pdf: isbn found on page 2
+2013-01-08 11:10:16,504 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN-13: 978-1-84628-656-8
+2013-01-08 11:10:16,504  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Springer Publishing An Introduction to PHP for Scientists and Engineers, Beyond JavaScript (2008).pdf
+2013-01-08 11:10:16,559  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - SitePoint The Art and Science of JavaScript (2007).pdf: isbn found on page 4
+2013-01-08 11:10:16,559 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN 978-0-9802858-4-0
+2013-01-08 11:10:16,560  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Springer Publishing Guide to HTML JavaScript and PHP, For Scientists and Engineers (2011).pdf
+2013-01-08 11:10:16,579 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Springer Publishing An Introduction to PHP for Scientists and Engineers, Beyond JavaScript (2008).pdf is open and contains 85 pages
+2013-01-08 11:10:16,585  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - SAMS Teach Yourself JavaScript in 24 Hours 4th (2007).pdf: isbn found on page 34
+2013-01-08 11:10:16,586 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN number. You’ll
+2013-01-08 11:10:16,586  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Visibooks HTML and JavaScript for Visual Learners (2001).pdf
+2013-01-08 11:10:16,765 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Springer Publishing Guide to HTML JavaScript and PHP, For Scientists and Engineers (2011).pdf is open and contains 430 pages
+2013-01-08 11:10:16,789 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - Visibooks HTML and JavaScript for Visual Learners (2001).pdf is open and contains 174 pages
+2013-01-08 11:10:16,829  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Springer Publishing An Introduction to PHP for Scientists and Engineers, Beyond JavaScript (2008).pdf: isbn found on page 4
+2013-01-08 11:10:16,830 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN: 978-1-84800-236-4
+2013-01-08 11:10:16,830  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Wiley Beginning JavaScript and CSS Development with jQuery (2009).pdf
+2013-01-08 11:10:17,043  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Springer Publishing Guide to HTML JavaScript and PHP, For Scientists and Engineers (2011).pdf: isbn found on page 5
+2013-01-08 11:10:17,043 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN 978-0-85729-448-7
+2013-01-08 11:10:17,044  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Wiley HTML, CSS and JavaScript Mobile Development for Dummies (2011).pdf
+2013-01-08 11:10:17,116 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Wiley Beginning JavaScript and CSS Development with jQuery (2009).pdf is open and contains 532 pages
+2013-01-08 11:10:17,219  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Wiley Beginning JavaScript and CSS Development with jQuery (2009).pdf: isbn found on page 2
+2013-01-08 11:10:17,220 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN: 978-0-470-22779-4
+2013-01-08 11:10:17,220  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Wiley JavaScript Bible 6th (2007).pdf
+2013-01-08 11:10:17,328  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Wiley Making Use of JavaScript (2002).pdf
+2013-01-08 11:10:17,535 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - Wiley Making Use of JavaScript (2002).pdf is open and contains 361 pages
+2013-01-08 11:10:17,622  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - SAMS Teach Yourself JavaScript in 21 days (2002).pdf: isbn found on page 112
+2013-01-08 11:10:17,624 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN Number</th>’);
+document.writeln(‘<th>Book
+2013-01-08 11:10:17,625  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Wiley Professional XMPP Programming with JavaScript and jQuery (2010).pdf
+2013-01-08 11:10:17,730  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Wiley Making Use of JavaScript (2002).pdf: isbn found on page 8
+2013-01-08 11:10:17,732  INFO [BookReaderThread-pool-3] (SearchISBN.java:78) - Wiley Making Use of JavaScript (2002).pdf isbn not match
+2013-01-08 11:10:17,903  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - SAMS Teach Yourself JavaScript in a Week (1996).pdf: isbn found on page 24
+2013-01-08 11:10:17,904 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:81) - ISBN 1-57521-073-8
+2013-01-08 11:10:17,904  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Wiley Web Application Design and Implementation, Apache 2 PHP5 MySQL JavaScript and Linux-UNIX (2007) (Scan, OCR).pdf
+2013-01-08 11:10:18,039 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Wiley Professional XMPP Programming with JavaScript and jQuery (2010).pdf is open and contains 458 pages
+2013-01-08 11:10:18,110  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Wiley Professional XMPP Programming with JavaScript and jQuery (2010).pdf: isbn found on page 2
+2013-01-08 11:10:18,255 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN: 978-0-470-54071-8
+2013-01-08 11:10:18,265  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Wordware Publishing Advanced Javascript 2nd (2001).pdf
+2013-01-08 11:10:18,313 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - Wiley Web Application Design and Implementation, Apache 2 PHP5 MySQL JavaScript and Linux-UNIX (2007) (Scan, OCR).pdf is open and contains 297 pages
+2013-01-08 11:10:18,613 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Wiley HTML, CSS and JavaScript Mobile Development for Dummies (2011).pdf is open and contains 435 pages
+2013-01-08 11:10:18,613  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Wordware Publishing Advanced JavaScript 3rd (2008).pdf
+2013-01-08 11:10:18,653  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Wiley HTML, CSS and JavaScript Mobile Development for Dummies (2011).pdf: isbn found on page 1
+2013-01-08 11:10:18,654 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN 978-1-118-02622-9
+2013-01-08 11:10:18,654  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Wordware Publishing Learn JavaScript (2002).pdf
+2013-01-08 11:10:18,913 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Wordware Publishing Advanced Javascript 2nd (2001).pdf is open and contains 733 pages
+2013-01-08 11:10:18,918 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Wordware Publishing Learn JavaScript (2002).pdf is open and contains 270 pages
+2013-01-08 11:10:18,938 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Wiley JavaScript Bible 6th (2007).pdf is open and contains 1200 pages
+2013-01-08 11:10:18,976  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Wordware Publishing Advanced Javascript 2nd (2001).pdf: isbn found on page 3
+2013-01-08 11:10:18,977 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN1-55622-852-X
+10987654321
+0105
+Product
+2013-01-08 11:10:18,977  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Wrox Press Beginning JavaScript 3rd (2007).pdf
+2013-01-08 11:10:19,363  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Wordware Publishing Learn JavaScript (2002).pdf: isbn found on page 3
+2013-01-08 11:10:19,364 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN 1-55622-856-2
+2013-01-08 11:10:19,365  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Wrox Press Beginning JavaScript 4th (2010).pdf
+2013-01-08 11:10:19,498  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Wiley JavaScript Bible 6th (2007).pdf: isbn found on page 3
+2013-01-08 11:10:19,499 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN 978-0-470-06916-5
+2013-01-08 11:10:19,499  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Wrox Press Beginning JavaScript and CSS Development with jQuery (2009).pdf
+2013-01-08 11:10:20,010 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Wrox Press Beginning JavaScript 4th (2010).pdf is open and contains 793 pages
+2013-01-08 11:10:20,026  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Wiley Web Application Design and Implementation, Apache 2 PHP5 MySQL JavaScript and Linux-UNIX (2007) (Scan, OCR).pdf: isbn found on page 4
+2013-01-08 11:10:20,027 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:81) - ISBN-13: 978-0-471-77391-7
+2013-01-08 11:10:20,027  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Wrox Press JavaScript Programmer's Reference (2009).pdf
+2013-01-08 11:10:20,126 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Wrox Press Beginning JavaScript and CSS Development with jQuery (2009).pdf is open and contains 560 pages
+2013-01-08 11:10:20,262  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Wrox Press Beginning JavaScript and CSS Development with jQuery (2009).pdf: isbn found on page 1
+2013-01-08 11:10:20,263 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN: 978-0-470-22779-4
+2013-01-08 11:10:20,263  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Wrox Press Professional JavaScript Frameworks, Prototype YUI Ext JS Dojo and MooTools (2009).pdf
+2013-01-08 11:10:20,288 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - Wordware Publishing Advanced JavaScript 3rd (2008).pdf is open and contains 617 pages
+2013-01-08 11:10:20,387  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Wrox Press Beginning JavaScript 4th (2010).pdf: isbn found on page 2
+2013-01-08 11:10:20,388 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN: 978-0-470-17708-2
+2013-01-08 11:10:20,388  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Wrox Press Professional XMPP Programming with JavaScript and jQuery (2010).pdf
+2013-01-08 11:10:20,500 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - Packt Publishing Unity 3.x Game Development Essentials, Game Development with C# and Javascript 2nd (2011).pdf is open and contains 488 pages
+2013-01-08 11:10:20,509  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Packt Publishing Unity 3.x Game Development Essentials, Game Development with C# and Javascript 2nd (2011).pdf: isbn found on page 1
+2013-01-08 11:10:20,510 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:81) - ISBN: 978-1-84969-040-9
+2013-01-08 11:10:20,510  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Wrox Press Web Standards Programmer's Reference, HTML CSS JavaScript Perl Python and PHP (2005).pdf
+2013-01-08 11:10:21,364  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Wordware Publishing Advanced JavaScript 3rd (2008).pdf: isbn found on page 3
+2013-01-08 11:10:21,364 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN-13: 978-1-59822-033-9
+2013-01-08 11:10:21,365  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Addison-Wesley Test-Driven JavaScript Development (2011).pdf
+2013-01-08 11:10:21,451 ERROR [BookReaderThread-pool-3] (SearchISBN.java:66) - can't open pdf: Wiley Making Use of JavaScript (2002).pdf
+2013-01-08 11:10:21,451  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Apress Beginning JavaScript with DOM Scripting and Ajax, From Novice to Professional (2006).pdf
+2013-01-08 11:10:21,934 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Wrox Press Professional JavaScript Frameworks, Prototype YUI Ext JS Dojo and MooTools (2009).pdf is open and contains 891 pages
+2013-01-08 11:10:21,953  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Wrox Press Professional JavaScript Frameworks, Prototype YUI Ext JS Dojo and MooTools (2009).pdf: isbn found on page 1
+2013-01-08 11:10:21,953 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN: 978-0-470-38459-6
+2013-01-08 11:10:21,954  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Apress HTML5 and JavaScript Projects (2011).pdf
+2013-01-08 11:10:21,977 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - Apress Beginning JavaScript with DOM Scripting and Ajax, From Novice to Professional (2006).pdf is open and contains 512 pages
+2013-01-08 11:10:21,986  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Apress Beginning JavaScript with DOM Scripting and Ajax, From Novice to Professional (2006).pdf: isbn found on page 1
+2013-01-08 11:10:22,023 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN 1-59059-680-3
+2013-01-08 11:10:22,023  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Apress Pro JavaScript Techniques (2006).pdf
+2013-01-08 11:10:22,216 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Apress HTML5 and JavaScript Projects (2011).pdf is open and contains 443 pages
+2013-01-08 11:10:22,216 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - Addison-Wesley Test-Driven JavaScript Development (2011).pdf is open and contains 525 pages
+2013-01-08 11:10:22,219 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - Wrox Press Web Standards Programmer's Reference, HTML CSS JavaScript Perl Python and PHP (2005).pdf is open and contains 842 pages
+2013-01-08 11:10:22,223  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Apress HTML5 and JavaScript Projects (2011).pdf: isbn found on page 2
+2013-01-08 11:10:22,225 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-4302-4032-7
+2013-01-08 11:10:22,225  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: No Starch Press Eloquent JavaScript, A Modern Introduction to Programming (2011).pdf
+2013-01-08 11:10:22,238  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Wrox Press Web Standards Programmer's Reference, HTML CSS JavaScript Perl Python and PHP (2005).pdf: isbn found on page 4
+2013-01-08 11:10:22,239 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:81) - ISBN-13: 978-0-7645-8820-4
+2013-01-08 11:10:22,239  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: No Starch Press The Book of JavaScript, A Practical Guide to Interactive Web Pages 2nd (2007).pdf
+2013-01-08 11:10:22,277 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Wrox Press Professional XMPP Programming with JavaScript and jQuery (2010).pdf is open and contains 484 pages
+2013-01-08 11:10:22,419 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - Wrox Press JavaScript Programmer's Reference (2009).pdf is open and contains 1035 pages
+2013-01-08 11:10:22,473 ERROR [BookReaderThread-pool-5] (SearchISBN.java:66) - can't open pdf: Addison-Wesley Test-Driven JavaScript Development (2011).pdf
+2013-01-08 11:10:22,473  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: OReilly Building iPhone Apps with HTML CSS and JavaScript (2010).pdf
+2013-01-08 11:10:22,514 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - No Starch Press The Book of JavaScript, A Practical Guide to Interactive Web Pages 2nd (2007).pdf is open and contains 519 pages
+2013-01-08 11:10:22,515  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Wrox Press JavaScript Programmer's Reference (2009).pdf: isbn found on page 1
+2013-01-08 11:10:22,516 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:81) - ISBN: 978-0-470-34472-9
+2013-01-08 11:10:22,516  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: OReilly Head First JavaScript (2008).pdf
+2013-01-08 11:10:22,542  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - No Starch Press The Book of JavaScript, A Practical Guide to Interactive Web Pages 2nd (2007).pdf: isbn found on page 3
+2013-01-08 11:10:22,542 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:81) - ISBN-10: 1-59327-106-9
+2013-01-08 11:10:22,543  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: OReilly High Performance Javascript (2010).pdf
+2013-01-08 11:10:22,620 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - Apress Pro JavaScript Techniques (2006).pdf is open and contains 362 pages
+2013-01-08 11:10:22,630 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - No Starch Press Eloquent JavaScript, A Modern Introduction to Programming (2011).pdf is open and contains 210 pages
+2013-01-08 11:10:22,634  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - No Starch Press Eloquent JavaScript, A Modern Introduction to Programming (2011).pdf: isbn found on page 2
+2013-01-08 11:10:22,635 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN-10: 1-59327-282-0
+2013-01-08 11:10:22,635  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: OReilly JavaScript and jQuery, The Missing Manual 2nd (2012).pdf
+2013-01-08 11:10:22,630  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Apress Pro JavaScript Techniques (2006).pdf: isbn found on page 2
+2013-01-08 11:10:22,664 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN-13 (pbk): 978-1-59059-727-9
+ISBN-10
+2013-01-08 11:10:22,665  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: OReilly JavaScript Patterns (2010).pdf
+2013-01-08 11:10:22,896 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - OReilly Building iPhone Apps with HTML CSS and JavaScript (2010).pdf is open and contains 186 pages
+2013-01-08 11:10:22,981 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - OReilly JavaScript Patterns (2010).pdf is open and contains 236 pages
+2013-01-08 11:10:22,968  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Wrox Press Professional XMPP Programming with JavaScript and jQuery (2010).pdf: isbn found on page 2
+2013-01-08 11:10:23,925 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - OReilly High Performance Javascript (2010).pdf is open and contains 231 pages
+2013-01-08 11:10:23,870 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Wrox Press Beginning JavaScript 3rd (2007).pdf is open and contains 791 pages
+2013-01-08 11:10:23,851  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - OReilly JavaScript Patterns (2010).pdf: isbn found on page 6
+2013-01-08 11:10:24,103 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN: 978-0-596-80675-0
+2013-01-08 11:10:24,103  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: OReilly JavaScript Web Applications (2011).pdf
+2013-01-08 11:10:24,092  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - OReilly High Performance Javascript (2010).pdf: isbn found on page 6
+2013-01-08 11:10:24,291 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:81) - ISBN: 978-0-596-80279-0
+2013-01-08 11:10:24,291  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: OReilly JavaScript, The Definitive Guide 5th (2006).pdf
+2013-01-08 11:10:24,045  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - OReilly Building iPhone Apps with HTML CSS and JavaScript (2010).pdf: isbn found on page 6
+2013-01-08 11:10:24,300 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN: 978-0-596-80578-4
+2013-01-08 11:10:24,301  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: OReilly JavaScript, The Good Parts (2008).pdf
+2013-01-08 11:10:24,315 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - OReilly Head First JavaScript (2008).pdf is open and contains 621 pages
+2013-01-08 11:10:24,321  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - OReilly Head First JavaScript (2008).pdf: isbn found on page 2
+2013-01-08 11:10:24,322 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:81) - ISBN-10: 0-596-52774-8
+2013-01-08 11:10:24,322  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: OReilly Learning PHP, MySQL and JavaScript (2009).pdf
+2013-01-08 11:10:23,937 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN: 978-0-470-52593-7
+2013-01-08 11:10:24,325  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: OReilly Making Isometric Social Real-Time Games with HTML5 CSS3 and Javascript (2011).pdf
+2013-01-08 11:10:24,175  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Wrox Press Beginning JavaScript 3rd (2007).pdf: isbn found on page 6
+2013-01-08 11:10:24,332 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN: 978-0-470-05151-1
+2013-01-08 11:10:24,332  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Packt Publishing Object-Oriented JavaScript (2008).pdf
+2013-01-08 11:10:24,162 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - OReilly JavaScript and jQuery, The Missing Manual 2nd (2012).pdf is open and contains 538 pages
+2013-01-08 11:10:24,561  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - OReilly JavaScript and jQuery, The Missing Manual 2nd (2012).pdf: isbn found on page 6
+2013-01-08 11:10:24,561 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN: 978-1-449-3-9
+2013-01-08 11:10:24,562  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Pragmatic Bookshelf Publishing CoffeeScript, Accelerated JavaScript Development (2011).pdf
+2013-01-08 11:10:24,623 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - OReilly JavaScript, The Good Parts (2008).pdf is open and contains 172 pages
+2013-01-08 11:10:24,739  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - OReilly JavaScript, The Good Parts (2008).pdf: isbn found on page 6
+2013-01-08 11:10:24,740 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN: 978-0-596-51774-8
+2013-01-08 11:10:24,740  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Pragmatic Bookshelf Publishing Continuous Testing, With Ruby Rails and JavaScript (2011).pdf
+2013-01-08 11:10:24,855 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - OReilly JavaScript, The Definitive Guide 5th (2006).pdf is open and contains 1651 pages
+2013-01-08 11:10:24,861  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - OReilly JavaScript, The Definitive Guide 5th (2006).pdf: isbn found on page 1
+2013-01-08 11:10:24,861 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:81) - ISBN-10: 0-596-10199-6
+2013-01-08 11:10:24,862  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Pragmatic Bookshelf Publishing Guide to JavaScript (2010).pdf
+2013-01-08 11:10:24,917 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - OReilly Making Isometric Social Real-Time Games with HTML5 CSS3 and Javascript (2011).pdf is open and contains 154 pages
+2013-01-08 11:10:24,931  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - OReilly Making Isometric Social Real-Time Games with HTML5 CSS3 and Javascript (2011).pdf: isbn found on page 4
+2013-01-08 11:10:24,932 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN: 978-1-449-30475-1
+2013-01-08 11:10:24,932  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Prentice Hall JavaScript by Example 2nd (2011).pdf
+2013-01-08 11:10:24,975 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Pragmatic Bookshelf Publishing CoffeeScript, Accelerated JavaScript Development (2011).pdf is open and contains 154 pages
+2013-01-08 11:10:24,979 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - OReilly Learning PHP, MySQL and JavaScript (2009).pdf is open and contains 528 pages
+2013-01-08 11:10:24,992  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - OReilly Learning PHP, MySQL and JavaScript (2009).pdf: isbn found on page 4
+2013-01-08 11:10:24,992 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:81) - ISBN: 978-0-596-15713-5
+2013-01-08 11:10:24,993  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Rockable Press Getting Good with Javascript (2011).pdf
+2013-01-08 11:10:25,009 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - OReilly JavaScript Web Applications (2011).pdf is open and contains 280 pages
+2013-01-08 11:10:25,026  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - OReilly JavaScript Web Applications (2011).pdf: isbn found on page 6
+2013-01-08 11:10:25,026 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN: 978-1-449-30351-8
+2013-01-08 11:10:25,027  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: SAMS Teach Yourself HTML, CSS and JavaScript All in One (2012).pdf
+2013-01-08 11:10:25,027  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Pragmatic Bookshelf Publishing CoffeeScript, Accelerated JavaScript Development (2011).pdf: isbn found on page 2
+2013-01-08 11:10:25,042 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN: 9781934356593.
+2013-01-08 11:10:25,042  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: SitePoint Simply JavaScript (2007).pdf
+2013-01-08 11:10:25,276 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Packt Publishing Object-Oriented JavaScript (2008).pdf is open and contains 339 pages
+2013-01-08 11:10:25,288  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Packt Publishing Object-Oriented JavaScript (2008).pdf: isbn found on page 2
+2013-01-08 11:10:25,289 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN 978-1-847194-14-5
+2013-01-08 11:10:25,289  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Wiley JavaScript and AJAX for Dummies (2010).pdf
+2013-01-08 11:10:25,357 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - Pragmatic Bookshelf Publishing Continuous Testing, With Ruby Rails and JavaScript (2011).pdf is open and contains 162 pages
+2013-01-08 11:10:25,372  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Pragmatic Bookshelf Publishing Continuous Testing, With Ruby Rails and JavaScript (2011).pdf: isbn found on page 2
+2013-01-08 11:10:25,373 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:81) - ISBN: 9781934356050.
+2013-01-08 11:10:25,373  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Wiley JavaScript Bible 5th (2004).pdf
+2013-01-08 11:10:25,494 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - Pragmatic Bookshelf Publishing Guide to JavaScript (2010).pdf is open and contains 141 pages
+2013-01-08 11:10:25,505  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Pragmatic Bookshelf Publishing Guide to JavaScript (2010).pdf: isbn found on page 2
+2013-01-08 11:10:25,506 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:81) - ISBN: 978-1934356-59-3
+2013-01-08 11:10:25,506  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Wiley JavaScript Bible 7th (2010).pdf
+2013-01-08 11:10:25,515 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Prentice Hall JavaScript by Example 2nd (2011).pdf is open and contains 885 pages
+2013-01-08 11:10:25,540  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Prentice Hall JavaScript by Example 2nd (2011).pdf: isbn found on page 3
+2013-01-08 11:10:25,545 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN 978-0-13-705489-3
+2013-01-08 11:10:25,545  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Wiley JavaScript for Dummies 4th (2005).pdf
+2013-01-08 11:10:25,845 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Wiley JavaScript and AJAX for Dummies (2010).pdf is open and contains 435 pages
+2013-01-08 11:10:25,960  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Wiley JavaScript and AJAX for Dummies (2010).pdf: isbn found on page 1
+2013-01-08 11:10:25,978 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:81) - ISBN 978-0-470-41799-7
+2013-01-08 11:10:25,978  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Wiley JavaScript in 10 Simple Steps or Less (2004).pdf
+2013-01-08 11:10:26,469 DEBUG [BookReaderThread-pool-10] (SearchISBN.java:40) - Rockable Press Getting Good with Javascript (2011).pdf is open and contains 146 pages
+2013-01-08 11:10:26,518 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - SitePoint Simply JavaScript (2007).pdf is open and contains 429 pages
+2013-01-08 11:10:26,543  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - SitePoint Simply JavaScript (2007).pdf: isbn found on page 4
+2013-01-08 11:10:26,544 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN 978-0-9802858-0-2
+2013-01-08 11:10:26,545  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Wiley Learn JavaScript and Ajax with w3schools (2010).pdf
+2013-01-08 11:10:26,925 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - Wiley JavaScript Bible 7th (2010).pdf is open and contains 2046 pages
+2013-01-08 11:10:27,295 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - SAMS Teach Yourself HTML, CSS and JavaScript All in One (2012).pdf is open and contains 608 pages
+2013-01-08 11:10:27,415  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Wiley JavaScript Bible 7th (2010).pdf: isbn found on page 8
+2013-01-08 11:10:27,416 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:81) - ISBN: 978-0-470-52691-0
+2013-01-08 11:10:27,416  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Wrox Press Beginning HTML XHTML CSS and JavaScript (2010).pdf
+2013-01-08 11:10:27,511  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - SAMS Teach Yourself HTML, CSS and JavaScript All in One (2012).pdf: isbn found on page 3
+2013-01-08 11:10:27,512 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:81) - ISBN-13: 978-0-672-33332-3
+2013-01-08 11:10:27,512  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Wrox Press Beginning iOS Application Development with HTML and JavaScript (2012).pdf
+2013-01-08 11:10:27,917 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:40) - Wiley Learn JavaScript and Ajax with w3schools (2010).pdf is open and contains 267 pages
+2013-01-08 11:10:29,335 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Wiley JavaScript for Dummies 4th (2005).pdf is open and contains 387 pages
+2013-01-08 11:10:29,401  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Wrox Press JavaScript Programmer's Reference (2001).pdf
+2013-01-08 11:10:29,413 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - Wrox Press Beginning HTML XHTML CSS and JavaScript (2010).pdf is open and contains 865 pages
+2013-01-08 11:10:29,474  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Wrox Press Beginning HTML XHTML CSS and JavaScript (2010).pdf: isbn found on page 2
+2013-01-08 11:10:29,498 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:81) - ISBN: 978-0-470-09697-0
+2013-01-08 11:10:29,498  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Wrox Press Professional JavaScript for Web Developers (2005).pdf
+2013-01-08 11:10:30,530 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Wrox Press JavaScript Programmer's Reference (2001).pdf is open and contains 2623 pages
+2013-01-08 11:10:30,557  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Wrox Press JavaScript Programmer's Reference (2001).pdf: isbn found on page 2
+2013-01-08 11:10:30,557 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN 1-861004-59-1
+2013-01-08 11:10:30,558  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Wrox Press Professional JavaScript for Web Developers 2nd (2009).pdf
+2013-01-08 11:10:32,380 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Wrox Press Professional JavaScript for Web Developers 2nd (2009).pdf is open and contains 809 pages
+2013-01-08 11:10:32,390  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Wrox Press Professional JavaScript for Web Developers 2nd (2009).pdf: isbn found on page 2
+2013-01-08 11:10:32,391 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN: 978-0-470-22780-0
+2013-01-08 11:10:32,391  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Wrox Press Professional JavaScript for Web Developers 3rd (2012).pdf
+2013-01-08 11:10:32,460 DEBUG [BookReaderThread-pool-3] (SearchISBN.java:40) - Wrox Press Beginning iOS Application Development with HTML and JavaScript (2012).pdf is open and contains 436 pages
+2013-01-08 11:10:32,619 ERROR [BookReaderThread-pool-3] (SearchISBN.java:66) - can't open pdf: Wrox Press Beginning iOS Application Development with HTML and JavaScript (2012).pdf
+2013-01-08 11:10:33,797 DEBUG [BookReaderThread-pool-2] (SearchISBN.java:40) - Wiley JavaScript in 10 Simple Steps or Less (2004).pdf is open and contains 626 pages
+2013-01-08 11:10:34,295 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:40) - Wrox Press Professional JavaScript for Web Developers 3rd (2012).pdf is open and contains 964 pages
+2013-01-08 11:10:34,382 DEBUG [BookReaderThread-pool-6] (SearchISBN.java:40) - Wrox Press Professional JavaScript for Web Developers (2005).pdf is open and contains 674 pages
+2013-01-08 11:10:34,471  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Wrox Press Professional JavaScript for Web Developers 3rd (2012).pdf: isbn found on page 1
+2013-01-08 11:10:34,472 DEBUG [BookReaderThread-pool-8] (SearchISBN.java:81) - ISBN: 978-1-1181-5900-2
+2013-01-08 11:10:35,175  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Microsoft Press JavaScript Step by Step 2nd (2010).pdf: isbn found on page 115
+2013-01-08 11:10:35,176 DEBUG [BookReaderThread-pool-9] (SearchISBN.java:81) - isbn>9780735624498</isbn>
+2013-01-08 11:10:36,868 DEBUG [BookReaderThread-pool-5] (SearchISBN.java:40) - Wiley JavaScript Bible 5th (2004).pdf is open and contains 1743 pages
+2013-01-08 11:10:38,011  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Wiley Learn JavaScript and Ajax with w3schools (2010).pdf: isbn found on page 4
+2013-01-08 11:10:38,012 DEBUG [BookReaderThread-pool-4] (SearchISBN.java:81) - ISBN: 978-0-470-61194-4
+2013-01-08 11:10:38,013  INFO [finalizer-BookReaderThread] (ProducerConsumerManager.java:106) - Thread[BookReaderThread,5,main] end at Tue Jan 08 11:10:38 ART 2013
+2013-01-08 11:10:39,016  INFO [finalizer-VolumeInfoSearchThread] (ProducerConsumerManager.java:106) - Thread[VolumeInfoSearchThread,5,main] end at Tue Jan 08 11:10:39 ART 2013
+2013-01-08 11:10:41,614  INFO [finalizer-PersistVolumesThread] (ProducerConsumerManager.java:106) - Thread[PersistVolumesThread,5,main] end at Tue Jan 08 11:10:41 ART 2013
+2013-01-08 11:10:41,622  INFO [main] (CreateTreeOfCategories.java:25) - class com.book.identification.task.CreateTreeOfCategories start at Tue Jan 08 11:10:41 ART 2013
+2013-01-08 11:10:41,812  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Dojo
+2013-01-08 11:10:42,574  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript for Absolute Beginners
+2013-01-08 11:10:42,783  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript, A Beginner's Guide, Third Edition
+2013-01-08 11:10:42,883  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Dojo
+2013-01-08 11:10:44,161  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Developing Hybrid Applications for the IPhone
+2013-01-08 11:10:44,763  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Foundation Website Creation with CSS, XHTML, and JavaScript
+2013-01-08 11:10:44,849  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Beginning Android 2
+2013-01-08 11:10:44,999  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Weekend Crash Course
+2013-01-08 11:10:45,063  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing DOM Scripting
+2013-01-08 11:10:45,133  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Plug-In JavaScript 100 Power Solutions
+2013-01-08 11:10:45,472  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Design
+2013-01-08 11:10:45,691  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing The book of JavaScript
+2013-01-08 11:10:45,963  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Examples Bible
+2013-01-08 11:10:46,024  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Designing With Web Standards
+2013-01-08 11:10:46,406  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Building Android Apps with HTML, CSS, and JavaScript
+2013-01-08 11:10:46,766  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Application Cookbook
+2013-01-08 11:10:47,391  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Java Demystified
+2013-01-08 11:10:47,471  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Learning JavaScript
+2013-01-08 11:10:47,549  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Building Android Apps with HTML, CSS, and JavaScript
+2013-01-08 11:10:47,933  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Learning Jquery
+2013-01-08 11:10:48,208  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Learning the iOS 4 SDK for JavaScript Programmers
+2013-01-08 11:10:48,406  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Pocket Reference
+2013-01-08 11:10:48,547  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Scripting InDesign CS3/4 with JavaScript
+2013-01-08 11:10:48,639  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Supercharged JavaScript Graphics
+2013-01-08 11:10:48,825  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Cookbook
+2013-01-08 11:10:48,983  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing iPhone User Interface Cookbook
+2013-01-08 11:10:49,200  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript: The Definitive Guide
+2013-01-08 11:10:49,533  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Drupal 6 Site Builder Solutions
+2013-01-08 11:10:49,733  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Moodle 2.0 First Look
+2013-01-08 11:10:49,889  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Django 1.1 Testing and Debugging
+2013-01-08 11:10:50,083  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Essential JavaScript for Web Professionals
+2013-01-08 11:10:50,472  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Icefaces 1.8
+2013-01-08 11:10:50,714  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing jQuery 1.4 Reference Guide
+2013-01-08 11:10:50,964  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Boletín ISBN, Venezuela
+2013-01-08 11:10:50,965  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript: The Missing Manual
+2013-01-08 11:10:51,089  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript for programmers
+2013-01-08 11:10:51,366  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Programming for the Absolute Beginner : the Fun Way to Learn Programming
+2013-01-08 11:10:51,539  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Dhtml Utopia - Modern Web Design
+2013-01-08 11:10:52,089  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript for programmers
+2013-01-08 11:10:52,363  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Pure JavaScript
+2013-01-08 11:10:52,488  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing The Art & Science of JavaScript
+2013-01-08 11:10:53,063  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Boletín ISBN, Venezuela
+2013-01-08 11:10:53,064  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Javascript Anthology
+2013-01-08 11:10:53,374  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Boletín ISBN, Venezuela
+2013-01-08 11:10:53,376  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Beginning JavaScript and CSS Development with jQuery
+2013-01-08 11:10:53,455  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Teach Yourself JavaScript in a Week
+2013-01-08 11:10:53,588  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing HTML, CSS, and JavaScript Mobile Development For Dummies
+2013-01-08 11:10:53,687  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Beginning JavaScript and CSS Development with jQuery
+2013-01-08 11:10:53,763  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Learn JavaScript
+2013-01-08 11:10:53,958  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Professional XMPP Programming with JavaScript and jQuery
+2013-01-08 11:10:54,030  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Bible
+2013-01-08 11:10:54,091  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Beginning JavaScript with DOM Scripting and Ajax
+2013-01-08 11:10:54,174  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Unity Ios Game Development Beginners Guide
+2013-01-08 11:10:54,371  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Professional CSS
+2013-01-08 11:10:54,441  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Programmer's Reference
+2013-01-08 11:10:54,524  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Patterns
+2013-01-08 11:10:54,730  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing High Performance JavaScript
+2013-01-08 11:10:54,847  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript
+2013-01-08 11:10:55,191  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Beginning JavaScript
+2013-01-08 11:10:55,263  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Beginning JavaScript
+2013-01-08 11:10:55,341  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Making Isometric Social Real-Time Games with HTML5, CSS3, and JavaScript
+2013-01-08 11:10:55,413  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Building iPhone Apps with HTML, CSS, and JavaScript
+2013-01-08 11:10:55,641  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Learning PHP, MySQL, and JavaScript
+2013-01-08 11:10:55,778  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Object-oriented Javascript
+2013-01-08 11:10:55,995  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Seven Languages in Seven Weeks
+2013-01-08 11:10:56,163  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Pragmatic Thinking & Learning
+2013-01-08 11:10:56,788  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Web Applications
+2013-01-08 11:10:56,905  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Seven Languages in Seven Weeks
+2013-01-08 11:10:57,104  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Simply JavaScript
+2013-01-08 11:10:57,442  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript by Example
+2013-01-08 11:10:57,855  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Beginning CSS
+2013-01-08 11:10:57,921  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript programmer's reference
+2013-01-08 11:10:58,147  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Professional JavaScript for Web Developers
+2013-01-08 11:10:58,212  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing Beginning iOS Application Development with HTML and JavaScript
+2013-01-08 11:10:58,280  INFO [main] (CreateTreeOfCategories.java:29) - Categorissing JavaScript Step by Step
+2013-01-08 11:10:58,304  INFO [main] (CreateTreeOfCategories.java:53) - class com.book.identification.task.CreateTreeOfCategories end at Tue Jan 08 11:10:58 ART 2013
+2013-01-08 11:10:58,304  INFO [main] (CreateTreeOfCategories.java:54) - class com.book.identification.task.CreateTreeOfCategories running 16seg
+2013-01-08 13:17:20,935  INFO [main] (Version.java:37) - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2013-01-08 13:17:20,944  INFO [main] (Version.java:41) - HHH000412: Hibernate Core {4.1.7.Final}
+2013-01-08 13:17:20,946  INFO [main] (Environment.java:239) - HHH000206: hibernate.properties not found
+2013-01-08 13:17:20,948  INFO [main] (Environment.java:342) - HHH000021: Bytecode provider name : javassist
+2013-01-08 13:17:20,970  INFO [main] (Configuration.java:1933) - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2013-01-08 13:17:20,970  INFO [main] (Configuration.java:1952) - HHH000040: Configuration resource: /hibernate.cfg.xml
+2013-01-08 13:17:20,996  WARN [main] (DTDEntityResolver.java:74) - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2013-01-08 13:17:21,032  INFO [main] (Configuration.java:2074) - HHH000041: Configured SessionFactory: 
+2013-01-08 13:17:21,304  INFO [main] (DriverManagerConnectionProviderImpl.java:96) - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2013-01-08 13:17:21,309  INFO [main] (DriverManagerConnectionProviderImpl.java:130) - HHH000115: Hibernate connection pool size: 1
+2013-01-08 13:17:21,310  INFO [main] (DriverManagerConnectionProviderImpl.java:133) - HHH000006: Autocommit mode: false
+2013-01-08 13:17:21,310  INFO [main] (DriverManagerConnectionProviderImpl.java:147) - HHH000401: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:db/ebook;shutdown=true;hsqldb.write_delay=false;]
+2013-01-08 13:17:21,310  INFO [main] (DriverManagerConnectionProviderImpl.java:152) - HHH000046: Connection properties: {user=sa, password=****}
+2013-01-08 13:17:22,982  INFO [main] (?:?) - checkpointClose start
+2013-01-08 13:17:23,220  INFO [main] (?:?) - checkpointClose end
+2013-01-08 13:17:23,320  INFO [main] (Dialect.java:125) - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2013-01-08 13:17:23,367  INFO [main] (TransactionFactoryInitiator.java:68) - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2013-01-08 13:17:23,373  INFO [main] (ASTQueryTranslatorFactory.java:48) - HHH000397: Using ASTQueryTranslatorFactory
+2013-01-08 13:17:23,420  INFO [main] (Version.java:39) - HSEARCH000034: Hibernate Search 4.1.1.Final
+2013-01-08 13:17:23,493  WARN [main] (ConfigContext.java:299) - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2013-01-08 13:17:23,637  INFO [main] (AvroSerializationProvider.java:73) - HSEARCH000079: Serialization protocol version 1.0
+2013-01-08 13:17:24,113  WARN [main] (SessionFactoryRegistry.java:102) - HHH000277: Could not bind factory to JNDI
+org.hibernate.service.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:92)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:108)
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:89)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:476)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at com.book.identification.HibernateUtil.<clinit>(HibernateUtil.java:23)
+	at com.book.identification.Main.main(Main.java:19)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:662)
+	at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:307)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(InitialContext.java:344)
+	at javax.naming.InitialContext.getNameParser(InitialContext.java:499)
+	at org.hibernate.service.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:86)
+	... 6 more
+2013-01-08 13:17:24,120  INFO [main] (SchemaUpdate.java:182) - HHH000228: Running hbm2ddl schema update
+2013-01-08 13:17:24,121  INFO [main] (SchemaUpdate.java:193) - HHH000102: Fetching database metadata
+2013-01-08 13:17:24,122  INFO [main] (SchemaUpdate.java:205) - HHH000396: Updating schema
+2013-01-08 13:17:24,218  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.ACCESSINFO
+2013-01-08 13:17:24,218  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [viewability, publicdomain, embeddable, accessviewstatus, entityid, webreaderlink, pdf_entityid, vieworderurl, epub_entityid, texttospeechpermission, country]
+2013-01-08 13:17:24,218  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk32bb185260cb9f2a, fk32bb18527baa3db0]
+2013-01-08 13:17:24,219  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10140, sys_idx_10138, sys_idx_sys_pk_10026_10027]
+2013-01-08 13:17:24,338  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.AUTHOR
+2013-01-08 13:17:24,339  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, displayname]
+2013-01-08 13:17:24,339  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 13:17:24,339  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10029_10030]
+2013-01-08 13:17:24,372  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY
+2013-01-08 13:17:24,373  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [category, entityid, parent_entityid]
+2013-01-08 13:17:24,373  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6dd211e55d6dd3e]
+2013-01-08 13:17:24,373  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10034, sys_idx_sys_pk_10032_10033]
+2013-01-08 13:17:24,410  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY_CATEGORY
+2013-01-08 13:17:24,410  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [subcategories_entityid, category_entityid]
+2013-01-08 13:17:24,410  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk8635931f1502c76a, fk8635931fe152b9cc]
+2013-01-08 13:17:24,411  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_ct_10039_10041, sys_idx_10044, sys_idx_sys_pk_10038_10040, sys_idx_10042]
+2013-01-08 13:17:24,436  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.DIMENSIONS
+2013-01-08 13:17:24,437  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [height, entityid, width, thickness]
+2013-01-08 13:17:24,437  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 13:17:24,437  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10047_10048]
+2013-01-08 13:17:24,479  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.EPUB
+2013-01-08 13:17:24,479  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-08 13:17:24,479  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 13:17:24,480  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10050_10051]
+2013-01-08 13:17:24,526  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.IMAGELINKS
+2013-01-08 13:17:24,526  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [thumbnail, entityid, small, medium, large, extralarge, smallthumbnail]
+2013-01-08 13:17:24,526  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 13:17:24,527  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10053_10054]
+2013-01-08 13:17:24,557  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.INDUSTRYIDENTIFIERS
+2013-01-08 13:17:24,557  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, type, identifier]
+2013-01-08 13:17:24,557  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 13:17:24,557  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10056_10057]
+2013-01-08 13:17:24,580  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.LISTPRICE
+2013-01-08 13:17:24,581  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-08 13:17:24,581  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 13:17:24,581  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10059_10060]
+2013-01-08 13:17:24,631  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.PDF
+2013-01-08 13:17:24,632  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-08 13:17:24,632  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 13:17:24,632  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10062_10063]
+2013-01-08 13:17:24,682  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RECOMMENDEDINFO
+2013-01-08 13:17:24,683  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, explanation]
+2013-01-08 13:17:24,683  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 13:17:24,684  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10065_10066]
+2013-01-08 13:17:24,718  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RETAILPRICE
+2013-01-08 13:17:24,719  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-08 13:17:24,719  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 13:17:24,719  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10068_10069]
+2013-01-08 13:17:24,758  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.REVIEW
+2013-01-08 13:17:24,758  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [content, title, author_entityid, entityid, fulltexturl, volumeid, rating, type, date, kind, source_entityid]
+2013-01-08 13:17:24,759  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk91b3e3788c74974a, fk91b3e3788ed6354a]
+2013-01-08 13:17:24,759  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10142, sys_idx_sys_pk_10071_10072, sys_idx_10073]
+2013-01-08 13:17:24,793  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SALEINFO
+2013-01-08 13:17:24,793  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [isebook, saleability, entityid, listprice_entityid, retailprice_entityid, buylink, country]
+2013-01-08 13:17:24,793  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk773b81b5cc82e510, fk773b81b5ce559b70]
+2013-01-08 13:17:24,794  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10080, sys_idx_sys_pk_10076_10077, sys_idx_10078]
+2013-01-08 13:17:24,829  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SEARCHINFO
+2013-01-08 13:17:24,829  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [textsnippet, entityid]
+2013-01-08 13:17:24,830  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 13:17:24,830  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10083_10084]
+2013-01-08 13:17:24,870  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SOURCE
+2013-01-08 13:17:24,870  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [description, entityid, extradescription, url]
+2013-01-08 13:17:24,870  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-08 13:17:24,871  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10086_10087]
+2013-01-08 13:17:24,916  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.USERINFO
+2013-01-08 13:17:24,917  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, isinmybooks, ispreordered, review_entityid, ispurchased]
+2013-01-08 13:17:24,917  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkf3f34b395de56bea]
+2013-01-08 13:17:24,917  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10091, sys_idx_sys_pk_10089_10090]
+2013-01-08 13:17:24,963  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUME
+2013-01-08 13:17:24,964  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [etag, entityid, searchinfo_entityid, recommendedinfo_entityid, saleinfo_entityid, userinfo_entityid, kind, id, selflink, volumeinfo_entityid, path, filename, accessinfo_entityid]
+2013-01-08 13:17:24,964  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk990fd33a10e1516a, fk990fd33ac5a8a2ca, fk990fd33a3cd1cf8a, fk990fd33a5f566f4a, fk990fd33ae71c5ea, fk990fd33ab26ac730]
+2013-01-08 13:17:24,965  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10144, sys_idx_10096, sys_idx_10104, sys_idx_sys_pk_10094_10095, sys_idx_10098, sys_idx_10102, sys_idx_10100]
+2013-01-08 13:17:24,998  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO
+2013-01-08 13:17:24,999  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [printtype, previewlink, entityid, averagerating, maincategory, publisheddate, publisher, dimensions_entityid, title, ratingscount, description, pagecount, imagelinks_entityid, subtitle, canonicalvolumelink, infolink, language, contentversion]
+2013-01-08 13:17:24,999  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk1a427f08c32b10a, fk1a427f089212900a]
+2013-01-08 13:17:24,999  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10111, sys_idx_10109, sys_idx_sys_pk_10107_10108]
+2013-01-08 13:17:25,031  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORY
+2013-01-08 13:17:25,032  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categoriess_entityid]
+2013-01-08 13:17:25,032  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6daa3c753cd1cf8a, fk6daa3c75b53ceab1]
+2013-01-08 13:17:25,032  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10117, sys_idx_sys_pk_10115_10116, sys_idx_10119]
+2013-01-08 13:17:25,082  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_INDUSTRYIDENTIFIERS
+2013-01-08 13:17:25,082  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, industryidentifiers_entityid]
+2013-01-08 13:17:25,083  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk9b8418553cd1cf8a, fk9b841855a16084d0]
+2013-01-08 13:17:25,083  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_ct_10123_10125, sys_idx_10126, sys_idx_10128]
+2013-01-08 13:17:25,127  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_AUTHORS
+2013-01-08 13:17:25,127  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [authors, volumeinfo_entityid]
+2013-01-08 13:17:25,127  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkb37dae113cd1cf8a]
+2013-01-08 13:17:25,128  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10132]
+2013-01-08 13:17:25,164  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORIES
+2013-01-08 13:17:25,164  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categories]
+2013-01-08 13:17:25,165  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk353ae7b33cd1cf8a]
+2013-01-08 13:17:25,165  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10136]
+2013-01-08 13:17:25,167  INFO [main] (SchemaUpdate.java:240) - HHH000232: Schema update complete

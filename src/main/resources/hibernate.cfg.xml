@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="">
+		<property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+		<property name="hibernate.connection.url">jdbc:hsqldb:file:db/ebook;shutdown=true;hsqldb.write_delay=false;</property>
+		<property name="hibernate.connection.username">sa</property>
+		<property name="hibernate.connection.password" />
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.format_sql">false</property>
+		
+		<!-- Hibernate Search configuration -->
+		<property name="hibernate.search.default.indexmanager">near-real-time</property>
+		<property name="hibernate.search.default.directory_provider">filesystem</property>
+        <property name="hibernate.search.default.indexBase">db/indexes</property>
+
+		<mapping class="com.book.identification.model.AccessInfo" />
+		<mapping class="com.book.identification.model.Author" />
+		<mapping class="com.book.identification.model.Dimensions" />
+		<mapping class="com.book.identification.model.EntityBase" />
+		<mapping class="com.book.identification.model.Epub" />
+		<mapping class="com.book.identification.model.ImageLinks" />
+		<mapping class="com.book.identification.model.IndustryIdentifiers" />
+		<mapping class="com.book.identification.model.ListPrice" />
+		<mapping class="com.book.identification.model.Pdf" />
+		<mapping class="com.book.identification.model.RecommendedInfo" />
+		<mapping class="com.book.identification.model.RetailPrice" />
+		<mapping class="com.book.identification.model.Review" />
+		<mapping class="com.book.identification.model.SaleInfo" />
+		<mapping class="com.book.identification.model.SearchInfo" />
+		<mapping class="com.book.identification.model.Source" />
+		<mapping class="com.book.identification.model.UserInfo" />
+		<mapping class="com.book.identification.model.Volume" />
+		<mapping class="com.book.identification.model.VolumeInfo" />
+		<mapping class="com.book.identification.model.Category" />
+
+
+
+	</session-factory>
+</hibernate-configuration>
