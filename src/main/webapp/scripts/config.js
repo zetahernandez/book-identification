@@ -1,5 +1,5 @@
 define({
-	app_name : "MyExampleApp",
+	app_name : "BooksApp",
 	shim : {
 		'ember' : {
 			deps : [ 'handlebars', 'jquery' ],

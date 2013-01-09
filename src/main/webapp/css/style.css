@@ -87,11 +87,42 @@ a:hover { color: #036; }
 */
 
 
+.zbookTable{
+	margin-left: 15em;
+}
 
+.gb-bookshelf-ordering-holder {
+    background-color: #FFFFFF;
+    border: 0.25em solid #FFFFFF;
+    opacity: 1;
+    vertical-align: top;
+    width: 100%;
+}
 
+.coverwrapper {
+    padding-right: 24px;
+    width: 1px;
+}
+a img, .coverthumb, .slider-link {
+    border-color: #999999;
+    color: #999999;
+}
+.coverthumb {
+    background-color: #FFFFFF;
+    margin-top: 1px;
+}
 
-
-
+h2.resbdy, h5.resbdy {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    max-width: 625px;
+    padding: 5px 0;
+}
+a.gb-hovercard-title {
+    color: #1155CC;
+    text-decoration: none;
+}
 
 
 

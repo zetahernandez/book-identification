@@ -1,5 +1,5 @@
 define([ "models/VolumeInfoModel" ], function(VolumeInfoModel) {
-	var VolumeInfoListController = Em.ArrayController.create({
+	var VolumeInfoListController = Ember.ArrayController.extend({
 		init : function() {
 			this._super();
 		},

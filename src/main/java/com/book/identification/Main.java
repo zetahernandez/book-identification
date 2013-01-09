@@ -10,6 +10,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import com.book.identification.httpserver.JettyHttpServer;
+import com.book.identification.task.CreateTreeOfCategories;
 
 
 public class Main {
@@ -21,7 +22,7 @@ public class Main {
 		JettyHttpServer httpServer = new JettyHttpServer();
 		httpServer.start();
 //		
-		HibernateUtil.getSessionFactory();
+//		HibernateUtil.getSessionFactory();
 ////		
 //		BookIdentificationWork bookIdentificationWork = new BookIdentificationWork("BookIdentificationWork",args);  
 //		bookIdentificationWork.start();

@@ -28,11 +28,11 @@
 		</layout>
 	</appender>
 	<logger name="com.book.identification.task.SearchISBN">
-		<level value="debug" />
+		<level value="info" />
 		<appender-ref ref="file" />
 	</logger>
 	<logger name="org.apache.http" additivity="false">
-		<level value="debug" />
+		<level value="info" />
 		<appender-ref ref="R" />
 	</logger>
 <!-- 	<logger name="org.hibernate" additivity="false"> -->

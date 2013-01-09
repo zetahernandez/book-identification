@@ -8,6 +8,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.hibernate.criterion.Restrictions;
+
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.model.Category;
 
@@ -18,6 +20,14 @@ public class CategoryResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response categories() {
 		List<Category> findAll = DAOFactory.getInstance().getCategoryDAO().findAll();
+        return Response.ok(findAll).build();
+    }
+	
+	@Path("parent/")
+	@GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response parentCategories() {
+		List<Category> findAll = DAOFactory.getInstance().getCategoryDAO().findByCriteria(Restrictions.isNull("parent"));
         return Response.ok(findAll).build();
     }
 }

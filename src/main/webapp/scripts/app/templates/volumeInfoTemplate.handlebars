@@ -1,0 +1,40 @@
+<tr id="main--{{unbound book.entityId}}"
+	class="gb-bookshelf-ordering-holder gb-bookshelf-standard-manage">
+	<td><table class="gb-bookshelf-table-container ">
+			<tbody>
+				<tr>
+					<td valign="top" align="center"
+						class="coverwrapper gb-bookshelf-hover-card"><a
+						href="http://books.google.com.ar/books?id=BFlF1TQQ26gC"><img
+							border="0"
+							src={{unbound  book.imageLinks.thumbnail}}
+							title={{unbound book.title}}
+							class="coverthumb hover-card-attach-point"
+							alt={{unbound book.title}}>
+					</a></td>
+					<td><div class="rsi">
+							<div>
+								<div>
+									<h2 class="resbdy">
+										<a
+											class="gb-hovercard-title"
+											href="{{unbound book.path}}"><span
+											dir="ltr" class="gb-volume-title">{{unbound book.title}}</span>&lrm;</a>
+									</h2>
+								</div>
+							</div>
+							<div class="gb-text-content">
+								<div style="line-height: 1.2em; font-size: small">
+									<span class="gb-gray-author"><span
+										style="color: #676767"><a class="link_aux"
+											href="http://www.google.com.ar/search?tbo=p&amp;tbm=bks&amp;q=inauthor:%22Filippo+di+Pisa%22"><span
+												dir="ltr">{{unbound book.authors}}</span></a> - {{book.publishedDate}} -</span></span>
+									<div dir="ltr" class="snippet sa">{{book.unescapedDescription}}</div>
+
+								</div>
+							</div>
+						</div></td>
+				</tr>
+			</tbody>
+		</table></td>
+</tr>

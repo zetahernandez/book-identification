@@ -1,14 +1,12 @@
 define([
-  "ember",
-  "controllers/VolumeInfoListController"
-],  function(Ember,volumeInfoListController){
+  "ember","models/VolumeInfoModel"
+],  function(Ember,volumeInfoModel){
 	var Router = Ember.Router.extend({
 	  root: Ember.Route.extend({
 	    index: Ember.Route.extend({
 	      route: '/',
-	      connectOutlets : function(router, context) {
-	    	  volumeInfoListController.showAll();
-	          return router.get('applicationController').connectOutlet('volumes');
+	      connectOutlets : function(router) {
+	          return router.get('applicationController').connectOutlet('volumeInfoList',volumeInfoModel.create().find());
 	        }
 	    })
 	  })
