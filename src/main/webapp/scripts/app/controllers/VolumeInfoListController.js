@@ -1,12 +1,13 @@
-define([ "models/VolumeInfoModel" ], function(VolumeInfoModel) {
+define([ "models/VolumeInfo" ], function(VolumeInfo) {
 	var VolumeInfoListController = Ember.ArrayController.extend({
-		init : function() {
-			this._super();
-		},
-		showAll : function() {
-			var volumes = VolumeInfoModel.create().find();
-			return volumes;
-		}
+//		content:  BooksApp.VolumeModel.find(),
+//		init : function() {
+//			this._super();
+//		},
+//		showAll : function() {
+//			var volumes = VolumeInfoModel.create().find();
+//			return volumes;
+//		}
 	});
 	return VolumeInfoListController;
 });

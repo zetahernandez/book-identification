@@ -1,12 +1,14 @@
 package com.book.identification.model;
 
 import javax.persistence.Entity;
+import javax.xml.bind.annotation.XmlRootElement;
 
 
 /**
  * Model definition for VolumeVolumeInfoIndustryIdentifiers.
  */
 @Entity
+@XmlRootElement(name="industry_Identifier")
 public final class IndustryIdentifiers extends EntityBase {
 
   /**

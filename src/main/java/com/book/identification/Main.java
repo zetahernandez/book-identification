@@ -31,11 +31,11 @@ public class Main {
 //		} catch (InterruptedException e) {
 //			e.printStackTrace();
 //		}
-//		
-//		
+		
+		
 //		
 //		new CreateTreeOfCategories().execute();
-		
+//		
 		try {
 			InetAddress localHost = InetAddress.getLocalHost();
 			URI uri = new java.net.URI( "http://"+localHost.getHostName()+":8080" );

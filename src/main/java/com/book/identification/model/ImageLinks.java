@@ -1,12 +1,15 @@
 package com.book.identification.model;
 
 import javax.persistence.Entity;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 
 /**
  * A list of image links for all the sizes that are available. (In LITE projection.)
  */
 @Entity
+@XmlRootElement(name="image_links")
 public final class ImageLinks  extends EntityBase {
 
   /**
@@ -123,6 +126,7 @@ public final class ImageLinks  extends EntityBase {
    * Image link for small thumbnail size (width of ~80 pixels). (In LITE projection)
    * The value returned may be {@code null}.
    */
+  @XmlElement(name="smallT_thumbnail")
   public String getSmallThumbnail() {
     return smallThumbnail;
   }

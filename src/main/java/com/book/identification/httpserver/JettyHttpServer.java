@@ -21,7 +21,7 @@ public class JettyHttpServer {
 		
 		//jersey servlet 
 		ResourceConfig rc = new PackagesResourceConfig("com.book.identification.rest");
-		rc.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING,Boolean.TRUE);
+//		rc.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING,Boolean.TRUE);
 		ServletContainer servletContainer = new ServletContainer(rc);
 		ServletHolder restHolder = new ServletHolder(servletContainer);
 		root.addServlet(restHolder, "/rest/*");

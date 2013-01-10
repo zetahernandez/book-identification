@@ -8,7 +8,8 @@ define({
 		'ember_data' : {
 			deps : [ 'ember' ],
 			exports : 'DS'
-		}
+		},
+		 waitSeconds:15
 	},
 	paths : {
 		'App' : 'app/main',

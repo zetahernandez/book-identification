@@ -1,6 +1,5 @@
 package com.book.identification.model;
 
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -11,18 +10,15 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-
-import org.hibernate.criterion.Restrictions;
-
-import com.book.identification.dao.CategoryDAO;
-import com.book.identification.dao.DAOFactory;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  * General volume information.
  */
 @Entity
 public final class VolumeInfo extends EntityBase {
-
 	/**
 	 * The names of the authors and/or editors for this volume. (In LITE
 	 * projection) The value may be {@code null}.
@@ -191,6 +187,7 @@ public final class VolumeInfo extends EntityBase {
 	 * The names of the authors and/or editors for this volume. (In LITE
 	 * projection) The value set may be {@code null}.
 	 */
+	
 	public void setAuthors(java.util.Set<String> authors) {
 		this.authors = authors;
 
@@ -200,6 +197,7 @@ public final class VolumeInfo extends EntityBase {
 	 * The mean review rating for this volume. (min = 1.0, max = 5.0) The value
 	 * returned may be {@code null}.
 	 */
+	@XmlTransient
 	public Double getAverageRating() {
 		return averageRating;
 	}
@@ -217,6 +215,7 @@ public final class VolumeInfo extends EntityBase {
 	 * Canonical URL for a volume. (In LITE projection.) The value returned may
 	 * be {@code null}.
 	 */
+	@XmlTransient
 	public String getCanonicalVolumeLink() {
 		return canonicalVolumeLink;
 	}
@@ -225,6 +224,7 @@ public final class VolumeInfo extends EntityBase {
 	 * Canonical URL for a volume. (In LITE projection.) The value set may be
 	 * {@code null}.
 	 */
+	
 	public void setCanonicalVolumeLink(String canonicalVolumeLink) {
 		this.canonicalVolumeLink = canonicalVolumeLink;
 
@@ -234,6 +234,7 @@ public final class VolumeInfo extends EntityBase {
 	 * A list of subject categories, such as "Fiction", "Suspense", etc. The
 	 * value returned may be {@code null}.
 	 */
+	@XmlTransient
 	public java.util.Set<String> getCategories() {
 		return categories;
 	}
@@ -250,6 +251,7 @@ public final class VolumeInfo extends EntityBase {
 	 * An identifier for the version of the volume content (text & images). (In
 	 * LITE projection) The value returned may be {@code null}.
 	 */
+	@XmlTransient
 	public String getContentVersion() {
 		return contentVersion;
 	}
@@ -286,6 +288,7 @@ public final class VolumeInfo extends EntityBase {
 	 * Physical dimensions of this volume. The value returned may be
 	 * {@code null}.
 	 */
+	@XmlTransient
 	public Dimensions getDimensions() {
 		return dimensions;
 	}
@@ -302,6 +305,7 @@ public final class VolumeInfo extends EntityBase {
 	 * A list of image links for all the sizes that are available. (In LITE
 	 * projection.) The value returned may be {@code null}.
 	 */
+	@XmlElement(name="image_links")
 	public ImageLinks getImageLinks() {
 		return imageLinks;
 	}
@@ -319,6 +323,7 @@ public final class VolumeInfo extends EntityBase {
 	 * Industry standard identifiers for this volume. The value returned may be
 	 * {@code null}.
 	 */
+	@XmlElement(name="industry_identifiers")
 	public java.util.List<IndustryIdentifiers> getIndustryIdentifiers() {
 		return industryIdentifiers;
 	}
@@ -337,7 +342,7 @@ public final class VolumeInfo extends EntityBase {
 	 * URL to view information about this volume on the Google Books site. (In
 	 * LITE projection) The value returned may be {@code null}.
 	 */
-	public String getInfoLink() {
+	@XmlTransient	public String getInfoLink() {
 		return infoLink;
 	}
 
@@ -355,6 +360,7 @@ public final class VolumeInfo extends EntityBase {
 	 * ISO 639-1 code such as 'fr', 'en', etc. The value returned may be
 	 * {@code null}.
 	 */
+	@XmlTransient
 	public String getLanguage() {
 		return language;
 	}
@@ -374,6 +380,7 @@ public final class VolumeInfo extends EntityBase {
 	 * from the categories list returned below that has the highest weight. The
 	 * value returned may be {@code null}.
 	 */
+	@XmlTransient
 	public String getMainCategory() {
 		return mainCategory;
 	}
@@ -391,6 +398,7 @@ public final class VolumeInfo extends EntityBase {
 	/**
 	 * Total number of pages. The value returned may be {@code null}.
 	 */
+	@XmlTransient
 	public Integer getPageCount() {
 		return pageCount;
 	}
@@ -407,6 +415,7 @@ public final class VolumeInfo extends EntityBase {
 	 * URL to preview this volume on the Google Books site. The value returned
 	 * may be {@code null}.
 	 */
+	@XmlTransient
 	public String getPreviewLink() {
 		return previewLink;
 	}
@@ -424,6 +433,7 @@ public final class VolumeInfo extends EntityBase {
 	 * Type of publication of this volume. Possible values are BOOK or MAGAZINE.
 	 * The value returned may be {@code null}.
 	 */
+	@XmlTransient
 	public String getPrintType() {
 		return printType;
 	}
@@ -441,6 +451,7 @@ public final class VolumeInfo extends EntityBase {
 	 * Date of publication. (In LITE projection.) The value returned may be
 	 * {@code null}.
 	 */
+	@XmlTransient
 	public String getPublishedDate() {
 		return publishedDate;
 	}
@@ -458,6 +469,7 @@ public final class VolumeInfo extends EntityBase {
 	 * Publisher of this volume. (In LITE projection.) The value returned may be
 	 * {@code null}.
 	 */
+	
 	public String getPublisher() {
 		return publisher;
 	}
@@ -475,6 +487,7 @@ public final class VolumeInfo extends EntityBase {
 	 * The number of review ratings for this volume. The value returned may be
 	 * {@code null}.
 	 */
+	@XmlTransient
 	public Integer getRatingsCount() {
 		return ratingsCount;
 	}

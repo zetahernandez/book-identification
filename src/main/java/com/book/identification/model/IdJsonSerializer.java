@@ -14,9 +14,9 @@ public class IdJsonSerializer extends JsonSerializer<EntityBase> {
 			SerializerProvider provider) throws IOException,
 			JsonProcessingException {
 
-			String id = value.getEntityId().toString();
-			 
-	        jgen.writeString(id);		
+			Long id = value.getEntityId();
+			
+	        jgen.writeNumber(id.longValue());
 	}
 
 }

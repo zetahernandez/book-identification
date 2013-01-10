@@ -8,11 +8,15 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.hibernate.annotations.IndexColumn;
 
 @Entity
+@XmlRootElement(name="category")
 public class Category extends EntityBase {
 	
 	@IndexColumn(name="categoryNameIndex")
@@ -43,6 +47,7 @@ public class Category extends EntityBase {
 		this.subCategories = subCategories;
 	}
 
+	@XmlTransient
 	public Category getParent() {
 		return parent;
 	}

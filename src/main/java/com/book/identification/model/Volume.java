@@ -4,7 +4,15 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
+import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Indexed;
 
@@ -48,6 +56,7 @@ import com.book.identification.task.base.ItemQueue;
  */
 @Indexed
 @Entity
+@XmlRootElement(name="volumes")
 public final class Volume extends EntityBase implements ItemQueue {
 
 	/**
@@ -63,7 +72,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * Opaque identifier for a specific version of a volume resource. (In LITE
 	 * projection) The value may be {@code null}.
 	 */
-
+	@JsonIgnore
 	private String etag;
 
 	/**
@@ -107,7 +116,6 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * URL to this resource. (In LITE projection.) The value may be {@code null}
 	 * .
 	 */
-
 	private String selfLink;
 
 	/**
@@ -130,6 +138,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * domain in one country but not in another, e.g.). The value returned may
 	 * be {@code null}.
 	 */
+	@XmlTransient
 	public AccessInfo getAccessInfo() {
 		return accessInfo;
 	}
@@ -149,6 +158,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * Opaque identifier for a specific version of a volume resource. (In LITE
 	 * projection) The value returned may be {@code null}.
 	 */
+	@XmlTransient
 	public String getEtag() {
 		return etag;
 	}
@@ -166,6 +176,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * Unique identifier for a volume. (In LITE projection.) The value returned
 	 * may be {@code null}.
 	 */
+	@XmlElement(name="book_id")
 	public String getId() {
 		return id;
 	}
@@ -183,6 +194,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * Resource type for a volume. (In LITE projection.) The value returned may
 	 * be {@code null}.
 	 */
+	
 	public String getKind() {
 		return kind;
 	}
@@ -200,6 +212,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * Recommendation related information for this volume. The value returned
 	 * may be {@code null}.
 	 */
+	@XmlTransient
 	public RecommendedInfo getRecommendedInfo() {
 		return recommendedInfo;
 	}
@@ -219,6 +232,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * request originates from (i.e. books may not be for sale in certain
 	 * countries). The value returned may be {@code null}.
 	 */
+	@XmlTransient
 	public SaleInfo getSaleInfo() {
 		return saleInfo;
 	}
@@ -238,6 +252,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * Search result information related to this volume. The value returned may
 	 * be {@code null}.
 	 */
+	@XmlTransient
 	public SearchInfo getSearchInfo() {
 		return searchInfo;
 	}
@@ -255,6 +270,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * URL to this resource. (In LITE projection.) The value returned may be
 	 * {@code null}.
 	 */
+	@XmlTransient
 	public String getSelfLink() {
 		return selfLink;
 	}
@@ -273,6 +289,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * last read or whether they purchased this book) The value returned may be
 	 * {@code null}.
 	 */
+	@XmlTransient
 	public UserInfo getUserInfo() {
 		return userInfo;
 	}
@@ -290,6 +307,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	/**
 	 * General volume information. The value returned may be {@code null}.
 	 */
+	@XmlElement(name="volume_info")
 	public VolumeInfo getVolumeInfo() {
 		return volumeInfo;
 	}
@@ -312,7 +330,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 
 	private String path;
 	private String fileName;
-
+	@XmlTransient
 	public String getPath() {
 		return path;
 	}
@@ -320,7 +338,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	public void setPath(String path) {
 		this.path = path;
 	}
-
+	@XmlTransient
 	public String getFileName() {
 		return fileName;
 	}

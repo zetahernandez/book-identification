@@ -3,6 +3,15 @@ define(
 		function(require, Ember, $, volumeInfoListController) {
 			var VolumeInfoModel = Ember.Object
 					.extend({
+						
+						title : null,
+						subtitle : null,
+						description : null,
+						language : null,
+						pageCount : null,
+						publishedDate : null,
+						publisher : null,
+						
 						unescapedDescription: function() {
 							return this.get('description').htmlSafe();
 						}.property('html'),
