@@ -4,23 +4,22 @@
 			<tbody>
 				<tr>
 					<td valign="top" align="center"
-						class="coverwrapper gb-bookshelf-hover-card"><a
-						href="http://books.google.com.ar/books?id=BFlF1TQQ26gC">
-						{{#with book.volume_info.image_links.thumbnail}}
-						<img
-							border="0"
-							src={{unbound  book.volume_info.image_links.thumbnail}}
-							title={{unbound book.volume_info.title}}
+						class="coverwrapper gb-bookshelf-hover-card"><a href="">
+							{{#if book.volumeInfo.imageLinks.thumbnail}} <img border="0"
+							src={{unbound
+							book.volumeInfo.imageLinks.thumbnail}}
+							title={{unbound
+							book.volumeInfo.title}}
 							class="coverthumb hover-card-attach-point"
-							alt={{unbound book.volume_info.title}}>
-							{{/with}}
+							alt={{unboundbook.volumeInfo.title}}> {{/if}}
 					</a></td>
 					<td><div class="rsi">
 							<div>
 								<div>
 									<h2 class="resbdy">
-										<a {{bindAttr href="book.volume_info.path"}} {{action "linkClicked" on="click"}}><span
-											dir="ltr" class="gb-volume-title">{{unbound book.volume_info.title}}</span>&lrm;</a>
+										<a {{action showVolumeInfobook}}><span dir="ltr"
+											class="gb-volume-title">{{unbound
+												book.volumeInfo.title}}</span>&lrm;</a>
 									</h2>
 								</div>
 							</div>
@@ -29,8 +28,11 @@
 									<span class="gb-gray-author"><span
 										style="color: #676767"><a class="link_aux"
 											href="http://www.google.com.ar/search?tbo=p&amp;tbm=bks&amp;q=inauthor:%22Filippo+di+Pisa%22"><span
-												dir="ltr">{{unbound book.volume_info.authors}}</span></a> - {{book.volume_info.publishedDate}} -</span></span>
-									<div dir="ltr" class="snippet sa">{{book.volume_info.description}}</div>
+												dir="ltr">{{unbound book.volumeInfo.authors}}</span></a> -
+											{{book.volumeInfo.publishedDate}} -</span></span> {{#if
+									book.volumeInfo.description}}
+									<div dir="ltr" class="snippet sa">{{book.volumeInfo.unescapedDescription}}</div>
+									{{/if}}
 
 								</div>
 							</div>

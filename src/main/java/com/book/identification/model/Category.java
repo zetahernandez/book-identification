@@ -5,31 +5,39 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlIDREF;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.hibernate.annotations.IndexColumn;
+import org.hibernate.search.annotations.Indexed;
 
+import com.book.identification.rest.IdXmlAdapter;
+
+@Indexed
 @Entity
-@XmlRootElement(name="category")
+@XmlRootElement(name = "category")
 public class Category extends EntityBase {
-	
-	@IndexColumn(name="categoryNameIndex")
-	@JoinColumn(unique=true,nullable=false)
+
+	@IndexColumn(name = "categoryNameIndex")
+	@JoinColumn(unique = true, nullable = false)
 	private String category;
-	
-	@OneToMany(fetch= FetchType.LAZY)
-	@JsonSerialize(using=ArrayOfIdJsonSerializer.class)
+
+	@OneToMany(fetch = FetchType.LAZY)
 	private Set<Category> subCategories;
-	
-	@ManyToOne(optional=true,cascade=CascadeType.ALL)
-	@JoinColumn(nullable=true)
-	@JsonSerialize(using=IdJsonSerializer.class)
+
+	@ManyToOne(optional = true, cascade = CascadeType.ALL)
+	@JoinColumn(nullable = true)
 	private Category parent;
 
 	public String getCategory() {
@@ -39,6 +47,8 @@ public class Category extends EntityBase {
 	public void setCategory(String category) {
 		this.category = category;
 	}
+	@XmlIDREF
+	@XmlElement
 	public Set<Category> getSubCategories() {
 		return subCategories;
 	}
@@ -47,7 +57,8 @@ public class Category extends EntityBase {
 		this.subCategories = subCategories;
 	}
 
-	@XmlTransient
+	@XmlIDREF
+	@XmlElement(name = "parent_id")
 	public Category getParent() {
 		return parent;
 	}

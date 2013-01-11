@@ -1,9 +1,9 @@
 define([
 	"views/ApplicationView",
-	"views/VolumeInfoListView",
+	"views/VolumeListView",
 	"views/VolumeInfoView",
 	"controllers/ApplicationController",
-	"controllers/VolumeInfoListController",
+	"controllers/VolumeListController",
 	"models/Volume",
 	"models/VolumeInfo",
 	"models/Category",
@@ -11,15 +11,15 @@ define([
 	"models/IndustryIdentifier",
 	"app/router",
 	"ember_data"
-], function(ApplicationView,VolumeInfoListView,VolumeInfoView,ApplicationController,VolumeInfoListController,
+], function(ApplicationView,VolumeListView,VolumeInfoView,ApplicationController,VolumeListController,
 		Volume,VolumeInfo,Category,ImageLink,IndustryIdentifier,Router){
 	/*Module Pattern*/
 	var App = Ember.Mixin.create({
 		ApplicationView: ApplicationView,
-		VolumeInfoListView: VolumeInfoListView,
+		VolumeListView: VolumeListView,
 		VolumeInfoView: VolumeInfoView,
 		ApplicationController: ApplicationController,
-		VolumeInfoListController: VolumeInfoListController,
+		VolumeListController: VolumeListController,
 		Router: Router,
 		Volume:Volume,
 		VolumeInfo:VolumeInfo,

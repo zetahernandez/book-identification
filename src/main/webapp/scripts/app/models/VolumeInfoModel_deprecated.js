@@ -1,6 +1,6 @@
 define(
-		[ "require", "ember", "jquery", "controllers/VolumeInfoListController" ],
-		function(require, Ember, $, volumeInfoListController) {
+		[ "require", "ember", "jquery" ],
+		function(require, Ember, $) {
 			var VolumeInfoModel = Ember.Object
 					.extend({
 						

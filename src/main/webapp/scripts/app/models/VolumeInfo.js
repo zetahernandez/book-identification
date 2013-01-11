@@ -4,12 +4,16 @@ define([ "require", "ember", "ember_data" ], function(require, Ember) {
 		id : DS.attr('number'),
 		authors: [],
 		description: DS.attr('string'),
-		image_links: DS.belongsTo('BooksApp.ImageLink', { embedded: true }),
-		industry_identifiers: DS.hasMany('BooksApp.IndustryIdentifier', { embedded: true }),
+		imageLinks: DS.belongsTo('BooksApp.ImageLink', { embedded: true }),
+		industryIdentifiers: DS.hasMany('BooksApp.IndustryIdentifier', { embedded: true }),
 		title: DS.attr('string'),
 		subtitle: DS.attr('string'),
 		publishedDate: DS.attr('date'),
-		categoriess: DS.hasMany('BooksApp.Category', { embedded: true })
+		categoriess: DS.hasMany('BooksApp.Category', { embedded: true }),
+		
+		unescapedDescription: function() {
+			return this.get('description').htmlSafe();
+		}.property('html'),
 
 	});
 	return Volumeinfo;

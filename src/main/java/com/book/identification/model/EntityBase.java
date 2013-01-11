@@ -7,6 +7,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlID;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -16,14 +17,14 @@ import org.codehaus.jackson.map.annotate.JsonRootName;
 import org.hibernate.search.annotations.DocumentId;
 
 @MappedSuperclass
+@XmlRootElement
 public abstract class EntityBase {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@DocumentId
-	@JsonProperty("id")
 	private Long entityId;
-	
-	@XmlElement(name="id")
+
+	@XmlTransient
 	public Long getEntityId() {
 		return entityId;
 	}
@@ -32,11 +33,23 @@ public abstract class EntityBase {
 		this.entityId = id;
 	}
 
+	@Transient
+	@XmlID
+	@XmlElement(name = "id")
+	public String getEntityXmlId() {
+		return Long.toString(entityId);
+	}
+
+	public void setEntityXmlId(final String entityXmlId) {
+		entityId = Long.parseLong(entityXmlId);
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((entityId == null) ? 0 : entityId.hashCode());
+		result = prime * result
+				+ ((entityId == null) ? 0 : entityId.hashCode());
 		return result;
 	}
 
@@ -61,12 +74,11 @@ public abstract class EntityBase {
 	public String toString() {
 		return "EntityBase [entityId=" + entityId + "]";
 	}
-	
+
 	@Transient
-	@JsonIgnore
 	@XmlTransient
-	public boolean isPersisted(){
+	public boolean isPersisted() {
 		return getEntityId() != null;
 	}
-	
+
 }

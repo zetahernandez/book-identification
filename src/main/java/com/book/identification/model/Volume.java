@@ -56,7 +56,7 @@ import com.book.identification.task.base.ItemQueue;
  */
 @Indexed
 @Entity
-@XmlRootElement(name="volumes")
+@XmlRootElement(name="volume")
 public final class Volume extends EntityBase implements ItemQueue {
 
 	/**
@@ -72,7 +72,6 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 * Opaque identifier for a specific version of a volume resource. (In LITE
 	 * projection) The value may be {@code null}.
 	 */
-	@JsonIgnore
 	private String etag;
 
 	/**
@@ -329,7 +328,9 @@ public final class Volume extends EntityBase implements ItemQueue {
 	}
 
 	private String path;
+	
 	private String fileName;
+
 	@XmlTransient
 	public String getPath() {
 		return path;
