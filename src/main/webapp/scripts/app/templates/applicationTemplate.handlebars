@@ -1,3 +1,19 @@
-<h1>An Example of EmberJS + ReguireJS with the Starter Kit</h1>
-<h2>and some other libraries like jquery.ui & bootstrap</h2>
-{{outlet}}
+<section>
+	<header>
+	{{outlet header}}
+	</header>
+	<nav>
+		{{view BooksApp.NavigationView}}
+	</nav>
+	<div class="main-container">
+		<div class="left-container">
+			{{outlet left}}
+		</div>
+		<div class="center-container">
+			{{outlet center}}
+		</div>
+	</div>
+	<footer>
+			{{outlet footer}}
+	</footer>
+</section>

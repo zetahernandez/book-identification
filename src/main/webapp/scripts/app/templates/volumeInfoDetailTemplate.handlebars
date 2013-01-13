@@ -1,0 +1,42 @@
+<tr id="main--{{unbound id}}"
+	class="gb-bookshelf-ordering-holder gb-bookshelf-standard-manage">
+	<td><table class="gb-bookshelf-table-container ">
+			<tbody>
+				<tr>
+					<td valign="top" align="center"
+						class="coverwrapper gb-bookshelf-hover-card"><a href="">
+							{{#if imageLinks.thumbnail}} <img border="0"
+							src={{unbound
+							imageLinks.thumbnail}}
+							title={{unbound title}}
+							class="coverthumb hover-card-attach-point"
+							alt={{title}}> {{/if}}
+					</a></td>
+					<td><div class="rsi">
+							<div>
+								<div>
+									<h2 class="resbdy">
+										<span dir="ltr"
+											class="gb-volume-title">{{unbound
+												title}}</span>&lrm;</a>
+									</h2>
+								</div>
+							</div>
+							<div class="gb-text-content">
+								<div style="line-height: 1.2em; font-size: small">
+									<span class="gb-gray-author"><span
+										style="color: #676767"><a class="link_aux"
+											href="http://www.google.com.ar/search?tbo=p&amp;tbm=bks&amp;q=inauthor:%22Filippo+di+Pisa%22"><span
+												dir="ltr">{{unbound book.volumeInfo.authors}}</span></a> -
+											{{book.volumeInfo.publishedDate}} -</span></span> {{#if
+									book.volumeInfo.description}}
+									<div dir="ltr" class="snippet sa">{{book.volumeInfo.unescapedDescription}}</div>
+									{{/if}}
+
+								</div>
+							</div>
+						</div></td>
+				</tr>
+			</tbody>
+		</table></td>
+</tr>

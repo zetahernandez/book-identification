@@ -1,8 +1,5 @@
-define([ "require", "ember","models/Volume" ], function() {
+define([ "require", "ember"], function(r,Ember) {
 	var VolumeListController = Ember.ArrayController.extend({
-		init : function() {
-			this._super();
-		}
 	});
 	return VolumeListController;
 });

@@ -1,7 +1,9 @@
-<table class="zbookTable">
-	<tbody class=">" id="GbShelfHolder">
-		{{#each book in controller}}
-			{{view BooksApp.VolumeInfoView contentBinding="this" target="book"}}
-		{{/each}}
-	</tbody>
-</table>
+<div>
+	<table class="zbookTable">
+		<tbody class=">" id="GbShelfHolder">
+			{{#each volume in controller}}
+				{{view BooksApp.VolumeInfoView contentBinding="this" target="volume"}}
+			{{/each}}
+		</tbody>
+	</table>
+</div>

@@ -5,24 +5,15 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.Transient;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlID;
 import javax.xml.bind.annotation.XmlIDREF;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.hibernate.annotations.IndexColumn;
 import org.hibernate.search.annotations.Indexed;
-
-import com.book.identification.rest.IdXmlAdapter;
 
 @Indexed
 @Entity
@@ -40,6 +31,7 @@ public class Category extends EntityBase {
 	@JoinColumn(nullable = true)
 	private Category parent;
 
+	@XmlElement(name="category_name")
 	public String getCategory() {
 		return category;
 	}

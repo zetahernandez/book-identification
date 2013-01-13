@@ -13,23 +13,26 @@ import org.hibernate.criterion.Restrictions;
 
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.model.Category;
+import com.book.identification.model.collections.Categories;
 
 @Path("categories/")
 public class CategoryResource {
 
-	@GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response categories() {
-		List<Category> findAll = DAOFactory.getInstance().getCategoryDAO().findAll();
-		final GenericEntity<List<Category>> entity = new GenericEntity<List<Category>>(findAll) { };
-		return Response.ok(entity).build();
-    }
+//	@GET
+//    @Produces(MediaType.APPLICATION_JSON)
+//    public Response categories() {
+//		List<Category> findAll = DAOFactory.getInstance().getCategoryDAO().findAll();
+//		Categories categories = new Categories();
+//		categories.setCategories(findAll);
+//		return Response.ok(categories).build();
+//    }
 	
-	@Path("parent/")
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response parentCategories() {
 		List<Category> findAll = DAOFactory.getInstance().getCategoryDAO().findByCriteria(Restrictions.isNull("parent"));
-        return Response.ok(findAll).build();
+		Categories categories = new Categories();
+		categories.setCategories(findAll);
+		return Response.ok(categories).build();
     }
 }

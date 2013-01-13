@@ -124,8 +124,24 @@ a.gb-hovercard-title {
     text-decoration: none;
 }
 
-
-
+div.main-container {
+	width: 100%;
+	margin: 5px 1px;
+}
+div.left-container {
+	float: left;
+    border-bottom: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+	padding: 4px 4px 0;
+}
+div.center-container {
+	padding: 4px 4px 4px 4px;
+	margin-left: 60px;
+}
+div.category-list {
+	padding: 4px 4px 4px 4px;
+	
+}
 
 
 

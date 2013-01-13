@@ -1,25 +1,25 @@
-<tr id="main--{{unbound book.id}}"
+<tr id="main--{{unbound volume.id}}"
 	class="gb-bookshelf-ordering-holder gb-bookshelf-standard-manage">
 	<td><table class="gb-bookshelf-table-container ">
 			<tbody>
 				<tr>
 					<td valign="top" align="center"
 						class="coverwrapper gb-bookshelf-hover-card"><a href="">
-							{{#if book.volumeInfo.imageLinks.thumbnail}} <img border="0"
+							{{#if volume.volumeInfo.imageLinks.thumbnail}} <img border="0"
 							src={{unbound
-							book.volumeInfo.imageLinks.thumbnail}}
+							volume.volumeInfo.imageLinks.thumbnail}}
 							title={{unbound
-							book.volumeInfo.title}}
+							volume.volumeInfo.title}}
 							class="coverthumb hover-card-attach-point"
-							alt={{unboundbook.volumeInfo.title}}> {{/if}}
+							alt={{unbound volume.volumeInfo.title}}> {{/if}}
 					</a></td>
 					<td><div class="rsi">
 							<div>
 								<div>
 									<h2 class="resbdy">
-										<a {{action showVolumeInfobook}}><span dir="ltr"
+										<a {{action showVolumeInfo volume.volumeInfo}}><span dir="ltr"
 											class="gb-volume-title">{{unbound
-												book.volumeInfo.title}}</span>&lrm;</a>
+												volume.volumeInfo.title}}</span>&lrm;</a>
 									</h2>
 								</div>
 							</div>
@@ -28,10 +28,10 @@
 									<span class="gb-gray-author"><span
 										style="color: #676767"><a class="link_aux"
 											href="http://www.google.com.ar/search?tbo=p&amp;tbm=bks&amp;q=inauthor:%22Filippo+di+Pisa%22"><span
-												dir="ltr">{{unbound book.volumeInfo.authors}}</span></a> -
-											{{book.volumeInfo.publishedDate}} -</span></span> {{#if
-									book.volumeInfo.description}}
-									<div dir="ltr" class="snippet sa">{{book.volumeInfo.unescapedDescription}}</div>
+												dir="ltr">{{unbound volume.volumeInfo.authors}}</span></a> -
+											{{volume.volumeInfo.publishedDate}} -</span></span> {{#if
+									volume.volumeInfo.description}}
+									<div dir="ltr" class="snippet sa">{{volume.volumeInfo.unescapedDescription}}</div>
 									{{/if}}
 
 								</div>
