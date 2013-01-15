@@ -51,13 +51,14 @@ define([ "views/ApplicationView",
 				// }),
 				mappings : {
 					volume : Volume,
-					volume_info : VolumeInfo,
+					volume_info  : VolumeInfo,
 					category : Category,
-					image_links : ImageLink,
-					industry_identifier : IndustryIdentifier,
+					imageLinks : ImageLink,
+					industryIdentifier : IndustryIdentifier,
 				},
 				plurals : {
 					volume : 'volumes',
+					volume_info : 'volumesInfo',
 					category : 'categories',
 					industry_identifier : 'industryIdentifiers'
 				},

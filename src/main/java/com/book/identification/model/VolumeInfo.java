@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * General volume information.
  */
 @Entity
+@XmlRootElement(name="volume_info")
 public final class VolumeInfo extends EntityBase {
 	/**
 	 * The names of the authors and/or editors for this volume. (In LITE
