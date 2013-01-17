@@ -18,18 +18,21 @@ import com.book.identification.model.collections.Categories;
 @Path("categories/")
 public class CategoryResource {
 
-//	@GET
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public Response categories() {
-//		List<Category> findAll = DAOFactory.getInstance().getCategoryDAO().findAll();
-//		Categories categories = new Categories();
-//		categories.setCategories(findAll);
-//		return Response.ok(categories).build();
-//    }
+	
 	
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response parentCategories() {
+		List<Category> findAll = DAOFactory.getInstance().getCategoryDAO().findByCriteria(Restrictions.isNull("parent"));
+		Categories categories = new Categories();
+		categories.setCategories(findAll);
+		return Response.ok(categories).build();
+    }
+	
+	@GET
+    @Produces(MediaType.APPLICATION_JSON)
+	@Path("{categoryId}")
+    public Response Category() {
 		List<Category> findAll = DAOFactory.getInstance().getCategoryDAO().findByCriteria(Restrictions.isNull("parent"));
 		Categories categories = new Categories();
 		categories.setCategories(findAll);

@@ -7,6 +7,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.hibernate.search.FullTextSession;
+
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.model.Volume;
 import com.book.identification.model.collections.Volumes;
@@ -31,5 +33,14 @@ public class VolumeResource {
 		Volume volume = DAOFactory.getInstance().getVolumeDAO().findById(entityId, false);
 		return  Response.ok(volume).build();
 		
+	}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("category/{categoryID}")
+	public Response findVolumesBySelectedCategory(@PathParam("categoryID") Long categoryId) {
+		FullTextSession fts =
+				org.hibernate.search.Search.getFullTextSession( DAOFactory.getInstance().getVolumeDAO().getSession());
+		return null;
 	}
 }
