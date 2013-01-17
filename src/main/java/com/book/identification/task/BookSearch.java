@@ -4,12 +4,18 @@ import java.io.File;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentSkipListSet;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.jfree.util.Log;
+
 import com.book.identification.FileFilter;
 import com.book.identification.FilePDF;
 import com.book.identification.task.base.ProducerConsumer;
 
 public class BookSearch extends Thread {
 
+	final static Logger logger = LogManager.getLogger(BookSearch.class);
+	
 	public final BlockingQueue<FilePDF> fileQueue;
 	public ConcurrentSkipListSet<File> indexedFiles = new ConcurrentSkipListSet<File>();
 	public final FileFilter fileFilter;
@@ -33,8 +39,7 @@ public class BookSearch extends Thread {
 		try {
 			foundFilesTask.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage());
 		}
 		producerConsumer.notifyEndProducers();
 	}

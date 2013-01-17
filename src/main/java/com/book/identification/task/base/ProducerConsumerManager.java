@@ -26,6 +26,7 @@ public abstract class ProducerConsumerManager<P extends ProducerThread<IP>, IP e
 	private AtomicBoolean finishedProdcers = new AtomicBoolean(false);
 	private Thread finalizer;
 	private ProducerConsumer nextProducerConsumer;
+	private	long startTime = 0;
 
 	public ProducerConsumerManager(final String name, BlockingQueue<IC> input,
 			BlockingQueue<IP> output, ProducerConsumer nextProducerConsumer) {
@@ -36,7 +37,6 @@ public abstract class ProducerConsumerManager<P extends ProducerThread<IP>, IP e
 		executorService = Executors.newFixedThreadPool(10,new ThreadFactory() {
 			AtomicInteger atomicInteger = new AtomicInteger(0);
 			public Thread newThread(Runnable r) {
-				
 				return new Thread(r, name + "-pool-" + atomicInteger.addAndGet(1));
 			}
 		});
@@ -50,7 +50,7 @@ public abstract class ProducerConsumerManager<P extends ProducerThread<IP>, IP e
 
 	@Override
 	public void run() {
-		long startTime = System.currentTimeMillis();
+		startTime = System.currentTimeMillis();
 		logger.info(this.toString() + " start at " + new Date()  );
 		while (!finished()) {
 			try {
@@ -103,7 +103,7 @@ public abstract class ProducerConsumerManager<P extends ProducerThread<IP>, IP e
 			nextProducerConsumer.notifyEndProducers();
 		}
 		logger.debug("Interrupt this Thread");
-		logger.info(this.toString() + " end at " + new Date()  );
+		logger.info(this.toString() + " running " +   ((System.currentTimeMillis() - startTime)/1000) + "seg");
 		this.interrupt();
 	}
 }

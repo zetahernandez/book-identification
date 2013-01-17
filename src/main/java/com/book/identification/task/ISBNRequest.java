@@ -21,7 +21,7 @@ import com.google.gson.GsonBuilder;
 
 public class ISBNRequest extends
 		ProducerThread<com.book.identification.model.Volume> {
-	Logger logger = LogManager.getLogger(ISBNRequest.class);
+	final static Logger logger = LogManager.getLogger(ISBNRequest.class);
 	/**
 	 * 
 	 */
@@ -52,6 +52,7 @@ public class ISBNRequest extends
 
 			if (volumes != null && volumes.getTotalItems() != null && volumes.getTotalItems() > 0) {
 					Volume volume = volumes.getItems().get(0);
+					logger.info("Search on goolge api book with isbn:" + fileIsbn.getIsbn());
 					Volume execute = books.volumes().get(volume.getId()).setProjection("full").execute();
 					Gson gson = new GsonBuilder().create();
 					com.book.identification.model.Volume volume2 = null;

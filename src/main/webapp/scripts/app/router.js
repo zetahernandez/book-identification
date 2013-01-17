@@ -3,6 +3,7 @@ define([ "ember" ], function(Ember) {
 		root : Ember.Route.extend({
 			index : Ember.Route.extend({
 				route : '/',
+				selectCategory : Ember.Route.transitionTo('selectCategory'),
 				showVolumeInfo : Ember.Route.transitionTo('volumeInfo'),
 				connectOutlets : function(router, context) {
 					router.get('applicationController').connectOutlet({
@@ -18,7 +19,7 @@ define([ "ember" ], function(Ember) {
 				}
 			}),
 			volumeInfo : Ember.Route.extend({
-				route : '/:volumeInfoId',
+				route : '/volumeInfo/:volumeInfoId',
 				showAllBooks : Ember.Route.transitionTo('index'),
 				showDetails : Ember.Route.transitionTo('details'),
 				connectOutlets : function(router, context) {

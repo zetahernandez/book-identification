@@ -15,6 +15,7 @@ define({
 		'App' : 'app/main',
 		'models' : 'app/models',
 		'views' : 'app/views',
+		'router' : 'app/views',
 		'controllers' : 'app/controllers',
 		'templates' : 'app/templates',
 		/* libs */

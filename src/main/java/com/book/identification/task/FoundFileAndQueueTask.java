@@ -9,7 +9,7 @@ import com.book.identification.FilePDF;
 
 
 public class FoundFileAndQueueTask extends Thread {
-	Logger logger = LogManager.getLogger(FoundFileAndQueueTask.class);
+	final static Logger logger = LogManager.getLogger(FoundFileAndQueueTask.class);
 	/**
 	 * 
 	 */
@@ -41,7 +41,7 @@ public class FoundFileAndQueueTask extends Thread {
 				else if (entry != null && !this.bookSearch.indexedFiles.contains(entry)) {
 					this.bookSearch.indexedFiles.add(entry);
 					try {
-						logger.debug("Accepted file -> " + entry.getName());
+						logger.info("Accepted file -> " + entry.getName());
 						this.bookSearch.fileQueue.put(new FilePDF(entry));
 					} catch (InterruptedException e) {
 						Thread.currentThread().interrupt();
