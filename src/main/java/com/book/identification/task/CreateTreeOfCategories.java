@@ -17,7 +17,7 @@ import com.book.identification.model.Category;
 import com.book.identification.model.VolumeInfo;
 
 public class CreateTreeOfCategories {
-	Logger logger = LogManager.getLogger(CreateTreeOfCategories.class);
+	final static Logger logger = LogManager.getLogger(CreateTreeOfCategories.class);
 	CategoryDAO categoryDAO = DAOFactory.getInstance().getCategoryDAO();
 	
 	public void execute() {
@@ -26,7 +26,7 @@ public class CreateTreeOfCategories {
 		VolumeInfoDAO volumeInfoDAO = DAOFactory.getInstance().getVolumeInfoDAO();
 		List<VolumeInfo> volumeInfos = volumeInfoDAO.findAll();
 		for (VolumeInfo volumeInfo : volumeInfos) {
-			logger.info("Categorissing " + volumeInfo.getTitle());
+			logger.info("Categorizing " + volumeInfo.getTitle());
 			Set<String> stringCategories = volumeInfo.getCategories();
 				
 			

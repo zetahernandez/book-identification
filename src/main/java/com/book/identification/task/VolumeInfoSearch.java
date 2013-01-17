@@ -14,7 +14,6 @@ public class VolumeInfoSearch extends ProducerConsumerManager<ProducerThread<Vol
 	public VolumeInfoSearch(String name, BlockingQueue<FileISBN> input,
 			BlockingQueue<Volume> output, ProducerConsumer nextProducerConsumer) {
 		super(name, input, output, nextProducerConsumer);
-		// TODO Auto-generated constructor stub
 	}
 
 

@@ -26,7 +26,7 @@ class SaveVolume extends ProducerThread<Volume>{
 		VolumeDAO volumeDAO = DAOFactory.getInstance().getVolumeDAO();
 		try{
 				volumeDAO.getSession().getTransaction().begin();
-				logger.debug("Save volume ->" + volume.toString());
+				logger.info("Save volume ->" + volume.getVolumeInfo().getTitle());
 				volumeDAO.makePersistent(volume);
 				volumeDAO.getSession().getTransaction().commit();
 		}catch (Exception e) {

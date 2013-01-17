@@ -14,7 +14,7 @@ import com.book.identification.task.base.ProducerThread;
 
 public class BookReader extends ProducerConsumerManager<ProducerThread<FileISBN>,FileISBN, FilePDF> {
 	
-	Logger logger = LogManager.getLogger(BookReader.class);
+	final static Logger logger = LogManager.getLogger(BookReader.class);
 
 	public BookReader(String name, BlockingQueue<FilePDF> input,
 			BlockingQueue<FileISBN> output,
