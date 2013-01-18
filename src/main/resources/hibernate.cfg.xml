@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
                                          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-	<session-factory name="">
+	<session-factory>
 		<property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
 		<property name="hibernate.connection.url">jdbc:hsqldb:file:db/ebook;shutdown=true;hsqldb.write_delay=false;</property>
 		<property name="hibernate.connection.username">sa</property>

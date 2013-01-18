@@ -1,5 +1,7 @@
 package com.book.identification.dao;
 
+import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.Query;
 
@@ -28,6 +30,16 @@ public class CategoryDAOHibernate extends GenericHibernateDAO<Category, Long>
 			}
 		}
 		return (Category) query.uniqueResult();
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Category> childCategories(Long parentId) {
+		Query query;
+		
+			query = getSession().createQuery("Select c From Category c Where c.parent.id = :parentId")
+			.setParameter("parentId", parentId);
+			return (List<Category>) query.list();
+		
 	}
 
 }

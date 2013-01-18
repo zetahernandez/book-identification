@@ -39,8 +39,8 @@ public class Category extends EntityBase {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	@XmlIDREF
-	@XmlElement
+	
+	@XmlElement(name="sub_categories")
 	public Set<Category> getSubCategories() {
 		return subCategories;
 	}

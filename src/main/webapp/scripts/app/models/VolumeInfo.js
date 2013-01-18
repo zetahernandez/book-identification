@@ -9,11 +9,11 @@ define([ "require", "ember", "ember_data" ], function(require, Ember) {
 		title: DS.attr('string'),
 		subtitle: DS.attr('string'),
 		publishedDate: DS.attr('date'),
-		categoriess: DS.hasMany('BooksApp.Category', { embedded: true }),
+		categories: DS.hasMany('BooksApp.Category', { embedded: true }),
 		
 		unescapedDescription: function() {
 			return this.get('description').htmlSafe();
-		}.property('html'),
+		}.property('description'),
 
 	});
 	return Volumeinfo;

@@ -51,6 +51,7 @@ public final class VolumeInfo extends EntityBase {
 	@ManyToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private Set<Category> categoriess;
 	
+	@XmlElement(name="categories")
 	public Set<Category> getCategoriess() {
 		return categoriess;
 	}

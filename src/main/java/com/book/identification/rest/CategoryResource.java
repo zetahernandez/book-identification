@@ -5,7 +5,7 @@ import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.GenericEntity;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -31,9 +31,9 @@ public class CategoryResource {
 	
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
-	@Path("{categoryId}")
-    public Response Category() {
-		List<Category> findAll = DAOFactory.getInstance().getCategoryDAO().findByCriteria(Restrictions.isNull("parent"));
+	@Path("{parentId}")
+    public Response childsCategory(@QueryParam("parentId") Long parentId) {
+		List<Category> findAll = DAOFactory.getInstance().getCategoryDAO().childCategories(parentId);
 		Categories categories = new Categories();
 		categories.setCategories(findAll);
 		return Response.ok(categories).build();

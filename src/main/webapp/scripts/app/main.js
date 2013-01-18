@@ -4,6 +4,7 @@ define([ "views/ApplicationView",
 		"views/VolumeInfoView",
 		"views/VolumeInfoDetailView",
 		"views/NavigationView",
+		"views/CategoryView",
 		"controllers/ApplicationController",
 		"controllers/VolumeListController",
 		"controllers/CategoryListController",
@@ -17,7 +18,7 @@ define([ "views/ApplicationView",
 		"ember_data" ],
 		
 		function(ApplicationView, VolumeListView,
-				CategoryListView, VolumeInfoView, VolumeInfoDetailView,NavigationView,
+				CategoryListView, VolumeInfoView, VolumeInfoDetailView,NavigationView,CategoryView,
 				ApplicationController, VolumeListController, CategoryListController,
 				VolumeInfoDetailController, Volume, VolumeInfo, Category, ImageLink,
 				IndustryIdentifier, Router) {
@@ -39,6 +40,7 @@ define([ "views/ApplicationView",
 		Category : Category,
 		ImageLink : ImageLink,
 		IndustryIdentifier : IndustryIdentifier,
+		CategoryView : CategoryView,
 
 		store : DS.Store.create({
 			revision : 4,
@@ -53,14 +55,16 @@ define([ "views/ApplicationView",
 					volume : Volume,
 					volume_info  : VolumeInfo,
 					category : Category,
-					imageLinks : ImageLink,
-					industryIdentifier : IndustryIdentifier,
+					image_links : ImageLink,
+					industry_identifier : IndustryIdentifier,
 				},
 				plurals : {
 					volume : 'volumes',
 					volume_info : 'volumesInfo',
 					category : 'categories',
-					industry_identifier : 'industryIdentifiers'
+					industry_identifier : 'industryIdentifiers',
+					image_link : 'imageLinks'
+						
 				},
 				namespace : 'rest' // you should change the first segment
 									// according to the application's folder

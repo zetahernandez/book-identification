@@ -6,7 +6,6 @@ import java.util.concurrent.ConcurrentSkipListSet;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.jfree.util.Log;
 
 import com.book.identification.FileFilter;
 import com.book.identification.FilePDF;

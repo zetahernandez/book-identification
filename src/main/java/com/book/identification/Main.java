@@ -22,7 +22,7 @@ public class Main {
 		JettyHttpServer httpServer = new JettyHttpServer();
 		httpServer.start();
 //		
-//		HibernateUtil.getSessionFactory();
+		HibernateUtil.getSessionFactory();
 ////		
 //		BookIdentificationWork bookIdentificationWork = new BookIdentificationWork("BookIdentificationWork",args);  
 //		bookIdentificationWork.start();
@@ -31,8 +31,8 @@ public class Main {
 //		} catch (InterruptedException e) {
 //			e.printStackTrace();
 //		}
-		
-		
+//		
+//		
 //		
 //		new CreateTreeOfCategories().execute();
 //		

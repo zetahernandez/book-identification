@@ -1,11 +1,6 @@
 <div class="filter-type">
 	<h2>Category Filter</h2>
-	
-	<div class="category-list">
 		{{#each category in controller}}
-			<div class="category">
-				<a {{action selectCategory category}}>{{category.categoryName}}</a>
-			</div>
+			{{view BooksApp.CategoryView}}
 		{{/each}}
-	</div>
 </div>
