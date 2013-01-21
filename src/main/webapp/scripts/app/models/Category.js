@@ -2,7 +2,7 @@ define([ "require", "ember", "ember_data"], function(require, Ember) {
 	var Category = DS.Model.extend({
 		primaryKey: 'id',
 		id : DS.attr('number'),
-		categoryName : DS.attr('string'),
+		categoryName : DS.attr('string'), //{ key: 'thumbnailUrl' }
 		parent :DS.belongsTo('BooksApp.Category'),
 		subCategories: DS.hasMany('BooksApp.Category',{ embedded: true }),
 		
