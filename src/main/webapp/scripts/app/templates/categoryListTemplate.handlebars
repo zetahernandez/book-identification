@@ -1,6 +1,15 @@
 <div class="filter-type">
 	<h2>Category Filter</h2>
-		{{#each category in controller}}
-			{{view BooksApp.CategoryView}}
-		{{/each}}
+		{{#if controller.selectedCategory}}
+			{{#each categoryParent in controller.selectedCategories}}
+				{{#view BooksApp.CategoryView contentBinding="this"}}<a href=# {{bindAttr id="categoryParent.id"}}>{{categoryParent.categoryName}}</a>{{/view}}
+			{{/each}}
+		{{/if}}
+		{{#if controller.content}}
+			{{#each category in controller}}
+				{{#view BooksApp.CategoryView contentBinding="this"}}<a href=# {{bindAttr id="category.id"}}>{{category.categoryName}}</a>{{/view}}
+			{{/each}}
+		{{/if}}
 </div>
+
+

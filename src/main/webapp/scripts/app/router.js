@@ -46,10 +46,10 @@ define([ "ember" ], function(Ember) {
 			//
 			// }
 			// })
-
 			})
+//			,
 //			selectCategory : Ember.Route.extend({
-//				route : '/category/:categoryId',
+//				route : '/',
 //				connectOutlets : function(router, context) {
 //					router.get('applicationController').connectOutlet({
 //						name : 'categoryList',

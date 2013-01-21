@@ -344,7 +344,8 @@ public final class VolumeInfo extends EntityBase {
 	 * URL to view information about this volume on the Google Books site. (In
 	 * LITE projection) The value returned may be {@code null}.
 	 */
-	@XmlTransient	public String getInfoLink() {
+	@XmlTransient	
+	public String getInfoLink() {
 		return infoLink;
 	}
 
@@ -400,7 +401,7 @@ public final class VolumeInfo extends EntityBase {
 	/**
 	 * Total number of pages. The value returned may be {@code null}.
 	 */
-	@XmlTransient
+	@XmlElement(name="pages")
 	public Integer getPageCount() {
 		return pageCount;
 	}
@@ -453,7 +454,7 @@ public final class VolumeInfo extends EntityBase {
 	 * Date of publication. (In LITE projection.) The value returned may be
 	 * {@code null}.
 	 */
-	@XmlTransient
+	@XmlElement(name="published_date")
 	public String getPublishedDate() {
 		return publishedDate;
 	}

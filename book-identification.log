@@ -2971,3 +2971,697 @@ Caused by: javax.naming.NoInitialContextException: Need to specify class name in
 2013-01-18 13:24:06,059  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk353ae7b33cd1cf8a]
 2013-01-18 13:24:06,059  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10136]
 2013-01-18 13:24:06,061  INFO [main] (SchemaUpdate.java:240) - HHH000232: Schema update complete
+2013-01-21 10:05:17,593  INFO [main] (Version.java:37) - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2013-01-21 10:05:17,603  INFO [main] (Version.java:41) - HHH000412: Hibernate Core {4.1.7.Final}
+2013-01-21 10:05:17,605  INFO [main] (Environment.java:239) - HHH000206: hibernate.properties not found
+2013-01-21 10:05:17,607  INFO [main] (Environment.java:342) - HHH000021: Bytecode provider name : javassist
+2013-01-21 10:05:17,671  INFO [main] (Configuration.java:1933) - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2013-01-21 10:05:17,672  INFO [main] (Configuration.java:1952) - HHH000040: Configuration resource: /hibernate.cfg.xml
+2013-01-21 10:05:17,820  WARN [main] (DTDEntityResolver.java:74) - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2013-01-21 10:05:17,889  INFO [main] (Configuration.java:2074) - HHH000041: Configured SessionFactory: null
+2013-01-21 10:05:18,642  INFO [main] (DriverManagerConnectionProviderImpl.java:96) - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2013-01-21 10:05:18,711  INFO [main] (DriverManagerConnectionProviderImpl.java:130) - HHH000115: Hibernate connection pool size: 1
+2013-01-21 10:05:18,712  INFO [main] (DriverManagerConnectionProviderImpl.java:133) - HHH000006: Autocommit mode: false
+2013-01-21 10:05:18,713  INFO [main] (DriverManagerConnectionProviderImpl.java:147) - HHH000401: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:db/ebook;shutdown=true;hsqldb.write_delay=false;]
+2013-01-21 10:05:18,714  INFO [main] (DriverManagerConnectionProviderImpl.java:152) - HHH000046: Connection properties: {user=sa, password=****}
+2013-01-21 10:05:19,682  INFO [main] (?:?) - checkpointClose start
+2013-01-21 10:05:20,005  INFO [main] (?:?) - checkpointClose end
+2013-01-21 10:05:20,364  INFO [main] (Dialect.java:125) - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2013-01-21 10:05:20,397  INFO [main] (TransactionFactoryInitiator.java:68) - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2013-01-21 10:05:20,410  INFO [main] (ASTQueryTranslatorFactory.java:48) - HHH000397: Using ASTQueryTranslatorFactory
+2013-01-21 10:05:20,573  INFO [main] (Version.java:39) - HSEARCH000034: Hibernate Search 4.1.1.Final
+2013-01-21 10:05:20,913  WARN [main] (ConfigContext.java:299) - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2013-01-21 10:05:21,306  INFO [main] (AvroSerializationProvider.java:73) - HSEARCH000079: Serialization protocol version 1.0
+2013-01-21 10:05:21,721  INFO [main] (AvroSerializationProvider.java:73) - HSEARCH000079: Serialization protocol version 1.0
+2013-01-21 10:05:24,359  INFO [main] (SchemaUpdate.java:182) - HHH000228: Running hbm2ddl schema update
+2013-01-21 10:05:24,360  INFO [main] (SchemaUpdate.java:193) - HHH000102: Fetching database metadata
+2013-01-21 10:05:24,363  INFO [main] (SchemaUpdate.java:205) - HHH000396: Updating schema
+2013-01-21 10:05:24,537  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.ACCESSINFO
+2013-01-21 10:05:24,538  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [viewability, publicdomain, embeddable, accessviewstatus, entityid, webreaderlink, pdf_entityid, vieworderurl, epub_entityid, texttospeechpermission, country]
+2013-01-21 10:05:24,538  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk32bb185260cb9f2a, fk32bb18527baa3db0]
+2013-01-21 10:05:24,538  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10140, sys_idx_10138, sys_idx_sys_pk_10026_10027]
+2013-01-21 10:05:24,604  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.AUTHOR
+2013-01-21 10:05:24,605  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, displayname]
+2013-01-21 10:05:24,605  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-21 10:05:24,605  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10029_10030]
+2013-01-21 10:05:24,648  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY
+2013-01-21 10:05:24,648  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [category, entityid, parent_entityid]
+2013-01-21 10:05:24,649  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6dd211e55d6dd3e]
+2013-01-21 10:05:24,649  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10034, sys_idx_sys_pk_10032_10033]
+2013-01-21 10:05:24,684  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.CATEGORY_CATEGORY
+2013-01-21 10:05:24,684  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [subcategories_entityid, category_entityid]
+2013-01-21 10:05:24,684  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk8635931f1502c76a, fk8635931fe152b9cc]
+2013-01-21 10:05:24,684  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_ct_10039_10041, sys_idx_10044, sys_idx_sys_pk_10038_10040, sys_idx_10042]
+2013-01-21 10:05:24,714  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.DIMENSIONS
+2013-01-21 10:05:24,715  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [height, entityid, width, thickness]
+2013-01-21 10:05:24,715  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-21 10:05:24,715  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10047_10048]
+2013-01-21 10:05:24,748  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.EPUB
+2013-01-21 10:05:24,748  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-21 10:05:24,749  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-21 10:05:24,749  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10050_10051]
+2013-01-21 10:05:24,773  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.IMAGELINKS
+2013-01-21 10:05:24,773  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [thumbnail, entityid, small, medium, large, extralarge, smallthumbnail]
+2013-01-21 10:05:24,773  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-21 10:05:24,774  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10053_10054]
+2013-01-21 10:05:24,797  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.INDUSTRYIDENTIFIERS
+2013-01-21 10:05:24,797  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, type, identifier]
+2013-01-21 10:05:24,797  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-21 10:05:24,798  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10056_10057]
+2013-01-21 10:05:24,819  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.LISTPRICE
+2013-01-21 10:05:24,820  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-21 10:05:24,820  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-21 10:05:24,820  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10059_10060]
+2013-01-21 10:05:24,852  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.PDF
+2013-01-21 10:05:24,853  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [acstokenlink, downloadlink, entityid, isavailable]
+2013-01-21 10:05:24,853  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-21 10:05:24,854  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10062_10063]
+2013-01-21 10:05:24,887  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RECOMMENDEDINFO
+2013-01-21 10:05:24,888  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, explanation]
+2013-01-21 10:05:24,888  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-21 10:05:24,889  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10065_10066]
+2013-01-21 10:05:24,921  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.RETAILPRICE
+2013-01-21 10:05:24,921  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [amount, entityid, currencycode]
+2013-01-21 10:05:24,922  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-21 10:05:24,922  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10068_10069]
+2013-01-21 10:05:24,955  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.REVIEW
+2013-01-21 10:05:24,956  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [content, title, author_entityid, entityid, fulltexturl, volumeid, rating, type, date, kind, source_entityid]
+2013-01-21 10:05:24,956  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk91b3e3788c74974a, fk91b3e3788ed6354a]
+2013-01-21 10:05:24,957  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10142, sys_idx_sys_pk_10071_10072, sys_idx_10073]
+2013-01-21 10:05:25,007  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SALEINFO
+2013-01-21 10:05:25,007  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [isebook, saleability, entityid, listprice_entityid, retailprice_entityid, buylink, country]
+2013-01-21 10:05:25,007  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk773b81b5cc82e510, fk773b81b5ce559b70]
+2013-01-21 10:05:25,008  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10080, sys_idx_sys_pk_10076_10077, sys_idx_10078]
+2013-01-21 10:05:25,059  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SEARCHINFO
+2013-01-21 10:05:25,059  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [textsnippet, entityid]
+2013-01-21 10:05:25,059  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-21 10:05:25,060  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10083_10084]
+2013-01-21 10:05:25,115  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.SOURCE
+2013-01-21 10:05:25,116  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [description, entityid, extradescription, url]
+2013-01-21 10:05:25,116  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: []
+2013-01-21 10:05:25,116  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_pk_10086_10087]
+2013-01-21 10:05:25,158  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.USERINFO
+2013-01-21 10:05:25,158  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [entityid, isinmybooks, ispreordered, review_entityid, ispurchased]
+2013-01-21 10:05:25,158  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkf3f34b395de56bea]
+2013-01-21 10:05:25,159  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10091, sys_idx_sys_pk_10089_10090]
+2013-01-21 10:05:25,214  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUME
+2013-01-21 10:05:25,215  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [etag, entityid, searchinfo_entityid, recommendedinfo_entityid, saleinfo_entityid, userinfo_entityid, kind, id, selflink, volumeinfo_entityid, path, filename, accessinfo_entityid]
+2013-01-21 10:05:25,215  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk990fd33a10e1516a, fk990fd33ac5a8a2ca, fk990fd33a3cd1cf8a, fk990fd33a5f566f4a, fk990fd33ae71c5ea, fk990fd33ab26ac730]
+2013-01-21 10:05:25,215  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10144, sys_idx_10096, sys_idx_10104, sys_idx_sys_pk_10094_10095, sys_idx_10098, sys_idx_10102, sys_idx_10100]
+2013-01-21 10:05:25,264  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO
+2013-01-21 10:05:25,264  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [printtype, previewlink, entityid, averagerating, maincategory, publisheddate, publisher, dimensions_entityid, title, ratingscount, description, pagecount, imagelinks_entityid, subtitle, canonicalvolumelink, infolink, language, contentversion]
+2013-01-21 10:05:25,264  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk1a427f08c32b10a, fk1a427f089212900a]
+2013-01-21 10:05:25,265  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10111, sys_idx_10109, sys_idx_sys_pk_10107_10108]
+2013-01-21 10:05:25,382  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORY
+2013-01-21 10:05:25,383  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categoriess_entityid]
+2013-01-21 10:05:25,383  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk6daa3c753cd1cf8a, fk6daa3c75b53ceab1]
+2013-01-21 10:05:25,383  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10117, sys_idx_sys_pk_10115_10116, sys_idx_10119]
+2013-01-21 10:05:25,431  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_INDUSTRYIDENTIFIERS
+2013-01-21 10:05:25,431  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, industryidentifiers_entityid]
+2013-01-21 10:05:25,432  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk9b8418553cd1cf8a, fk9b841855a16084d0]
+2013-01-21 10:05:25,432  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_sys_ct_10123_10125, sys_idx_10126, sys_idx_10128]
+2013-01-21 10:05:25,478  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_AUTHORS
+2013-01-21 10:05:25,479  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [authors, volumeinfo_entityid]
+2013-01-21 10:05:25,479  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fkb37dae113cd1cf8a]
+2013-01-21 10:05:25,479  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10132]
+2013-01-21 10:05:25,513  INFO [main] (TableMetadata.java:65) - HHH000261: Table found: PUBLIC.PUBLIC.VOLUMEINFO_CATEGORIES
+2013-01-21 10:05:25,513  INFO [main] (TableMetadata.java:66) - HHH000037: Columns: [volumeinfo_entityid, categories]
+2013-01-21 10:05:25,514  INFO [main] (TableMetadata.java:68) - HHH000108: Foreign keys: [fk353ae7b33cd1cf8a]
+2013-01-21 10:05:25,514  INFO [main] (TableMetadata.java:69) - HHH000126: Indexes: [sys_idx_10136]
+2013-01-21 10:05:25,515  INFO [main] (SchemaUpdate.java:240) - HHH000232: Schema update complete
+2013-01-21 11:30:22,713  INFO [main] (Version.java:37) - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2013-01-21 11:30:22,723  INFO [main] (Version.java:41) - HHH000412: Hibernate Core {4.1.7.Final}
+2013-01-21 11:30:22,725  INFO [main] (Environment.java:239) - HHH000206: hibernate.properties not found
+2013-01-21 11:30:22,727  INFO [main] (Environment.java:342) - HHH000021: Bytecode provider name : javassist
+2013-01-21 11:30:22,750  INFO [main] (Configuration.java:1933) - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2013-01-21 11:30:22,751  INFO [main] (Configuration.java:1952) - HHH000040: Configuration resource: /hibernate.cfg.xml
+2013-01-21 11:30:22,779  WARN [main] (DTDEntityResolver.java:74) - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2013-01-21 11:30:22,831  INFO [main] (Configuration.java:2074) - HHH000041: Configured SessionFactory: null
+2013-01-21 11:30:23,075  INFO [main] (DriverManagerConnectionProviderImpl.java:96) - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2013-01-21 11:30:23,097  INFO [main] (DriverManagerConnectionProviderImpl.java:130) - HHH000115: Hibernate connection pool size: 1
+2013-01-21 11:30:23,097  INFO [main] (DriverManagerConnectionProviderImpl.java:133) - HHH000006: Autocommit mode: false
+2013-01-21 11:30:23,099  INFO [main] (DriverManagerConnectionProviderImpl.java:147) - HHH000401: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:db/ebook;shutdown=true;hsqldb.write_delay=false;]
+2013-01-21 11:30:23,099  INFO [main] (DriverManagerConnectionProviderImpl.java:152) - HHH000046: Connection properties: {user=sa, password=****}
+2013-01-21 11:30:23,653  INFO [main] (?:?) - Checkpoint start
+2013-01-21 11:30:23,653  INFO [main] (?:?) - checkpointClose start
+2013-01-21 11:30:23,806  INFO [main] (?:?) - checkpointClose end
+2013-01-21 11:30:23,838  INFO [main] (?:?) - Checkpoint end
+2013-01-21 11:30:23,873  INFO [main] (Dialect.java:125) - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2013-01-21 11:30:23,930  INFO [main] (TransactionFactoryInitiator.java:68) - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2013-01-21 11:30:23,936  INFO [main] (ASTQueryTranslatorFactory.java:48) - HHH000397: Using ASTQueryTranslatorFactory
+2013-01-21 11:30:23,983  INFO [main] (Version.java:39) - HSEARCH000034: Hibernate Search 4.1.1.Final
+2013-01-21 11:30:24,062  WARN [main] (ConfigContext.java:299) - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2013-01-21 11:30:24,115  WARN [main] (DirectoryProviderHelper.java:258) - HSEARCH000041: Index directory not found, creating: 'C:\desarrollo\workspaces\threads\book-identification\db\indexes'
+2013-01-21 11:30:24,117  WARN [main] (DirectoryProviderHelper.java:258) - HSEARCH000041: Index directory not found, creating: 'C:\desarrollo\workspaces\threads\book-identification\db\indexes\com.book.identification.model.Category'
+2013-01-21 11:30:24,326  INFO [main] (AvroSerializationProvider.java:73) - HSEARCH000079: Serialization protocol version 1.0
+2013-01-21 11:30:24,569  WARN [main] (DirectoryProviderHelper.java:258) - HSEARCH000041: Index directory not found, creating: 'C:\desarrollo\workspaces\threads\book-identification\db\indexes\com.book.identification.model.Volume'
+2013-01-21 11:30:24,700  INFO [main] (AvroSerializationProvider.java:73) - HSEARCH000079: Serialization protocol version 1.0
+2013-01-21 11:30:24,952  INFO [main] (SchemaUpdate.java:182) - HHH000228: Running hbm2ddl schema update
+2013-01-21 11:30:24,952  INFO [main] (SchemaUpdate.java:193) - HHH000102: Fetching database metadata
+2013-01-21 11:30:24,954  INFO [main] (SchemaUpdate.java:205) - HHH000396: Updating schema
+2013-01-21 11:30:24,989  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: AccessInfo
+2013-01-21 11:30:24,995  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Author
+2013-01-21 11:30:25,003  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Category
+2013-01-21 11:30:25,010  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Category_Category
+2013-01-21 11:30:25,014  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Dimensions
+2013-01-21 11:30:25,020  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Epub
+2013-01-21 11:30:25,025  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: ImageLinks
+2013-01-21 11:30:25,030  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: IndustryIdentifiers
+2013-01-21 11:30:25,035  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: ListPrice
+2013-01-21 11:30:25,043  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Pdf
+2013-01-21 11:30:25,049  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: RecommendedInfo
+2013-01-21 11:30:25,055  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: RetailPrice
+2013-01-21 11:30:25,059  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Review
+2013-01-21 11:30:25,063  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: SaleInfo
+2013-01-21 11:30:25,067  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: SearchInfo
+2013-01-21 11:30:25,071  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Source
+2013-01-21 11:30:25,075  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: UserInfo
+2013-01-21 11:30:25,081  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Volume
+2013-01-21 11:30:25,086  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo
+2013-01-21 11:30:25,092  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_Category
+2013-01-21 11:30:25,097  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_IndustryIdentifiers
+2013-01-21 11:30:25,102  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_authors
+2013-01-21 11:30:25,108  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_categories
+2013-01-21 11:30:25,112  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: AccessInfo
+2013-01-21 11:30:25,116  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Author
+2013-01-21 11:30:25,120  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Category
+2013-01-21 11:30:25,125  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Category_Category
+2013-01-21 11:30:25,128  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Dimensions
+2013-01-21 11:30:25,134  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Epub
+2013-01-21 11:30:25,139  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: ImageLinks
+2013-01-21 11:30:25,142  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: IndustryIdentifiers
+2013-01-21 11:30:25,144  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: ListPrice
+2013-01-21 11:30:25,146  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Pdf
+2013-01-21 11:30:25,149  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: RecommendedInfo
+2013-01-21 11:30:25,151  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: RetailPrice
+2013-01-21 11:30:25,153  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Review
+2013-01-21 11:30:25,155  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: SaleInfo
+2013-01-21 11:30:25,159  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: SearchInfo
+2013-01-21 11:30:25,163  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Source
+2013-01-21 11:30:25,167  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: UserInfo
+2013-01-21 11:30:25,171  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: Volume
+2013-01-21 11:30:25,173  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo
+2013-01-21 11:30:25,177  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_Category
+2013-01-21 11:30:25,181  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_IndustryIdentifiers
+2013-01-21 11:30:25,184  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_authors
+2013-01-21 11:30:25,188  INFO [main] (DatabaseMetadata.java:120) - HHH000262: Table not found: VolumeInfo_categories
+2013-01-21 11:30:26,066  INFO [main] (SchemaUpdate.java:240) - HHH000232: Schema update complete
+2013-01-21 11:30:26,134  INFO [VolumeInfoSearchThread] (ProducerConsumerManager.java:54) - Thread[VolumeInfoSearchThread,5,main] start at Mon Jan 21 11:30:26 ART 2013
+2013-01-21 11:30:26,135  INFO [PersistVolumesThread] (ProducerConsumerManager.java:54) - Thread[PersistVolumesThread,5,main] start at Mon Jan 21 11:30:26 ART 2013
+2013-01-21 11:30:26,137  INFO [BookReaderThread] (ProducerConsumerManager.java:54) - Thread[BookReaderThread,5,main] start at Mon Jan 21 11:30:26 ART 2013
+2013-01-21 11:30:26,256  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> AddedBytes Cheat Sheets JavaScript.pdf
+2013-01-21 11:30:26,260  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Addison-Wesley Developing Hybrid Applications for the iPhone, Using HTML CSS and JavaScript to Build Dynamic Apps for the iPhone (2009).pdf
+2013-01-21 11:30:26,261  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Addison-Wesley Dojo, Using the Dojo JavaScript Library to Build Ajax Applications (2009).pdf
+2013-01-21 11:30:26,262  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Addison-Wesley Professional Dojo, Using the Dojo JavaScript Library to Build AJAX Applications (2009).pdf
+2013-01-21 11:30:26,263  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Adobe Press Acrobat 7.0 JavaScript Scripting Reference (2005).pdf
+2013-01-21 11:30:26,264  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Adobe Press Extending Acrobat Forms with JavaScript (2003) (no OCR).pdf
+2013-01-21 11:30:26,264  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Beginning iPhone and iPad Web Apps, Scripting with HTML5 CSS3 and JavaScript (2010).pdf
+2013-01-21 11:30:26,265  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Beginning PhoneGap, Mobile Web Framework for JavaScript and HTML5 (2012).pdf
+2013-01-21 11:30:26,266  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Beginning Smartphone Web Development (2009).pdf
+2013-01-21 11:30:26,267  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress DOM Scripting, Web Design with JavaScript and the Document Object Model (2005).pdf
+2013-01-21 11:30:26,267  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress DOM Scripting, Web Design with JavaScript and the Document Object Model 2nd (2010).pdf
+2013-01-21 11:30:26,269  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Foundation HTML5 Animation with JavaScript (2011).pdf
+2013-01-21 11:30:26,278  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Foundation Website Creation with CSS, XHTML and JavaScript (2008).pdf
+2013-01-21 11:30:26,278  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress JavaScript for Absolute Beginners (2010).pdf
+2013-01-21 11:30:26,279  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Metro Revealed, Building Windows 8 Apps with HTML5 and JavaScript (2012) (no OCR).pdf
+2013-01-21 11:30:26,279  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress MooTools Essentials, The Official MooTools Reference for JavaScript and Ajax Development (2008).pdf
+2013-01-21 11:30:26,280  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Practical JavaScript, DOM Scripting and Ajax Projects (2007).pdf
+2013-01-21 11:30:26,280  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Pro Android Web Apps, Develop for Android Using HTML5 CSS3 and JavaScript (2011).pdf
+2013-01-21 11:30:26,279  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: AddedBytes Cheat Sheets JavaScript.pdf
+2013-01-21 11:30:26,281  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Pro iOS Web Design and Development, HTML5 CSS3 and JavaScript with Safari (2011).pdf
+2013-01-21 11:30:26,280  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Apress Beginning iPhone and iPad Web Apps, Scripting with HTML5 CSS3 and JavaScript (2010).pdf
+2013-01-21 11:30:26,279  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Addison-Wesley Developing Hybrid Applications for the iPhone, Using HTML CSS and JavaScript to Build Dynamic Apps for the iPhone (2009).pdf
+2013-01-21 11:30:26,280  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Adobe Press Extending Acrobat Forms with JavaScript (2003) (no OCR).pdf
+2013-01-21 11:30:26,280  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Apress DOM Scripting, Web Design with JavaScript and the Document Object Model (2005).pdf
+2013-01-21 11:30:26,279  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Addison-Wesley Dojo, Using the Dojo JavaScript Library to Build Ajax Applications (2009).pdf
+2013-01-21 11:30:26,283  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Pro JavaScript Design Patterns (2008).pdf
+2013-01-21 11:30:26,284  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Pro JavaScript RIA Techniques, Best Practices Performance and Presentation (2009).pdf
+2013-01-21 11:30:26,284  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress Pro JavaScript with MooTools, Learning Advanced JavaScript Programming (2010).pdf
+2013-01-21 11:30:26,284  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress The Essential Guide to HTML5, Using Games to Learn HTML5 and JavaScript (2010).pdf
+2013-01-21 11:30:26,284  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Apress ZK, AJAX without JavaScript Framework (2007).pdf
+2013-01-21 11:30:26,285  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Addison-Wesley Professional Dojo, Using the Dojo JavaScript Library to Build AJAX Applications (2009).pdf
+2013-01-21 11:30:26,285  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Apress Beginning Smartphone Web Development (2009).pdf
+2013-01-21 11:30:26,286  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Apress Beginning PhoneGap, Mobile Web Framework for JavaScript and HTML5 (2012).pdf
+2013-01-21 11:30:26,286  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Course Technology JavaScript 5th (2011).pdf
+2013-01-21 11:30:26,288  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Hungry Minds JavaScript Bible 4th (2001).pdf
+2013-01-21 11:30:26,286  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Adobe Press Acrobat 7.0 JavaScript Scripting Reference (2005).pdf
+2013-01-21 11:30:26,292  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Hungry Minds JavaScript Examples Bible, The Essential Companion to JavaScript Bible (2001).pdf
+2013-01-21 11:30:26,293  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Hungry Minds Javascript Weekend Crash Course (2001).pdf
+2013-01-21 11:30:26,293  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> MCGraw-Hill Osborne How to Do Everything with JavaScript (2003).pdf
+2013-01-21 11:30:26,294  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> MCGraw-Hill Osborne Javascript Demystified (2005).pdf
+2013-01-21 11:30:26,294  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> MCGraw-Hill Osborne JavaScript, A Beginner's Guide 3rd (2010).pdf
+2013-01-21 11:30:26,295  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> MCGraw-Hill Osborne Plug-In JavaScript, 100 Power Solutions (2011).pdf
+2013-01-21 11:30:26,295  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Microsoft Press JavaScript 2nd (2010).pdf
+2013-01-21 11:30:26,295  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Microsoft Press JavaScript Step by Step 2nd (2010).pdf
+2013-01-21 11:30:26,295  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> New Riders Publishing JavaScript Design (2001).pdf
+2013-01-21 11:30:26,296  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> New Riders Publishing Scriptin' with JavaScript and Ajax, A Designer’s Guide (2010).pdf
+2013-01-21 11:30:26,296  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> No Starch Press The Book of JavaScript, A Practical Guide to Interactive Web Pages (2000).pdf
+2013-01-21 11:30:26,296  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly Adobe Integrated Runtime (AIR) for JavaScript Developers, Pocket Guide (2007).pdf
+2013-01-21 11:30:26,299  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly Building Android Apps with HTML CSS and JavaScript (2010).pdf
+2013-01-21 11:30:26,299  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly Building Android Apps with HTML CSS and JavaScript 2nd (2012).pdf
+2013-01-21 11:30:26,299  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly JavaScript and DHTML Cookbook 2nd (2007).pdf
+2013-01-21 11:30:26,299  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly JavaScript Application Cookbook (1999).pdf
+2013-01-21 11:30:26,300  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly JavaScript Cookbook (2010).pdf
+2013-01-21 11:30:26,300  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly JavaScript Pocket Reference 3rd (2012).pdf
+2013-01-21 11:30:26,300  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly JavaScript, The Definitive Guide 6th (2011).pdf
+2013-01-21 11:30:26,301  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly JavaScript, The Missing Manual (2008).pdf
+2013-01-21 11:30:26,301  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly Learning JavaScript 2nd (2009).pdf
+2013-01-21 11:30:26,301  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly Learning the iOS 4 SDK for JavaScript Programmers (2011).pdf
+2013-01-21 11:30:26,301  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly Scripting InDesign CS3-4 with JavaScript (2009).pdf
+2013-01-21 11:30:26,302  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> OReilly Supercharged JavaScript Graphics, With HTML5 Canvas and jQuery (2011).pdf
+2013-01-21 11:30:26,302  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Packt Publishing Django JavaScript Integration, AJAX and jQuery (2010).pdf
+2013-01-21 11:30:26,302  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Packt Publishing Drupal 6 JavaScript and jQuery (2009).pdf
+2013-01-21 11:30:26,302  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Packt Publishing iPhone JavaScript Cookbook (2011).pdf
+2013-01-21 11:30:26,303  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Packt Publishing JavaScript Testing, Beginner's Guide (2010).pdf
+2013-01-21 11:30:26,303  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Packt Publishing Joomla 1.5 JavaScript jQuery (2010).pdf
+2013-01-21 11:30:26,303  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Packt Publishing Moodle JavaScript Cookbook (2011).pdf
+2013-01-21 11:30:26,304  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Packt Publishing Sencha Touch Mobile JavaScript Framework (2012).pdf
+2013-01-21 11:30:26,305  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Packt Publishing Unity 3.x Game Development Essentials, Game Development with C# and Javascript 2nd (2011).pdf
+2013-01-21 11:30:26,305  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Peachpit Press The JavaScript Pocket Guide (2010).pdf
+2013-01-21 11:30:26,305  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Peachpit Press Visual QuickStart Guide JavaScript 8th (2012).pdf
+2013-01-21 11:30:26,306  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Peachpit Press Visual QuickStart Guide JavaScript and Ajax for the Web 6th (2006).pdf
+2013-01-21 11:30:26,306  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Pearson Education Publishing JavaScript for Programmers (2010).pdf
+2013-01-21 11:30:26,306  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Pragmatic Bookshelf Publishing Mastering Dojo, JavaScript and AJAX Tools for Great Web Experiences (2008).pdf
+2013-01-21 11:30:26,307  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Pragmatic Bookshelf Publishing Prototype and script.aculo.us, You Never Knew JavaScript Could Do This (2007).pdf
+2013-01-21 11:30:26,308  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Prentice Hall AJAX, Creating Web Pages with Asynchronous JavaScript and XML (2006).pdf
+2013-01-21 11:30:26,308  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Prentice Hall Essential JavaScript for Web Professionals (1999).pdf
+2013-01-21 11:30:26,308  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Prentice Hall JavaScript for Programmers (2010).pdf
+2013-01-21 11:30:26,309  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Prima Publishing JavaScript Programming for the Absolute Beginner (2001).pdf
+2013-01-21 11:30:26,309  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> QUE JavaScript 1.5 by Example (2001).pdf
+2013-01-21 11:30:26,309  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> QUE JavaScript Goodies 2nd (2002).pdf
+2013-01-21 11:30:26,309  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> QUE Special Edition Using JavaScript (2001).pdf
+2013-01-21 11:30:26,310  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> QUE The Complete Idiot's Guide to JavaScript 2nd (1997).pdf
+2013-01-21 11:30:26,310  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SAMS JavaScript Phrasebook, Essential Code and Commands (2006).pdf
+2013-01-21 11:30:26,310  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SAMS JavaScript, Developer's Dictionary (2002).pdf
+2013-01-21 11:30:26,310  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SAMS Pure JavaScript (1999).pdf
+2013-01-21 11:30:26,311  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SAMS Pure JavaScript 2nd (2002).pdf
+2013-01-21 11:30:26,311  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SAMS Teach Yourself Ajax JavaScript and PHP, All in One (2009).pdf
+2013-01-21 11:30:26,311  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SAMS Teach Yourself JavaScript in 21 days (2002).pdf
+2013-01-21 11:30:26,311  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SAMS Teach Yourself Javascript in 24 Hours 3rd (2002).pdf
+2013-01-21 11:30:26,312  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SAMS Teach Yourself JavaScript in 24 Hours 4th (2007).pdf
+2013-01-21 11:30:26,312  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SAMS Teach Yourself JavaScript in a Week (1996).pdf
+2013-01-21 11:30:26,312  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SitePoint DHTML Utopia, Modern Web Design Using JavaScript and DOM (2005).pdf
+2013-01-21 11:30:26,312  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SitePoint The Art and Science of JavaScript (2007).pdf
+2013-01-21 11:30:26,312  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> SitePoint The JavaScript Anthology, 101 Essential Tips Tricks and Hacks (2006).pdf
+2013-01-21 11:30:26,313  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Springer Publishing An Introduction to HTML and JavaScript for Scientists and Engineers (2007).pdf
+2013-01-21 11:30:26,313  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Springer Publishing An Introduction to PHP for Scientists and Engineers, Beyond JavaScript (2008).pdf
+2013-01-21 11:30:26,313  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Springer Publishing Guide to HTML JavaScript and PHP, For Scientists and Engineers (2011).pdf
+2013-01-21 11:30:26,313  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Visibooks HTML and JavaScript for Visual Learners (2001).pdf
+2013-01-21 11:30:26,313  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wiley Beginning JavaScript and CSS Development with jQuery (2009).pdf
+2013-01-21 11:30:26,314  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wiley HTML, CSS and JavaScript Mobile Development for Dummies (2011).pdf
+2013-01-21 11:30:26,314  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wiley JavaScript Bible 6th (2007).pdf
+2013-01-21 11:30:26,315  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wiley Making Use of JavaScript (2002).pdf
+2013-01-21 11:30:26,316  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wiley Professional XMPP Programming with JavaScript and jQuery (2010).pdf
+2013-01-21 11:30:26,316  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wiley Web Application Design and Implementation, Apache 2 PHP5 MySQL JavaScript and Linux-UNIX (2007) (Scan, OCR).pdf
+2013-01-21 11:30:26,317  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wordware Publishing Advanced Javascript 2nd (2001).pdf
+2013-01-21 11:30:26,317  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wordware Publishing Advanced JavaScript 3rd (2008).pdf
+2013-01-21 11:30:26,317  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wordware Publishing Learn JavaScript (2002).pdf
+2013-01-21 11:30:26,318  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wrox Press Beginning JavaScript 3rd (2007).pdf
+2013-01-21 11:30:26,318  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wrox Press Beginning JavaScript 4th (2010).pdf
+2013-01-21 11:30:26,318  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wrox Press Beginning JavaScript and CSS Development with jQuery (2009).pdf
+2013-01-21 11:30:26,319  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wrox Press JavaScript Programmer's Reference (2009).pdf
+2013-01-21 11:30:26,319  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wrox Press Professional JavaScript Frameworks, Prototype YUI Ext JS Dojo and MooTools (2009).pdf
+2013-01-21 11:30:26,319  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wrox Press Professional XMPP Programming with JavaScript and jQuery (2010).pdf
+2013-01-21 11:30:26,319  INFO [Thread-8] (FoundFileAndQueueTask.java:44) - Accepted file -> Wrox Press Web Standards Programmer's Reference, HTML CSS JavaScript Perl Python and PHP (2005).pdf
+2013-01-21 11:30:26,984  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Apress DOM Scripting, Web Design with JavaScript and the Document Object Model 2nd (2010).pdf
+2013-01-21 11:30:29,366  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Addison-Wesley Professional Dojo, Using the Dojo JavaScript Library to Build AJAX Applications (2009).pdf: isbn found on page 2
+2013-01-21 11:30:29,370  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Apress Foundation HTML5 Animation with JavaScript (2011).pdf
+2013-01-21 11:30:29,378  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Apress DOM Scripting, Web Design with JavaScript and the Document Object Model (2005).pdf: isbn found on page 3
+2013-01-21 11:30:29,444  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Addison-Wesley Dojo, Using the Dojo JavaScript Library to Build Ajax Applications (2009).pdf: isbn found on page 5
+2013-01-21 11:30:29,444  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Apress Foundation Website Creation with CSS, XHTML and JavaScript (2008).pdf
+2013-01-21 11:30:29,519 ERROR [BookReaderThread-pool-5] (SearchISBN.java:66) - can't open pdf: Adobe Press Acrobat 7.0 JavaScript Scripting Reference (2005).pdf
+2013-01-21 11:30:29,519  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Apress JavaScript for Absolute Beginners (2010).pdf
+2013-01-21 11:30:29,550  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Apress Metro Revealed, Building Windows 8 Apps with HTML5 and JavaScript (2012) (no OCR).pdf
+2013-01-21 11:30:29,555  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Addison-Wesley Developing Hybrid Applications for the iPhone, Using HTML CSS and JavaScript to Build Dynamic Apps for the iPhone (2009).pdf: isbn found on page 7
+2013-01-21 11:30:29,556  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Apress MooTools Essentials, The Official MooTools Reference for JavaScript and Ajax Development (2008).pdf
+2013-01-21 11:30:29,722  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Apress Beginning Smartphone Web Development (2009).pdf: isbn found on page 4
+2013-01-21 11:30:29,739  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Apress Practical JavaScript, DOM Scripting and Ajax Projects (2007).pdf
+2013-01-21 11:30:30,708  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Apress MooTools Essentials, The Official MooTools Reference for JavaScript and Ajax Development (2008).pdf: isbn found on page 1
+2013-01-21 11:30:30,710  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Apress Pro Android Web Apps, Develop for Android Using HTML5 CSS3 and JavaScript (2011).pdf
+2013-01-21 11:30:30,740  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Apress DOM Scripting, Web Design with JavaScript and the Document Object Model 2nd (2010).pdf: isbn found on page 4
+2013-01-21 11:30:30,743  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Apress Pro iOS Web Design and Development, HTML5 CSS3 and JavaScript with Safari (2011).pdf
+2013-01-21 11:30:33,548  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Apress Pro JavaScript Design Patterns (2008).pdf
+2013-01-21 11:30:35,114  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Apress JavaScript for Absolute Beginners (2010).pdf: isbn found on page 1
+2013-01-21 11:30:35,115  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Apress Pro JavaScript RIA Techniques, Best Practices Performance and Presentation (2009).pdf
+2013-01-21 11:30:35,125  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Apress Pro JavaScript Design Patterns (2008).pdf: isbn found on page 2
+2013-01-21 11:30:35,127  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Apress Pro JavaScript with MooTools, Learning Advanced JavaScript Programming (2010).pdf
+2013-01-21 11:30:35,478  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Apress Beginning iPhone and iPad Web Apps, Scripting with HTML5 CSS3 and JavaScript (2010).pdf: isbn found on page 4
+2013-01-21 11:30:35,481  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Apress The Essential Guide to HTML5, Using Games to Learn HTML5 and JavaScript (2010).pdf
+2013-01-21 11:30:36,085  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Apress Foundation Website Creation with CSS, XHTML and JavaScript (2008).pdf: isbn found on page 1
+2013-01-21 11:30:36,086  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Apress ZK, AJAX without JavaScript Framework (2007).pdf
+2013-01-21 11:30:37,534  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Apress Pro JavaScript RIA Techniques, Best Practices Performance and Presentation (2009).pdf: isbn found on page 2
+2013-01-21 11:30:37,535  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Course Technology JavaScript 5th (2011).pdf
+2013-01-21 11:30:38,347  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Apress Pro Android Web Apps, Develop for Android Using HTML5 CSS3 and JavaScript (2011).pdf: isbn found on page 1
+2013-01-21 11:30:38,348  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Hungry Minds JavaScript Bible 4th (2001).pdf
+2013-01-21 11:30:38,362  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Apress ZK, AJAX without JavaScript Framework (2007).pdf: isbn found on page 3
+2013-01-21 11:30:38,364  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Hungry Minds JavaScript Examples Bible, The Essential Companion to JavaScript Bible (2001).pdf
+2013-01-21 11:30:38,462  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Apress Pro iOS Web Design and Development, HTML5 CSS3 and JavaScript with Safari (2011).pdf: isbn found on page 4
+2013-01-21 11:30:38,464  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Hungry Minds Javascript Weekend Crash Course (2001).pdf
+2013-01-21 11:30:38,931  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Apress Beginning PhoneGap, Mobile Web Framework for JavaScript and HTML5 (2012).pdf: isbn found on page 9
+2013-01-21 11:30:38,932  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne How to Do Everything with JavaScript (2003).pdf
+2013-01-21 11:30:41,043  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Apress Pro JavaScript with MooTools, Learning Advanced JavaScript Programming (2010).pdf: isbn found on page 4
+2013-01-21 11:30:41,045  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne Javascript Demystified (2005).pdf
+2013-01-21 11:30:42,424  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Apress Foundation HTML5 Animation with JavaScript (2011).pdf: isbn found on page 15
+2013-01-21 11:30:42,425  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne JavaScript, A Beginner's Guide 3rd (2010).pdf
+2013-01-21 11:30:44,279  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Apress The Essential Guide to HTML5, Using Games to Learn HTML5 and JavaScript (2010).pdf: isbn found on page 4
+2013-01-21 11:30:44,281  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne Plug-In JavaScript, 100 Power Solutions (2011).pdf
+2013-01-21 11:30:45,013  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Microsoft Press JavaScript 2nd (2010).pdf
+2013-01-21 11:30:45,271  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - MCGraw-Hill Osborne JavaScript, A Beginner's Guide 3rd (2010).pdf: isbn found on page 5
+2013-01-21 11:30:45,271  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Microsoft Press JavaScript Step by Step 2nd (2010).pdf
+2013-01-21 11:30:45,846 ERROR [BookReaderThread-pool-2] (SearchISBN.java:66) - can't open pdf: Hungry Minds JavaScript Bible 4th (2001).pdf
+2013-01-21 11:30:45,846  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: New Riders Publishing JavaScript Design (2001).pdf
+2013-01-21 11:30:45,894  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Course Technology JavaScript 5th (2011).pdf: isbn found on page 5
+2013-01-21 11:30:45,895  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: New Riders Publishing Scriptin' with JavaScript and Ajax, A Designer’s Guide (2010).pdf
+2013-01-21 11:30:46,320  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Microsoft Press JavaScript 2nd (2010).pdf: isbn found on page 102
+2013-01-21 11:30:46,321  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: No Starch Press The Book of JavaScript, A Practical Guide to Interactive Web Pages (2000).pdf
+2013-01-21 11:30:46,521  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Apress Practical JavaScript, DOM Scripting and Ajax Projects (2007).pdf: isbn found on page 4
+2013-01-21 11:30:46,522  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: OReilly Adobe Integrated Runtime (AIR) for JavaScript Developers, Pocket Guide (2007).pdf
+2013-01-21 11:30:47,331  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - MCGraw-Hill Osborne Javascript Demystified (2005).pdf: isbn found on page 96
+2013-01-21 11:30:47,346  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: OReilly Building Android Apps with HTML CSS and JavaScript (2010).pdf
+2013-01-21 11:30:49,265  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: OReilly Building Android Apps with HTML CSS and JavaScript 2nd (2012).pdf
+2013-01-21 11:30:49,335  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Hungry Minds Javascript Weekend Crash Course (2001).pdf: isbn found on page 1
+2013-01-21 11:30:49,336  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: OReilly JavaScript and DHTML Cookbook 2nd (2007).pdf
+2013-01-21 11:30:49,354  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Hungry Minds JavaScript Examples Bible, The Essential Companion to JavaScript Bible (2001).pdf: isbn found on page 1
+2013-01-21 11:30:49,355  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: OReilly JavaScript Application Cookbook (1999).pdf
+2013-01-21 11:30:49,909  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - New Riders Publishing JavaScript Design (2001).pdf: isbn found on page 1
+2013-01-21 11:30:49,910  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: OReilly JavaScript Cookbook (2010).pdf
+2013-01-21 11:30:50,563  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - No Starch Press The Book of JavaScript, A Practical Guide to Interactive Web Pages (2000).pdf: isbn found on page 1
+2013-01-21 11:30:50,565  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: OReilly JavaScript Pocket Reference 3rd (2012).pdf
+2013-01-21 11:30:51,920  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - New Riders Publishing Scriptin' with JavaScript and Ajax, A Designer’s Guide (2010).pdf: isbn found on page 1
+2013-01-21 11:30:51,923  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: OReilly JavaScript, The Definitive Guide 6th (2011).pdf
+2013-01-21 11:30:51,934  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - OReilly Building Android Apps with HTML CSS and JavaScript (2010).pdf: isbn found on page 6
+2013-01-21 11:30:51,935  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: OReilly JavaScript, The Missing Manual (2008).pdf
+2013-01-21 11:30:51,951  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - OReilly JavaScript Application Cookbook (1999).pdf: isbn found on page 1
+2013-01-21 11:30:51,952  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: OReilly Learning JavaScript 2nd (2009).pdf
+2013-01-21 11:30:52,748  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - OReilly JavaScript Cookbook (2010).pdf: isbn found on page 5
+2013-01-21 11:30:52,749  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: OReilly Learning the iOS 4 SDK for JavaScript Programmers (2011).pdf
+2013-01-21 11:30:52,890  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - MCGraw-Hill Osborne Plug-In JavaScript, 100 Power Solutions (2011).pdf: isbn found on page 3
+2013-01-21 11:30:52,891  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: OReilly Scripting InDesign CS3-4 with JavaScript (2009).pdf
+2013-01-21 11:30:53,070  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - OReilly JavaScript Pocket Reference 3rd (2012).pdf: isbn found on page 4
+2013-01-21 11:30:53,070  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: OReilly Supercharged JavaScript Graphics, With HTML5 Canvas and jQuery (2011).pdf
+2013-01-21 11:30:53,257  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - OReilly Building Android Apps with HTML CSS and JavaScript 2nd (2012).pdf: isbn found on page 4
+2013-01-21 11:30:53,258  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Packt Publishing Django JavaScript Integration, AJAX and jQuery (2010).pdf
+2013-01-21 11:30:53,362  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - OReilly Scripting InDesign CS3-4 with JavaScript (2009).pdf: isbn found on page 1
+2013-01-21 11:30:53,363  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Packt Publishing Drupal 6 JavaScript and jQuery (2009).pdf
+2013-01-21 11:30:54,100  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Packt Publishing Drupal 6 JavaScript and jQuery (2009).pdf: isbn found on page 1
+2013-01-21 11:30:54,101  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Packt Publishing iPhone JavaScript Cookbook (2011).pdf
+2013-01-21 11:30:54,245  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - OReilly Learning JavaScript 2nd (2009).pdf: isbn found on page 6
+2013-01-21 11:30:54,246  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Packt Publishing JavaScript Testing, Beginner's Guide (2010).pdf
+2013-01-21 11:30:54,260  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - OReilly JavaScript, The Definitive Guide 6th (2011).pdf: isbn found on page 6
+2013-01-21 11:30:54,261  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Packt Publishing Joomla 1.5 JavaScript jQuery (2010).pdf
+2013-01-21 11:30:54,614  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - OReilly Learning the iOS 4 SDK for JavaScript Programmers (2011).pdf: isbn found on page 6
+2013-01-21 11:30:54,615  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Packt Publishing Moodle JavaScript Cookbook (2011).pdf
+2013-01-21 11:30:55,108  INFO [VolumeInfoSearchThread-pool-2] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 0-13-235804-2
+2013-01-21 11:30:55,114  INFO [VolumeInfoSearchThread-pool-4] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 978-0-321-60416-3
+2013-01-21 11:30:55,114  INFO [VolumeInfoSearchThread-pool-1] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 0-13-235804-2
+2013-01-21 11:30:55,125  INFO [VolumeInfoSearchThread-pool-8] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 978-1-4302-7219-9
+2013-01-21 11:30:55,113  INFO [VolumeInfoSearchThread-pool-3] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN (pbk): 1-59059-533-5
+Printed
+2013-01-21 11:30:55,176  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - OReilly Adobe Integrated Runtime (AIR) for JavaScript Developers, Pocket Guide (2007).pdf: isbn found on page 6
+2013-01-21 11:30:55,176  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Packt Publishing Sencha Touch Mobile JavaScript Framework (2012).pdf
+2013-01-21 11:30:55,304  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Microsoft Press JavaScript Step by Step 2nd (2010).pdf: isbn found on page 115
+2013-01-21 11:30:55,306  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Packt Publishing Unity 3.x Game Development Essentials, Game Development with C# and Javascript 2nd (2011).pdf
+2013-01-21 11:30:55,616  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Packt Publishing Django JavaScript Integration, AJAX and jQuery (2010).pdf: isbn found on page 1
+2013-01-21 11:30:55,616  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Peachpit Press The JavaScript Pocket Guide (2010).pdf
+2013-01-21 11:30:55,699  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Packt Publishing Moodle JavaScript Cookbook (2011).pdf: isbn found on page 1
+2013-01-21 11:30:55,700  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Peachpit Press Visual QuickStart Guide JavaScript 8th (2012).pdf
+2013-01-21 11:30:55,749  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - OReilly JavaScript and DHTML Cookbook 2nd (2007).pdf: isbn found on page 5
+2013-01-21 11:30:55,750  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Peachpit Press Visual QuickStart Guide JavaScript and Ajax for the Web 6th (2006).pdf
+2013-01-21 11:30:55,753  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - OReilly Supercharged JavaScript Graphics, With HTML5 Canvas and jQuery (2011).pdf: isbn found on page 6
+2013-01-21 11:30:55,754  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Pearson Education Publishing JavaScript for Programmers (2010).pdf
+2013-01-21 11:30:55,831  INFO [VolumeInfoSearchThread-pool-7] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 978-1-4302-0991- 1
+2013-01-21 11:30:55,852  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Packt Publishing JavaScript Testing, Beginner's Guide (2010).pdf: isbn found on page 1
+2013-01-21 11:30:55,852  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Pragmatic Bookshelf Publishing Mastering Dojo, JavaScript and AJAX Tools for Great Web Experiences (2008).pdf
+2013-01-21 11:30:55,857  INFO [VolumeInfoSearchThread-pool-6] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 978-1-4302-2629-1
+2013-01-21 11:30:56,465  INFO [VolumeInfoSearchThread-pool-10] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-07-163296-6
+2013-01-21 11:30:56,650  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Packt Publishing iPhone JavaScript Cookbook (2011).pdf: isbn found on page 1
+2013-01-21 11:30:56,651  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Pragmatic Bookshelf Publishing Prototype and script.aculo.us, You Never Knew JavaScript Could Do This (2007).pdf
+2013-01-21 11:30:56,734  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Peachpit Press The JavaScript Pocket Guide (2010).pdf: isbn found on page 3
+2013-01-21 11:30:56,735  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Prentice Hall AJAX, Creating Web Pages with Asynchronous JavaScript and XML (2006).pdf
+2013-01-21 11:30:56,913  INFO [VolumeInfoSearchThread-pool-5] (ISBNRequest.java:55) - Search on goolge api book with isbn:isbn publisher 
+MySQL
+2013-01-21 11:30:56,929  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Packt Publishing Joomla 1.5 JavaScript jQuery (2010).pdf: isbn found on page 1
+2013-01-21 11:30:56,929  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Prentice Hall Essential JavaScript for Web Professionals (1999).pdf
+2013-01-21 11:30:57,068  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - OReilly JavaScript, The Missing Manual (2008).pdf: isbn found on page 4
+2013-01-21 11:30:57,069  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Prentice Hall JavaScript for Programmers (2010).pdf
+2013-01-21 11:30:57,171  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Packt Publishing Sencha Touch Mobile JavaScript Framework (2012).pdf: isbn found on page 1
+2013-01-21 11:30:57,172  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Prima Publishing JavaScript Programming for the Absolute Beginner (2001).pdf
+2013-01-21 11:30:57,304  INFO [VolumeInfoSearchThread-pool-9] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 0072254548
+2013-01-21 11:30:57,439  INFO [VolumeInfoSearchThread-pool-8] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 0-7645-4804-2
+2013-01-21 11:30:57,476  INFO [VolumeInfoSearchThread-pool-7] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 1886411360
+2013-01-21 11:30:57,502  INFO [VolumeInfoSearchThread-pool-3] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 0-7357-1167-4
+2013-01-21 11:30:57,503  INFO [VolumeInfoSearchThread-pool-10] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 0321616952,
+2013-01-21 11:30:57,579  INFO [VolumeInfoSearchThread-pool-2] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 0-7645-4855-7
+2013-01-21 11:30:57,579  INFO [VolumeInfoSearchThread-pool-5] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-596-80613-2
+2013-01-21 11:30:58,080  INFO [VolumeInfoSearchThread-pool-1] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 1-56592-577-7
+2013-01-21 11:30:58,082  INFO [VolumeInfoSearchThread-pool-9] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-07-173862-0
+2013-01-21 11:30:58,103  INFO [VolumeInfoSearchThread-pool-6] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-449-38326-8
+2013-01-21 11:30:58,216  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Pragmatic Bookshelf Publishing Prototype and script.aculo.us, You Never Knew JavaScript Could Do This (2007).pdf: isbn found on page 2
+2013-01-21 11:30:58,217  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: QUE JavaScript 1.5 by Example (2001).pdf
+2013-01-21 11:30:58,392  INFO [VolumeInfoSearchThread-pool-5] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-449-31641-9
+2013-01-21 11:30:58,416  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Prentice Hall AJAX, Creating Web Pages with Asynchronous JavaScript and XML (2006).pdf: isbn found on page 2
+2013-01-21 11:30:58,416  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: QUE JavaScript Goodies 2nd (2002).pdf
+2013-01-21 11:30:58,444  INFO [VolumeInfoSearchThread-pool-10] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-449-31685-3
+2013-01-21 11:30:58,481  INFO [VolumeInfoSearchThread-pool-7] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-596-80252-3
+2013-01-21 11:30:58,596  INFO [VolumeInfoSearchThread-pool-3] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-596-52187-5
+2013-01-21 11:30:58,598  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Pragmatic Bookshelf Publishing Mastering Dojo, JavaScript and AJAX Tools for Great Web Experiences (2008).pdf: isbn found on page 4
+2013-01-21 11:30:58,599  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: QUE Special Edition Using JavaScript (2001).pdf
+2013-01-21 11:30:58,794  INFO [VolumeInfoSearchThread-pool-2] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-847196-40-8
+2013-01-21 11:30:58,970  INFO [VolumeInfoSearchThread-pool-8] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-596-80552-4
+2013-01-21 11:30:58,972  INFO [VolumeInfoSearchThread-pool-6] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-449-38845-4
+2013-01-21 11:30:58,985  INFO [VolumeInfoSearchThread-pool-9] (ISBNRequest.java:55) - Search on goolge api book with isbn:isbn>9780735624498</isbn>
+2013-01-21 11:30:59,170  INFO [VolumeInfoSearchThread-pool-10] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-847197-56-6
+2013-01-21 11:30:59,214  INFO [PersistVolumesThread-pool-9] (SaveVolume.java:29) - Save volume ->Java Demystified
+2013-01-21 11:30:59,215  INFO [PersistVolumesThread-pool-3] (SaveVolume.java:29) - Save volume ->DOM Scripting
+2013-01-21 11:30:59,216  INFO [PersistVolumesThread-pool-1] (SaveVolume.java:29) - Save volume ->JavaScript for Absolute Beginners
+2013-01-21 11:30:59,216  INFO [PersistVolumesThread-pool-4] (SaveVolume.java:29) - Save volume ->Foundation Website Creation with CSS, XHTML, and JavaScript
+2013-01-21 11:30:59,216  INFO [PersistVolumesThread-pool-8] (SaveVolume.java:29) - Save volume ->Canciones en Braille Edición ISBN
+2013-01-21 11:30:59,216  INFO [PersistVolumesThread-pool-10] (SaveVolume.java:29) - Save volume ->Designing With Web Standards
+2013-01-21 11:30:59,215  INFO [PersistVolumesThread-pool-2] (SaveVolume.java:29) - Save volume ->Dojo
+2013-01-21 11:30:59,217  INFO [PersistVolumesThread-pool-5] (SaveVolume.java:29) - Save volume ->JavaScript, A Beginner's Guide, Third Edition
+2013-01-21 11:30:59,217  INFO [PersistVolumesThread-pool-7] (SaveVolume.java:29) - Save volume ->Dojo
+2013-01-21 11:30:59,216  INFO [PersistVolumesThread-pool-6] (SaveVolume.java:29) - Save volume ->Beginning Android 2
+2013-01-21 11:30:59,342  INFO [VolumeInfoSearchThread-pool-1] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-849511-94-0
+2013-01-21 11:30:59,400  INFO [VolumeInfoSearchThread-pool-7] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-449-39363-2
+2013-01-21 11:30:59,421  INFO [VolumeInfoSearchThread-pool-3] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-847197-24-5
+2013-01-21 11:30:59,697  INFO [VolumeInfoSearchThread-pool-5] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-849691-14-7
+2013-01-21 11:30:59,722  INFO [VolumeInfoSearchThread-pool-8] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-847192-50-9
+2013-01-21 11:30:59,792  INFO [VolumeInfoSearchThread-pool-9] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN:  978-0-596-51589-8
+2013-01-21 11:30:59,863  INFO [VolumeInfoSearchThread-pool-6] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-84951-004-2
+2013-01-21 11:31:00,197  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Packt Publishing Unity 3.x Game Development Essentials, Game Development with C# and Javascript 2nd (2011).pdf: isbn found on page 1
+2013-01-21 11:31:00,198  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: QUE The Complete Idiot's Guide to JavaScript 2nd (1997).pdf
+2013-01-21 11:31:00,485  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Pearson Education Publishing JavaScript for Programmers (2010).pdf: isbn found on page 5
+2013-01-21 11:31:00,486  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: SAMS JavaScript Phrasebook, Essential Code and Commands (2006).pdf
+2013-01-21 11:31:00,523  INFO [VolumeInfoSearchThread-pool-10] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-1-84969-040-9
+2013-01-21 11:31:00,909  INFO [VolumeInfoSearchThread-pool-7] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 0-13-700131-2
+2013-01-21 11:31:01,380  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: SAMS JavaScript, Developer's Dictionary (2002).pdf
+2013-01-21 11:31:01,383 ERROR [BookReaderThread-pool-7] (SearchISBN.java:66) - can't open pdf: QUE JavaScript 1.5 by Example (2001).pdf
+2013-01-21 11:31:01,383  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: SAMS Pure JavaScript (1999).pdf
+2013-01-21 11:31:02,353  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Prentice Hall Essential JavaScript for Web Professionals (1999).pdf: isbn found on page 1
+2013-01-21 11:31:02,353  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: SAMS Pure JavaScript 2nd (2002).pdf
+2013-01-21 11:31:02,535  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Prima Publishing JavaScript Programming for the Absolute Beginner (2001).pdf: isbn found on page 3
+2013-01-21 11:31:02,537  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: SAMS Teach Yourself Ajax JavaScript and PHP, All in One (2009).pdf
+2013-01-21 11:31:02,604  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Prentice Hall JavaScript for Programmers (2010).pdf: isbn found on page 5
+2013-01-21 11:31:02,605  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: SAMS Teach Yourself JavaScript in 21 days (2002).pdf
+2013-01-21 11:31:02,745  INFO [VolumeInfoSearchThread-pool-3] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 0-13-013056-7
+2013-01-21 11:31:02,872  INFO [VolumeInfoSearchThread-pool-9] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 0-13-700131-2
+2013-01-21 11:31:03,093  INFO [VolumeInfoSearchThread-pool-1] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 0-7615-3410-5
+2013-01-21 11:31:03,135  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: SAMS Teach Yourself Javascript in 24 Hours 3rd (2002).pdf
+2013-01-21 11:31:04,872  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Peachpit Press Visual QuickStart Guide JavaScript and Ajax for the Web 6th (2006).pdf: isbn found on page 2
+2013-01-21 11:31:04,873  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: SAMS Teach Yourself JavaScript in 24 Hours 4th (2007).pdf
+2013-01-21 11:31:04,963  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - SAMS Pure JavaScript (1999).pdf: isbn found on page 2
+2013-01-21 11:31:04,964  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: SAMS Teach Yourself JavaScript in a Week (1996).pdf
+2013-01-21 11:31:05,409  INFO [VolumeInfoSearchThread-pool-5] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 
+0672315475
+
+2013-01-21 11:31:05,501  INFO [PersistVolumesThread-pool-9] (SaveVolume.java:29) - Save volume ->JavaScript Cookbook
+2013-01-21 11:31:05,548  INFO [PersistVolumesThread-pool-10] (SaveVolume.java:29) - Save volume ->The book of JavaScript
+2013-01-21 11:31:05,564  INFO [PersistVolumesThread-pool-4] (SaveVolume.java:29) - Save volume ->JavaScript Examples Bible
+2013-01-21 11:31:05,824  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - SAMS Teach Yourself Ajax JavaScript and PHP, All in One (2009).pdf: isbn found on page 4
+2013-01-21 11:31:05,825  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: SitePoint DHTML Utopia, Modern Web Design Using JavaScript and DOM (2005).pdf
+2013-01-21 11:31:05,941  INFO [PersistVolumesThread-pool-8] (SaveVolume.java:29) - Save volume ->JavaScript Design
+2013-01-21 11:31:06,135  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Peachpit Press Visual QuickStart Guide JavaScript 8th (2012).pdf: isbn found on page 3
+2013-01-21 11:31:06,137  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: SitePoint The Art and Science of JavaScript (2007).pdf
+2013-01-21 11:31:06,332  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - SAMS Teach Yourself Javascript in 24 Hours 3rd (2002).pdf: isbn found on page 22
+2013-01-21 11:31:06,334  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: SitePoint The JavaScript Anthology, 101 Essential Tips Tricks and Hacks (2006).pdf
+2013-01-21 11:31:06,623  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - SitePoint DHTML Utopia, Modern Web Design Using JavaScript and DOM (2005).pdf: isbn found on page 2
+2013-01-21 11:31:06,625  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Springer Publishing An Introduction to HTML and JavaScript for Scientists and Engineers (2007).pdf
+2013-01-21 11:31:06,796  INFO [PersistVolumesThread-pool-3] (SaveVolume.java:29) - Save volume ->JavaScript Weekend Crash Course
+2013-01-21 11:31:06,947  INFO [VolumeInfoSearchThread-pool-3] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 0–9579218–9–6
+Printed
+2013-01-21 11:31:07,021  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - SAMS Teach Yourself JavaScript in 21 days (2002).pdf: isbn found on page 112
+2013-01-21 11:31:07,023  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Springer Publishing An Introduction to PHP for Scientists and Engineers, Beyond JavaScript (2008).pdf
+2013-01-21 11:31:07,420  INFO [VolumeInfoSearchThread-pool-9] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN Number</th>’);
+document.writeln(‘<th>Book
+2013-01-21 11:31:07,538  INFO [PersistVolumesThread-pool-7] (SaveVolume.java:29) - Save volume ->Building Android Apps with HTML, CSS, and JavaScript
+2013-01-21 11:31:07,572 ERROR [BookReaderThread-pool-3] (SearchISBN.java:66) - can't open pdf: QUE Special Edition Using JavaScript (2001).pdf
+2013-01-21 11:31:07,573  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Springer Publishing Guide to HTML JavaScript and PHP, For Scientists and Engineers (2011).pdf
+2013-01-21 11:31:07,852  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Springer Publishing An Introduction to HTML and JavaScript for Scientists and Engineers (2007).pdf: isbn found on page 2
+2013-01-21 11:31:07,853  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Visibooks HTML and JavaScript for Visual Learners (2001).pdf
+2013-01-21 11:31:07,875  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - SAMS Teach Yourself JavaScript in 24 Hours 4th (2007).pdf: isbn found on page 34
+2013-01-21 11:31:07,876  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Wiley Beginning JavaScript and CSS Development with jQuery (2009).pdf
+2013-01-21 11:31:08,253  INFO [VolumeInfoSearchThread-pool-8] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN number. You’ll
+2013-01-21 11:31:08,276  INFO [PersistVolumesThread-pool-6] (SaveVolume.java:29) - Save volume ->JavaScript Application Cookbook
+2013-01-21 11:31:08,428  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - SitePoint The JavaScript Anthology, 101 Essential Tips Tricks and Hacks (2006).pdf: isbn found on page 2
+2013-01-21 11:31:08,429  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Wiley HTML, CSS and JavaScript Mobile Development for Dummies (2011).pdf
+2013-01-21 11:31:08,818  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - SAMS Teach Yourself JavaScript in a Week (1996).pdf: isbn found on page 24
+2013-01-21 11:31:08,819  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Wiley JavaScript Bible 6th (2007).pdf
+2013-01-21 11:31:08,837  INFO [VolumeInfoSearchThread-pool-5] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 0-9752402-6-9
+2013-01-21 11:31:08,921  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Wiley Making Use of JavaScript (2002).pdf
+2013-01-21 11:31:09,104 ERROR [BookReaderThread-pool-5] (SearchISBN.java:66) - can't open pdf: SAMS Pure JavaScript 2nd (2002).pdf
+2013-01-21 11:31:09,104  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Wiley Professional XMPP Programming with JavaScript and jQuery (2010).pdf
+2013-01-21 11:31:09,121  INFO [VolumeInfoSearchThread-pool-6] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 1-57521-073-8
+2013-01-21 11:31:09,150  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - SitePoint The Art and Science of JavaScript (2007).pdf: isbn found on page 4
+2013-01-21 11:31:09,151  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Wiley Web Application Design and Implementation, Apache 2 PHP5 MySQL JavaScript and Linux-UNIX (2007) (Scan, OCR).pdf
+2013-01-21 11:31:09,929  INFO [PersistVolumesThread-pool-2] (SaveVolume.java:29) - Save volume ->Plug-In JavaScript 100 Power Solutions
+2013-01-21 11:31:10,140  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Wordware Publishing Advanced Javascript 2nd (2001).pdf
+2013-01-21 11:31:10,204  INFO [VolumeInfoSearchThread-pool-7] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 978-0-9802858-4-0
+2013-01-21 11:31:10,679  INFO [PersistVolumesThread-pool-5] (SaveVolume.java:29) - Save volume ->JavaScript Pocket Reference
+2013-01-21 11:31:10,705  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Wordware Publishing Advanced JavaScript 3rd (2008).pdf
+2013-01-21 11:31:11,006  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Springer Publishing Guide to HTML JavaScript and PHP, For Scientists and Engineers (2011).pdf: isbn found on page 5
+2013-01-21 11:31:11,007  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Wordware Publishing Learn JavaScript (2002).pdf
+2013-01-21 11:31:11,465  INFO [PersistVolumesThread-pool-1] (SaveVolume.java:29) - Save volume ->Building Android Apps with HTML, CSS, and JavaScript
+2013-01-21 11:31:11,553  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Wiley Beginning JavaScript and CSS Development with jQuery (2009).pdf: isbn found on page 2
+2013-01-21 11:31:11,553  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Wrox Press Beginning JavaScript 3rd (2007).pdf
+2013-01-21 11:31:11,893  INFO [VolumeInfoSearchThread-pool-3] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-470-22779-4
+2013-01-21 11:31:12,372  INFO [PersistVolumesThread-pool-9] (SaveVolume.java:29) - Save volume ->Scripting InDesign CS3/4 with JavaScript
+2013-01-21 11:31:12,503  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Wiley Making Use of JavaScript (2002).pdf: isbn found on page 8
+2013-01-21 11:31:12,504  INFO [BookReaderThread-pool-6] (SearchISBN.java:78) - Wiley Making Use of JavaScript (2002).pdf isbn not match
+2013-01-21 11:31:12,878 ERROR [BookReaderThread-pool-6] (SearchISBN.java:66) - can't open pdf: Wiley Making Use of JavaScript (2002).pdf
+2013-01-21 11:31:12,878  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Wrox Press Beginning JavaScript 4th (2010).pdf
+2013-01-21 11:31:12,996 ERROR [VolumeInfoSearchThread-pool-4] (ISBNRequest.java:73) - 503 Service Unavailable
+{
+  "code" : 503,
+  "errors" : [ {
+    "domain" : "global",
+    "message" : "Backend Error",
+    "reason" : "backendError"
+  } ],
+  "message" : "Backend Error"
+}
+2013-01-21 11:31:13,267  INFO [PersistVolumesThread-pool-10] (SaveVolume.java:29) - Save volume ->Learning JavaScript
+2013-01-21 11:31:14,241  INFO [PersistVolumesThread-pool-4] (SaveVolume.java:29) - Save volume ->Drupal 6 Site Builder Solutions
+2013-01-21 11:31:15,256  INFO [PersistVolumesThread-pool-8] (SaveVolume.java:29) - Save volume ->JavaScript: The Definitive Guide
+2013-01-21 11:31:15,377  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Wiley Professional XMPP Programming with JavaScript and jQuery (2010).pdf: isbn found on page 2
+2013-01-21 11:31:15,378  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Wrox Press Beginning JavaScript and CSS Development with jQuery (2009).pdf
+2013-01-21 11:31:15,429  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Wordware Publishing Advanced Javascript 2nd (2001).pdf: isbn found on page 3
+2013-01-21 11:31:15,429  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Wrox Press JavaScript Programmer's Reference (2009).pdf
+2013-01-21 11:31:15,830  INFO [VolumeInfoSearchThread-pool-9] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-470-54071-8
+2013-01-21 11:31:16,085  INFO [PersistVolumesThread-pool-3] (SaveVolume.java:29) - Save volume ->JavaScript Step by Step
+2013-01-21 11:31:17,019  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Wiley JavaScript Bible 6th (2007).pdf: isbn found on page 3
+2013-01-21 11:31:17,019  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Wrox Press Professional JavaScript Frameworks, Prototype YUI Ext JS Dojo and MooTools (2009).pdf
+2013-01-21 11:31:17,219  INFO [PersistVolumesThread-pool-7] (SaveVolume.java:29) - Save volume ->Learning the iOS 4 SDK for JavaScript Programmers
+2013-01-21 11:31:17,425  INFO [VolumeInfoSearchThread-pool-8] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 978-0-470-06916-5
+2013-01-21 11:31:18,190  INFO [PersistVolumesThread-pool-6] (SaveVolume.java:29) - Save volume ->Django 1.1 Testing and Debugging
+2013-01-21 11:31:18,285  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Wordware Publishing Advanced JavaScript 3rd (2008).pdf: isbn found on page 3
+2013-01-21 11:31:18,286  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Wrox Press Professional XMPP Programming with JavaScript and jQuery (2010).pdf
+2013-01-21 11:31:18,662  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Wordware Publishing Learn JavaScript (2002).pdf: isbn found on page 3
+2013-01-21 11:31:18,662  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Wrox Press Web Standards Programmer's Reference, HTML CSS JavaScript Perl Python and PHP (2005).pdf
+2013-01-21 11:31:18,955  INFO [PersistVolumesThread-pool-2] (SaveVolume.java:29) - Save volume ->Supercharged JavaScript Graphics
+2013-01-21 11:31:18,976  INFO [VolumeInfoSearchThread-pool-6] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 1-55622-856-2
+2013-01-21 11:31:19,692  INFO [PersistVolumesThread-pool-5] (SaveVolume.java:29) - Save volume ->Moodle 2.0 First Look
+2013-01-21 11:31:20,445  INFO [PersistVolumesThread-pool-1] (SaveVolume.java:29) - Save volume ->Icefaces 1.8
+2013-01-21 11:31:20,918  INFO [PersistVolumesThread-pool-9] (SaveVolume.java:29) - Save volume ->JavaScript: The Missing Manual
+2013-01-21 11:31:20,948  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Wiley HTML, CSS and JavaScript Mobile Development for Dummies (2011).pdf: isbn found on page 1
+2013-01-21 11:31:21,148  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Wrox Press JavaScript Programmer's Reference (2009).pdf: isbn found on page 1
+2013-01-21 11:31:21,170  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Wrox Press Professional JavaScript Frameworks, Prototype YUI Ext JS Dojo and MooTools (2009).pdf: isbn found on page 1
+2013-01-21 11:31:21,261  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Wrox Press Beginning JavaScript and CSS Development with jQuery (2009).pdf: isbn found on page 1
+2013-01-21 11:31:21,380  INFO [PersistVolumesThread-pool-10] (SaveVolume.java:29) - Save volume ->Learning Jquery
+2013-01-21 11:31:21,560  INFO [VolumeInfoSearchThread-pool-10] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN 978-1-118-02622-9
+2013-01-21 11:31:21,651  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Wrox Press Beginning JavaScript 4th (2010).pdf: isbn found on page 2
+2013-01-21 11:31:21,738  INFO [PersistVolumesThread-pool-4] (SaveVolume.java:29) - Save volume ->iPhone User Interface Cookbook
+2013-01-21 11:31:22,003  INFO [VolumeInfoSearchThread-pool-7] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-470-34472-9
+2013-01-21 11:31:22,056  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Springer Publishing An Introduction to PHP for Scientists and Engineers, Beyond JavaScript (2008).pdf: isbn found on page 4
+2013-01-21 11:31:22,196  INFO [PersistVolumesThread-pool-8] (SaveVolume.java:29) - Save volume ->jQuery 1.4 Reference Guide
+2013-01-21 11:31:22,481  INFO [VolumeInfoSearchThread-pool-3] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-470-22779-4
+2013-01-21 11:31:22,543  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Wrox Press Beginning JavaScript 3rd (2007).pdf: isbn found on page 6
+2013-01-21 11:31:22,551  INFO [VolumeInfoSearchThread-pool-4] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-470-17708-2
+2013-01-21 11:31:22,667  INFO [PersistVolumesThread-pool-3] (SaveVolume.java:29) - Save volume ->JavaScript for programmers
+2013-01-21 11:31:22,746  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Wrox Press Professional XMPP Programming with JavaScript and jQuery (2010).pdf: isbn found on page 2
+2013-01-21 11:31:22,933  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Wrox Press Web Standards Programmer's Reference, HTML CSS JavaScript Perl Python and PHP (2005).pdf: isbn found on page 4
+2013-01-21 11:31:22,942  INFO [VolumeInfoSearchThread-pool-9] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-470-05151-1
+2013-01-21 11:31:23,156  INFO [VolumeInfoSearchThread-pool-8] (ISBNRequest.java:55) - Search on goolge api book with isbn:ISBN: 978-0-470-52593-7
+2013-01-21 11:31:23,168  INFO [PersistVolumesThread-pool-7] (SaveVolume.java:29) - Save volume ->Essential JavaScript for Web Professionals
+2013-01-21 11:31:23,334  INFO [PersistVolumesThread-pool-6] (SaveVolume.java:29) - Save volume ->JavaScript for programmers
+2013-01-21 11:31:23,431  INFO [PersistVolumesThread-pool-2] (SaveVolume.java:29) - Save volume ->JavaScript Programming for the Absolute Beginner
+2013-01-21 11:31:23,527  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Wiley Web Application Design and Implementation, Apache 2 PHP5 MySQL JavaScript and Linux-UNIX (2007) (Scan, OCR).pdf: isbn found on page 4
+2013-01-21 11:31:23,528  INFO [finalizer-BookReaderThread] (ProducerConsumerManager.java:106) - Thread[BookReaderThread,5,main] running 57seg
+2013-01-21 11:31:23,572  INFO [PersistVolumesThread-pool-5] (SaveVolume.java:29) - Save volume ->Pure JavaScript
+2013-01-21 11:31:23,608  INFO [PersistVolumesThread-pool-1] (SaveVolume.java:29) - Save volume ->DHTML Utopia
+2013-01-21 11:31:23,725  INFO [PersistVolumesThread-pool-9] (SaveVolume.java:29) - Save volume ->Canciones en Braille Edición ISBN
+2013-01-21 11:31:23,799  INFO [PersistVolumesThread-pool-10] (SaveVolume.java:29) - Save volume ->Canciones en Braille Edición ISBN
+2013-01-21 11:31:23,867  INFO [PersistVolumesThread-pool-4] (SaveVolume.java:29) - Save volume ->The JavaScript Anthology
+2013-01-21 11:31:24,260  INFO [PersistVolumesThread-pool-8] (SaveVolume.java:29) - Save volume ->Teach Yourself JavaScript in a Week
+2013-01-21 11:31:24,340  INFO [PersistVolumesThread-pool-3] (SaveVolume.java:29) - Save volume ->Unity Ios Game Development Beginners Guide
+2013-01-21 11:31:24,408  INFO [PersistVolumesThread-pool-7] (SaveVolume.java:29) - Save volume ->The Art & Science of JavaScript
+2013-01-21 11:31:24,486  INFO [PersistVolumesThread-pool-6] (SaveVolume.java:29) - Save volume ->Beginning JavaScript and CSS Development with jQuery
+2013-01-21 11:31:24,532  INFO [finalizer-VolumeInfoSearchThread] (ProducerConsumerManager.java:106) - Thread[VolumeInfoSearchThread,5,main] running 58seg
+2013-01-21 11:31:24,624  INFO [PersistVolumesThread-pool-2] (SaveVolume.java:29) - Save volume ->Professional XMPP Programming with JavaScript and jQuery
+2013-01-21 11:31:24,732  INFO [PersistVolumesThread-pool-5] (SaveVolume.java:29) - Save volume ->JavaScript Bible
+2013-01-21 11:31:24,852  INFO [PersistVolumesThread-pool-1] (SaveVolume.java:29) - Save volume ->Learn JavaScript
+2013-01-21 11:31:24,942  INFO [PersistVolumesThread-pool-9] (SaveVolume.java:29) - Save volume ->HTML, CSS, and JavaScript Mobile Development For Dummies
+2013-01-21 11:31:25,104  INFO [PersistVolumesThread-pool-10] (SaveVolume.java:29) - Save volume ->JavaScript Programmer's Reference
+2013-01-21 11:31:25,171  INFO [PersistVolumesThread-pool-4] (SaveVolume.java:29) - Save volume ->Beginning JavaScript and CSS Development with jQuery
+2013-01-21 11:31:25,440  INFO [PersistVolumesThread-pool-8] (SaveVolume.java:29) - Save volume ->Professional CSS
+2013-01-21 11:31:25,580  INFO [PersistVolumesThread-pool-3] (SaveVolume.java:29) - Save volume ->Beginning JavaScript
+2013-01-21 11:31:25,699  INFO [PersistVolumesThread-pool-7] (SaveVolume.java:29) - Save volume ->Beginning JavaScript
+2013-01-21 11:31:27,061  INFO [finalizer-PersistVolumesThread] (ProducerConsumerManager.java:106) - Thread[PersistVolumesThread,5,main] running 60seg
+2013-01-21 11:31:27,136  INFO [main] (CreateTreeOfCategories.java:25) - class com.book.identification.task.CreateTreeOfCategories start at Mon Jan 21 11:31:27 ART 2013
+2013-01-21 11:31:27,388  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Java Demystified
+2013-01-21 11:31:27,684  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing DOM Scripting
+2013-01-21 11:31:27,876  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Designing With Web Standards
+2013-01-21 11:31:28,259  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Foundation Website Creation with CSS, XHTML, and JavaScript
+2013-01-21 11:31:28,576  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Canciones en Braille Edición ISBN
+2013-01-21 11:31:28,759  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Dojo
+2013-01-21 11:31:29,761  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Beginning Android 2
+2013-01-21 11:31:30,168  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Dojo
+2013-01-21 11:31:32,248  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript, A Beginner's Guide, Third Edition
+2013-01-21 11:31:32,446  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript for Absolute Beginners
+2013-01-21 11:31:32,999  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript Cookbook
+2013-01-21 11:31:33,289  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing The book of JavaScript
+2013-01-21 11:31:34,064  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript Examples Bible
+2013-01-21 11:31:34,222  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript Design
+2013-01-21 11:31:34,567  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript Weekend Crash Course
+2013-01-21 11:31:34,717  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Building Android Apps with HTML, CSS, and JavaScript
+2013-01-21 11:31:35,420  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript Application Cookbook
+2013-01-21 11:31:36,403  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Plug-In JavaScript 100 Power Solutions
+2013-01-21 11:31:36,989  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript Pocket Reference
+2013-01-21 11:31:37,262  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Building Android Apps with HTML, CSS, and JavaScript
+2013-01-21 11:31:37,714  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Scripting InDesign CS3/4 with JavaScript
+2013-01-21 11:31:37,916  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Learning JavaScript
+2013-01-21 11:31:38,004  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Drupal 6 Site Builder Solutions
+2013-01-21 11:31:38,297  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript: The Definitive Guide
+2013-01-21 11:31:38,902  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript Step by Step
+2013-01-21 11:31:39,015  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Learning the iOS 4 SDK for JavaScript Programmers
+2013-01-21 11:31:39,589  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Django 1.1 Testing and Debugging
+2013-01-21 11:31:39,881  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Supercharged JavaScript Graphics
+2013-01-21 11:31:40,472  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Moodle 2.0 First Look
+2013-01-21 11:31:40,701  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Icefaces 1.8
+2013-01-21 11:31:41,086  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript: The Missing Manual
+2013-01-21 11:31:41,403  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Learning Jquery
+2013-01-21 11:31:41,803  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing iPhone User Interface Cookbook
+2013-01-21 11:31:42,269  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing jQuery 1.4 Reference Guide
+2013-01-21 11:31:43,006  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript for programmers
+2013-01-21 11:31:43,645  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Essential JavaScript for Web Professionals
+2013-01-21 11:31:44,284  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript for programmers
+2013-01-21 11:31:45,091  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript Programming for the Absolute Beginner
+2013-01-21 11:31:45,314  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Pure JavaScript
+2013-01-21 11:31:45,539  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing DHTML Utopia
+2013-01-21 11:31:46,637  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Canciones en Braille Edición ISBN
+2013-01-21 11:31:46,664  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Canciones en Braille Edición ISBN
+2013-01-21 11:31:46,689  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing The JavaScript Anthology
+2013-01-21 11:31:47,456  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Teach Yourself JavaScript in a Week
+2013-01-21 11:31:47,664  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Unity Ios Game Development Beginners Guide
+2013-01-21 11:31:47,870  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing The Art & Science of JavaScript
+2013-01-21 11:31:48,856  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Beginning JavaScript and CSS Development with jQuery
+2013-01-21 11:31:48,953  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Professional XMPP Programming with JavaScript and jQuery
+2013-01-21 11:31:49,106  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript Bible
+2013-01-21 11:31:49,216  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Learn JavaScript
+2013-01-21 11:31:49,508  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing HTML, CSS, and JavaScript Mobile Development For Dummies
+2013-01-21 11:31:49,698  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing JavaScript Programmer's Reference
+2013-01-21 11:31:49,956  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Beginning JavaScript and CSS Development with jQuery
+2013-01-21 11:31:50,132  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Professional CSS
+2013-01-21 11:31:50,262  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Beginning JavaScript
+2013-01-21 11:31:50,362  INFO [main] (CreateTreeOfCategories.java:29) - Categorizing Beginning JavaScript
+2013-01-21 11:31:50,448  INFO [main] (CreateTreeOfCategories.java:53) - class com.book.identification.task.CreateTreeOfCategories end at Mon Jan 21 11:31:50 ART 2013
+2013-01-21 11:31:50,448  INFO [main] (CreateTreeOfCategories.java:54) - class com.book.identification.task.CreateTreeOfCategories running 23seg

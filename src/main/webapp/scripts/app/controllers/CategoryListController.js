@@ -1,20 +1,26 @@
-define([ "require", "ember"], function(r,Ember) {
+define([ "require", "ember" ], function(r, Ember) {
 	var CategoryListController = Ember.ArrayController.extend({
-	selectedCategory : null,	
-  
-	selectCategory  : function(event) {
-			console.log(event);
-		 	return event;
+		selectedCategory : null,
+		
+		selectedCategories : Ember.ArrayProxy.create({
+		}),
+		
+		selectCategories : function(category) {
+			var categories = [];
+			if(category != null && category != undefined && category.get('parent')){
+				categories = categories.concat(this.selectCategories(category.get('parent')));
+			}
+			categories.push(category);
+			return categories;
 		},
-	
-    subcategories :  function() {
-		    var sub = this.filter(function(category) {
-		        return category.get('subCategories');
-		      });
-		      return sub;
-		    }.property()
-		    
-		    
+
+		selectCategory : function(categoryId) {
+			BooksApp.VolumeListController.filteByCategory(this.get('selectedCategories').get('id'));
+			this.set('selectedCategory',this.findProperty("id", parseInt(categoryId)));
+			this.get('selectedCategories').set('content',this.selectCategories(this.get('selectedCategory'))); 
+			this.set('content',this.get('selectedCategory').get('subCategories'));
+		},
+
 	});
 	return CategoryListController;
 });

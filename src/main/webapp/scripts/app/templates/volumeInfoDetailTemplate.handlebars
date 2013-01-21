@@ -1,6 +1,7 @@
 <tr id="main--{{unbound id}}"
 	class="gb-bookshelf-ordering-holder gb-bookshelf-standard-manage">
-	<td><table class="gb-bookshelf-table-container ">
+	<td>
+		<table class="gb-bookshelf-table-container ">
 			<tbody>
 				<tr>
 					<td valign="top" align="center"
@@ -11,7 +12,8 @@
 							class="coverthumb hover-card-attach-point"
 							alt={{title}}> {{/if}}
 					</a></td>
-					<td><div class="rsi">
+					<td>
+						<div class="rsi">
 							<div>
 								<div>
 									<h2 class="resbdy">
@@ -23,19 +25,32 @@
 							</div>
 							<div class="gb-text-content">
 								<div style="line-height: 1.2em; font-size: small">
-									<span class="gb-gray-author"><span
-										style="color: #676767"><a class="link_aux"
+									<span class="gb-gray-author"><a class="link_aux"
 											href="http://www.google.com.ar/search?tbo=p&amp;tbm=bks&amp;q=inauthor:%22Filippo+di+Pisa%22"><span
-												dir="ltr">{{unbound book.volumeInfo.authors}}</span></a> -
-											{{publishedDate}} -</span></span> {{#if
-									description}}
-									<div dir="ltr" class="snippet sa">{{unescapedDescription}}</div>
+												dir="ltr">{{unbound authors}}</span></a>
+										<span style="color: #676767"> - Published: - {{publishedDate}} -</span>
+									</span> 
+									{{#if description}}
+										<h2 dir="ltr" class="snippet sa">Description</h2>
+										<div dir="ltr" class="snippet sa">{{unescapedDescription}}</div>
 									{{/if}}
-
+									{{#if pages}}
+										<div dir="ltr" class="snippet sa">pages: {{pages}}</div>
+									{{/if}}
+									{{#if publisher}}
+										<div dir="ltr" class="snippet sa">publisher: {{publisher}}</div>
+									{{/if}}
+									{{#if industryIdentifiers}}
+										{{#each isbn in industryIdentifiers}}
+											<div dir="ltr" class="snippet sa">{{isbn.type}}: {{isbn.identifier}}</div>
+										{{/each}}
+									{{/if}}
 								</div>
 							</div>
-						</div></td>
+						</div>
+					</td>
 				</tr>
 			</tbody>
-		</table></td>
+		</table>
+	</td>
 </tr>

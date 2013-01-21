@@ -702,3 +702,204 @@
 2013-01-16 14:33:46,779  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Wiley Learn JavaScript and Ajax with w3schools (2010).pdf: isbn found on page 4
 2013-01-16 14:33:48,528 ERROR [BookReaderThread-pool-10] (SearchISBN.java:66) - can't open pdf: Wrox Press Beginning iOS Application Development with HTML and JavaScript (2012).pdf
 2013-01-16 14:33:49,209  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Wrox Press Professional JavaScript for Web Developers 3rd (2012).pdf: isbn found on page 1
+2013-01-21 11:30:26,279  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: AddedBytes Cheat Sheets JavaScript.pdf
+2013-01-21 11:30:26,280  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Apress DOM Scripting, Web Design with JavaScript and the Document Object Model (2005).pdf
+2013-01-21 11:30:26,280  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Apress Beginning iPhone and iPad Web Apps, Scripting with HTML5 CSS3 and JavaScript (2010).pdf
+2013-01-21 11:30:26,280  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Adobe Press Extending Acrobat Forms with JavaScript (2003) (no OCR).pdf
+2013-01-21 11:30:26,279  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Addison-Wesley Dojo, Using the Dojo JavaScript Library to Build Ajax Applications (2009).pdf
+2013-01-21 11:30:26,279  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Addison-Wesley Developing Hybrid Applications for the iPhone, Using HTML CSS and JavaScript to Build Dynamic Apps for the iPhone (2009).pdf
+2013-01-21 11:30:26,285  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Addison-Wesley Professional Dojo, Using the Dojo JavaScript Library to Build AJAX Applications (2009).pdf
+2013-01-21 11:30:26,285  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Apress Beginning Smartphone Web Development (2009).pdf
+2013-01-21 11:30:26,286  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Apress Beginning PhoneGap, Mobile Web Framework for JavaScript and HTML5 (2012).pdf
+2013-01-21 11:30:26,286  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Adobe Press Acrobat 7.0 JavaScript Scripting Reference (2005).pdf
+2013-01-21 11:30:26,984  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Apress DOM Scripting, Web Design with JavaScript and the Document Object Model 2nd (2010).pdf
+2013-01-21 11:30:29,366  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Addison-Wesley Professional Dojo, Using the Dojo JavaScript Library to Build AJAX Applications (2009).pdf: isbn found on page 2
+2013-01-21 11:30:29,370  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Apress Foundation HTML5 Animation with JavaScript (2011).pdf
+2013-01-21 11:30:29,378  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Apress DOM Scripting, Web Design with JavaScript and the Document Object Model (2005).pdf: isbn found on page 3
+2013-01-21 11:30:29,444  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Addison-Wesley Dojo, Using the Dojo JavaScript Library to Build Ajax Applications (2009).pdf: isbn found on page 5
+2013-01-21 11:30:29,444  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Apress Foundation Website Creation with CSS, XHTML and JavaScript (2008).pdf
+2013-01-21 11:30:29,519 ERROR [BookReaderThread-pool-5] (SearchISBN.java:66) - can't open pdf: Adobe Press Acrobat 7.0 JavaScript Scripting Reference (2005).pdf
+2013-01-21 11:30:29,519  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Apress JavaScript for Absolute Beginners (2010).pdf
+2013-01-21 11:30:29,550  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Apress Metro Revealed, Building Windows 8 Apps with HTML5 and JavaScript (2012) (no OCR).pdf
+2013-01-21 11:30:29,555  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Addison-Wesley Developing Hybrid Applications for the iPhone, Using HTML CSS and JavaScript to Build Dynamic Apps for the iPhone (2009).pdf: isbn found on page 7
+2013-01-21 11:30:29,556  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Apress MooTools Essentials, The Official MooTools Reference for JavaScript and Ajax Development (2008).pdf
+2013-01-21 11:30:29,722  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Apress Beginning Smartphone Web Development (2009).pdf: isbn found on page 4
+2013-01-21 11:30:29,739  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Apress Practical JavaScript, DOM Scripting and Ajax Projects (2007).pdf
+2013-01-21 11:30:30,708  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Apress MooTools Essentials, The Official MooTools Reference for JavaScript and Ajax Development (2008).pdf: isbn found on page 1
+2013-01-21 11:30:30,710  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Apress Pro Android Web Apps, Develop for Android Using HTML5 CSS3 and JavaScript (2011).pdf
+2013-01-21 11:30:30,740  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Apress DOM Scripting, Web Design with JavaScript and the Document Object Model 2nd (2010).pdf: isbn found on page 4
+2013-01-21 11:30:30,743  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Apress Pro iOS Web Design and Development, HTML5 CSS3 and JavaScript with Safari (2011).pdf
+2013-01-21 11:30:33,548  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Apress Pro JavaScript Design Patterns (2008).pdf
+2013-01-21 11:30:35,114  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Apress JavaScript for Absolute Beginners (2010).pdf: isbn found on page 1
+2013-01-21 11:30:35,115  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Apress Pro JavaScript RIA Techniques, Best Practices Performance and Presentation (2009).pdf
+2013-01-21 11:30:35,125  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Apress Pro JavaScript Design Patterns (2008).pdf: isbn found on page 2
+2013-01-21 11:30:35,127  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Apress Pro JavaScript with MooTools, Learning Advanced JavaScript Programming (2010).pdf
+2013-01-21 11:30:35,478  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Apress Beginning iPhone and iPad Web Apps, Scripting with HTML5 CSS3 and JavaScript (2010).pdf: isbn found on page 4
+2013-01-21 11:30:35,481  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Apress The Essential Guide to HTML5, Using Games to Learn HTML5 and JavaScript (2010).pdf
+2013-01-21 11:30:36,085  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Apress Foundation Website Creation with CSS, XHTML and JavaScript (2008).pdf: isbn found on page 1
+2013-01-21 11:30:36,086  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Apress ZK, AJAX without JavaScript Framework (2007).pdf
+2013-01-21 11:30:37,534  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Apress Pro JavaScript RIA Techniques, Best Practices Performance and Presentation (2009).pdf: isbn found on page 2
+2013-01-21 11:30:37,535  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Course Technology JavaScript 5th (2011).pdf
+2013-01-21 11:30:38,347  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Apress Pro Android Web Apps, Develop for Android Using HTML5 CSS3 and JavaScript (2011).pdf: isbn found on page 1
+2013-01-21 11:30:38,348  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Hungry Minds JavaScript Bible 4th (2001).pdf
+2013-01-21 11:30:38,362  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Apress ZK, AJAX without JavaScript Framework (2007).pdf: isbn found on page 3
+2013-01-21 11:30:38,364  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Hungry Minds JavaScript Examples Bible, The Essential Companion to JavaScript Bible (2001).pdf
+2013-01-21 11:30:38,462  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Apress Pro iOS Web Design and Development, HTML5 CSS3 and JavaScript with Safari (2011).pdf: isbn found on page 4
+2013-01-21 11:30:38,464  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Hungry Minds Javascript Weekend Crash Course (2001).pdf
+2013-01-21 11:30:38,931  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Apress Beginning PhoneGap, Mobile Web Framework for JavaScript and HTML5 (2012).pdf: isbn found on page 9
+2013-01-21 11:30:38,932  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne How to Do Everything with JavaScript (2003).pdf
+2013-01-21 11:30:41,043  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Apress Pro JavaScript with MooTools, Learning Advanced JavaScript Programming (2010).pdf: isbn found on page 4
+2013-01-21 11:30:41,045  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne Javascript Demystified (2005).pdf
+2013-01-21 11:30:42,424  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Apress Foundation HTML5 Animation with JavaScript (2011).pdf: isbn found on page 15
+2013-01-21 11:30:42,425  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne JavaScript, A Beginner's Guide 3rd (2010).pdf
+2013-01-21 11:30:44,279  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Apress The Essential Guide to HTML5, Using Games to Learn HTML5 and JavaScript (2010).pdf: isbn found on page 4
+2013-01-21 11:30:44,281  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: MCGraw-Hill Osborne Plug-In JavaScript, 100 Power Solutions (2011).pdf
+2013-01-21 11:30:45,013  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Microsoft Press JavaScript 2nd (2010).pdf
+2013-01-21 11:30:45,271  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - MCGraw-Hill Osborne JavaScript, A Beginner's Guide 3rd (2010).pdf: isbn found on page 5
+2013-01-21 11:30:45,271  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Microsoft Press JavaScript Step by Step 2nd (2010).pdf
+2013-01-21 11:30:45,846 ERROR [BookReaderThread-pool-2] (SearchISBN.java:66) - can't open pdf: Hungry Minds JavaScript Bible 4th (2001).pdf
+2013-01-21 11:30:45,846  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: New Riders Publishing JavaScript Design (2001).pdf
+2013-01-21 11:30:45,894  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Course Technology JavaScript 5th (2011).pdf: isbn found on page 5
+2013-01-21 11:30:45,895  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: New Riders Publishing Scriptin' with JavaScript and Ajax, A Designer’s Guide (2010).pdf
+2013-01-21 11:30:46,320  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Microsoft Press JavaScript 2nd (2010).pdf: isbn found on page 102
+2013-01-21 11:30:46,321  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: No Starch Press The Book of JavaScript, A Practical Guide to Interactive Web Pages (2000).pdf
+2013-01-21 11:30:46,521  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Apress Practical JavaScript, DOM Scripting and Ajax Projects (2007).pdf: isbn found on page 4
+2013-01-21 11:30:46,522  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: OReilly Adobe Integrated Runtime (AIR) for JavaScript Developers, Pocket Guide (2007).pdf
+2013-01-21 11:30:47,331  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - MCGraw-Hill Osborne Javascript Demystified (2005).pdf: isbn found on page 96
+2013-01-21 11:30:47,346  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: OReilly Building Android Apps with HTML CSS and JavaScript (2010).pdf
+2013-01-21 11:30:49,265  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: OReilly Building Android Apps with HTML CSS and JavaScript 2nd (2012).pdf
+2013-01-21 11:30:49,335  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Hungry Minds Javascript Weekend Crash Course (2001).pdf: isbn found on page 1
+2013-01-21 11:30:49,336  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: OReilly JavaScript and DHTML Cookbook 2nd (2007).pdf
+2013-01-21 11:30:49,354  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Hungry Minds JavaScript Examples Bible, The Essential Companion to JavaScript Bible (2001).pdf: isbn found on page 1
+2013-01-21 11:30:49,355  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: OReilly JavaScript Application Cookbook (1999).pdf
+2013-01-21 11:30:49,909  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - New Riders Publishing JavaScript Design (2001).pdf: isbn found on page 1
+2013-01-21 11:30:49,910  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: OReilly JavaScript Cookbook (2010).pdf
+2013-01-21 11:30:50,563  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - No Starch Press The Book of JavaScript, A Practical Guide to Interactive Web Pages (2000).pdf: isbn found on page 1
+2013-01-21 11:30:50,565  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: OReilly JavaScript Pocket Reference 3rd (2012).pdf
+2013-01-21 11:30:51,920  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - New Riders Publishing Scriptin' with JavaScript and Ajax, A Designer’s Guide (2010).pdf: isbn found on page 1
+2013-01-21 11:30:51,923  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: OReilly JavaScript, The Definitive Guide 6th (2011).pdf
+2013-01-21 11:30:51,934  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - OReilly Building Android Apps with HTML CSS and JavaScript (2010).pdf: isbn found on page 6
+2013-01-21 11:30:51,935  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: OReilly JavaScript, The Missing Manual (2008).pdf
+2013-01-21 11:30:51,951  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - OReilly JavaScript Application Cookbook (1999).pdf: isbn found on page 1
+2013-01-21 11:30:51,952  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: OReilly Learning JavaScript 2nd (2009).pdf
+2013-01-21 11:30:52,748  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - OReilly JavaScript Cookbook (2010).pdf: isbn found on page 5
+2013-01-21 11:30:52,749  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: OReilly Learning the iOS 4 SDK for JavaScript Programmers (2011).pdf
+2013-01-21 11:30:52,890  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - MCGraw-Hill Osborne Plug-In JavaScript, 100 Power Solutions (2011).pdf: isbn found on page 3
+2013-01-21 11:30:52,891  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: OReilly Scripting InDesign CS3-4 with JavaScript (2009).pdf
+2013-01-21 11:30:53,070  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - OReilly JavaScript Pocket Reference 3rd (2012).pdf: isbn found on page 4
+2013-01-21 11:30:53,070  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: OReilly Supercharged JavaScript Graphics, With HTML5 Canvas and jQuery (2011).pdf
+2013-01-21 11:30:53,257  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - OReilly Building Android Apps with HTML CSS and JavaScript 2nd (2012).pdf: isbn found on page 4
+2013-01-21 11:30:53,258  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Packt Publishing Django JavaScript Integration, AJAX and jQuery (2010).pdf
+2013-01-21 11:30:53,362  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - OReilly Scripting InDesign CS3-4 with JavaScript (2009).pdf: isbn found on page 1
+2013-01-21 11:30:53,363  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Packt Publishing Drupal 6 JavaScript and jQuery (2009).pdf
+2013-01-21 11:30:54,100  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Packt Publishing Drupal 6 JavaScript and jQuery (2009).pdf: isbn found on page 1
+2013-01-21 11:30:54,101  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Packt Publishing iPhone JavaScript Cookbook (2011).pdf
+2013-01-21 11:30:54,245  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - OReilly Learning JavaScript 2nd (2009).pdf: isbn found on page 6
+2013-01-21 11:30:54,246  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Packt Publishing JavaScript Testing, Beginner's Guide (2010).pdf
+2013-01-21 11:30:54,260  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - OReilly JavaScript, The Definitive Guide 6th (2011).pdf: isbn found on page 6
+2013-01-21 11:30:54,261  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Packt Publishing Joomla 1.5 JavaScript jQuery (2010).pdf
+2013-01-21 11:30:54,614  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - OReilly Learning the iOS 4 SDK for JavaScript Programmers (2011).pdf: isbn found on page 6
+2013-01-21 11:30:54,615  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Packt Publishing Moodle JavaScript Cookbook (2011).pdf
+2013-01-21 11:30:55,176  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - OReilly Adobe Integrated Runtime (AIR) for JavaScript Developers, Pocket Guide (2007).pdf: isbn found on page 6
+2013-01-21 11:30:55,176  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Packt Publishing Sencha Touch Mobile JavaScript Framework (2012).pdf
+2013-01-21 11:30:55,304  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Microsoft Press JavaScript Step by Step 2nd (2010).pdf: isbn found on page 115
+2013-01-21 11:30:55,306  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Packt Publishing Unity 3.x Game Development Essentials, Game Development with C# and Javascript 2nd (2011).pdf
+2013-01-21 11:30:55,616  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Packt Publishing Django JavaScript Integration, AJAX and jQuery (2010).pdf: isbn found on page 1
+2013-01-21 11:30:55,616  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Peachpit Press The JavaScript Pocket Guide (2010).pdf
+2013-01-21 11:30:55,699  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Packt Publishing Moodle JavaScript Cookbook (2011).pdf: isbn found on page 1
+2013-01-21 11:30:55,700  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Peachpit Press Visual QuickStart Guide JavaScript 8th (2012).pdf
+2013-01-21 11:30:55,749  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - OReilly JavaScript and DHTML Cookbook 2nd (2007).pdf: isbn found on page 5
+2013-01-21 11:30:55,750  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Peachpit Press Visual QuickStart Guide JavaScript and Ajax for the Web 6th (2006).pdf
+2013-01-21 11:30:55,753  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - OReilly Supercharged JavaScript Graphics, With HTML5 Canvas and jQuery (2011).pdf: isbn found on page 6
+2013-01-21 11:30:55,754  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Pearson Education Publishing JavaScript for Programmers (2010).pdf
+2013-01-21 11:30:55,852  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Packt Publishing JavaScript Testing, Beginner's Guide (2010).pdf: isbn found on page 1
+2013-01-21 11:30:55,852  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Pragmatic Bookshelf Publishing Mastering Dojo, JavaScript and AJAX Tools for Great Web Experiences (2008).pdf
+2013-01-21 11:30:56,650  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Packt Publishing iPhone JavaScript Cookbook (2011).pdf: isbn found on page 1
+2013-01-21 11:30:56,651  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Pragmatic Bookshelf Publishing Prototype and script.aculo.us, You Never Knew JavaScript Could Do This (2007).pdf
+2013-01-21 11:30:56,734  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Peachpit Press The JavaScript Pocket Guide (2010).pdf: isbn found on page 3
+2013-01-21 11:30:56,735  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Prentice Hall AJAX, Creating Web Pages with Asynchronous JavaScript and XML (2006).pdf
+2013-01-21 11:30:56,929  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Packt Publishing Joomla 1.5 JavaScript jQuery (2010).pdf: isbn found on page 1
+2013-01-21 11:30:56,929  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Prentice Hall Essential JavaScript for Web Professionals (1999).pdf
+2013-01-21 11:30:57,068  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - OReilly JavaScript, The Missing Manual (2008).pdf: isbn found on page 4
+2013-01-21 11:30:57,069  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Prentice Hall JavaScript for Programmers (2010).pdf
+2013-01-21 11:30:57,171  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Packt Publishing Sencha Touch Mobile JavaScript Framework (2012).pdf: isbn found on page 1
+2013-01-21 11:30:57,172  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Prima Publishing JavaScript Programming for the Absolute Beginner (2001).pdf
+2013-01-21 11:30:58,216  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Pragmatic Bookshelf Publishing Prototype and script.aculo.us, You Never Knew JavaScript Could Do This (2007).pdf: isbn found on page 2
+2013-01-21 11:30:58,217  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: QUE JavaScript 1.5 by Example (2001).pdf
+2013-01-21 11:30:58,416  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Prentice Hall AJAX, Creating Web Pages with Asynchronous JavaScript and XML (2006).pdf: isbn found on page 2
+2013-01-21 11:30:58,416  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: QUE JavaScript Goodies 2nd (2002).pdf
+2013-01-21 11:30:58,598  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Pragmatic Bookshelf Publishing Mastering Dojo, JavaScript and AJAX Tools for Great Web Experiences (2008).pdf: isbn found on page 4
+2013-01-21 11:30:58,599  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: QUE Special Edition Using JavaScript (2001).pdf
+2013-01-21 11:31:00,197  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Packt Publishing Unity 3.x Game Development Essentials, Game Development with C# and Javascript 2nd (2011).pdf: isbn found on page 1
+2013-01-21 11:31:00,198  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: QUE The Complete Idiot's Guide to JavaScript 2nd (1997).pdf
+2013-01-21 11:31:00,485  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Pearson Education Publishing JavaScript for Programmers (2010).pdf: isbn found on page 5
+2013-01-21 11:31:00,486  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: SAMS JavaScript Phrasebook, Essential Code and Commands (2006).pdf
+2013-01-21 11:31:01,380  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: SAMS JavaScript, Developer's Dictionary (2002).pdf
+2013-01-21 11:31:01,383 ERROR [BookReaderThread-pool-7] (SearchISBN.java:66) - can't open pdf: QUE JavaScript 1.5 by Example (2001).pdf
+2013-01-21 11:31:01,383  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: SAMS Pure JavaScript (1999).pdf
+2013-01-21 11:31:02,353  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Prentice Hall Essential JavaScript for Web Professionals (1999).pdf: isbn found on page 1
+2013-01-21 11:31:02,353  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: SAMS Pure JavaScript 2nd (2002).pdf
+2013-01-21 11:31:02,535  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Prima Publishing JavaScript Programming for the Absolute Beginner (2001).pdf: isbn found on page 3
+2013-01-21 11:31:02,537  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: SAMS Teach Yourself Ajax JavaScript and PHP, All in One (2009).pdf
+2013-01-21 11:31:02,604  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Prentice Hall JavaScript for Programmers (2010).pdf: isbn found on page 5
+2013-01-21 11:31:02,605  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: SAMS Teach Yourself JavaScript in 21 days (2002).pdf
+2013-01-21 11:31:03,135  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: SAMS Teach Yourself Javascript in 24 Hours 3rd (2002).pdf
+2013-01-21 11:31:04,872  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Peachpit Press Visual QuickStart Guide JavaScript and Ajax for the Web 6th (2006).pdf: isbn found on page 2
+2013-01-21 11:31:04,873  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: SAMS Teach Yourself JavaScript in 24 Hours 4th (2007).pdf
+2013-01-21 11:31:04,963  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - SAMS Pure JavaScript (1999).pdf: isbn found on page 2
+2013-01-21 11:31:04,964  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: SAMS Teach Yourself JavaScript in a Week (1996).pdf
+2013-01-21 11:31:05,824  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - SAMS Teach Yourself Ajax JavaScript and PHP, All in One (2009).pdf: isbn found on page 4
+2013-01-21 11:31:05,825  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: SitePoint DHTML Utopia, Modern Web Design Using JavaScript and DOM (2005).pdf
+2013-01-21 11:31:06,135  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Peachpit Press Visual QuickStart Guide JavaScript 8th (2012).pdf: isbn found on page 3
+2013-01-21 11:31:06,137  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: SitePoint The Art and Science of JavaScript (2007).pdf
+2013-01-21 11:31:06,332  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - SAMS Teach Yourself Javascript in 24 Hours 3rd (2002).pdf: isbn found on page 22
+2013-01-21 11:31:06,334  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: SitePoint The JavaScript Anthology, 101 Essential Tips Tricks and Hacks (2006).pdf
+2013-01-21 11:31:06,623  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - SitePoint DHTML Utopia, Modern Web Design Using JavaScript and DOM (2005).pdf: isbn found on page 2
+2013-01-21 11:31:06,625  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Springer Publishing An Introduction to HTML and JavaScript for Scientists and Engineers (2007).pdf
+2013-01-21 11:31:07,021  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - SAMS Teach Yourself JavaScript in 21 days (2002).pdf: isbn found on page 112
+2013-01-21 11:31:07,023  INFO [BookReaderThread-pool-10] (SearchISBN.java:37) - Openning: Springer Publishing An Introduction to PHP for Scientists and Engineers, Beyond JavaScript (2008).pdf
+2013-01-21 11:31:07,572 ERROR [BookReaderThread-pool-3] (SearchISBN.java:66) - can't open pdf: QUE Special Edition Using JavaScript (2001).pdf
+2013-01-21 11:31:07,573  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Springer Publishing Guide to HTML JavaScript and PHP, For Scientists and Engineers (2011).pdf
+2013-01-21 11:31:07,852  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Springer Publishing An Introduction to HTML and JavaScript for Scientists and Engineers (2007).pdf: isbn found on page 2
+2013-01-21 11:31:07,853  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Visibooks HTML and JavaScript for Visual Learners (2001).pdf
+2013-01-21 11:31:07,875  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - SAMS Teach Yourself JavaScript in 24 Hours 4th (2007).pdf: isbn found on page 34
+2013-01-21 11:31:07,876  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Wiley Beginning JavaScript and CSS Development with jQuery (2009).pdf
+2013-01-21 11:31:08,428  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - SitePoint The JavaScript Anthology, 101 Essential Tips Tricks and Hacks (2006).pdf: isbn found on page 2
+2013-01-21 11:31:08,429  INFO [BookReaderThread-pool-8] (SearchISBN.java:37) - Openning: Wiley HTML, CSS and JavaScript Mobile Development for Dummies (2011).pdf
+2013-01-21 11:31:08,818  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - SAMS Teach Yourself JavaScript in a Week (1996).pdf: isbn found on page 24
+2013-01-21 11:31:08,819  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Wiley JavaScript Bible 6th (2007).pdf
+2013-01-21 11:31:08,921  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Wiley Making Use of JavaScript (2002).pdf
+2013-01-21 11:31:09,104 ERROR [BookReaderThread-pool-5] (SearchISBN.java:66) - can't open pdf: SAMS Pure JavaScript 2nd (2002).pdf
+2013-01-21 11:31:09,104  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Wiley Professional XMPP Programming with JavaScript and jQuery (2010).pdf
+2013-01-21 11:31:09,150  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - SitePoint The Art and Science of JavaScript (2007).pdf: isbn found on page 4
+2013-01-21 11:31:09,151  INFO [BookReaderThread-pool-2] (SearchISBN.java:37) - Openning: Wiley Web Application Design and Implementation, Apache 2 PHP5 MySQL JavaScript and Linux-UNIX (2007) (Scan, OCR).pdf
+2013-01-21 11:31:10,140  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Wordware Publishing Advanced Javascript 2nd (2001).pdf
+2013-01-21 11:31:10,705  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Wordware Publishing Advanced JavaScript 3rd (2008).pdf
+2013-01-21 11:31:11,006  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Springer Publishing Guide to HTML JavaScript and PHP, For Scientists and Engineers (2011).pdf: isbn found on page 5
+2013-01-21 11:31:11,007  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Wordware Publishing Learn JavaScript (2002).pdf
+2013-01-21 11:31:11,553  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Wiley Beginning JavaScript and CSS Development with jQuery (2009).pdf: isbn found on page 2
+2013-01-21 11:31:11,553  INFO [BookReaderThread-pool-1] (SearchISBN.java:37) - Openning: Wrox Press Beginning JavaScript 3rd (2007).pdf
+2013-01-21 11:31:12,503  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Wiley Making Use of JavaScript (2002).pdf: isbn found on page 8
+2013-01-21 11:31:12,504  INFO [BookReaderThread-pool-6] (SearchISBN.java:78) - Wiley Making Use of JavaScript (2002).pdf isbn not match
+2013-01-21 11:31:12,878 ERROR [BookReaderThread-pool-6] (SearchISBN.java:66) - can't open pdf: Wiley Making Use of JavaScript (2002).pdf
+2013-01-21 11:31:12,878  INFO [BookReaderThread-pool-6] (SearchISBN.java:37) - Openning: Wrox Press Beginning JavaScript 4th (2010).pdf
+2013-01-21 11:31:15,377  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Wiley Professional XMPP Programming with JavaScript and jQuery (2010).pdf: isbn found on page 2
+2013-01-21 11:31:15,378  INFO [BookReaderThread-pool-5] (SearchISBN.java:37) - Openning: Wrox Press Beginning JavaScript and CSS Development with jQuery (2009).pdf
+2013-01-21 11:31:15,429  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Wordware Publishing Advanced Javascript 2nd (2001).pdf: isbn found on page 3
+2013-01-21 11:31:15,429  INFO [BookReaderThread-pool-9] (SearchISBN.java:37) - Openning: Wrox Press JavaScript Programmer's Reference (2009).pdf
+2013-01-21 11:31:17,019  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Wiley JavaScript Bible 6th (2007).pdf: isbn found on page 3
+2013-01-21 11:31:17,019  INFO [BookReaderThread-pool-7] (SearchISBN.java:37) - Openning: Wrox Press Professional JavaScript Frameworks, Prototype YUI Ext JS Dojo and MooTools (2009).pdf
+2013-01-21 11:31:18,285  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Wordware Publishing Advanced JavaScript 3rd (2008).pdf: isbn found on page 3
+2013-01-21 11:31:18,286  INFO [BookReaderThread-pool-4] (SearchISBN.java:37) - Openning: Wrox Press Professional XMPP Programming with JavaScript and jQuery (2010).pdf
+2013-01-21 11:31:18,662  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Wordware Publishing Learn JavaScript (2002).pdf: isbn found on page 3
+2013-01-21 11:31:18,662  INFO [BookReaderThread-pool-3] (SearchISBN.java:37) - Openning: Wrox Press Web Standards Programmer's Reference, HTML CSS JavaScript Perl Python and PHP (2005).pdf
+2013-01-21 11:31:20,948  INFO [BookReaderThread-pool-8] (SearchISBN.java:75) - Wiley HTML, CSS and JavaScript Mobile Development for Dummies (2011).pdf: isbn found on page 1
+2013-01-21 11:31:21,148  INFO [BookReaderThread-pool-9] (SearchISBN.java:75) - Wrox Press JavaScript Programmer's Reference (2009).pdf: isbn found on page 1
+2013-01-21 11:31:21,170  INFO [BookReaderThread-pool-7] (SearchISBN.java:75) - Wrox Press Professional JavaScript Frameworks, Prototype YUI Ext JS Dojo and MooTools (2009).pdf: isbn found on page 1
+2013-01-21 11:31:21,261  INFO [BookReaderThread-pool-5] (SearchISBN.java:75) - Wrox Press Beginning JavaScript and CSS Development with jQuery (2009).pdf: isbn found on page 1
+2013-01-21 11:31:21,651  INFO [BookReaderThread-pool-6] (SearchISBN.java:75) - Wrox Press Beginning JavaScript 4th (2010).pdf: isbn found on page 2
+2013-01-21 11:31:22,056  INFO [BookReaderThread-pool-10] (SearchISBN.java:75) - Springer Publishing An Introduction to PHP for Scientists and Engineers, Beyond JavaScript (2008).pdf: isbn found on page 4
+2013-01-21 11:31:22,543  INFO [BookReaderThread-pool-1] (SearchISBN.java:75) - Wrox Press Beginning JavaScript 3rd (2007).pdf: isbn found on page 6
+2013-01-21 11:31:22,746  INFO [BookReaderThread-pool-4] (SearchISBN.java:75) - Wrox Press Professional XMPP Programming with JavaScript and jQuery (2010).pdf: isbn found on page 2
+2013-01-21 11:31:22,933  INFO [BookReaderThread-pool-3] (SearchISBN.java:75) - Wrox Press Web Standards Programmer's Reference, HTML CSS JavaScript Perl Python and PHP (2005).pdf: isbn found on page 4
+2013-01-21 11:31:23,527  INFO [BookReaderThread-pool-2] (SearchISBN.java:75) - Wiley Web Application Design and Implementation, Apache 2 PHP5 MySQL JavaScript and Linux-UNIX (2007) (Scan, OCR).pdf: isbn found on page 4
