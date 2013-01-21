@@ -8,8 +8,11 @@ define([
 		
 		click: function(event){
 			 var categoryId = event.target.id;
-			 //this return categeryListController
-			 this.get('content').selectCategory(categoryId);
+			 if(categoryId == "allCategories"){
+				 this.get('content').viewAllCategories();
+			 }else{
+				 this.get('content').selectCategory(categoryId);
+			 }
 		 }
 	});
 	return CategoryView;

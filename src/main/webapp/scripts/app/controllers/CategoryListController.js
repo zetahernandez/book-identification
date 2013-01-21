@@ -14,11 +14,25 @@ define([ "require", "ember" ], function(r, Ember) {
 			return categories;
 		},
 
+		viewAllCategories : function() {
+				this.get('selectedCategories').clear();
+				this.set('selectedCategory',null);
+				var parents = BooksApp.Category.find().filter(function(category){
+					return category.get('parent') == null;
+				});
+				this.set('content',parents );
+				BooksApp.router.get('volumeListController').showAll();
+		},
+		
 		selectCategory : function(categoryId) {
-			BooksApp.VolumeListController.filteByCategory(this.get('selectedCategories').get('id'));
-			this.set('selectedCategory',this.findProperty("id", parseInt(categoryId)));
+			var category = this.findProperty("id", parseInt(categoryId));
+			if(category == null || category == undefined){
+			    category = BooksApp.Category.find(categoryId);
+			}
+			this.set('selectedCategory',category);
 			this.get('selectedCategories').set('content',this.selectCategories(this.get('selectedCategory'))); 
 			this.set('content',this.get('selectedCategory').get('subCategories'));
+			BooksApp.router.get('volumeListController').filterByCategory(this.get('selectedCategory'));
 		},
 
 	});
