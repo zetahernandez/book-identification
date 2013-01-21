@@ -31,9 +31,14 @@
 												dir="ltr">{{unbound volume.volumeInfo.authors}}</span></a> -
 											{{volume.volumeInfo.publishedDate}} -</span></span> {{#if
 									volume.volumeInfo.description}}
-									<div dir="ltr" class="snippet sa">{{volume.volumeInfo.unescapedDescription}}</div>
+									<div id="container" >
+										<div class="more-less">
+											<div dir="ltr" class="snippet sa more-block">
+												<p>{{volume.volumeInfo.unescapedDescription}}</p>
+											</div>
+										</div>
+									</div>
 									{{/if}}
-
 								</div>
 							</div>
 						</div></td>

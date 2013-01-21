@@ -186,3 +186,52 @@ div.category-list {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ page-break-after: avoid; }
 }
+
+
+	p{
+		font-family:Tahoma, Geneva, sans-serif; 
+		font-size:14px; 
+		line-height:22px;
+		margin-bottom:20px;
+	}
+	#container{
+		width:700px;
+		margin:auto;
+	}
+	a.adjust{
+		padding:10px;
+		display:block;
+		font-weight:bold;
+		background:#eee;
+		color:#333;
+		border-radius:12px;
+		-webkit-border-radius:12px;
+		-moz-border-radius:12px;
+		width:80px;
+		text-align:center;
+		text-decoration:none;
+	}
+		a.adjust:hover{
+			background:#333;
+			color:#FFF;
+			-webkit-transition: all 400ms; /*safari and chrome */
+			-moz-transition: all 400ms ease; /* firefox */
+			-o-transition: all 400ms ease; /* opera */
+			transition: all 400ms ease;
+		}
+	p.continued{
+		margin-top:0;
+	}
+/* 	img{ */
+/* 		padding:10px; */
+/* 		background:#FFF; */
+/* 		border-radius: 12px; */
+/* 		-webkit-box-shadow: 0 1px 13px rgba(0,0,0,.25); */
+/* 		-moz-box-shadow: 0 1px 13px rgba(0,0,0,.25); */
+/* 		box-shadow: 0 1px 13px rgba(0,0,0,.25); */
+/* 		width:400px; */
+/* 		margin-left:20px; */
+/* 	} */
+
+
+
