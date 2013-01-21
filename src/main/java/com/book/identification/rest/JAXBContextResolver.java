@@ -26,8 +26,8 @@ public class JAXBContextResolver implements ContextResolver<JAXBContext> {
 
 	public JAXBContextResolver() throws Exception {
 		this.contextDefault = new JSONJAXBContext(JSONConfiguration.natural()
-				.rootUnwrapping(false).build(), types);
-		this.contextCollections = new JSONJAXBContext(JSONConfiguration.mapped().build(), collectionTypes);
+				.rootUnwrapping(true).build(), types);
+		this.contextCollections = new JSONJAXBContext(JSONConfiguration.natural().build(), collectionTypes);
 	}
 
 	public JAXBContext getContext(Class<?> objectType) {
