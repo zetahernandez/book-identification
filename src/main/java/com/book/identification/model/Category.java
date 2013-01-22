@@ -31,6 +31,8 @@ public class Category extends EntityBase {
 	@ManyToOne(optional = true, cascade = CascadeType.ALL)
 	@JoinColumn(nullable = true)
 	private Category parent;
+	
+	private int level;
 
 	@XmlElement(name="category_name")
 	public String getCategory() {
@@ -59,5 +61,15 @@ public class Category extends EntityBase {
 	public void setParent(Category parent) {
 		this.parent = parent;
 	}
+	
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
+	}
+	
+	
 
 }

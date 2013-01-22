@@ -80,15 +80,26 @@ public class CreateTreeOfCategories {
 		}
 	}
 	private  Category buscameOcreame(String stringCategory,String[] subarray) {
-		Category retrieveCategory = categoryDAO.retrieveCategory(stringCategory, subarray);
-		if(retrieveCategory == null){
-			retrieveCategory = new Category();
-			retrieveCategory.setCategory(stringCategory);
+		Category category = categoryDAO.retrieveCategory(stringCategory, subarray);
+		if(category == null){
+			category = createNewCategory(stringCategory, subarray);
 		}
 		if(subarray != null && subarray.length > 0){
-			retrieveCategory.setParent(setParents(subarray));
+			category.setParent(setParents(subarray));
 		}
-		return retrieveCategory;
+		return category;
+	}
+
+	private Category createNewCategory(String stringCategory, String[] subarray) {
+		Category category;
+		category = new Category();
+		category.setCategory(stringCategory);
+		if(subarray!=null){
+			category.setLevel(subarray.length);
+		}else{
+			category.setLevel(0);
+		}
+		return category;
 	}
 
 	
