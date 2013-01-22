@@ -34,7 +34,7 @@ public class Main {
 //		
 //		
 //		
-//		new CreateTreeOfCategories().execute();
+		new CreateTreeOfCategories().execute();
 //		
 		try {
 			InetAddress localHost = InetAddress.getLocalHost();

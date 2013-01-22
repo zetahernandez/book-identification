@@ -26,7 +26,7 @@ public class CategoryDAOHibernate extends GenericHibernateDAO<Category, Long>
 			
 			query = getSession().createQuery(stringQuery.toString()).setParameter("categoryName", categoryName);
 			for (int i = parentCategoryName.length ; i > 0; i--) {
-				query = query.setParameter("parentCategoryName" + (parentCategoryName.length - i), parentCategoryName[i-1]);
+				query = query.setParameter("parentCategoryName" + (parentCategoryName.length - i), StringUtils.trim(parentCategoryName[i-1]));
 			}
 		}
 		return (Category) query.uniqueResult();
