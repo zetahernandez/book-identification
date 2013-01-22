@@ -23,7 +23,7 @@ public class Main {
 		httpServer.start();
 //		
 		HibernateUtil.getSessionFactory();
-////		
+//////		
 //		BookIdentificationWork bookIdentificationWork = new BookIdentificationWork("BookIdentificationWork",args);  
 //		bookIdentificationWork.start();
 //		try {
@@ -31,10 +31,10 @@ public class Main {
 //		} catch (InterruptedException e) {
 //			e.printStackTrace();
 //		}
+		
 //		
 //		
-//		
-		new CreateTreeOfCategories().execute();
+//		new CreateTreeOfCategories().execute();
 //		
 		try {
 			InetAddress localHost = InetAddress.getLocalHost();

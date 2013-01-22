@@ -31,7 +31,7 @@ define([ "ember" ], function(Ember) {
 				},
 				serialize : function(router, context) {
 					return {
-						volumeInfoId : context.get('id')
+						volumeInfoId : context.get('volumeInfo').get('id')
 					};
 				},
 				deserialize : function(router, urlParams) {

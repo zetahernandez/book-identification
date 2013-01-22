@@ -4,7 +4,6 @@ define([ "views/ApplicationView",
 		"views/VolumeInfoView",
 		"views/VolumeInfoDetailView",
 		"views/NavigationView",
-		"views/CategoryView",
 		"controllers/ApplicationController",
 		"controllers/VolumeListController",
 		"controllers/CategoryListController",
@@ -18,7 +17,7 @@ define([ "views/ApplicationView",
 		"ember_data" ],
 		
 		function(ApplicationView, VolumeListView,
-				CategoryListView, VolumeInfoView, VolumeInfoDetailView,NavigationView,CategoryView,
+				CategoryListView, VolumeInfoView, VolumeInfoDetailView,NavigationView,
 				ApplicationController, VolumeListController, CategoryListController,
 				VolumeInfoDetailController, Volume, VolumeInfo, Category, ImageLink,
 				IndustryIdentifier, Router) {
@@ -40,17 +39,10 @@ define([ "views/ApplicationView",
 		Category : Category,
 		ImageLink : ImageLink,
 		IndustryIdentifier : IndustryIdentifier,
-		CategoryView : CategoryView,
-
 		store : DS.Store.create({
 			revision : 4,
 			adapter : DS.RESTAdapter.create({
 				bulkCommit : false,
-				// serializer:DS.Serializer.create({
-				// primaryKey:function (type) {
-				// return type.pk;
-				// }
-				// }),
 				mappings : {
 					volume : Volume,
 					volume_info  : VolumeInfo,
@@ -73,7 +65,7 @@ define([ "views/ApplicationView",
 		}),
 		ready : function() {
 		}
+		
 	});
-
 	return App;
 });

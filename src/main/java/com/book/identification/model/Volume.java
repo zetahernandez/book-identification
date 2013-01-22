@@ -331,7 +331,6 @@ public final class Volume extends EntityBase implements ItemQueue {
 	
 	private String fileName;
 
-	@XmlTransient
 	public String getPath() {
 		return path;
 	}

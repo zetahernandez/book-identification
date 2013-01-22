@@ -23,11 +23,12 @@ define([ "require", "ember" ], function(r, Ember) {
 				this.set('content',parents );
 				BooksApp.router.get('volumeListController').showAll();
 		},
-		
-		selectCategory : function(categoryId) {
-			var category = this.findProperty("id", parseInt(categoryId));
-			if(category == null || category == undefined){
-			    category = BooksApp.Category.find(categoryId);
+
+		selectCategory : function(event) {
+			var category = event.context;
+			var cat = this.findProperty("id", category.get('id'));
+			if(cat == null || cat == undefined){
+				cat = BooksApp.Category.find(category.get('id'));
 			}
 			this.set('selectedCategory',category);
 			this.get('selectedCategories').set('content',this.selectCategories(this.get('selectedCategory'))); 
