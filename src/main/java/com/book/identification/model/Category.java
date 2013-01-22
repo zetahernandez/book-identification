@@ -8,6 +8,7 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlIDREF;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -15,8 +16,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.hibernate.annotations.IndexColumn;
 import org.hibernate.search.annotations.Indexed;
 
-@Indexed
 @Entity
+@Indexed
 @XmlRootElement(name = "category")
 public class Category extends EntityBase {
 

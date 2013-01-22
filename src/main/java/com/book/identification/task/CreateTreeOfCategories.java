@@ -84,9 +84,9 @@ public class CreateTreeOfCategories {
 		if(retrieveCategory == null){
 			retrieveCategory = new Category();
 			retrieveCategory.setCategory(stringCategory);
-			if(subarray != null && subarray.length > 0){
-				retrieveCategory.setParent(setParents(subarray));
-			}
+		}
+		if(subarray != null && subarray.length > 0){
+			retrieveCategory.setParent(setParents(subarray));
 		}
 		return retrieveCategory;
 	}

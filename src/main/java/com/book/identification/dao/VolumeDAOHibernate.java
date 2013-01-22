@@ -9,7 +9,7 @@ public class VolumeDAOHibernate extends GenericHibernateDAO<Volume, Long>
 
 	@SuppressWarnings("unchecked")
 	public List<Volume> volumesWithCategory(Long categoryId) {
-		String q = "Select distinct v From Volume v JOIN v.volumeInfo vi JOIN vi.categoriess c JOIN c.parent cp WHERE c.id = :categoryId OR cp.id = :categoryId";
+		String q = "Select distinct v From Volume v JOIN v.volumeInfo vi JOIN vi.categoriess c LEFT OUTER JOIN c.parent cp WHERE c.id = :categoryId OR cp.id = :categoryId";
 		return (List<Volume>) getSession().createQuery(q).setParameter("categoryId",categoryId).list();
 	}
 
