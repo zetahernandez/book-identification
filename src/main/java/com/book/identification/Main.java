@@ -10,7 +10,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import com.book.identification.httpserver.JettyHttpServer;
-import com.book.identification.task.CreateTreeOfCategories;
 
 
 public class Main {
@@ -41,9 +40,9 @@ public class Main {
 			URI uri = new java.net.URI( "http://"+localHost.getHostName()+":8080" );
 			Desktop.getDesktop().browse( uri );
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error(e);
 		} catch (URISyntaxException e) {
-			e.printStackTrace();
+			logger.error(e);
 		}
 		
 	}

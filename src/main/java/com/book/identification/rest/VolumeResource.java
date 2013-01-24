@@ -1,20 +1,13 @@
 package com.book.identification.rest;
 
-import java.util.List;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.hibernate.criterion.Restrictions;
-import org.hibernate.search.FullTextSession;
-
 import com.book.identification.dao.DAOFactory;
-import com.book.identification.model.Volume;
 import com.book.identification.model.collections.Volumes;
 
 @Path("volumes/")
