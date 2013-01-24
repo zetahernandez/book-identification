@@ -10,6 +10,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import com.book.identification.httpserver.JettyHttpServer;
+import com.book.identification.task.CreateTreeOfCategories;
 
 
 public class Main {
@@ -30,9 +31,9 @@ public class Main {
 //		} catch (InterruptedException e) {
 //			e.printStackTrace();
 //		}
-		
 //		
-//		
+////		
+////		
 //		new CreateTreeOfCategories().execute();
 //		
 		try {

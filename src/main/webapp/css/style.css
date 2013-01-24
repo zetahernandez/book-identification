@@ -1,6 +1,6 @@
 /* ==== Scroll down to find where to put your styles :) ==== */
 
-/*  HTML5 ✰ Boilerplate  */
+/*  HTML5 âœ° Boilerplate  */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
 	{
 	margin: 0;
@@ -404,17 +404,15 @@ div.category-list {
 	.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after {
 		content: "";
 	}
-<<<<<<< HEAD
 	pre,blockquote {
 		border: 1px solid #999;
 		page-break-inside: avoid;
-=======
-
+	}
         /* Estos son los estilos para el more-less button*/
-        #container{
+       
+  #container{
 		width:700px;
 		margin:auto;
->>>>>>> ca8384b2302b765f848963af6d96aa3c02ef1b26
 	}
 	thead {
 		display: table-header-group;
@@ -422,7 +420,6 @@ div.category-list {
 	tr,img {
 		page-break-inside: avoid;
 	}
-<<<<<<< HEAD
 	@page {
 		margin: 0.5cm;
 	}
@@ -483,7 +480,6 @@ p.continued {
 /* 		width:400px; */
 /* 		margin-left:20px; */
 /* 	} */
-=======
 
 /**Estilo para el loading del scroll infinito*/
 .endless_scroll_loader { position: fixed; bottom:5%; right:50px; }
@@ -492,4 +488,3 @@ p.continued {
     width:100px;
     height:100px;
 }
->>>>>>> ca8384b2302b765f848963af6d96aa3c02ef1b26
