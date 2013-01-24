@@ -404,9 +404,17 @@ div.category-list {
 	.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after {
 		content: "";
 	}
+<<<<<<< HEAD
 	pre,blockquote {
 		border: 1px solid #999;
 		page-break-inside: avoid;
+=======
+
+        /* Estos son los estilos para el more-less button*/
+        #container{
+		width:700px;
+		margin:auto;
+>>>>>>> ca8384b2302b765f848963af6d96aa3c02ef1b26
 	}
 	thead {
 		display: table-header-group;
@@ -414,6 +422,7 @@ div.category-list {
 	tr,img {
 		page-break-inside: avoid;
 	}
+<<<<<<< HEAD
 	@page {
 		margin: 0.5cm;
 	}
@@ -474,3 +483,13 @@ p.continued {
 /* 		width:400px; */
 /* 		margin-left:20px; */
 /* 	} */
+=======
+
+/**Estilo para el loading del scroll infinito*/
+.endless_scroll_loader { position: fixed; bottom:5%; right:50px; }
+.loading{
+    background-image: url("../img/ajax-loader.gif");
+    width:100px;
+    height:100px;
+}
+>>>>>>> ca8384b2302b765f848963af6d96aa3c02ef1b26

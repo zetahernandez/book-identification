@@ -10,6 +10,11 @@ import javax.xml.bind.annotation.XmlID;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+<<<<<<< HEAD
+=======
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
+>>>>>>> ca8384b2302b765f848963af6d96aa3c02ef1b26
 import org.hibernate.search.annotations.DocumentId;
 
 @MappedSuperclass

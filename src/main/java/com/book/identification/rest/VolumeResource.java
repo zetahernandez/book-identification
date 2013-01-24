@@ -15,12 +15,17 @@ public class VolumeResource {
 	
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response volumes(@QueryParam("categoryId") Long categoryId) {
+    public Response volumes(@QueryParam("categoryId") Long categoryId, @QueryParam("page") Integer page) {
 		Volumes volumes = new Volumes();
 		if(categoryId!=null){
-			volumes.setVolumes(DAOFactory.getInstance().getVolumeDAO().volumesWithCategory(categoryId));
+			volumes.setVolumes(DAOFactory.getInstance().getVolumeDAO().volumesWithCategory(categoryId))  ;
 		}else{
-			volumes.setVolumes(DAOFactory.getInstance().getVolumeDAO().findAll());
+                    if ( page == null ){
+                        volumes.setVolumes(DAOFactory.getInstance().getVolumeDAO().findAll());
+                    }else{
+                        volumes.setVolumes( DAOFactory.getInstance().getVolumeDAO().retrievesVolumesPerPage(page) );
+                    }	
+                    
 		}
 		return Response.ok(volumes).build();
         
