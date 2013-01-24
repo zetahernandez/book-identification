@@ -205,7 +205,9 @@ div.category-list {
 		line-height:22px;
 		margin-bottom:20px;
 	}
-	#container{
+
+        /* Estos son los estilos para el more-less button*/
+        #container{
 		width:700px;
 		margin:auto;
 	}
@@ -233,16 +235,11 @@ div.category-list {
 	p.continued{
 		margin-top:0;
 	}
-/* 	img{ */
-/* 		padding:10px; */
-/* 		background:#FFF; */
-/* 		border-radius: 12px; */
-/* 		-webkit-box-shadow: 0 1px 13px rgba(0,0,0,.25); */
-/* 		-moz-box-shadow: 0 1px 13px rgba(0,0,0,.25); */
-/* 		box-shadow: 0 1px 13px rgba(0,0,0,.25); */
-/* 		width:400px; */
-/* 		margin-left:20px; */
-/* 	} */
 
-
-
+/**Estilo para el loading del scroll infinito*/
+.endless_scroll_loader { position: fixed; bottom:5%; right:50px; }
+.loading{
+    background-image: url("../img/ajax-loader.gif");
+    width:100px;
+    height:100px;
+}
