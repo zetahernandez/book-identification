@@ -9,7 +9,6 @@ import org.mortbay.jetty.servlet.ServletHolder;
 
 import com.sun.jersey.api.core.PackagesResourceConfig;
 import com.sun.jersey.api.core.ResourceConfig;
-import com.sun.jersey.api.json.JSONConfiguration;
 import com.sun.jersey.spi.container.servlet.ServletContainer;
 
 public class JettyHttpServer {

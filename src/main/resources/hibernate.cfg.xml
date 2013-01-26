@@ -24,7 +24,7 @@
 		<property name="hibernate.format_sql">false</property>
 		
 		<!-- Hibernate Search configuration -->
-		<property name="hibernate.search.default.indexmanager">near-real-time</property>
+<!-- 		<property name="hibernate.search.default.indexmanager">near-real-time</property> -->
 		<property name="hibernate.search.default.directory_provider">filesystem</property>
         <property name="hibernate.search.default.indexBase">db/indexes</property>
 

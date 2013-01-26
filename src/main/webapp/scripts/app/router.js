@@ -8,7 +8,7 @@ define([ "ember" ], function(Ember) {
 				connectOutlets : function(router, context) {
 					router.get('applicationController').connectOutlet({
 						name : 'volumeList',
-						context : BooksApp.Volume.find(),
+						context : context,
 						outletName : 'center'
 					});
 					router.get('applicationController').connectOutlet({

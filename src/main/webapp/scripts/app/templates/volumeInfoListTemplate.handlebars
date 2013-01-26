@@ -1,7 +1,7 @@
 <div>
 	<table class="zbookTable">
 		<tbody class=">" id="GbShelfHolder">
-			{{#each volume in controller}}
+			{{#each volume in currentVolumes}}
 				{{view BooksApp.VolumeInfoView contentBinding="this" target="volume"}}
 			{{/each}}
 		</tbody>

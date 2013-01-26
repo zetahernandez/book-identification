@@ -14,9 +14,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Index;
+import org.hibernate.search.annotations.Indexed;
+import org.hibernate.search.annotations.Store;
+
 /**
  * General volume information.
  */
+@Indexed
 @Entity
 @XmlRootElement(name="volume_info")
 public final class VolumeInfo extends EntityBase {
@@ -73,6 +79,7 @@ public final class VolumeInfo extends EntityBase {
 	 * (In LITE projection.) The value may be {@code null}.
 	 */
 	@Lob
+	@Field(index=Index.YES,store=Store.YES)
 	private String description;
 
 	/**
@@ -168,13 +175,13 @@ public final class VolumeInfo extends EntityBase {
 	/**
 	 * Volume subtitle. (In LITE projection.) The value may be {@code null}.
 	 */
-
+	@Field(index=Index.YES,store=Store.YES)
 	private String subtitle;
 
 	/**
 	 * Volume title. (In LITE projection.) The value may be {@code null}.
 	 */
-
+	@Field(index=Index.YES,store=Store.YES)
 	private String title;
 
 	/**
