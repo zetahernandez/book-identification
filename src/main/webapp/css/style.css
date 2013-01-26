@@ -301,17 +301,14 @@ div.center-container {
 div.category-list {
 	padding: 4px 4px 4px 4px;
 }
-<<<<<<< HEAD
 .gb-volume-title {
 	font-weight: bold;
-=======
-
+}
 #logo {
 	background-image: url("/img/Hijitus.png");
 	height: 46px;
 	margin: 5px 84px;
 	width: 150px;
->>>>>>> 23f4bfdf20edaeceb5d772b05acc96ca6bd71c5a
 }
 
 #header {
