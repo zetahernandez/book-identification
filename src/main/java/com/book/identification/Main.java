@@ -24,17 +24,17 @@ public class Main {
 //		
 		HibernateUtil.getSessionFactory();
 //////		
-//		BookIdentificationWork bookIdentificationWork = new BookIdentificationWork("BookIdentificationWork",args);  
-//		bookIdentificationWork.start();
-//		try {
-//			bookIdentificationWork.join();
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
+		BookIdentificationWork bookIdentificationWork = new BookIdentificationWork("BookIdentificationWork",args);  
+		bookIdentificationWork.start();
+		try {
+			bookIdentificationWork.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 //		
-////		
-////		
-//		new CreateTreeOfCategories().execute();
+//		
+		new CreateTreeOfCategories().execute();
 //		
 		try {
 			InetAddress localHost = InetAddress.getLocalHost();
