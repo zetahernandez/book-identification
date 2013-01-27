@@ -301,7 +301,9 @@ div.center-container {
 div.category-list {
 	padding: 4px 4px 4px 4px;
 }
-
+.gb-volume-title {
+	font-weight: bold;
+}
 #logo {
 	background-image: url("/img/onebooklogo.png");
 	height: 46px;

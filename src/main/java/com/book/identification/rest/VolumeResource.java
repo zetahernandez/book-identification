@@ -35,9 +35,8 @@ public class VolumeResource {
 //	@GET
 //	@Produces(MediaType.APPLICATION_JSON)
 //	@Path("{categoryID}")
-//	public Response findVolumesBySelectedCategory(@PathParam("categoryID") Long categoryId) {
-//		FullTextSession fts =
-//				org.hibernate.search.Search.getFullTextSession( DAOFactory.getInstance().getVolumeDAO().getSession());
-//		return null;
+//	public Response findVolumesBySelectedCategory(Long categoryId) {
+//		FullTextSession fts = org.hibernate.search.Search.getFullTextSession( DAOFactory.getInstance().getVolumeDAO().getSession());
+//		fts.createFullTextQuery(arg0, arg1)
 //	}
 }
