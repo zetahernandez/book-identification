@@ -7,6 +7,11 @@ define([ "ember" ], function(Ember) {
 				showVolumeInfo : Ember.Route.transitionTo('volumeInfo'),
 				connectOutlets : function(router, context) {
 					router.get('applicationController').connectOutlet({
+						name : 'header',
+						context : context,
+						outletName : 'header'
+					});
+					router.get('applicationController').connectOutlet({
 						name : 'volumeList',
 						context : context,
 						outletName : 'center'
