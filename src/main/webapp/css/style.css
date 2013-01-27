@@ -30,7 +30,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
 
 blockquote,q {
 	quotes: none;
-}
+}serachBox
 
 blockquote:before,blockquote:after,q:before,q:after {
 	content: '';
@@ -303,10 +303,10 @@ div.category-list {
 }
 
 #logo {
-	background-image: url("/img/Hijitus.png");
+	background-image: url("/img/onebooklogo.png");
 	height: 46px;
 	margin: 5px 84px;
-	width: 150px;
+	width: 89px;
 }
 
 #header {
@@ -317,9 +317,44 @@ div.category-list {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: 985;
+	z-index: 1;
 }
-
+.searchBox {
+  background-color: white;
+  margin: 0 0 0 260px;
+  max-width: 600px;
+  padding: 4px;
+  position: absolute;
+  top: 13px;
+  width: 600px;
+  z-index: 2;
+}
+.searchInput {
+  border: medium none;
+  width: 87%;
+  font-size: 15px;
+}
+.gbqfb {
+  background-color: #4D90FE;
+  background-image: -moz-linear-gradient(center top , #4D90FE, #4787ED);
+  border: 1px solid #3079ED;
+  color: #FFFFFF !important;
+  margin: 0px;
+  padding: 3px;
+}
+.gbqfi {
+  background-position: -33px 2px;
+  display: inline-block;
+  height: 14px;
+  margin: 0px 19px;
+  width: 14px;
+  background-image: url("/img/k1_a31af7ac.png");
+  background-size: 294px 45px;
+  
+}
+.button {
+	cursor:pointer;
+}
 .ir {
 	display: block;
 	text-indent: -999em;
@@ -364,7 +399,6 @@ div.category-list {
 	height: 0;
 	overflow: hidden;
 }
-
 .clearfix:after {
 	clear: both;
 }
