@@ -35,10 +35,9 @@ public class BookIdentificationWork extends Thread {
 
 	@Override
 	public void run() {
-		long startTime = System.currentTimeMillis();
-		
-		logger.debug("BookIdentificationWork start at " + new Date()  );
-		
+
+		logger.debug("BookIdentificationWork start at " + new Date());
+
 		bookReader.start();
 		volumeInfoSearch.start();
 		persistVolumes.start();
@@ -52,15 +51,6 @@ public class BookIdentificationWork extends Thread {
 				bookSearch.start();
 			}
 		}
-		try {
-			persistVolumes.join();
-			long endTime = System.currentTimeMillis();
-			logger.debug("BookIdentificationWork end at " +  new Date());
-			logger.debug("Time working -->" + Long.valueOf((endTime - startTime)/1000).toString() + "seg");
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
 	}
 
 }

@@ -33,12 +33,12 @@ public class CategoryDAOHibernate extends GenericHibernateDAO<Category, Long>
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Category> childCategories(Long parentId) {
+	public List<Long> childCategories(Long parentId) {
 		Query query;
 		
-			query = getSession().createQuery("Select c From Category c Where c.parent.id = :parentId")
-			.setParameter("parentId", parentId);
-			return (List<Category>) query.list();
+			query = getSession().createQuery("Select c.entityId From Category c LEFT OUTER JOIN c.parent cp WHERE c.id = :categoryId OR cp.id = :categoryId")
+			.setParameter("categoryId", parentId);
+			return (List<Long>) query.list();
 		
 	}
 

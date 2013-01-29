@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Indexed;
+import org.hibernate.search.annotations.IndexedEmbedded;
 
 import com.book.identification.task.base.ItemQueue;
 
@@ -123,6 +124,7 @@ public final class Volume extends EntityBase implements ItemQueue {
 	/**
 	 * General volume information. The value may be {@code null}.
 	 */
+	@IndexedEmbedded
 	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private VolumeInfo volumeInfo;
 

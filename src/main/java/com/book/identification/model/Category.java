@@ -41,7 +41,7 @@ public class Category extends EntityBase {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	
+
 	@XmlElement(name="sub_categories")
 	public Set<Category> getSubCategories() {
 		return subCategories;

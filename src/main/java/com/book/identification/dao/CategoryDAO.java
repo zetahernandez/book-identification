@@ -8,5 +8,5 @@ public interface CategoryDAO extends GenericDAO<Category, Long> {
 
 	Category retrieveCategory(String categoryName, String... parentsCategoryName);
 
-	List<Category> childCategories(Long parentId);
+	List<Long> childCategories(Long parentId);
 }

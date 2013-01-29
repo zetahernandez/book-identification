@@ -1,14 +1,13 @@
 define([ "ember", "text!templates/applicationTemplate.handlebars" ], function(
 		Ember, applicationTemplate) {
 	var SearchVolumeView = Ember.TextField.extend(Ember.TargetActionSupport, {
-//		valueBinding : 'BooksApp.SearchController.searchText',
-//		controller : 'BooksApp.SearchController',
+		valueBinding : 'BooksApp.router.searchVolumeController.searchText',
+//		controller : 'BooksApp.SearchVolumeController',
 		classNames: ["searchInput"],
 	
 		insertNewline : function() {
-			this.triggerAction();
-		},
-	
+			BooksApp.router.get("searchVolumeController").searchVolumes();
+		}
 	});
 	return SearchVolumeView;
 });

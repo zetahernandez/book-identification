@@ -30,7 +30,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
 
 blockquote,q {
 	quotes: none;
-}serachBox
+}
 
 blockquote:before,blockquote:after,q:before,q:after {
 	content: '';
@@ -291,6 +291,7 @@ div.left-container {
 	border-bottom: 1px solid #DDDDDD;
 	border-right: 1px solid #DDDDDD;
 	padding: 4px 4px 0;
+	min-width: 310px;
 }
 
 div.center-container {
@@ -323,7 +324,7 @@ div.category-list {
 }
 .searchBox {
   background-color: white;
-  margin: 0 0 0 260px;
+  margin: 0 0 0 319px;
   max-width: 600px;
   padding: 4px;
   position: absolute;

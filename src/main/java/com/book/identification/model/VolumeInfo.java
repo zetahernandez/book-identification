@@ -17,6 +17,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Indexed;
+import org.hibernate.search.annotations.IndexedEmbedded;
 import org.hibernate.search.annotations.Store;
 
 /**
@@ -54,6 +55,7 @@ public final class VolumeInfo extends EntityBase {
 	@ElementCollection(fetch = FetchType.LAZY)
 	private java.util.Set<String> categories;
 
+	@IndexedEmbedded
 	@ManyToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private Set<Category> categoriess;
 	

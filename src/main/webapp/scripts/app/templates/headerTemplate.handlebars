@@ -1,8 +1,8 @@
 <div id="header">
 	<div id="logo"/>
 	<div class="searchBox">
-	        {{#view BooksApp.SearchVolumeView placeholder="search" action="search" target="BooksApp.searchVolumeController"}}
-				<a class="gbqfb button" id="searchButton" {{action search target="BooksApp.searchVolumeController"}}>
+	        {{#view BooksApp.SearchVolumeView placeholder="search"}}
+				<a class="gbqfb button" {{action searchVolumes target="BooksApp.router.searchVolumeController"}}>
 					<span class="gbqfi"></span>
 				</a>
 			{{/view}}

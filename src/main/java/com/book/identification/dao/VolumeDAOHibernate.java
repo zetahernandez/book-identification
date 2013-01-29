@@ -15,7 +15,8 @@ public class VolumeDAOHibernate extends GenericHibernateDAO<Volume, Long>
         return (List<Volume>) getSession().createQuery(q).setParameter("categoryId", categoryId).list();
     }
 
-    public List<Volume> retrievesVolumesPerPage( int page ) {
+    @SuppressWarnings("unchecked")
+	public List<Volume> retrievesVolumesPerPage( int page ) {
         String q = "Select v From Volume v ";
         String qCount = "Select count(v.id) From Volume v ";
         int qCountResult = ((Long)getSession().createQuery(qCount).uniqueResult()).intValue();

@@ -3,7 +3,7 @@ define([ "ember" ], function(Ember) {
 		root : Ember.Route.extend({
 			index : Ember.Route.extend({
 				route : '/',
-//				selectCategory : Ember.Route.transitionTo('selectCategory'),
+				search : Ember.Route.transitionTo('searchVolume'),
 				showVolumeInfo : Ember.Route.transitionTo('volumeInfo'),
 				connectOutlets : function(router, context) {
 					router.get('applicationController').connectOutlet({
@@ -41,6 +41,45 @@ define([ "ember" ], function(Ember) {
 				},
 				deserialize : function(router, urlParams) {
 					return BooksApp.VolumeInfo.find(urlParams.volumeInfoId);
+				}
+			// // child states
+			// initialState : 'details',
+			// details : Ember.Route.extend({
+			// route : '/',
+			// connectOutlets : function(router) {
+			// var id = router.get('volumeInfoDetailController.content').id;
+			//
+			// }
+			// })
+			}),
+			searchVolume : Ember.Route.extend({
+				route : '/search/:q',
+				search : Ember.Route.transitionTo('searchVolume'),
+				showVolumeInfo : Ember.Route.transitionTo('volumeInfo'),
+				connectOutlets : function(router, context) {
+					router.get('applicationController').connectOutlet({
+						name : 'header',
+						context : context,
+						outletName : 'header'
+					});
+					router.get('applicationController').connectOutlet({
+						name : 'volumeList',
+						context : BooksApp.Volume.find({q:BooksApp.SearchVolumeController.searchText}),
+						outletName : 'center'
+					});
+					router.get('applicationController').connectOutlet({
+						name : 'categoryList',
+						context : BooksApp.Category.find(),
+						outletName : 'left'
+					});
+				},
+				serialize : function(router, context) {
+					return {
+						q : BooksApp.SearchVolumeController.searchText
+					};
+				},
+				deserialize : function(router, urlParams) {
+					return urlParams.q;
 				}
 			// // child states
 			// initialState : 'details',
