@@ -130,4 +130,21 @@ public abstract class GenericHibernateDAO<T, ID extends Serializable>
 		}
 		return crit.list();
 	}
+        /**
+	 * Obtenemos la cantidad de registros usando la query como parametro
+	 * @param qCount
+	 * @return int 
+	 */
+	protected int getCantOfRows( String qCount ,int initialPage, int cantRows) {
+            int qCountResult = 0;
+            Long result = (Long)getSession().createQuery(qCount).
+                                                setFirstResult(initialPage).
+                                                setMaxResults( cantRows ).
+                                                uniqueResult();
+            if ( result != null ){
+                qCountResult = result.intValue();
+            }
+              
+            return qCountResult;
+	}
 }

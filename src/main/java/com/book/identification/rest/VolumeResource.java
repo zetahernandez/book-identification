@@ -13,12 +13,12 @@ import com.book.identification.model.collections.Volumes;
 @Path("volumes/")
 public class VolumeResource {
 	
-	@GET
+@GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response volumes(@QueryParam("categoryId") Long categoryId, @QueryParam("page") Integer page) {
 		Volumes volumes = new Volumes();
-		if(categoryId!=null){
-			volumes.setVolumes(DAOFactory.getInstance().getVolumeDAO().volumesWithCategory(categoryId))  ;
+		if(categoryId!=null && page !=null ){
+			volumes.setVolumes(DAOFactory.getInstance().getVolumeDAO().retrieveVolumesWithCategoryPerPage( categoryId, page ) );
 		}else{
                     if ( page == null ){
                         volumes.setVolumes(DAOFactory.getInstance().getVolumeDAO().findAll());

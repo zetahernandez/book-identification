@@ -242,7 +242,7 @@ a:hover {
     \\ ========================================== //
 */
 .zbookTable {
-	margin-left: 15em;
+	margin-left: 8em;
 }
 
 .gb-bookshelf-ordering-holder {
@@ -523,4 +523,10 @@ p.continued {
     background-image: url("../img/ajax-loader.gif");
     width:100px;
     height:100px;
+}
+
+#infiniteScroll{
+    height: 520px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
