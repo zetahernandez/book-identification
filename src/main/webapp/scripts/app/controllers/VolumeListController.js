@@ -59,10 +59,6 @@ define([ "require", "ember"], function(r,Ember) {
             }
 
             var books = BooksApp.Volume.find( data );
-  
-//            this.get('content').forEach(function(vol) {
-//                mutableVolumes.pushObject(vol);
-//            });
             
             books.forEach(function(vol) {
                 mutableVolumes.pushObject(vol);
