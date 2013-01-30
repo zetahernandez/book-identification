@@ -30,7 +30,7 @@ public class VolumeResource {
 	private static final int PAGE_LENGTH = 10;
 
 	@SuppressWarnings("unchecked")
-	@GET
+@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response volumes(@QueryParam("categoryId") Long categoryId,
 			@QueryParam("page") Integer page, @QueryParam("q") String q) {
