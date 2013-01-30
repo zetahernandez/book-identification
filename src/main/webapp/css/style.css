@@ -302,9 +302,11 @@ div.center-container {
 div.category-list {
 	padding: 4px 4px 4px 4px;
 }
+
 .gb-volume-title {
 	font-weight: bold;
 }
+
 #logo {
 	background-image: url("/img/onebooklogo.png");
 	height: 46px;
@@ -314,50 +316,56 @@ div.category-list {
 
 #header {
 	background: none repeat scroll 0 0 #F1F1F1;
-	height: 54px;
 	border-color: #E5E5E5;
+	height: 54px;
+	left: 0;
 	min-width: 700px;
-	position: absolute;
+	position: fixed;
+	right: 0;
 	top: 0;
 	width: 100%;
-	z-index: 1;
 }
+
 .searchBox {
-  background-color: white;
-  margin: 0 0 0 319px;
-  max-width: 600px;
-  padding: 4px;
-  position: absolute;
-  top: 13px;
-  width: 600px;
-  z-index: 2;
+	background-color: white;
+	margin: 0 0 0 319px;
+	max-width: 600px;
+	padding: 4px;
+	position: absolute;
+	top: 13px;
+	width: 600px;
+	z-index: 2;
 }
+
 .searchInput {
-  border: medium none;
-  width: 87%;
-  font-size: 15px;
+	border: medium none;
+	width: 87%;
+	font-size: 15px;
 }
+
 .gbqfb {
-  background-color: #4D90FE;
-  background-image: -moz-linear-gradient(center top , #4D90FE, #4787ED);
-  border: 1px solid #3079ED;
-  color: #FFFFFF !important;
-  margin: 0px;
-  padding: 3px;
+	background-color: #4D90FE;
+	background-image: -moz-linear-gradient(center top, #4D90FE, #4787ED);
+	border: 1px solid #3079ED;
+	color: #FFFFFF !important;
+	margin: 0px;
+	padding: 3px;
 }
+
 .gbqfi {
-  background-position: -33px 2px;
-  display: inline-block;
-  height: 14px;
-  margin: 0px 19px;
-  width: 14px;
-  background-image: url("/img/k1_a31af7ac.png");
-  background-size: 294px 45px;
-  
+	background-position: -33px 2px;
+	display: inline-block;
+	height: 14px;
+	margin: 0px 19px;
+	width: 14px;
+	background-image: url("/img/k1_a31af7ac.png");
+	background-size: 294px 45px;
 }
+
 .button {
-	cursor:pointer;
+	cursor: pointer;
 }
+
 .ir {
 	display: block;
 	text-indent: -999em;
@@ -402,6 +410,7 @@ div.category-list {
 	height: 0;
 	overflow: hidden;
 }
+
 .clearfix:after {
 	clear: both;
 }
@@ -445,11 +454,10 @@ div.category-list {
 		border: 1px solid #999;
 		page-break-inside: avoid;
 	}
-        /* Estos son los estilos para el more-less button*/
-       
-  #container{
-		width:700px;
-		margin:auto;
+	/* Estos son los estilos para el more-less button*/
+	#container {
+		width: 700px;
+		margin: auto;
 	}
 	thead {
 		display: table-header-group;
@@ -519,15 +527,20 @@ p.continued {
 /* 	} */
 
 /**Estilo para el loading del scroll infinito*/
-.endless_scroll_loader { position: fixed; bottom:5%; right:50px; }
-.loading{
-    background-image: url("../img/ajax-loader.gif");
-    width:100px;
-    height:100px;
+.endless_scroll_loader {
+	position: fixed;
+	bottom: 5%;
+	right: 50px;
 }
 
-#infiniteScroll{
-    height: 520px;
-    overflow-x: hidden;
-    overflow-y: scroll;
+.loading {
+	background-image: url("../img/ajax-loader.gif");
+	width: 100px;
+	height: 100px;
+}
+
+#infiniteScroll {
+/* 	height: 520px; */
+/* 	overflow-x: hidden; */
+/* 	overflow-y: scroll; */
 }

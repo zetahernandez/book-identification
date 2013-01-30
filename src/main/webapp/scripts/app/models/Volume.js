@@ -5,7 +5,7 @@ define([ "require", "ember", "ember_data"], function(require, Ember) {
 		bookId : DS.attr('string'),
 		kind : DS.attr('string'),
 		path : DS.attr('string'),
-		volumeInfo : DS.belongsTo('BooksApp.VolumeInfo', { embedded: true })
+		volumeInfo : DS.belongsTo('BooksApp.VolumeInfo', { embedded: true }),
 	});	
 	return Volume;
 });
