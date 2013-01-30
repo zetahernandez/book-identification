@@ -29,6 +29,8 @@ public class Main {
 			logger.error(e);
 		} catch (URISyntaxException e) {
 			logger.error(e);
+		}catch (Exception e){
+			logger.error(e);
 		}
 		
 	}
