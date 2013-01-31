@@ -56,7 +56,9 @@ public abstract class ProducerConsumerManager<P extends ProducerThread<IP>, IP e
 			try {
 				IC item = input.take();
 				P consumerWork = createConsumerWork(item, output);
-				executorService.submit(consumerWork);
+				if(consumerWork!=null){
+					executorService.submit(consumerWork);
+				}
 
 			} catch (InterruptedException e) {
 				logger.debug("Interrupted " + getName());

@@ -7,10 +7,22 @@ import com.book.identification.task.base.ItemQueue;
 public class FilePDF implements ItemQueue {
 
 	private File file;
-	public FilePDF(File file) {
+	private String hash;
+	
+	public FilePDF(File file, String hash) {
 		this.file  = file; 
-		// TODO Auto-generated constructor stub
+		this.hash = hash;
 	}
+	
+	public String getHash() {
+		return hash;
+	}
+
+	public void setHash(String hash) {
+		this.hash = hash;
+	}
+
+
 	public File getFile() {
 		return file;
 	}

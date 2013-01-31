@@ -1,7 +1,8 @@
 define([ "ember", "text!templates/volumeInfoListTemplate.handlebars" ],
 		function(Ember, volumesTemplate) {
 			var VolumeListView = Ember.View.extend({
-				template : Ember.Handlebars.compile(volumesTemplate),
+				classNames: ["searchInput"],
+			  template : Ember.Handlebars.compile(volumesTemplate),
 				
 				init : function() {
 					this._super();
@@ -10,14 +11,11 @@ define([ "ember", "text!templates/volumeInfoListTemplate.handlebars" ],
 				},
 				willDestroyElement : function() {
 					BooksApp.router.volumeListController.page = 0;
-					this.removeInfiniteScroll();
 					this._super();
 				},
-				removeInfiniteScroll : function() {
-					$(window).endlessScroll({});
-				},
+				
 				addInfiniteScroll : function() {
-					$(window).endlessScroll(
+					$("#infiniteScroll").endlessScroll(
 							{
 								loader : '<div class="loading"><div>',
 								ceaseFireOnEmpty : false,

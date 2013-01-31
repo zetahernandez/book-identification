@@ -1,5 +1,6 @@
 package com.book.identification.rest;
 
+import java.io.File;
 import java.util.List;
 
 import javax.ws.rs.GET;
@@ -15,14 +16,17 @@ import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.util.Version;
+import org.hibernate.Transaction;
 import org.hibernate.search.FullTextQuery;
 import org.hibernate.search.FullTextSession;
 
 import com.book.identification.BookIdentificationWork;
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.dao.VolumeDAO;
+import com.book.identification.model.Volume;
 import com.book.identification.model.collections.Volumes;
 import com.book.identification.task.CreateTreeOfCategories;
+import com.book.identification.util.FileHashUtil;
 
 @Path("volumes/")
 public class VolumeResource {
@@ -136,5 +140,19 @@ public class VolumeResource {
 	public Response createCategories() {
 		new CreateTreeOfCategories().execute();
 		return Response.ok("createCategories").build();
+	}
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("hash/")
+	public Response hashing() {
+		VolumeDAO volumeDAO = DAOFactory.getInstance().getVolumeDAO();
+		List<Volume> findAll = volumeDAO.findAll();
+		Transaction beginTransaction = volumeDAO.getSession().beginTransaction();
+		for (Volume volume : findAll) {
+			String fileSHA1 = FileHashUtil.getFileSHA1(new File(volume.getPath()));
+			volume.setHashSH1(fileSHA1);
+		}
+		beginTransaction.commit();
+		return Response.ok("hashed").build();
 	}
 }

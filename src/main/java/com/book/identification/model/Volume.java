@@ -1,6 +1,7 @@
 package com.book.identification.model;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
@@ -9,8 +10,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Indexed;
 import org.hibernate.search.annotations.IndexedEmbedded;
+import org.hibernate.search.annotations.Store;
 
 import com.book.identification.task.base.ItemQueue;
 
@@ -120,6 +123,19 @@ public final class Volume extends EntityBase implements ItemQueue {
 	 */
 	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private UserInfo userInfo;
+	
+	@Field(index = Index.YES,store=Store.YES)
+	private String hashSH1;
+	
+	
+	@Column
+	public String getHashSH1() {
+		return hashSH1;
+	}
+
+	public void setHashSH1(String hashSH1) {
+		this.hashSH1 = hashSH1;
+	}
 
 	/**
 	 * General volume information. The value may be {@code null}.

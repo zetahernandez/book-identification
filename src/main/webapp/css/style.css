@@ -540,7 +540,7 @@ p.continued {
 }
 
 #infiniteScroll {
-/* 	height: 520px; */
-/* 	overflow-x: hidden; */
-/* 	overflow-y: scroll; */
+	height: 720px;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }

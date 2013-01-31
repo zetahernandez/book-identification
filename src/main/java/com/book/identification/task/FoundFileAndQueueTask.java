@@ -6,6 +6,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import com.book.identification.FilePDF;
+import com.book.identification.util.FileHashUtil;
 
 
 public class FoundFileAndQueueTask extends Thread {
@@ -41,8 +42,10 @@ public class FoundFileAndQueueTask extends Thread {
 				else if (entry != null && !this.bookSearch.indexedFiles.contains(entry)) {
 					this.bookSearch.indexedFiles.add(entry);
 					try {
-						logger.info("Accepted file -> " + entry.getName());
-						this.bookSearch.fileQueue.put(new FilePDF(entry));
+						//Hashing
+						String fileSHA1 = FileHashUtil.getFileSHA1(entry);
+						logger.info("Accepted file -> " + entry.getName() + " Hash -> " + fileSHA1);
+						this.bookSearch.fileQueue.put(new FilePDF(entry,fileSHA1));
 					} catch (InterruptedException e) {
 						Thread.currentThread().interrupt();
 					} catch (Throwable e) {

@@ -58,8 +58,9 @@ public class ISBNRequest extends
 					com.book.identification.model.Volume volume2 = null;
 					try {
 						volume2 = gson.fromJson(execute.toString(),com.book.identification.model.Volume.class);
-						volume2.setPath(fileIsbn.getFile().getAbsolutePath());
-						volume2.setFileName(fileIsbn.getFile().getName());
+						volume2.setPath(fileIsbn.getFilePDF().getFile().getAbsolutePath());
+						volume2.setFileName(fileIsbn.getFilePDF().getFile().getName());
+						volume2.setHashSH1(fileIsbn.getFilePDF().getHash());
 					} catch (Exception e) {
 						logger.error(e);
 					}

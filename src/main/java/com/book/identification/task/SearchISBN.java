@@ -13,6 +13,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import com.book.identification.FileISBN;
+import com.book.identification.FilePDF;
 import com.book.identification.task.base.ProducerThread;
 import com.lowagie.text.pdf.PdfReader;
 import com.lowagie.text.pdf.parser.PdfTextExtractor;
@@ -22,22 +23,22 @@ public class SearchISBN extends ProducerThread<FileISBN> {
 	/**
 	 * 
 	 */
-	private File file;
+	private FilePDF file;
 	private BlockingQueue<FileISBN> fileISBNs;
 
-	SearchISBN(File file, BlockingQueue<FileISBN> fileISBNs) {
-		this.file = file;
+	SearchISBN(FilePDF filePdf, BlockingQueue<FileISBN> fileISBNs) {
+		this.file = filePdf;
 		this.fileISBNs = fileISBNs;
 	}
 
-	private void searchISBN(File take) {
+	private void searchISBN(FilePDF take) {
 		PdfReader reader;
 		String result = "";
 		try {
-			logger.info("Openning: " + take.getName());
-			reader = new PdfReader(new FileInputStream(take));
+			logger.info("Openning: " + take.getFile().getName());
+			reader = new PdfReader(new FileInputStream(take.getFile()));
 			int numberOfPages = reader.getNumberOfPages();
-			logger.debug(take.getName() + " is open and contains "
+			logger.debug(take.getFile().getName() + " is open and contains "
 					+ numberOfPages + " pages");
 			PdfTextExtractor pdfTextExtractor = new PdfTextExtractor(reader);
 
@@ -49,9 +50,9 @@ public class SearchISBN extends ProducerThread<FileISBN> {
 				lastPage = pdfTextExtractor.getTextFromPage(numberOfPages
 						- page + 1);
 
-				result = findIsbn(take, page, firstPage);
+				result = findIsbn(take.getFile(), page, firstPage);
 				if (StringUtils.isBlank(result)) {
-					result = findIsbn(take, page, lastPage);
+					result = findIsbn(take.getFile(), page, lastPage);
 				}
 				if (!StringUtils.isBlank(result)) {
 					fileISBNs.put(new FileISBN(file, result));
@@ -59,13 +60,13 @@ public class SearchISBN extends ProducerThread<FileISBN> {
 				}
 			}
 		} catch (FileNotFoundException e1) {
-			logger.error("can't open pdf: " + take.getName());
+			logger.error("can't open pdf: " + take.getFile().getName());
 		} catch (IOException e1) {
-			logger.error("can't open pdf: " + take.getName());
+			logger.error("can't open pdf: " + take.getFile().getName());
 		} catch (Exception e1) {
-			logger.error("can't open pdf: " + take.getName());
+			logger.error("can't open pdf: " + take.getFile().getName());
 		} catch (Throwable e) {
-			logger.error("can't open pdf: " + take.getName());
+			logger.error("can't open pdf: " + take.getFile().getName());
 		}
 	}
 
