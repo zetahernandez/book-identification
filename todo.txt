@@ -1,0 +1,19 @@
+TODO: 
+Current Version. 0.1 (Beta)
+ -- FEATURES --
+ 
+ -- TODO --
+- paginado Endless. 
+- back volume info detail
+- style
+- mavenizar el assembly
+
+Version 0.2 (Ganga Style Version)
+ -- FEATURES --
+- Agregar loggin de Gmail y modificar goole api
+- Configurar rutas y lanzar trabajos
+
+Version 0.3 (Let it be Version)
+ -- FEATURES --
+- Drag and Drop
+
