@@ -241,6 +241,10 @@ a:hover {
    ||                                              ||
     \\ ========================================== //
 */
+body {
+	height: 100%; 
+	overflow: hidden;
+}
 .zbookTable {
 	margin-left: 8em;
 }
@@ -544,3 +548,6 @@ p.continued {
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
+
+
+	

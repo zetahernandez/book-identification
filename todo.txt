@@ -4,7 +4,7 @@ Current Version. 0.1 (Beta)
 - Identificar archivos books pdf
 - Identificar ISBN de los books
 - Consultar datos de los books a google api books
-- Persistir los datos y asociar path del pdf
+- Persistir los datos y asociar path del book file
 - Categorizar los books
 - Hash file (SHA1)
 - Indexar los datos (title, description, categorias)
@@ -20,14 +20,33 @@ Version 0.2 (Ganga Style Version)
  -- FEATURES --
 - Agregar loggin de Gmail y modificar goole api
 - Configurar path de ficheros, ejectuar BookSearch
-
+- Optimizar la identificacion de isbn (Regex Patterns)
+- Optimizar Categorizing
+- Hash
 
 Version 0.3 (Let it be Version)
  -- FEATURES --
 - Drag and Drop de ficheros
-- Incluir archvos *.chm  (compiled html) al indexador
-- Monitorear la identificacion de archivos (Progreso)
+- Incluir archvos *.chm  (compiled html)
+- Monitorear la identificacion de archivos (Progreso) - JMS - WebSocket
 
 Vesrion 1.0
+ -- FEATURES --
 - Editar los datos del book
+- Manejar errores (can't open pdf, isbn not found, no data for isbn on goolge api)
+- Ponderar los indices para las busquedas 0.7 (title)  0.3 (description)
+
+Version 1.1 
+ -- FEATURES --
+- Administración de usuarios
+- Commentarios en Book details
+- Valoración (Ranking)
+- Ordenar las busquedas por relevancia y ranking 
+
+Version 1.2 
+ -- FEATURES --
+- Administración de BookShelve
+- Agregar books a la estantería
+- Clasificar estantería
+
 

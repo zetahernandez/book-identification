@@ -30,6 +30,13 @@ define([ "require", "ember"], function(r,Ember) {
             this.set('currentVolumes', mutableVolumes);
         }.observes('content', 'content.isLoaded'),
         
+        showVolumeInfo: function(event) {
+        	BooksApp.router.applicationController.connectOutlet({
+        		name : 'volumeInfoDetail',
+				context : event.context,
+				outletName : 'center'
+			});
+        },
         
         addMoreVolumes : function ( page ){
             
