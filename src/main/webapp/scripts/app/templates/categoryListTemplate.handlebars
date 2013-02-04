@@ -1,5 +1,4 @@
-<div class="filter-type">
-	<h2>Category Filter</h2>
+	<li><h2>Category Filter</h2></li>
 		{{#if controller.selectedCategory}}
 			<li><a href="#"  {{action viewAllCategories target="controller"}} id="allCategories">All Categories</a></li>
 			{{#each categoryParent in controller.selectedCategories}}
@@ -11,6 +10,5 @@
 				<li><a href="#" {{bindAttr style="category.leftMarginStyle"}} {{action selectCategory category target="controller"}}>{{category.categoryName}}</a></li>
 			{{/each}}
 		{{/if}}
-</div>
 
 

@@ -1,7 +1,6 @@
 define([ "ember", "text!templates/volumeInfoListTemplate.handlebars" ],
 		function(Ember, volumesTemplate) {
 			var VolumeListView = Ember.View.extend({
-				classNames: ["searchInput"],
 			  template : Ember.Handlebars.compile(volumesTemplate),
 				
 				init : function() {
