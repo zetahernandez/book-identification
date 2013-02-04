@@ -31,13 +31,15 @@ public class BookReader extends ProducerConsumerManager<ProducerThread<FileISBN>
 	protected ProducerThread<FileISBN> createConsumerWork(FilePDF take,
 			BlockingQueue<FileISBN> output) {
 		
-		List<Volume> volumes = DAOFactory.getInstance().getVolumeDAO().findByCriteria(Restrictions.eq("hashSH1", take.getHash()));
-		if(volumes.size()==0){
 			return new SearchISBN(take, output);
-		}else{
-			return null;
-		}
 		
+	}
+
+
+	@Override
+	protected boolean acceptWork(FilePDF item) {
+		List<Volume> volumes = DAOFactory.getInstance().getVolumeDAO().findByCriteria(Restrictions.eq("hashSH1", item.getHash()));
+		return volumes.size()==0;
 	}
 	
 }

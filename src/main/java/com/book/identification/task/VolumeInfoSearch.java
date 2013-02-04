@@ -23,4 +23,10 @@ public class VolumeInfoSearch extends ProducerConsumerManager<ProducerThread<Vol
 		return new ISBNRequest(take,output);
 	}
 
+
+	@Override
+	protected boolean acceptWork(FileISBN item) {
+		return true;
+	}
+
 }

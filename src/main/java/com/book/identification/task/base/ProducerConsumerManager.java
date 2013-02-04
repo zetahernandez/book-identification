@@ -55,8 +55,8 @@ public abstract class ProducerConsumerManager<P extends ProducerThread<IP>, IP e
 		while (!finished()) {
 			try {
 				IC item = input.take();
-				P consumerWork = createConsumerWork(item, output);
-				if(consumerWork!=null){
+				if(acceptWork(item)){
+					P consumerWork = createConsumerWork(item, output);
 					executorService.submit(consumerWork);
 				}
 
@@ -66,6 +66,8 @@ public abstract class ProducerConsumerManager<P extends ProducerThread<IP>, IP e
 			}
 		}
 	}
+
+	protected abstract boolean acceptWork(IC item);
 
 	protected abstract P createConsumerWork(IC take, BlockingQueue<IP> output);
 
