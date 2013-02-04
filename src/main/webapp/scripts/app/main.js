@@ -1,30 +1,21 @@
-define([ "views/ApplicationView", 
-         "views/HeaderView",
-         "views/VolumeListView",
-		"views/CategoryListView",
-		"views/VolumeInfoView",
-		"views/VolumeInfoDetailView",
-		"views/NavigationView",
-		"views/SearchVolumeView",
-		"controllers/ApplicationController",
-		"controllers/HeaderController",
+define([ "views/ApplicationView", "views/HeaderView", "views/VolumeListView",
+		"views/CategoryListView", "views/VolumeInfoView",
+		"views/VolumeInfoDetailView", "views/NavigationView",
+		"views/SearchVolumeView", "views/LoadMoreView",
+		"controllers/ApplicationController", "controllers/HeaderController",
 		"controllers/VolumeListController",
 		"controllers/CategoryListController",
 		"controllers/VolumeInfoDetailController",
-		"controllers/SearchVolumeController",
-		"models/Volume", 
-		"models/VolumeInfo",
-		"models/Category",
-		"models/ImageLink", 
-		"models/IndustryIdentifier",
-		"app/router",
-		"ember_data" ],
-		
-		function(ApplicationView,HeaderView, VolumeListView,
-				CategoryListView, VolumeInfoView, VolumeInfoDetailView,NavigationView,SearchVolumeView,
-				ApplicationController,HeaderController, VolumeListController, CategoryListController,
-				VolumeInfoDetailController,SearchVolumeController, Volume, VolumeInfo, Category, ImageLink,
-				IndustryIdentifier, Router) {
+		"controllers/SearchVolumeController", "models/Volume",
+		"models/VolumeInfo", "models/Category", "models/ImageLink",
+		"models/IndustryIdentifier", "app/router", "ember_data" ],
+
+function(ApplicationView, HeaderView, VolumeListView, CategoryListView,
+		VolumeInfoView, VolumeInfoDetailView, NavigationView, SearchVolumeView,
+		LoadMoreView, ApplicationController, HeaderController,
+		VolumeListController, CategoryListController,
+		VolumeInfoDetailController, SearchVolumeController, Volume, VolumeInfo,
+		Category, ImageLink, IndustryIdentifier, Router) {
 	/* Module Pattern */
 	var App = Ember.Mixin.create({
 		ApplicationView : ApplicationView,
@@ -35,6 +26,7 @@ define([ "views/ApplicationView",
 		VolumeInfoDetailView : VolumeInfoDetailView,
 		NavigationView : NavigationView,
 		SearchVolumeView : SearchVolumeView,
+		LoadMoreView : LoadMoreView,
 		ApplicationController : ApplicationController,
 		HeaderController : HeaderController,
 		VolumeListController : VolumeListController,
@@ -50,10 +42,18 @@ define([ "views/ApplicationView",
 		store : DS.Store.create({
 			revision : 4,
 			adapter : DS.RESTAdapter.create({
+				ajax : function(url, callback) {
+					Ember.$.ajax({
+						url : url,
+						dataType : 'json',
+						context : this,
+						success : callback
+					});
+				},
 				bulkCommit : false,
 				mappings : {
 					volume : Volume,
-					volume_info  : VolumeInfo,
+					volume_info : VolumeInfo,
 					category : Category,
 					image_links : ImageLink,
 					industry_identifier : IndustryIdentifier,
@@ -64,16 +64,16 @@ define([ "views/ApplicationView",
 					category : 'categories',
 					industry_identifier : 'industryIdentifiers',
 					image_link : 'imageLinks'
-						
+
 				},
 				namespace : 'rest' // you should change the first segment
-									// according to the application's folder
-									// path on the server.
+			// according to the application's folder
+			// path on the server.
 			})
 		}),
 		ready : function() {
 		}
-		
+
 	});
 	return App;
 });

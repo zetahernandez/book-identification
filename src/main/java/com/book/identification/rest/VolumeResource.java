@@ -67,11 +67,13 @@ public class VolumeResource {
 	private Query buildLuceneQuery(Long categoryId, Integer page, String q)
 			throws ParseException {
 		StringBuilder query = new StringBuilder();
+		
 		QueryParser queryParser = new org.apache.lucene.queryParser.QueryParser(
 				Version.LUCENE_31, "title", new StandardAnalyzer((Version.LUCENE_31)));
 		if (StringUtils.isNotBlank(q)) {
 			query.append(buildQuery(q));
 		}
+		
 		if (categoryId != null) {
 			List<Long> childCategories = DAOFactory.getInstance().getCategoryDAO().childCategories(categoryId);
 			if(StringUtils.isNotBlank(q)){
@@ -81,6 +83,7 @@ public class VolumeResource {
 			}
 				
 			buildQuery(childCategories);
+	
 		}
 		if (!StringUtils.isNotBlank(query)) {
 			query.append("id:*");
