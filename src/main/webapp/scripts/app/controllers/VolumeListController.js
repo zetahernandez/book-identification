@@ -13,7 +13,11 @@ define([ "require", "ember", "controllers/LoadMoreMixin" ], function(r, Ember,Lo
 						this.get('target').send('loadMoreVolumes', page);
 					}
 				},
-
+				loadingComplete:function(){
+					BooksApp.router.set('volumeListController.isLoading', false);
+					BooksApp.router.set('volumeListController.content',BooksApp.store.find(BooksApp.Volume));
+				}.observes('content.isLoaded'), 
+				
 				filterByCategory : function(category) {
 					this.category = category;
 					var content = BooksApp.Volume.find({
