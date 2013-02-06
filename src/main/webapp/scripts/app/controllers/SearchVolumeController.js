@@ -4,12 +4,7 @@ define([ "require", "ember" ],
 		searchText : '',
 		
 		searchVolumes : function() {
-			var volumes = BooksApp.Volume.find({q: this.get('searchText')});
-			BooksApp.router.get('applicationController').connectOutlet({
-				name : 'volumeList',
-				context :volumes,
-				outletName : 'center'
-			});
+			BooksApp.router.get('volumeListController').searchVolumes(this.get('searchText'));
 		}
 		
 	});

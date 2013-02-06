@@ -9,6 +9,7 @@ define([ "require", "ember" ], function() {
 		back : function() {
 			BooksApp.router.applicationController.connectOutlet({
 				name : 'volumeList',
+				context : BooksApp.router.get('volumeListController.content'),
 				outletName : 'center'
 			});
 		}

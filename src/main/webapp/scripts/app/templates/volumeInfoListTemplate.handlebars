@@ -1,12 +1,10 @@
-<div id="infiniteScroll">
-	<table class="zbookTable">
-		<tbody class=">" id="GbShelfHolder">
-		<ul class="unstyled">
-			{{#each volume in controller}}
-				{{view BooksApp.VolumeInfoView eventBinding="volume"  contentBinding="this" target="volume"}}
-			{{/each}}
-			{{view BooksApp.LoadMoreView controllerBinding="controller"}}
-	    </ul>
-		</tbody>
-	</table>
-</div>
+<table class="zbookTable">
+	<tbody class=">" id="GbShelfHolder">
+	<ul class="unstyled">
+		{{#each volume in currentVolumes}}
+			{{view BooksApp.VolumeInfoView eventBinding="volume"  contentBinding="this" target="volume"}}
+		{{/each}}
+		{{view BooksApp.LoadMoreView controllerBinding="controller"}}
+    </ul>
+	</tbody>
+</table>

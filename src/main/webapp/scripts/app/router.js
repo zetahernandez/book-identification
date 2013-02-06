@@ -7,9 +7,9 @@ define([ "ember" ], function(Ember) {
 				showVolumeInfo : Ember.Route.transitionTo('volumeInfo'),
 				connectOutlets : function(router, context) {
 					router.get('volumeListController').resetLoadMore();
-					var query = { page: 1};
-					router.set('volumeListController.query', query);
-			        router.set('volumeListController.isLoading', true);
+//					var query = { page: 1};
+//					router.set('volumeListController.query', query);
+//			        router.set('volumeListController.isLoading', true);
 					router.get('applicationController').connectOutlet({
 						name : 'header',
 						context : context,
@@ -17,7 +17,6 @@ define([ "ember" ], function(Ember) {
 					});
 					router.get('applicationController').connectOutlet({
 						name : 'volumeList',
-						context : BooksApp.store.findQuery(BooksApp.Volume, query),
 						outletName : 'center'
 					});
 					router.get('applicationController').connectOutlet({
@@ -28,10 +27,10 @@ define([ "ember" ], function(Ember) {
 				}
  			}),
      		  loadMoreVolumes: function(router, page) {
+    			  router.set('volumeListController.isLoading', true);
 		        var query = router.get('volumeListController.query');
 		        query.page = page;
-		        BooksApp.router.set('volumeListController.content',BooksApp.store.findQuery(BooksApp.Volume, query))
-		        router.set('volumeListController.isLoading', true);
+		        BooksApp.router.set('loadMoreController.content',BooksApp.store.findQuery(BooksApp.Volume, query));
 		      },
 		})
 

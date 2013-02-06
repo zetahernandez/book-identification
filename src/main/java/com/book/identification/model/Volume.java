@@ -5,6 +5,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -359,5 +360,28 @@ public final class Volume extends EntityBase implements ItemQueue {
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
+
+	private Integer page;
+	private String q;
+	
+	@XmlElement
+	@Transient
+	public Integer getPage() {
+		return page;
+	}
+
+	public void setPage(Integer page) {
+		this.page = page;
+	}
+	@XmlElement
+	@Transient
+	public String getQ() {
+		return q;
+	}
+
+	public void setQ(String q) {
+		this.q = q;
+	}
+	
 		
 }

@@ -47,6 +47,11 @@ public class VolumeResource {
 			Query query = buildLuceneQuery(categoryId, page, q);
 			FullTextQuery createFullTextQuery = fts.createFullTextQuery(query,com.book.identification.model.Volume.class);
 			addPaginationToQuery(createFullTextQuery, page);
+			List<Volume> list = createFullTextQuery.list();
+			for (Volume volume : list) {
+				volume.setPage(page);
+				volume.setQ(q);
+			}
 			volumes.setVolumes(createFullTextQuery.list());
 		} catch (ParseException e1) {
 			e1.printStackTrace();
