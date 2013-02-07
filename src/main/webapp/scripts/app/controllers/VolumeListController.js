@@ -6,6 +6,7 @@ define([ "require", "ember", "controllers/LoadMoreMixin" ], function(r, Ember,Lo
 					if(this.get('content')!= undefined){
 						mod10 = this.get('content').length % 10;
 					}
+					console.log(this.get('isLoading') && mod10 == 0);
 					return !this.get('isLoading') && mod10 == 0 ;
 				},
 
@@ -17,7 +18,6 @@ define([ "require", "ember", "controllers/LoadMoreMixin" ], function(r, Ember,Lo
 				},
 			
 				contentChanged: function() {
-					console.log(this.get('content'));
 				    var mutableVolumes = [];
 
 				    this.get('content').forEach(function(volume) {

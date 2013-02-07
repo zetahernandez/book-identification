@@ -10,15 +10,15 @@ define([ "require", "ember", "ember_data"], function(require, Ember) {
 		extraLarge : DS.attr('string'),
 		
 		maxSizeImage : function() {
-			if(this.get('large') !== undefined)
+			if(this.get('large') != undefined)
 				return this.get('large');
-			if(this.get('medium') !== undefined)
+			if(this.get('medium') != undefined)
 				return this.get('medium');
-			if(this.get('small') !== undefined)
+			if(this.get('small') != undefined)
 				return this.get('small');
 			if(this.get('smallThumbnail') != undefined)
 				return this.get('smallThumbnail');
-			if(this.get('thumbnail') !== undefined)
+			if(this.get('thumbnail') != undefined)
 				return this.get('thumbnail');
 		}.property()
 	});

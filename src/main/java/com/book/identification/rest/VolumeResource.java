@@ -56,8 +56,12 @@ public class VolumeResource {
 		} catch (ParseException e1) {
 			e1.printStackTrace();
 		}
-		return Response.ok(volumes).build();
+		
+		if(volumes.getVolumes().isEmpty()){
+			return Response.ok("volumes : {}").build();
+		}
 
+		return Response.ok(volumes).build();
 	}
 
 	private void addPaginationToQuery(FullTextQuery fullTextQuery, Integer page) {

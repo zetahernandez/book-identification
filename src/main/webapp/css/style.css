@@ -111,3 +111,10 @@ div.center-container {
 	width: 100px;
 	height: 100px;
 }
+a,a:active,a:visited {
+	color: #607890;
+}
+
+a:hover {
+	color: #036;
+}

@@ -18,29 +18,16 @@ import com.sun.jersey.api.json.JSONJAXBContext;
 public class JAXBContextResolver implements ContextResolver<JAXBContext> {
 
 	private JAXBContext contextDefault;
-	private JAXBContext contextCollections;
 
 	private Class<?>[] types = { Volume.class, Category.class,
-			VolumeInfo.class, ImageLinks.class, IndustryIdentifiers.class };
-	private Class<?>[] collectionTypes = { Volumes.class,Categories.class };
+			VolumeInfo.class, ImageLinks.class, IndustryIdentifiers.class,  Volumes.class,Categories.class};
 
 	public JAXBContextResolver() throws Exception {
 		this.contextDefault = new JSONJAXBContext(JSONConfiguration.natural()
 				.rootUnwrapping(true).build(), types);
-		this.contextCollections = new JSONJAXBContext(JSONConfiguration.natural().build(), collectionTypes);
 	}
 
 	public JAXBContext getContext(Class<?> objectType) {
-		for (Class<?> type : types) {
-			if (type == objectType) {
-				return contextDefault;
-			}
-		}
-		for (Class<?> type : collectionTypes) {
-			if (type == objectType) {
-				return contextCollections;
-			}
-		}
-		return null;
+			return contextDefault;
 	}
 }
