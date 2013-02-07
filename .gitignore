@@ -3,6 +3,7 @@
 #################
 
 book-search-main/target/*
+book-search-assembly/target/*
 
 #################
 ## Eclipse
