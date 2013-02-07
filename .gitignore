@@ -3,8 +3,9 @@
 #################
 
 book-search-main/target/*
+book-search-main/db/*
 book-search-assembly/target/*
-
+.hg/*
 #################
 ## Eclipse
 #################

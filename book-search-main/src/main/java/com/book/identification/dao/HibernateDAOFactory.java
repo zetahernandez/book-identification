@@ -27,14 +27,12 @@ public class HibernateDAOFactory extends DAOFactory {
 
 	@Override
 	public VolumeInfoDAO getVolumeInfoDAO() {
-		// TODO Auto-generated method stub
 		return instantiateDAO(VolumeInfoDAOHibernate.class);
 	}
 
 
 	@Override
 	public CategoryDAO getCategoryDAO() {
-		// TODO Auto-generated method stub
 		return instantiateDAO(CategoryDAOHibernate.class);
 	}
 
