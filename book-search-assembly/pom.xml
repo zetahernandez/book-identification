@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.book.identification</groupId>
+	<artifactId>book-searh-assembly</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>org.book.identification</groupId>
+		<artifactId>book-search</artifactId>
+		<version>0.1.beta</version>
+	</parent>
+	
+	<dependencies>
+	<dependecy>
+		<groupId>org.book.identification</groupId>
+		<artifactId>book-search-main</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependecy>
+	</dependencies>
+	
+	
+</project>
