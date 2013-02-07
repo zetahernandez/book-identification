@@ -7,7 +7,7 @@ html, body, section {
 }
 body {
 	font: 13px/1.231 sans-serif;
-	*font-size: small;
+	font-size: small;
 }
 ul,li {
 	margin: 0;
@@ -23,25 +23,25 @@ div {
 header {
     width: 100%;
 }
-div#header {
+#header {
     height: 50px;
     background: none repeat scroll 0 0 #F1F1F1;
 	border-color: #E5E5E5;
 }
-div.header ul li {
+.header ul li {
     float: left;
 }
-div.main-container {
+.main-container {
     height: 89%;
     width: 100%;
 }
-div.left-container {
+.left-container {
     float: left;
     height: 100%;
     overflow-y: scroll;
     width: 30%;
 }
-div.center-container {
+.center-container {
     float: right;
     height: 100%;
     overflow-y: auto;
