@@ -6,11 +6,21 @@ book-search-main/target/*
 book-search-main/db/*
 book-search-assembly/target/*
 .hg/*
-#################
+<<<<<<< HEAD
+.hgignore
 book-search-main/db/*
 book-search-main/.project
 book-search-assembly/*
 book-search-main/.settings/*
+.settings/*
+target/*
+bin/*
+=======
+#################
+## Eclipse
+#################
+
+*.pydevproject
 .project
 .metadata
 bin/
@@ -20,6 +30,7 @@ tmp/
 *.swp
 *~.nib
 local.properties
+>>>>>>> maven-structure
 .classpath
 .settings/
 .loadpath
@@ -27,8 +38,12 @@ local.properties
 # External tool builders
 .externalToolBuilders/
 *.log
-# Locally stored "Eclipse launch configurations"
+<<<<<<< HEAD
+nb*
 
+=======
+# Locally stored "Eclipse launch configurations"
+*.launch
 
 # CDT-specific
 .cproject
@@ -48,3 +63,4 @@ Thumbs.db
 
 # Folder config file
 Desktop.ini
+>>>>>>> maven-structure

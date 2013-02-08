@@ -1,0 +1,10 @@
+	<ul class="list-volumes">
+		<table class="zbookTable">
+			<tbody class=">" id="GbShelfHolder">
+				{{#each volume in currentVolumes}}
+				{{view BooksApp.VolumeInfoView eventBinding="volume"  contentBinding="this" target="volume"}}
+				{{/each}}
+			</tbody>
+		</table>
+		{{view BooksApp.LoadMoreView controllerBinding="controller"}}
+	</ul>

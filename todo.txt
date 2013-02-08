@@ -1,4 +1,4 @@
-TODO: 
+﻿TODO: 
 Current Version. 0.1 (Beta)
  -- FEATURES --
 - Identificar archivos books pdf
@@ -10,31 +10,33 @@ Current Version. 0.1 (Beta)
 - Indexar los datos (title, description, categorias)
 - Cliente Web de busqueda con filtros (Categorias, FullText)
 - Abrir Pdf en el browser (download)
+- infinite scroll. 
  -- TODO --
-- paginado Endless. 
-- back volume info detail
-- style
 - mavenizar el assembly
 
 Version 0.2 (Ganga Style Version)
  -- FEATURES --
-- Agregar loggin de Gmail y modificar goole api
+- Agregar login de Gmail y modificar goole api
 - Configurar path de ficheros, ejectuar BookSearch
 - Optimizar la identificacion de isbn (Regex Patterns)
 - Optimizar Categorizing
 - Hash
+- style
 
 Version 0.3 (Let it be Version)
  -- FEATURES --
 - Drag and Drop de ficheros
 - Incluir archvos *.chm  (compiled html)
 - Monitorear la identificacion de archivos (Progreso) - JMS - WebSocket
+- style bootstrap
+- style
 
 Vesrion 1.0
  -- FEATURES --
 - Editar los datos del book
 - Manejar errores (can't open pdf, isbn not found, no data for isbn on goolge api)
 - Ponderar los indices para las busquedas 0.7 (title)  0.3 (description)
+- style
 
 Version 1.1 
  -- FEATURES --
@@ -42,6 +44,7 @@ Version 1.1
 - Commentarios en Book details
 - Valoración (Ranking)
 - Ordenar las busquedas por relevancia y ranking 
+- style
 
 Version 1.2 
  -- FEATURES --
