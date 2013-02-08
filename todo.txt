@@ -40,7 +40,7 @@ Vesrion 1.0
 
 Version 1.1 
  -- FEATURES --
-- Administración de usuarios
+- Administración de Perfiles
 - Commentarios en Book details
 - Valoración (Ranking)
 - Ordenar las busquedas por relevancia y ranking 
