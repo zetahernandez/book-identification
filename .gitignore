@@ -2,10 +2,14 @@
 *~
 .hg/*
 .hgignore
-db/*
+book-search-main/db/*
+book-search-main/.project
+book-search-assembly/*
+book-search-main/.settings/*
 .settings/*
 target/*
 bin/*
 .classpath
 *.log
 nb*
+
