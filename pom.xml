@@ -8,10 +8,30 @@
 	<version>0.1.beta</version>
 	<name>BookSearch</name>
 
+	 <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+    <developers>
+		<developer>
+			<name>Zeta Hernandez</name>
+			<email>zetahernandez@gmail.com</email>
+		</developer>
+	</developers>
+    
+    <scm>
+        <connection>scm:git:git@github.com:zetahernandez/book-identification.git</connection>
+        <developerConnection>scm:git:git@github.com:zetahernandez/book-identification.git</developerConnection>
+        <url>https://github.com/zetahernandez/book-identification.git</url>
+    </scm>
 
 	<organization>
 		<name>Zeta</name>
-		<url>http://zeta.org/</url>
+		<!--<url>http://zeta.org/</url>-->
 	</organization>
 	<inceptionYear>2013</inceptionYear>
 
@@ -37,12 +57,7 @@
 		</notifiers>
 	</ciManagement>
 
-	<developers>
-		<developer>
-			<name>Zeta Hernandez</name>
-			<email>zetahernandez@gmail.com</email>
-		</developer>
-	</developers>
+	
 
 	<modules>
 		<module>book-search-main</module>
