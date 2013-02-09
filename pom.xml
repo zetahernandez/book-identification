@@ -21,6 +21,9 @@
 			<name>Zeta Hernandez</name>
 			<email>zetahernandez@gmail.com</email>
 		</developer>
+		<developer>
+			<name>Mariano Abdala</name>
+		</developer>
 	</developers>
     
     <scm>
@@ -29,21 +32,10 @@
         <url>https://github.com/zetahernandez/book-identification.git</url>
     </scm>
 
-	<organization>
-		<name>Zeta</name>
-		<!--<url>http://zeta.org/</url>-->
-	</organization>
-	<inceptionYear>2013</inceptionYear>
-
 	<properties>
 		<failOnDependencyWarning>true</failOnDependencyWarning>
 		<project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
 	</properties>
-	<scm>
-		<!--<connection>scm:svn:https://subsonic.svn.sourceforge.net/svnroot/subsonic/trunk</connection>
-        <developerConnection>scm:svn:https://subsonic.svn.sourceforge.net/svnroot/subsonic/trunk</developerConnection>
-        <url>http://subsonic.svn.sourceforge.net/viewvc/subsonic/</url>-->
-	</scm>
 
 	<ciManagement>
 		<system>continuum</system>

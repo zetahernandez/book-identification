@@ -1,10 +1,10 @@
-define(["require", "ember"], function (r, Ember) {
+define(["require", "ember"], function(r, Ember) {
 	var CategoryListController = Ember.ArrayController.extend({
 		selectedCategory: null,
 
 		selectedCategories: Ember.ArrayProxy.create({}),
 
-		selectCategories: function (category) {
+		selectCategories: function(category) {
 			var categories = [];
 			if(category !== null && category !== undefined && category.get('parent')) {
 				categories = categories.concat(this.selectCategories(category.get('parent')));
@@ -13,17 +13,17 @@ define(["require", "ember"], function (r, Ember) {
 			return categories;
 		},
 
-		viewAllCategories: function () {
+		viewAllCategories: function() {
 			this.get('selectedCategories').clear();
 			this.set('selectedCategory', null);
-			var parents = BooksApp.Category.find().filter(function (category) {
+			var parents = BooksApp.Category.find().filter(function(category) {
 				return category.get('parent') === null;
 			});
 			this.set('content', parents);
 			BooksApp.router.get('volumeListController').showAll();
 		},
 
-		selectCategory: function (event) {
+		selectCategory: function(event) {
 			var category = event.context;
 			var cat = this.findProperty("id", category.get('id'));
 			if(cat === null || cat === undefined) {
