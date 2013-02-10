@@ -2,7 +2,8 @@ define(["ember", "text!templates/volumeInfoTemplate.handlebars"], function (Embe
 	var VolumeInfoView = Ember.View.extend({
 		template: Ember.Handlebars.compile(volumeInfoTemplate),
 
-		didInsertElement: function () {
+		init: function () {
+			this._super();
 			// The height of the content block when it's not expanded
 			var adjustheight = 85;
 			// The "more" link text

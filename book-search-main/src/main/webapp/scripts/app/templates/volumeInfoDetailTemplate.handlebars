@@ -1,60 +1,63 @@
-<tr id="main--{{unbound volumeInfo.id}}"
-class="gb-bookshelf-ordering-holder gb-bookshelf-standard-manage">
-<td>
-	<table class="gb-bookshelf-table-container ">
-		<tbody>
-			<tr>
-				<td valign="top" align="center"
-				class="coverwrapper gb-bookshelf-hover-card"><a href="#">
-				{{#if volumeInfo.imageLinks.maxSizeImage}} <img border="0"
+<div id="main--{{unbound volumeInfo.id}}" class="volume-info">
+	{{#if volumeInfo.imageLinks.maxSizeImage}}
+	<div class="volume-image">
+			<a dir="ltr">
+			<img border="0"
 				class="coverthumb hover-card-attach-point"
 				src={{unbound volumeInfo.imageLinks.maxSizeImage}}
 				title={{unbound volumeInfo.title}}
-				alt={{volumeInfo.title}}> 
-				{{/if}}
-			</a></td>
-			<td>
-				<div class="rsi">
-					<div>
-						<div>
-							<h2 class="resbdy">
-								<span dir="ltr"
-								class="gb-volume-title">{{unbound volumeInfo.title}}</span>&lrm;</a>
-							</h2>
-						</div>
-					</div>
-					<div class="gb-text-content">
-						<div style="line-height: 1.2em; font-size: small">
-							<span class="gb-gray-author"><a class="link_aux"
-								href="#"><span
-								dir="ltr">{{unbound volumeInfo.authors}}</span></a>
-								<span style="color: #676767"> - Published: - {{volumeInfo.publishedDate}} -</span>
-							</span> 
-							{{#if volumeInfo.description}}
-							<h2 dir="ltr" class="snippet sa">Description</h2>
-							<div dir="ltr" class="snippet sa">{{volumeInfo.unescapedDescription}}</div>
-							{{/if}}
-							{{#if volumeInfo.pages}}
-							<div dir="ltr" class="snippet sa">pages: {{volumeInfo.pages}}</div>
-							{{/if}}
-							{{#if volumeInfo.publisher}}
-							<div dir="ltr" class="snippet sa">publisher: {{volumeInfo.publisher}}</div>
-							{{/if}}
-							{{#if volumeInfo.industryIdentifiers}}
-							{{#each isbn in volumeInfo.industryIdentifiers}}
-							<div dir="ltr" class="snippet sa">{{isbn.type}}: {{isbn.identifier}}</div>
-							{{/each}}
-							{{/if}}
-							{{#if path}}
-							<div dir="ltr" class="openBook"><a href="#" {{action openPdf volumeInfo target="controller" }}>Open Book</a></div>
-							{{/if}}
-							<div dir="ltr" class="back"><a href="#" {{action back target="controller" }}>Back</a></div>
-						</div>
+			</a>
+	</div>
+	{{/if}}
+	<div class="volume-info-data">
+		<div class="volume-info-title">
+			<h2>
+				<a href="#"><span
+					dir="ltr" class="gb-volume-title">{{unbound volumeInfo.title}}</span>&lrm;</a>
+			</h2>
+		</div>
+		<div class="volume-info-content">
+			<div>
+				<span class="volume-info-author">
+					<span style="color: #676767">
+						<a href="#">
+						   <span dir="ltr">{{unbound volumeInfo.authors}}</span>
+						</a> 
+						- {{volumeInfo.publishedDate}} -
+					</span>
+				</span> 
+				{{#if volumeInfo.description}}
+				<div>
+					<div dir="ltr" class="snippet sa more-block">
+							<p>{{volumeInfo.unescapedDescription}}</p>
 					</div>
 				</div>
-			</td>
-		</tr>
-	</tbody>
-</table>
-</td>
-</tr>
+				{{/if}}
+				{{#if volumeInfo.pages}}
+				<div dir="ltr">
+					Pages: {{volumeInfo.pages}}
+				</div>
+				{{/if}}
+				{{#if volumeInfo.publisher}}
+				<div dir="ltr">
+					Publisher: {{volumeInfo.publisher}}</div>
+				{{/if}}
+				{{#if volumeInfo.industryIdentifiers}}
+					{{#each isbn in volumeInfo.industryIdentifiers}}
+					<div dir="ltr" class="snippet sa">
+						{{isbn.type}}: {{isbn.identifier}}
+					</div>
+					{{/each}}
+				{{/if}}
+				{{#if path}}
+					<div dir="ltr" class="open-book">
+						<a href="#" {{action openPdf volumeInfo target="controller" }}>Open Book</a>
+					</div>
+				{{/if}}
+				<div dir="ltr" class="back">
+					<a href="#" {{action back target="controller" }}>Back</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

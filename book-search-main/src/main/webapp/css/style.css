@@ -16,12 +16,15 @@ ul,li {
 }
 
 div {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
+
 header {
     width: 100%;
+}
+.application {
+    height: 100%;
 }
 #header {
     height: 50px;
@@ -105,7 +108,6 @@ header {
 	bottom: 5%;
 	right: 50px;
 }
-
 .loading {
 	background-image: url("../img/ajax-loader.gif");
 	width: 100px;
@@ -114,7 +116,24 @@ header {
 a,a:active,a:visited {
 	color: #607890;
 }
-
 a:hover {
 	color: #036;
+}
+.volume-image-thumb {
+    float: left;
+    text-align: center;
+    width: 160px;
+}
+.volume-image {
+    float: left;
+    text-align: center;
+}
+
+
+.volume-info-data {
+    display: table;
+}
+.volume-info {
+    display: table;
+    height: auto;
 }
