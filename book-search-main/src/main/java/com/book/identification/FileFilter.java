@@ -29,7 +29,7 @@ public class FileFilter implements java.io.FileFilter {
 	
 	public FileFilter(FileType ...fileType) {
 		super();
-		this.fileTypes =EnumSet.copyOf(Arrays.asList(fileType));
+		this.fileTypes = EnumSet.copyOf(Arrays.asList(fileType));
 	}
 
 

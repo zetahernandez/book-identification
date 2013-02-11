@@ -21,8 +21,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+import com.book.identification.BookFile;
 import com.book.identification.ClientCredentials;
-import com.book.identification.FileISBN;
 import com.book.identification.task.base.ProducerThread;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
@@ -39,11 +39,11 @@ public class ISBNRequest extends
 	/**
 	 * 
 	 */
-	private FileISBN fileIsbn;
+	private BookFile fileIsbn;
 
 	private BlockingQueue<com.book.identification.model.Volume> volumesQueue;
 
-	public ISBNRequest(FileISBN isbn,
+	public ISBNRequest(BookFile isbn,
 			BlockingQueue<com.book.identification.model.Volume> volumesQueue) {
 		super("ISBNRequest-" + isbn);
 		this.volumesQueue = volumesQueue;
@@ -72,9 +72,10 @@ public class ISBNRequest extends
 					com.book.identification.model.Volume volume2 = null;
 					try {
 						volume2 = gson.fromJson(execute.toString(),com.book.identification.model.Volume.class);
-						volume2.setPath(fileIsbn.getFilePDF().getFile().getAbsolutePath());
-						volume2.setFileName(fileIsbn.getFilePDF().getFile().getName());
-						volume2.setHashSH1(fileIsbn.getFilePDF().getHash());
+						volume2.setPath(fileIsbn.getFile().getAbsolutePath());
+						volume2.setFileName(fileIsbn.getFile().getName());
+						volume2.setHashSH1(fileIsbn.getHash());
+						volume2.setFileType(fileIsbn.getFileType());
 					} catch (Exception e) {
 						logger.error(e);
 					}

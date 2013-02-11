@@ -21,8 +21,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.hibernate.criterion.Restrictions;
 
-import com.book.identification.FileISBN;
-import com.book.identification.FilePDF;
+import com.book.identification.BookFile;
+import com.book.identification.FileType;
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.model.Volume;
 import com.book.identification.task.base.ProducerConsumer;
@@ -30,28 +30,34 @@ import com.book.identification.task.base.ProducerConsumerManager;
 import com.book.identification.task.base.ProducerThread;
 
 
-public class BookReader extends ProducerConsumerManager<ProducerThread<FileISBN>,FileISBN, FilePDF> {
+public class BookReader extends ProducerConsumerManager<ProducerThread<BookFile>,BookFile, BookFile> {
 	
 	final static Logger logger = LogManager.getLogger(BookReader.class);
 
-	public BookReader(String name, BlockingQueue<FilePDF> input,
-			BlockingQueue<FileISBN> output,
+	public BookReader(String name, BlockingQueue<BookFile> input,
+			BlockingQueue<BookFile> output,
 			ProducerConsumer nextProducerConsumer) {
 		super(name, input, output, nextProducerConsumer);
 	}
 
 
 	@Override
-	protected ProducerThread<FileISBN> createConsumerWork(FilePDF take,
-			BlockingQueue<FileISBN> output) {
-		
-			return new SearchISBN(take, output);
+	protected ProducerThread<BookFile> createConsumerWork(BookFile take,
+			BlockingQueue<BookFile> output) {
+
+			SearchISBN searchISBN = null;
+			if(take.getFileType().equals(FileType.PDF)){
+				searchISBN = new PDFSearchISBN(take, output);
+			}else{
+				searchISBN = new CHMSearchISBN(take, output);
+			}
+			return searchISBN;
 		
 	}
 
 
 	@Override
-	protected boolean acceptWork(FilePDF item) {
+	protected boolean acceptWork(BookFile item) {
 		List<Volume> volumes = DAOFactory.getInstance().getVolumeDAO().findByCriteria(Restrictions.eq("hashSH1", item.getHash()));
 		return volumes.size()==0;
 	}

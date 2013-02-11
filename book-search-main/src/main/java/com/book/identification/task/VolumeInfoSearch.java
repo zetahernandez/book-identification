@@ -16,30 +16,30 @@ package com.book.identification.task;
 
 import java.util.concurrent.BlockingQueue;
 
-import com.book.identification.FileISBN;
+import com.book.identification.BookFile;
 import com.book.identification.model.Volume;
 import com.book.identification.task.base.ProducerConsumer;
 import com.book.identification.task.base.ProducerConsumerManager;
 import com.book.identification.task.base.ProducerThread;
 
-public class VolumeInfoSearch extends ProducerConsumerManager<ProducerThread<Volume>, Volume, FileISBN> {
+public class VolumeInfoSearch extends ProducerConsumerManager<ProducerThread<Volume>, Volume, BookFile> {
 
 
-	public VolumeInfoSearch(String name, BlockingQueue<FileISBN> input,
+	public VolumeInfoSearch(String name, BlockingQueue<BookFile> input,
 			BlockingQueue<Volume> output, ProducerConsumer nextProducerConsumer) {
 		super(name, input, output, nextProducerConsumer);
 	}
 
 
 	@Override
-	protected ProducerThread<Volume> createConsumerWork(FileISBN take,
+	protected ProducerThread<Volume> createConsumerWork(BookFile take,
 			BlockingQueue<Volume> output) {
 		return new ISBNRequest(take,output);
 	}
 
 
 	@Override
-	protected boolean acceptWork(FileISBN item) {
+	protected boolean acceptWork(BookFile item) {
 		return true;
 	}
 

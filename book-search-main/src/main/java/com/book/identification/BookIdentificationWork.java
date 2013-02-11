@@ -31,9 +31,9 @@ import com.book.identification.task.VolumeInfoSearch;
 public class BookIdentificationWork extends Thread {
 	private static Logger logger = LogManager.getLogger(BookIdentificationWork.class);
 	private String[] folders;
-	BlockingQueue<FilePDF> fileBlockingQueue = new ArrayBlockingQueue<FilePDF>(
+	BlockingQueue<BookFile> fileBlockingQueue = new ArrayBlockingQueue<BookFile>(
 			10);
-	BlockingQueue<FileISBN> fileISBNs = new ArrayBlockingQueue<FileISBN>(10);
+	BlockingQueue<BookFile> fileISBNs = new ArrayBlockingQueue<BookFile>(10);
 	BlockingQueue<Volume> volumesQueue = new ArrayBlockingQueue<Volume>(10);
 
 	PersistVolumes persistVolumes = new PersistVolumes("PersistVolumesThread",
@@ -61,7 +61,7 @@ public class BookIdentificationWork extends Thread {
 			if (root.isDirectory()) {
 
 				BookSearch bookSearch = new BookSearch(fileBlockingQueue,
-						new FileFilter(FileType.PDF), root, bookReader);
+						new FileFilter(FileType.PDF,FileType.CHM), root, bookReader);
 				bookSearch.start();
 			}
 		}

@@ -127,6 +127,7 @@ a:hover {
 .volume-image {
     float: left;
     text-align: center;
+    margin-right: 10px;
 }
 
 

@@ -16,10 +16,13 @@ package com.book.identification.task;
 
 import java.io.File;
 
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import com.book.identification.FilePDF;
+import com.book.identification.BookFile;
+import com.book.identification.FileType;
 import com.book.identification.util.FileHashUtil;
 
 
@@ -59,7 +62,8 @@ public class FoundFileAndQueueTask extends Thread {
 						//Hashing
 						String fileSHA1 = FileHashUtil.getFileSHA1(entry);
 						logger.info("Accepted file -> " + entry.getName() + " Hash -> " + fileSHA1);
-						this.bookSearch.fileQueue.put(new FilePDF(entry,fileSHA1));
+						FileType fileType = FileType.valueOf(StringUtils.upperCase(FilenameUtils.getExtension(entry.getName())));
+						this.bookSearch.fileQueue.put(new BookFile(entry,fileSHA1,fileType));
 					} catch (InterruptedException e) {
 						Thread.currentThread().interrupt();
 					} catch (Throwable e) {

@@ -17,6 +17,8 @@ package com.book.identification.model;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
@@ -30,6 +32,7 @@ import org.hibernate.search.annotations.Indexed;
 import org.hibernate.search.annotations.IndexedEmbedded;
 import org.hibernate.search.annotations.Store;
 
+import com.book.identification.FileType;
 import com.book.identification.task.base.ItemQueue;
 
 /*
@@ -142,7 +145,17 @@ public final class Volume extends EntityBase implements ItemQueue {
 	@Field(index = Index.YES,store=Store.YES)
 	private String hashSH1;
 	
+	private FileType fileType;
 	
+	@Enumerated(EnumType.STRING)
+	public FileType getFileType() {
+		return fileType;
+	}
+
+	public void setFileType(FileType fileType) {
+		this.fileType = fileType;
+	}
+
 	@Column
 	public String getHashSH1() {
 		return hashSH1;

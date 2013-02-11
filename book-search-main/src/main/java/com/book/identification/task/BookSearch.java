@@ -23,7 +23,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import com.book.identification.FileFilter;
-import com.book.identification.FilePDF;
+import com.book.identification.BookFile;
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.model.Volume;
 import com.book.identification.task.base.ProducerConsumer;
@@ -32,13 +32,13 @@ public class BookSearch extends Thread {
 
 	final static Logger logger = LogManager.getLogger(BookSearch.class);
 	
-	public final BlockingQueue<FilePDF> fileQueue;
+	public final BlockingQueue<BookFile> fileQueue;
 	public ConcurrentSkipListSet<File> indexedFiles = new ConcurrentSkipListSet<File>();
 	public final FileFilter fileFilter;
 	private final File root;
 	private ProducerConsumer producerConsumer;
 
-	public BookSearch(BlockingQueue<FilePDF> fileQueue,
+	public BookSearch(BlockingQueue<BookFile> fileQueue,
 			final FileFilter fileFilter, File root,ProducerConsumer producerConsumer) {
 		super("BookSearch");
 		this.fileQueue = fileQueue;

@@ -14,25 +14,64 @@
 
 package com.book.identification;
 
+import java.io.File;
+
+import org.apache.commons.lang3.StringUtils;
+
 import com.book.identification.task.base.ItemQueue;
 
-public class FileISBN implements ItemQueue {
-	private FilePDF file;
+public class BookFile implements ItemQueue {
+
+	private File file;
+	private String hash;
+	private FileType fileType;
 	private String isbn;
 	
-
-	public FileISBN(FilePDF file, String isbn) {
+	
+	public BookFile(File file, String hash, FileType fileType) {
 		super();
 		this.file = file;
-		this.isbn = isbn;
+		this.hash = hash;
+		this.fileType = fileType;
 	}
 
-	public FilePDF getFilePDF() {
+		
+	public String getHash() {
+		return hash;
+	}
+
+	public void setHash(String hash) {
+		this.hash = hash;
+	}
+
+
+	public File getFile() {
 		return file;
 	}
+	public void setFile(File file) {
+		this.file = file;
+	}
+
+	public FileType getFileType() {
+		return fileType;
+	}
+
+	public void setFileType(FileType fileType) {
+		this.fileType = fileType;
+	}
+
 
 	public String getIsbn() {
 		return isbn;
+	}
+
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+	
+	public boolean hasISBN() {
+		return StringUtils.isNotBlank(isbn);
 	}
 
 }

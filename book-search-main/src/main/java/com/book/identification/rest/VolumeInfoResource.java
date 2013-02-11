@@ -25,6 +25,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
+import com.book.identification.FileType;
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.model.Volume;
 import com.book.identification.model.VolumeInfo;
@@ -50,11 +51,19 @@ public class VolumeInfoResource {
 	
 	@GET
 	@Path("open/{volumeInfoId}")
-	@Produces({"application/pdf"})
+	@Produces({"application/pdf",MediaType.TEXT_PLAIN})
 	public Response  openPDF(@PathParam("volumeInfoId") Long volumeInfoId) {
 		final Volume volume = (Volume) DAOFactory.getInstance().getVolumeInfoDAO().getSession().createQuery("From Volume v where v.volumeInfo.entityId = :volumeInfoId").setParameter("volumeInfoId",volumeInfoId).uniqueResult();
 		File file = new File(volume.getPath());
-		ResponseBuilder response = Response.ok((Object) file);
+		
+		ResponseBuilder response = null;
+		response = Response.ok((Object) file);
+		if(volume.getFileType().equals(FileType.CHM)){
+			response.header("Content-Type", MediaType.TEXT_PLAIN);
+			response.header("Content-Disposition",	"attachment; filename=\""+ volume.getVolumeInfo().getTitle() + ".chm" + "\"");
+		}
+	
+		
 		return response.build();
 	}
 }
