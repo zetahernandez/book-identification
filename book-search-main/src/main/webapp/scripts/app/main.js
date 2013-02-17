@@ -24,8 +24,9 @@ function (ApplicationView, HeaderView, VolumeListView, CategoryListView, VolumeI
 		Category: Category,
 		ImageLink: ImageLink,
 		IndustryIdentifier: IndustryIdentifier,
+		
 		store: DS.Store.create({
-			revision: 4,
+			revision: 11,
 			adapter: DS.RESTAdapter.create({
 				bulkCommit: false,
 				mappings: {
@@ -48,9 +49,7 @@ function (ApplicationView, HeaderView, VolumeListView, CategoryListView, VolumeI
 				// according to the application's folder
 				// path on the server.
 			})
-		}),
-		ready: function () {}
-
+		})
 	});
 	return App;
 });
