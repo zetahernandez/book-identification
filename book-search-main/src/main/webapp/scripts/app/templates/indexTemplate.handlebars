@@ -1,0 +1,17 @@
+	<section id="section">
+	<header>
+		{{outlet header}}
+		{{view BooksApp.NavigationView}}
+	</header>
+	<div class="main-container">
+		<div class="left-container">
+			{{outlet left}}
+		</div>
+		<div class="center-container">
+			{{outlet center}}
+		</div>
+	</div>
+	<footer>
+		{{outlet footer}}
+	</footer>
+</section>
