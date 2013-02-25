@@ -1,6 +1,6 @@
 define(["ember", "text!templates/volumeInfoTemplate.handlebars"], function (Ember, volumeInfoTemplate) {
 	var VolumeInfoView = Ember.View.extend({
-		template: Ember.Handlebars.compile(volumeInfoTemplate),
+		defaultTemplate: Ember.Handlebars.compile(volumeInfoTemplate),
 
 		init: function () {
 			this._super();

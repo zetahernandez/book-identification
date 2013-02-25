@@ -13,13 +13,16 @@ define({
 			deps: ['jquery'],
 			exports: 'inview'
 		},
+		'handlebars' : {
+			exports: 'handlebars'
+		},
 		waitSeconds: 15
 	},
 	paths: {
 		'App': 'app/main',
 		'models': 'app/models',
 		'views': 'app/views',
-		'router': 'app/views',
+		'routes': 'app/routes',
 		'controllers': 'app/controllers',
 		'templates': 'app/templates',
 		/* libs */

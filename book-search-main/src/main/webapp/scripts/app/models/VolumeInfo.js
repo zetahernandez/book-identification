@@ -1,7 +1,6 @@
 define(["require", "ember", "ember_data"], function (require, Ember) {
 	var Volumeinfo = DS.Model.extend({
 		primaryKey: 'id',
-		id: DS.attr('number'),
 		authors: DS.attr('string'),
 		description: DS.attr('string'),
 		imageLinks: DS.belongsTo('BooksApp.ImageLink', {
