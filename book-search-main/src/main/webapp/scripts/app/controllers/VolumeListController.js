@@ -13,7 +13,7 @@ define(["require", "ember", "controllers/LoadMoreMixin"], function (r, Ember, Lo
 		loadMore: function () {
 			if(this.get('canLoadMore')) {
 				var page = this.incrementProperty('currentPage');
-				this.get('target').send('loadMoreVolumes', page);
+				// this.get('target').send('loadMoreVolumes', page);
 			}
 		},
 
