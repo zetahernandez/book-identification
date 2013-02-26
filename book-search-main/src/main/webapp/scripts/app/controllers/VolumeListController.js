@@ -1,6 +1,9 @@
 define(["require", "ember", "controllers/LoadMoreMixin"], function (r, Ember, LoadMoreMixin) {
 	var VolumeListController = Ember.ArrayController.extend(
 	LoadMoreMixin, {
+		content:[],
+		currentVolumes:[],
+		
 		canLoadMore: function () {
 			var mod10 = 0;
 			if(this.get('content') !== undefined) {
@@ -13,20 +16,20 @@ define(["require", "ember", "controllers/LoadMoreMixin"], function (r, Ember, Lo
 		loadMore: function () {
 			if(this.get('canLoadMore')) {
 				var page = this.incrementProperty('currentPage');
-				// this.get('target').send('loadMoreVolumes', page);
+				this.loadMoreVolumes(page);
 			}
 		},
 
 		contentChanged: function () {
 			var mutableVolumes = [];
-
+			console.log(this.get('content'));
 			this.get('content').forEach(function (volume) {
 				mutableVolumes.pushObject(volume);
 			});
 
 			this.set('isLoading', false);
 			this.set('currentVolumes', mutableVolumes);
-		}.observes('content', 'content.isLoaded'),
+		}.observes('content.isLoaded'),
 
 		addVolume: function (volume) {
 			this.get('currentVolumes').pushObject(volume);
@@ -76,7 +79,25 @@ define(["require", "ember", "controllers/LoadMoreMixin"], function (r, Ember, Lo
 				context: event.context,
 				outletName: 'center'
 			});
-		}
+		},
+		loadMoreVolumes: function (page) {
+				this.set('isLoading', true);
+				this.set('query.page', page);
+				this.set('moreVolumes', BooksApp.store.findQuery(BooksApp.Volume, this.get('query')));
+		},
+		more: function () {
+			_self = this;
+			if(this.get('moreVolumes') !== null && this.get('moreVolumes').isLoaded) {
+				if(this.get('content') === null) {
+					this.set('content', this.get('moreVolumes'));
+				} else {
+					this.get('moreVolumes').forEach(function (volume) {
+						_self.addVolume(volume);
+					});
+				}
+				this.set('isLoading', false);
+			}
+		}.observes('moreVolumes', 'moreVolumes.isLoaded')
 	});
 	return VolumeListController;
 });

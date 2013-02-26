@@ -1,6 +1,5 @@
-define(["require", "ember", "ember_data"], function (require, Ember) {
+define(["ember", "ember_data"], function(Ember,DS) {
 	var IamgeLink = DS.Model.extend({
-		primaryKey: 'id',
 		thumbnail: DS.attr('string'),
 		smallThumbnail: DS.attr('string'),
 		small: DS.attr('string'),

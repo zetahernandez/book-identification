@@ -1,10 +1,9 @@
-define([ "require", "ember", "ember_data"], function(require, Ember) {
+define(["ember", "ember_data"], function(Ember,DS) {
 	var Category = DS.Model.extend({
-		primaryKey: 'id',
 		level : DS.attr('number'),
 		categoryName : DS.attr('string'), //{ key: 'thumbnailUrl' }
 		parent :DS.belongsTo('BooksApp.Category'),
-		subCategories: DS.hasMany('BooksApp.Category',{ embedded: true }),
+		subCategories: DS.hasMany('BooksApp.Category',{ embedded: 'load' }),
 		
 		haveParent : function() {
 			return this.get('parent') !== null && this.get('parent') !== undefined;

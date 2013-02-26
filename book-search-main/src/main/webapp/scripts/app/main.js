@@ -25,6 +25,14 @@ function (IndexView, HeaderView, VolumeListView, CategoryListView, VolumeInfoVie
 	App.ImageLink = ImageLink;
 	App.IndustryIdentifier = IndustryIdentifier;
 	App.IndexRoute = IndexRoute;
+	DS.RESTAdapter.configure("plurals", {
+		'volume': 'volumes',
+		'volume_info': 'volumesInfo',
+		'category': 'categories',
+		'industry_identifier': 'industryIdentifiers',
+		'image_link': 'imageLinks'
+	});
+
 	App.store = DS.Store.create({
 		revision: 11,
 		adapter: DS.RESTAdapter.create({
@@ -35,14 +43,6 @@ function (IndexView, HeaderView, VolumeListView, CategoryListView, VolumeInfoVie
 				category: Category,
 				image_links: ImageLink,
 				industry_identifier: IndustryIdentifier
-			},
-			plurals: {
-				volume: 'volumes',
-				volume_info: 'volumesInfo',
-				category: 'categories',
-				industry_identifier: 'industryIdentifiers',
-				image_link: 'imageLinks'
-
 			},
 			namespace: 'rest' // you should change the first
 			// segment
