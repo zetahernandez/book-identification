@@ -32,6 +32,21 @@ function (IndexView, HeaderView, VolumeListView, CategoryListView, VolumeInfoVie
 		'industry_identifier': 'industryIdentifiers',
 		'image_link': 'imageLinks'
 	});
+	DS.RESTAdapter.map('BooksApp.Volume', {
+		volumeInfo: {
+			embedded: 'load'
+		}
+	});
+	DS.RESTAdapter.map('BooksApp.VolumeInfo', {
+		imageLinks: {
+			embedded: 'load'
+		}
+	});
+	DS.RESTAdapter.map('BooksApp.Category', {
+		subCategories: {
+			embedded: 'load'
+		}
+	});
 
 	App.store = DS.Store.create({
 		revision: 11,

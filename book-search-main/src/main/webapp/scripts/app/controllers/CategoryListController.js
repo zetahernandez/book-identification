@@ -1,7 +1,6 @@
 define(["require", "ember"], function (r, Ember) {
 	var CategoryListController = Ember.ArrayController.extend({
 		needs: ['volumeList'],
-		content: [],
 		selectedCategory: null,
 
 		selectedCategories: Ember.ArrayProxy.create({}),
@@ -18,9 +17,10 @@ define(["require", "ember"], function (r, Ember) {
 		viewAllCategories: function () {
 			this.get('selectedCategories').clear();
 			this.set('selectedCategory', null);
-			var parents = BooksApp.Category.find().filter(function (category) {
+			/*	var parents = BooksApp.Category.find().filter(function (category) {
 				return category.get('parent') === null;
-			});
+			});*/
+			var parents = BooksApp.Category.find();
 			this.set('content', parents);
 			this.get('controllers.volumeList').showAll();
 		},

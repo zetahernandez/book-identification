@@ -5,7 +5,7 @@ define(["ember"], function (Ember) {
 		classNames: ["searchInput"],
 
 		insertNewline: function () {
-			BooksApp.router.get("searchVolumeController").searchVolumes();
+			this.get("controller").searchVolumes();
 		}
 	});
 	return SearchVolumeView;

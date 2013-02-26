@@ -5,8 +5,7 @@
 	<li><a href="#"  {{bindAttr style="categoryParent.leftMarginStyle"}} {{action selectCategory categoryParent target="controller"}}>{{categoryParent.categoryName}}</a></li>
 	{{/each}}
 	{{/if}}
-	
-	{{#each category in content}}
+	{{#each category in controller}}
 	<li><a href="#" {{bindAttr style="category.leftMarginStyle"}} {{action selectCategory category target="controller"}}>{{category.categoryName}}</a></li>
 	{{/each}}
 	
