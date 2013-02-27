@@ -16,6 +16,9 @@ define({
 		'handlebars' : {
 			exports: 'handlebars'
 		},
+		'bootstrap' : {
+			deps: ['jquery']
+		},
 		waitSeconds: 15
 	},
 	paths: {
@@ -25,11 +28,13 @@ define({
 		'routes': 'app/routes',
 		'controllers': 'app/controllers',
 		'templates': 'app/templates',
+
 		/* libs */
 		'jquery': 'libs/jquery',
 		'inview': 'libs/jquery.inview',
 		'handlebars': 'libs/handlebars',
 		'ember': 'libs/ember',
-		'ember_data': 'libs/ember-data'
+		'ember_data': 'libs/ember-data',
+		'bootstrap' : 'libs/bootstrap/js/bootstrap'
 	}
 });

@@ -1,7 +1,7 @@
 define(["ember", "text!templates/volumeInfoTemplate.handlebars"], function (Ember, volumeInfoTemplate) {
 	var VolumeInfoView = Ember.View.extend({
 		defaultTemplate: Ember.Handlebars.compile(volumeInfoTemplate),
-
+		
 		init: function () {
 			this._super();
 			// The height of the content block when it's not expanded

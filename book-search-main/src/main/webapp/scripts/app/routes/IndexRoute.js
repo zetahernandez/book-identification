@@ -9,7 +9,7 @@ define(["ember"], function (Ember) {
 			volumeListController.set('content', BooksApp.Volume.find());
 
 			this.render('index');
-			this.render('header', {
+				this.render('header', {
 				outlet: 'header',
 				into: 'index'
 			});

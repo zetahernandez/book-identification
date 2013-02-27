@@ -39,7 +39,7 @@ public class Main {
 	public static void main(String[] args) {
 		HttpClient httpClient = new DefaultHttpClient();
 
-		for (int i = 0; i < 1746; i += MAX_REQUEST) {
+		for (int i = 1740; i < 1767; i += MAX_REQUEST) {
 			List<String> urls  = new ArrayList<String>();
 
 			for (int j = i; j < i + MAX_REQUEST; j++) {

@@ -1,5 +1,4 @@
 define(["ember", "text!templates/loadMoreTemplate.handlebars"], function (Ember, loadMore) {
-
 	LoadMoreView = Ember.View.extend({
 		defaultTemplate: Ember.Handlebars.compile(loadMore),
 		didInsertElement: function () {

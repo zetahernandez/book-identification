@@ -1,22 +1,14 @@
-<div id="main--{{unbound volume.id}}" class="volume-info">
-	{{#if volume.volumeInfo.imageLinks.thumbnail}} 
-	<div class="volume-image-thumb">
-		<a href="">
-			<img border="0"
-			src={{unbound volume.volumeInfo.imageLinks.thumbnail}} {{action
-				showVolumeInfo volume target="controller"}} title=
-				volume.volumeInfo.title}} class="coverthumb hover-card-attach-point"
-				alt={{unboundvolume.volumeInfo.title}}
-			</a>
+<div id="main--{{unbound volume.id}}" class="row-fluid">
+	<div class="span2">
+		{{#if volume.volumeInfo.imageLinks.thumbnail}} 		
+				<img border="0" src={{unbound volume.volumeInfo.imageLinks.thumbnail}} {{action "openVolume"  volume}} title=volume.volumeInfo.title}} alt={{unboundvolume.volumeInfo.title}}
+		{{/if}}
 	</div>
-	{{/if}}
-	<div class="volume-info-data">
+	<div class="span10">
 		<div class="volume-info-title">
-			<h2>
-				<a href="#" {{action showVolumeInfo volume target="controller"}}><span
-					dir="ltr" class="gb-volume-title">{{unbound
-						volume.volumeInfo.title}}</span>&lrm;</a>
-			</h2>
+			<h3>
+				<a href="" {{action "openVolume" volume}}>{{volume.volumeInfo.title}}</a>
+			</h3>
 		</div>
 		<div class="volume-info-content">
 			<div>

@@ -1,14 +1,15 @@
 <section id="section">
-	<header>
-		{{outlet header}}
-		{{view BooksApp.NavigationView}}
-	</header>
-	<div class="main-container">
-		<div class="left-container">
-			{{outlet left}}
-		</div>
-		<div class="center-container">
-			{{outlet center}}
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		{{outlet header}}	
+	</div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				{{outlet left}}
+			</div>
+			<div class="span10">
+				{{outlet center}}
+			</div>
 		</div>
 	</div>
 	<footer>
