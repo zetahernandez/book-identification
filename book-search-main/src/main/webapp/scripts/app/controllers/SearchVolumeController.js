@@ -4,7 +4,7 @@ define(["require", "ember"], function () {
 		searchText: '',
 
 		searchVolumes: function () {
-			this.get('controllers.volumeListController').searchVolumes(this.get('searchText'));
+			this.get('controllers.volumeList').searchVolumes(this.get('searchText'));
 		}
 
 	});

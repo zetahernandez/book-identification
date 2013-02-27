@@ -1,6 +1,6 @@
 define(["ember"], function (Ember) {
 	var SearchVolumeView = Ember.TextField.extend(Ember.TargetActionSupport, {
-		valueBinding: 'BooksApp.router.searchVolumeController.searchText',
+		valueBinding: 'BooksApp.Router.searchVolumeController.searchText',
 		//		controller : 'BooksApp.SearchVolumeController',
 		classNames: ["searchInput"],
 

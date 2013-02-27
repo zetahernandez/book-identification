@@ -52,13 +52,7 @@ function (IndexView, HeaderView, VolumeListView, CategoryListView, VolumeInfoVie
 		revision: 11,
 		adapter: DS.RESTAdapter.create({
 			bulkCommit: false,
-			mappings: {
-				volume: Volume,
-				volume_info: VolumeInfo,
-				category: Category,
-				image_links: ImageLink,
-				industry_identifier: IndustryIdentifier
-			},
+			
 			namespace: 'rest' // you should change the first
 			// segment
 			// according to the application's folder
