@@ -7,7 +7,7 @@ define(["require", "ember"], function () {
 			window.open("rest/volumesInfo/open/" + volumeInfoId);
 		},
 		cancel: function () {
-			this.transitionToRoute('index');
+			this.transitionToRoute('volumes');
 		}
 	});
 	return VolumeInfoDetailController;

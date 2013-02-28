@@ -6,15 +6,18 @@
 	</div>
 	{{/if}}
 	<div class="span6">
-		<div class="volume-info-title">
+		<div>
 			<h2>
-				<a href="#"><span
-					dir="ltr" class="gb-volume-title">{{unbound volumeInfo.title}}</span>&lrm;</a>
+				<span dir="ltr" >{{unbound volumeInfo.title}}</span>&lrm;
 			</h2>
 		</div>
-		<div class="volume-info-content">
+		{{#if path}}
+					<button  class="btn btn-primary"  {{action openPdf volumeInfo }}>Open Book</button >
+				{{/if}}
+				<button  class="btn btn-primary" {{action "cancel"}}>Back</button >
+		<div>
 			<div>
-				<span class="volume-info-author">
+				<span>
 					<span style="color: #676767">
 						<a href="#">
 						   <span dir="ltr">{{unbound volumeInfo.authors}}</span>
@@ -24,7 +27,7 @@
 				</span> 
 				{{#if volumeInfo.description}}
 				<div>
-					<div dir="ltr" class="snippet sa more-block">
+					<div dir="ltr">
 							<p>{{volumeInfo.unescapedDescription}}</p>
 					</div>
 				</div>
@@ -40,7 +43,7 @@
 				{{/if}}
 				{{#if volumeInfo.industryIdentifiers}}
 					{{#each isbn in volumeInfo.industryIdentifiers}}
-					<div dir="ltr" class="snippet sa">
+					<div dir="ltr">
 						{{isbn.type}}: {{isbn.identifier}}
 					</div>
 					{{/each}}
@@ -48,7 +51,7 @@
 				{{#if path}}
 					<button  class="btn btn-primary"  {{action openPdf volumeInfo }}>Open Book</button >
 				{{/if}}
-				<button  class="btn btn-primary" {{action "cancel"}}>Back</button >
+					<button  class="btn btn-primary" {{action "cancel"}}>Back</button >
 			</div>
 		</div>
 	</div>
