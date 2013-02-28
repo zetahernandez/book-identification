@@ -99,9 +99,7 @@ define(["require", "ember", "controllers/LoadMoreMixin"], function (r, Ember, Lo
 			}
 		}.observes('moreVolumes', 'moreVolumes.isLoaded'),
 		openVolume : function(volume) {
-			var volumeInfoView = BooksApp.VolumeInfoDetailView.create();
-			volumeInfoView.appendTo('#modal');
-			Ember.$('#modal').modal();
+			this.transitionToRoute('volumeInfoDetail',volume);
 		}
 	});
 	return VolumeListController;

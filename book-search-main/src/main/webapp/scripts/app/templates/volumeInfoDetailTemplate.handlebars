@@ -1,15 +1,11 @@
-<div id="main--{{unbound volumeInfo.id}}" class="volume-info">
+<div id="main--{{unbound volumeInfo.id}}" class="row-fluid">
 	{{#if volumeInfo.imageLinks.maxSizeImage}}
-	<div class="volume-image">
-			<a dir="ltr">
-			<img border="0"
-				class="coverthumb hover-card-attach-point"
-				src={{unbound volumeInfo.imageLinks.maxSizeImage}}
-				title={{unbound volumeInfo.title}}
-			</a>
+	<div class="span4">
+		<img  {{bindAttr src="volumeInfo.imageLinks.maxSizeImage"}}
+			{{bindAttr title="volumeInfo.title"}}>	
 	</div>
 	{{/if}}
-	<div class="volume-info-data">
+	<div class="span6">
 		<div class="volume-info-title">
 			<h2>
 				<a href="#"><span
@@ -50,13 +46,9 @@
 					{{/each}}
 				{{/if}}
 				{{#if path}}
-					<div dir="ltr" class="open-book">
-						<a href="#" {{action openPdf volumeInfo target="controller" }}>Open Book</a>
-					</div>
+					<button  class="btn btn-primary"  {{action openPdf volumeInfo }}>Open Book</button >
 				{{/if}}
-				<div dir="ltr" class="back">
-					<a href="#" {{action "cancel"}}>Back</a>
-				</div>
+				<button  class="btn btn-primary" {{action "cancel"}}>Back</button >
 			</div>
 		</div>
 	</div>
