@@ -1,7 +1,7 @@
 <div id="main--{{unbound volume.id}}" class="row-fluid">
 	<div class="span2">
 		{{#if volume.volumeInfo.imageLinks.thumbnail}} 		
-				<img border="0" src={{unbound volume.volumeInfo.imageLinks.thumbnail}} {{action "openVolume"  volume}} title=volume.volumeInfo.title}} alt={{unboundvolume.volumeInfo.title}}
+				<img border="0" {{bindAttr src="volume.volumeInfo.imageLinks.thumbnail"}} {{action "openVolume"  volume}} {{ bindAttr title="volume.volumeInfo.title"}} {{ bindAttr alt="unbound volume.volumeInfo.title"}}>
 		{{/if}}
 	</div>
 	<div class="span10">
