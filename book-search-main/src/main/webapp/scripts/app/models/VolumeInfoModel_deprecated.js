@@ -1,5 +1,4 @@
-define(
-["require", "ember", "jquery"], function (require, Ember, $) {
+define(["ember", "ember_data", "jquery"], function (Ember, DS, $) {
 	var VolumeInfoModel = Ember.Object.extend({
 
 		title: null,

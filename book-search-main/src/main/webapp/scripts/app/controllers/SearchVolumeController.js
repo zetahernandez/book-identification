@@ -1,9 +1,10 @@
 define(["require", "ember"], function () {
 	var SearchVolumeController = Ember.ObjectController.extend({
+		needs : ['volumeList'],
 		searchText: '',
 
 		searchVolumes: function () {
-			BooksApp.router.get('volumeListController').searchVolumes(this.get('searchText'));
+			this.get('controllers.volumeList').searchVolumes(this.get('searchText'));
 		}
 
 	});

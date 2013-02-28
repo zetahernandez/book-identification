@@ -1,15 +1,10 @@
-	<li><h2>Category Filter</h2></li>
-	{{#if controller.selectedCategory}}
-	<li><a href="#"  {{action viewAllCategories target="controller"}} id="allCategories">All Categories</a></li>
-	{{#each categoryParent in controller.selectedCategories}}
-	<li><a href="#"  {{bindAttr style="categoryParent.leftMarginStyle"}} {{action selectCategory categoryParent target="controller"}}>{{categoryParent.categoryName}}</a></li>
-	{{/each}}
-	{{/if}}
-	{{#if controller.content}}
-	{{#each category in controller}}
-	<li><a href="#" {{bindAttr style="category.leftMarginStyle"}} {{action selectCategory category target="controller"}}>{{category.categoryName}}</a></li>
-	{{/each}}
-	{{/if}}
-
-
-	
+<li class="nav-header">Category Filter</li>
+{{#if selectedCategory}}
+<li><a href="#"  {{action viewAllCategories target="controller"}} id="allCategories">All Categories</a></li>
+{{#each categoryParent in selectedCategories}}
+<li><a href="#"  {{bindAttr style="categoryParent.leftMarginStyle"}} {{action selectCategory categoryParent target="controller"}}>{{categoryParent.categoryName}}</a></li>
+{{/each}}
+{{/if}}
+{{#each category in controller}}
+<li><a href="#" {{bindAttr style="category.leftMarginStyle"}} {{action selectCategory category target="controller"}}>{{category.categoryName}}</a></li>
+{{/each}}

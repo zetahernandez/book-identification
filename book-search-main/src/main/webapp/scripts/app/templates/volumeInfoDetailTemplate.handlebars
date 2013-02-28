@@ -1,34 +1,33 @@
-<div id="main--{{unbound volumeInfo.id}}" class="volume-info">
+<div id="main--{{unbound volumeInfo.id}}" class="row-fluid">
 	{{#if volumeInfo.imageLinks.maxSizeImage}}
-	<div class="volume-image">
-			<a dir="ltr">
-			<img border="0"
-				class="coverthumb hover-card-attach-point"
-				src={{unbound volumeInfo.imageLinks.maxSizeImage}}
-				title={{unbound volumeInfo.title}}
-			</a>
+	<div class="span4">
+		<img  {{bindAttr src="volumeInfo.imageLinks.maxSizeImage"}}
+			{{bindAttr title="volumeInfo.title"}}>	
 	</div>
 	{{/if}}
-	<div class="volume-info-data">
-		<div class="volume-info-title">
+	<div class="span6">
+		<div>
 			<h2>
-				<a href="#"><span
-					dir="ltr" class="gb-volume-title">{{unbound volumeInfo.title}}</span>&lrm;</a>
+				<span dir="ltr" >{{unbound volumeInfo.title}}</span>&lrm;
 			</h2>
 		</div>
-		<div class="volume-info-content">
+		{{#if path}}
+					<button  class="btn btn-primary"  {{action openPdf volumeInfo }}>Open Book</button >
+				{{/if}}
+				<button  class="btn btn-primary" {{action "cancel"}}>Back</button >
+		<div>
 			<div>
-				<span class="volume-info-author">
+				<span>
 					<span style="color: #676767">
 						<a href="#">
 						   <span dir="ltr">{{unbound volumeInfo.authors}}</span>
 						</a> 
-						- {{volumeInfo.publishedDate}} -
+						- {{volumeInfo.formattedPublishedDate}} -
 					</span>
 				</span> 
 				{{#if volumeInfo.description}}
 				<div>
-					<div dir="ltr" class="snippet sa more-block">
+					<div dir="ltr">
 							<p>{{volumeInfo.unescapedDescription}}</p>
 					</div>
 				</div>
@@ -44,19 +43,15 @@
 				{{/if}}
 				{{#if volumeInfo.industryIdentifiers}}
 					{{#each isbn in volumeInfo.industryIdentifiers}}
-					<div dir="ltr" class="snippet sa">
+					<div dir="ltr">
 						{{isbn.type}}: {{isbn.identifier}}
 					</div>
 					{{/each}}
 				{{/if}}
 				{{#if path}}
-					<div dir="ltr" class="open-book">
-						<a href="#" {{action openPdf volumeInfo target="controller" }}>Open Book</a>
-					</div>
+					<button  class="btn btn-primary"  {{action openPdf volumeInfo }}>Open Book</button >
 				{{/if}}
-				<div dir="ltr" class="back">
-					<a href="#" {{action back target="controller" }}>Back</a>
-				</div>
+					<button  class="btn btn-primary" {{action "cancel"}}>Back</button >
 			</div>
 		</div>
 	</div>

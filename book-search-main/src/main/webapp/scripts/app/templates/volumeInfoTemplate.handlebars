@@ -1,41 +1,31 @@
-<div id="main--{{unbound volume.id}}" class="volume-info">
-	{{#if volume.volumeInfo.imageLinks.thumbnail}} 
-	<div class="volume-image-thumb">
-		<a href="">
-			<img border="0"
-			src={{unbound volume.volumeInfo.imageLinks.thumbnail}} {{action
-				showVolumeInfo volume target="controller"}} title=
-				volume.volumeInfo.title}} class="coverthumb hover-card-attach-point"
-				alt={{unboundvolume.volumeInfo.title}}
-			</a>
+<div id="main--{{unbound volume.id}}" class="row-fluid">
+	<div class="span2">
+		{{#if volume.volumeInfo.imageLinks.thumbnail}} 		
+				<img border="0" {{bindAttr src="volume.volumeInfo.imageLinks.thumbnail"}} {{action "openVolume"  volume}} {{ bindAttr title="volume.volumeInfo.title"}} {{ bindAttr alt="unbound volume.volumeInfo.title"}}>
+		{{/if}}
 	</div>
-	{{/if}}
-	<div class="volume-info-data">
-		<div class="volume-info-title">
-			<h2>
-				<a href="#" {{action showVolumeInfo volume target="controller"}}><span
-					dir="ltr" class="gb-volume-title">{{unbound
-						volume.volumeInfo.title}}</span>&lrm;</a>
-			</h2>
+	<div class="span10">
+		<div>
+			<h3>
+				<a href="" {{action "openVolume" volume}}>{{volume.volumeInfo.title}}</a>
+			</h3>
 		</div>
-		<div class="volume-info-content">
+		<div>
 			<div>
-				<span class="volume-info-author">
+				<span>
 					<span style="color: #676767">
 						<a href="#">
 						   <span dir="ltr">{{unbound volume.volumeInfo.authors}}</span>
 						</a> 
-						- {{volume.volumeInfo.publishedDate}} -
+						- {{volume.volumeInfo.formattedPublishedDate}} -
 					</span>
 				</span> 
 				{{#if volume.volumeInfo.description}}
-				<div>
-					<div class="more-less">
-						<div dir="ltr" class="snippet sa more-block">
-							<p>{{volume.volumeInfo.unescapedDescription}}</p>
-						</div>
+					<div class="sidebar-box">
+						<p class="description">{{volume.volumeInfo.unescapedDescription}}</p>
+						
 					</div>
-				</div>
+					<p class="text-right"><button class="btn btn-link" type="button" {{action "readMore" target=view}}>Read More</button></p>	
 				{{/if}}
 			</div>
 		</div>

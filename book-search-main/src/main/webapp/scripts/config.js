@@ -13,20 +13,28 @@ define({
 			deps: ['jquery'],
 			exports: 'inview'
 		},
+		'handlebars' : {
+			exports: 'handlebars'
+		},
+		'bootstrap' : {
+			deps: ['jquery']
+		},
 		waitSeconds: 15
 	},
 	paths: {
 		'App': 'app/main',
 		'models': 'app/models',
 		'views': 'app/views',
-		'router': 'app/views',
+		'routes': 'app/routes',
 		'controllers': 'app/controllers',
 		'templates': 'app/templates',
+
 		/* libs */
-		'jquery': 'libs/jquery/1.7.2/jquery',
-		'inview': 'libs/jquery/inview/jquery.inview',
-		'handlebars': 'libs/handlebars/1.0.beta.6/handlebars',
-		'ember': 'libs/ember/1.0.0-pre2.1/ember',
-		'ember_data': 'libs/ember/data/ember-data-latest'
+		'jquery': 'libs/jquery',
+		'inview': 'libs/jquery.inview',
+		'handlebars': 'libs/handlebars',
+		'ember': 'libs/ember',
+		'ember_data': 'libs/ember-data',
+		'bootstrap' : 'libs/bootstrap/js/bootstrap'
 	}
 });

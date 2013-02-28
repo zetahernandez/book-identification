@@ -1,7 +1,5 @@
-define(["require", "ember", "ember_data"], function (require, Ember) {
+define(["ember", "ember_data"], function(Ember,DS) {
 	var IndustryIdentifier = DS.Model.extend({
-		primaryKey: 'id',
-		id: DS.attr('number'),
 		identifier: DS.attr('string'),
 		type: DS.attr('string')
 	});
