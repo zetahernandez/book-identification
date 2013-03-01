@@ -8,9 +8,9 @@
     <a class="brand" href="#">BOOKS</a>
     <div class="nav-collapse collapse">
       <ul class="nav">
-        <li class="active"><a>Home</a></li>
+        <li class="active">{{#linkTo index}}Home{{/linkTo}}</li>
         <li><a>About</a></li>
-        <li><a>Contact</a></li>
+        <li>{{#linkTo uploadBooks}}Upluload{{/linkTo}}</li>
         <li> 
         	<div class="navbar-form pull-right">
   {{view BooksApp.SearchVolumeView controllerBinding=controllers.searchVolume placeholder="search"}}

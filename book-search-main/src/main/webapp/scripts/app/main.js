@@ -27,6 +27,7 @@ function (IndexView, HeaderView, VolumeListView, CategoryListView, VolumeInfoVie
 	App.IndexRoute = IndexRoute;
 	App.VolumesRoute = VolumesRoute;
 	App.VolumeInfoDetailRoute = VolumeInfoDetailRoute;
+
 	DS.RESTAdapter.configure("plurals", {
 		'volume': 'volumes',
 		'volume_info': 'volumesInfo',
@@ -34,11 +35,13 @@ function (IndexView, HeaderView, VolumeListView, CategoryListView, VolumeInfoVie
 		'industry_identifier': 'industryIdentifiers',
 		'image_link': 'imageLinks'
 	});
+
 	DS.RESTAdapter.map('BooksApp.Volume', {
 		volumeInfo: {
 			embedded: 'load'
 		}
 	});
+
 	DS.RESTAdapter.map('BooksApp.VolumeInfo', {
 		imageLinks: {
 			embedded: 'load'
@@ -47,6 +50,7 @@ function (IndexView, HeaderView, VolumeListView, CategoryListView, VolumeInfoVie
 			embedded: 'load'
 		}
 	});
+
 	DS.RESTAdapter.map('BooksApp.Category', {
 		subCategories: {
 			embedded: 'load'

@@ -2,7 +2,7 @@ define(["ember", "text!templates/volumeInfoDetailTemplate.handlebars"], function
 	var VolumeInfoDetailView = Ember.View.extend({
 		defaultTemplate: Ember.Handlebars.compile(volumeInfoDetailTemplate),
 		didInsertElement: function () {
-			Ember.$('html, body').animate({
+			Ember.$('.scrollable-content').animate({
 				scrollTop: 0
 			}, 2000);
 		}
