@@ -1,4 +1,4 @@
-define(["ember", "ember_data"], function(Ember,DS) {
+define(["ember", "ember_data"], function (Ember, DS) {
 	var IamgeLink = DS.Model.extend({
 		thumbnail: DS.attr('string'),
 		smallThumbnail: DS.attr('string'),
@@ -8,11 +8,11 @@ define(["ember", "ember_data"], function(Ember,DS) {
 		extraLarge: DS.attr('string'),
 
 		maxSizeImage: function () {
-			if(this.get('large') !== null) return this.get('large');
-			if(this.get('medium') !== null) return this.get('medium');
-			if(this.get('small') !== null) return this.get('small');
-			if(this.get('smallThumbnail') !== null) return this.get('smallThumbnail');
-			if(this.get('thumbnail') !== null) return this.get('thumbnail');
+			if (this.get('large') !== null) return this.get('large');
+			if (this.get('medium') !== null) return this.get('medium');
+			if (this.get('small') !== null) return this.get('small');
+			if (this.get('smallThumbnail') !== null) return this.get('smallThumbnail');
+			if (this.get('thumbnail') !== null) return this.get('thumbnail');
 		}.property()
 	});
 	return IamgeLink;

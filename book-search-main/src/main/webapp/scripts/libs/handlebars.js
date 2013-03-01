@@ -63,8 +63,7 @@ this.Handlebars = {};
     functionType = "[object Function]";
 
   Handlebars.registerHelper('blockHelperMissing', function (context, options) {
-    var inverse = options.inverse ||
-    function () {}, fn = options.fn;
+    var inverse = options.inverse || function () {}, fn = options.fn;
 
 
     var ret = "";
@@ -91,8 +90,7 @@ this.Handlebars = {};
 
   Handlebars.K = function () {};
 
-  Handlebars.createFrame = Object.create ||
-  function (object) {
+  Handlebars.createFrame = Object.create || function (object) {
     Handlebars.K.prototype = object;
     var obj = new Handlebars.K();
     Handlebars.K.prototype = null;
@@ -324,157 +322,157 @@ var handlebars = (function () {
 
       var $0 = $$.length - 1;
       switch (yystate) {
-      case 1:
-        return $$[$0 - 1];
-        break;
-      case 2:
-        this.$ = new yy.ProgramNode([], $$[$0]);
-        break;
-      case 3:
-        this.$ = new yy.ProgramNode($$[$0 - 2], $$[$0]);
-        break;
-      case 4:
-        this.$ = new yy.ProgramNode($$[$0 - 1], []);
-        break;
-      case 5:
-        this.$ = new yy.ProgramNode($$[$0]);
-        break;
-      case 6:
-        this.$ = new yy.ProgramNode([], []);
-        break;
-      case 7:
-        this.$ = new yy.ProgramNode([]);
-        break;
-      case 8:
-        this.$ = [$$[$0]];
-        break;
-      case 9:
-        $$[$0 - 1].push($$[$0]);
-        this.$ = $$[$0 - 1];
-        break;
-      case 10:
-        this.$ = new yy.BlockNode($$[$0 - 2], $$[$0 - 1].inverse, $$[$0 - 1], $$[$0]);
-        break;
-      case 11:
-        this.$ = new yy.BlockNode($$[$0 - 2], $$[$0 - 1], $$[$0 - 1].inverse, $$[$0]);
-        break;
-      case 12:
-        this.$ = $$[$0];
-        break;
-      case 13:
-        this.$ = $$[$0];
-        break;
-      case 14:
-        this.$ = new yy.ContentNode($$[$0]);
-        break;
-      case 15:
-        this.$ = new yy.CommentNode($$[$0]);
-        break;
-      case 16:
-        this.$ = new yy.MustacheNode($$[$0 - 1][0], $$[$0 - 1][1]);
-        break;
-      case 17:
-        this.$ = new yy.MustacheNode($$[$0 - 1][0], $$[$0 - 1][1]);
-        break;
-      case 18:
-        this.$ = $$[$0 - 1];
-        break;
-      case 19:
-        this.$ = new yy.MustacheNode($$[$0 - 1][0], $$[$0 - 1][1]);
-        break;
-      case 20:
-        this.$ = new yy.MustacheNode($$[$0 - 1][0], $$[$0 - 1][1], true);
-        break;
-      case 21:
-        this.$ = new yy.PartialNode($$[$0 - 1]);
-        break;
-      case 22:
-        this.$ = new yy.PartialNode($$[$0 - 2], $$[$0 - 1]);
-        break;
-      case 23:
-        break;
-      case 24:
-        this.$ = [
-          [$$[$0 - 2]].concat($$[$0 - 1]), $$[$0]
-        ];
-        break;
-      case 25:
-        this.$ = [
-          [$$[$0 - 1]].concat($$[$0]), null];
-        break;
-      case 26:
-        this.$ = [
-          [$$[$0 - 1]], $$[$0]
-        ];
-        break;
-      case 27:
-        this.$ = [
-          [$$[$0]], null];
-        break;
-      case 28:
-        this.$ = [
-          [new yy.DataNode($$[$0])], null];
-        break;
-      case 29:
-        $$[$0 - 1].push($$[$0]);
-        this.$ = $$[$0 - 1];
-        break;
-      case 30:
-        this.$ = [$$[$0]];
-        break;
-      case 31:
-        this.$ = $$[$0];
-        break;
-      case 32:
-        this.$ = new yy.StringNode($$[$0]);
-        break;
-      case 33:
-        this.$ = new yy.IntegerNode($$[$0]);
-        break;
-      case 34:
-        this.$ = new yy.BooleanNode($$[$0]);
-        break;
-      case 35:
-        this.$ = new yy.DataNode($$[$0]);
-        break;
-      case 36:
-        this.$ = new yy.HashNode($$[$0]);
-        break;
-      case 37:
-        $$[$0 - 1].push($$[$0]);
-        this.$ = $$[$0 - 1];
-        break;
-      case 38:
-        this.$ = [$$[$0]];
-        break;
-      case 39:
-        this.$ = [$$[$0 - 2], $$[$0]];
-        break;
-      case 40:
-        this.$ = [$$[$0 - 2], new yy.StringNode($$[$0])];
-        break;
-      case 41:
-        this.$ = [$$[$0 - 2], new yy.IntegerNode($$[$0])];
-        break;
-      case 42:
-        this.$ = [$$[$0 - 2], new yy.BooleanNode($$[$0])];
-        break;
-      case 43:
-        this.$ = [$$[$0 - 2], new yy.DataNode($$[$0])];
-        break;
-      case 44:
-        this.$ = new yy.PartialNameNode($$[$0]);
-        break;
-      case 45:
-        this.$ = new yy.IdNode($$[$0]);
-        break;
-      case 46:
-        $$[$0 - 2].push($$[$0]);
-        this.$ = $$[$0 - 2];
-        break;
-      case 47:
-        this.$ = [$$[$0]];
-        break;
+        case 1:
+          return $$[$0 - 1];
+          break;
+        case 2:
+          this.$ = new yy.ProgramNode([], $$[$0]);
+          break;
+        case 3:
+          this.$ = new yy.ProgramNode($$[$0 - 2], $$[$0]);
+          break;
+        case 4:
+          this.$ = new yy.ProgramNode($$[$0 - 1], []);
+          break;
+        case 5:
+          this.$ = new yy.ProgramNode($$[$0]);
+          break;
+        case 6:
+          this.$ = new yy.ProgramNode([], []);
+          break;
+        case 7:
+          this.$ = new yy.ProgramNode([]);
+          break;
+        case 8:
+          this.$ = [$$[$0]];
+          break;
+        case 9:
+          $$[$0 - 1].push($$[$0]);
+          this.$ = $$[$0 - 1];
+          break;
+        case 10:
+          this.$ = new yy.BlockNode($$[$0 - 2], $$[$0 - 1].inverse, $$[$0 - 1], $$[$0]);
+          break;
+        case 11:
+          this.$ = new yy.BlockNode($$[$0 - 2], $$[$0 - 1], $$[$0 - 1].inverse, $$[$0]);
+          break;
+        case 12:
+          this.$ = $$[$0];
+          break;
+        case 13:
+          this.$ = $$[$0];
+          break;
+        case 14:
+          this.$ = new yy.ContentNode($$[$0]);
+          break;
+        case 15:
+          this.$ = new yy.CommentNode($$[$0]);
+          break;
+        case 16:
+          this.$ = new yy.MustacheNode($$[$0 - 1][0], $$[$0 - 1][1]);
+          break;
+        case 17:
+          this.$ = new yy.MustacheNode($$[$0 - 1][0], $$[$0 - 1][1]);
+          break;
+        case 18:
+          this.$ = $$[$0 - 1];
+          break;
+        case 19:
+          this.$ = new yy.MustacheNode($$[$0 - 1][0], $$[$0 - 1][1]);
+          break;
+        case 20:
+          this.$ = new yy.MustacheNode($$[$0 - 1][0], $$[$0 - 1][1], true);
+          break;
+        case 21:
+          this.$ = new yy.PartialNode($$[$0 - 1]);
+          break;
+        case 22:
+          this.$ = new yy.PartialNode($$[$0 - 2], $$[$0 - 1]);
+          break;
+        case 23:
+          break;
+        case 24:
+          this.$ = [
+            [$$[$0 - 2]].concat($$[$0 - 1]), $$[$0]
+          ];
+          break;
+        case 25:
+          this.$ = [
+            [$$[$0 - 1]].concat($$[$0]), null];
+          break;
+        case 26:
+          this.$ = [
+            [$$[$0 - 1]], $$[$0]
+          ];
+          break;
+        case 27:
+          this.$ = [
+            [$$[$0]], null];
+          break;
+        case 28:
+          this.$ = [
+            [new yy.DataNode($$[$0])], null];
+          break;
+        case 29:
+          $$[$0 - 1].push($$[$0]);
+          this.$ = $$[$0 - 1];
+          break;
+        case 30:
+          this.$ = [$$[$0]];
+          break;
+        case 31:
+          this.$ = $$[$0];
+          break;
+        case 32:
+          this.$ = new yy.StringNode($$[$0]);
+          break;
+        case 33:
+          this.$ = new yy.IntegerNode($$[$0]);
+          break;
+        case 34:
+          this.$ = new yy.BooleanNode($$[$0]);
+          break;
+        case 35:
+          this.$ = new yy.DataNode($$[$0]);
+          break;
+        case 36:
+          this.$ = new yy.HashNode($$[$0]);
+          break;
+        case 37:
+          $$[$0 - 1].push($$[$0]);
+          this.$ = $$[$0 - 1];
+          break;
+        case 38:
+          this.$ = [$$[$0]];
+          break;
+        case 39:
+          this.$ = [$$[$0 - 2], $$[$0]];
+          break;
+        case 40:
+          this.$ = [$$[$0 - 2], new yy.StringNode($$[$0])];
+          break;
+        case 41:
+          this.$ = [$$[$0 - 2], new yy.IntegerNode($$[$0])];
+          break;
+        case 42:
+          this.$ = [$$[$0 - 2], new yy.BooleanNode($$[$0])];
+          break;
+        case 43:
+          this.$ = [$$[$0 - 2], new yy.DataNode($$[$0])];
+          break;
+        case 44:
+          this.$ = new yy.PartialNameNode($$[$0]);
+          break;
+        case 45:
+          this.$ = new yy.IdNode($$[$0]);
+          break;
+        case 46:
+          $$[$0 - 2].push($$[$0]);
+          this.$ = $$[$0 - 2];
+          break;
+        case 47:
+          this.$ = [$$[$0]];
+          break;
       }
     },
     table: [{
@@ -1034,7 +1032,7 @@ var handlebars = (function () {
         return token;
       }
       var symbol, preErrorSymbol, state, action, a, r, yyval = {},
-        p, len, newState, expected;
+      p, len, newState, expected;
       while (true) {
         state = stack[stack.length - 1];
         if (this.defaultActions[state]) {
@@ -1071,52 +1069,52 @@ var handlebars = (function () {
           throw new Error("Parse Error: multiple actions possible at state: " + state + ", token: " + symbol);
         }
         switch (action[0]) {
-        case 1:
-          stack.push(symbol);
-          vstack.push(this.lexer.yytext);
-          lstack.push(this.lexer.yylloc);
-          stack.push(action[1]);
-          symbol = null;
-          if (!preErrorSymbol) {
-            yyleng = this.lexer.yyleng;
-            yytext = this.lexer.yytext;
-            yylineno = this.lexer.yylineno;
-            yyloc = this.lexer.yylloc;
-            if (recovering > 0) recovering--;
-          } else {
-            symbol = preErrorSymbol;
-            preErrorSymbol = null;
-          }
-          break;
-        case 2:
-          len = this.productions_[action[1]][1];
-          yyval.$ = vstack[vstack.length - len];
-          yyval._$ = {
-            first_line: lstack[lstack.length - (len || 1)].first_line,
-            last_line: lstack[lstack.length - 1].last_line,
-            first_column: lstack[lstack.length - (len || 1)].first_column,
-            last_column: lstack[lstack.length - 1].last_column
-          };
-          if (ranges) {
-            yyval._$.range = [lstack[lstack.length - (len || 1)].range[0], lstack[lstack.length - 1].range[1]];
-          }
-          r = this.performAction.call(yyval, yytext, yyleng, yylineno, this.yy, action[1], vstack, lstack);
-          if (typeof r !== "undefined") {
-            return r;
-          }
-          if (len) {
-            stack = stack.slice(0, -1 * len * 2);
-            vstack = vstack.slice(0, -1 * len);
-            lstack = lstack.slice(0, -1 * len);
-          }
-          stack.push(this.productions_[action[1]][0]);
-          vstack.push(yyval.$);
-          lstack.push(yyval._$);
-          newState = table[stack[stack.length - 2]][stack[stack.length - 1]];
-          stack.push(newState);
-          break;
-        case 3:
-          return true;
+          case 1:
+            stack.push(symbol);
+            vstack.push(this.lexer.yytext);
+            lstack.push(this.lexer.yylloc);
+            stack.push(action[1]);
+            symbol = null;
+            if (!preErrorSymbol) {
+              yyleng = this.lexer.yyleng;
+              yytext = this.lexer.yytext;
+              yylineno = this.lexer.yylineno;
+              yyloc = this.lexer.yylloc;
+              if (recovering > 0) recovering--;
+            } else {
+              symbol = preErrorSymbol;
+              preErrorSymbol = null;
+            }
+            break;
+          case 2:
+            len = this.productions_[action[1]][1];
+            yyval.$ = vstack[vstack.length - len];
+            yyval._$ = {
+              first_line: lstack[lstack.length - (len || 1)].first_line,
+              last_line: lstack[lstack.length - 1].last_line,
+              first_column: lstack[lstack.length - (len || 1)].first_column,
+              last_column: lstack[lstack.length - 1].last_column
+            };
+            if (ranges) {
+              yyval._$.range = [lstack[lstack.length - (len || 1)].range[0], lstack[lstack.length - 1].range[1]];
+            }
+            r = this.performAction.call(yyval, yytext, yyleng, yylineno, this.yy, action[1], vstack, lstack);
+            if (typeof r !== "undefined") {
+              return r;
+            }
+            if (len) {
+              stack = stack.slice(0, -1 * len * 2);
+              vstack = vstack.slice(0, -1 * len);
+              lstack = lstack.slice(0, -1 * len);
+            }
+            stack.push(this.productions_[action[1]][0]);
+            vstack.push(yyval.$);
+            lstack.push(yyval._$);
+            newState = table[stack[stack.length - 2]][stack[stack.length - 1]];
+            stack.push(newState);
+            break;
+          case 3:
+            return true;
         }
       }
       return true;
@@ -1300,124 +1298,124 @@ var handlebars = (function () {
 
       var YYSTATE = YY_START
       switch ($avoiding_name_collisions) {
-      case 0:
-        if (yy_.yytext.slice(-1) !== "\\") this.begin("mu");
-        if (yy_.yytext.slice(-1) === "\\") yy_.yytext = yy_.yytext.substr(0, yy_.yyleng - 1), this.begin("emu");
-        if (yy_.yytext) return 14;
+        case 0:
+          if (yy_.yytext.slice(-1) !== "\\") this.begin("mu");
+          if (yy_.yytext.slice(-1) === "\\") yy_.yytext = yy_.yytext.substr(0, yy_.yyleng - 1), this.begin("emu");
+          if (yy_.yytext) return 14;
 
-        break;
-      case 1:
-        return 14;
-        break;
-      case 2:
-        if (yy_.yytext.slice(-1) !== "\\") this.popState();
-        if (yy_.yytext.slice(-1) === "\\") yy_.yytext = yy_.yytext.substr(0, yy_.yyleng - 1);
-        return 14;
+          break;
+        case 1:
+          return 14;
+          break;
+        case 2:
+          if (yy_.yytext.slice(-1) !== "\\") this.popState();
+          if (yy_.yytext.slice(-1) === "\\") yy_.yytext = yy_.yytext.substr(0, yy_.yyleng - 1);
+          return 14;
 
-        break;
-      case 3:
-        yy_.yytext = yy_.yytext.substr(0, yy_.yyleng - 4);
-        this.popState();
-        return 15;
-        break;
-      case 4:
-        this.begin("par");
-        return 24;
-        break;
-      case 5:
-        return 16;
-        break;
-      case 6:
-        return 20;
-        break;
-      case 7:
-        return 19;
-        break;
-      case 8:
-        return 19;
-        break;
-      case 9:
-        return 23;
-        break;
-      case 10:
-        return 23;
-        break;
-      case 11:
-        this.popState();
-        this.begin('com');
-        break;
-      case 12:
-        yy_.yytext = yy_.yytext.substr(3, yy_.yyleng - 5);
-        this.popState();
-        return 15;
-        break;
-      case 13:
-        return 22;
-        break;
-      case 14:
-        return 36;
-        break;
-      case 15:
-        return 35;
-        break;
-      case 16:
-        return 35;
-        break;
-      case 17:
-        return 39;
-        break;
-      case 18:
-        /*ignore whitespace*/
-        break;
-      case 19:
-        this.popState();
-        return 18;
-        break;
-      case 20:
-        this.popState();
-        return 18;
-        break;
-      case 21:
-        yy_.yytext = yy_.yytext.substr(1, yy_.yyleng - 2).replace(/\\"/g, '"');
-        return 30;
-        break;
-      case 22:
-        yy_.yytext = yy_.yytext.substr(1, yy_.yyleng - 2).replace(/\\'/g, "'");
-        return 30;
-        break;
-      case 23:
-        yy_.yytext = yy_.yytext.substr(1);
-        return 28;
-        break;
-      case 24:
-        return 32;
-        break;
-      case 25:
-        return 32;
-        break;
-      case 26:
-        return 31;
-        break;
-      case 27:
-        return 35;
-        break;
-      case 28:
-        yy_.yytext = yy_.yytext.substr(1, yy_.yyleng - 2);
-        return 35;
-        break;
-      case 29:
-        return 'INVALID';
-        break;
-      case 30:
-        /*ignore whitespace*/
-        break;
-      case 31:
-        this.popState();
-        return 37;
-        break;
-      case 32:
-        return 5;
-        break;
+          break;
+        case 3:
+          yy_.yytext = yy_.yytext.substr(0, yy_.yyleng - 4);
+          this.popState();
+          return 15;
+          break;
+        case 4:
+          this.begin("par");
+          return 24;
+          break;
+        case 5:
+          return 16;
+          break;
+        case 6:
+          return 20;
+          break;
+        case 7:
+          return 19;
+          break;
+        case 8:
+          return 19;
+          break;
+        case 9:
+          return 23;
+          break;
+        case 10:
+          return 23;
+          break;
+        case 11:
+          this.popState();
+          this.begin('com');
+          break;
+        case 12:
+          yy_.yytext = yy_.yytext.substr(3, yy_.yyleng - 5);
+          this.popState();
+          return 15;
+          break;
+        case 13:
+          return 22;
+          break;
+        case 14:
+          return 36;
+          break;
+        case 15:
+          return 35;
+          break;
+        case 16:
+          return 35;
+          break;
+        case 17:
+          return 39;
+          break;
+        case 18:
+          /*ignore whitespace*/
+          break;
+        case 19:
+          this.popState();
+          return 18;
+          break;
+        case 20:
+          this.popState();
+          return 18;
+          break;
+        case 21:
+          yy_.yytext = yy_.yytext.substr(1, yy_.yyleng - 2).replace(/\\"/g, '"');
+          return 30;
+          break;
+        case 22:
+          yy_.yytext = yy_.yytext.substr(1, yy_.yyleng - 2).replace(/\\'/g, "'");
+          return 30;
+          break;
+        case 23:
+          yy_.yytext = yy_.yytext.substr(1);
+          return 28;
+          break;
+        case 24:
+          return 32;
+          break;
+        case 25:
+          return 32;
+          break;
+        case 26:
+          return 31;
+          break;
+        case 27:
+          return 35;
+          break;
+        case 28:
+          yy_.yytext = yy_.yytext.substr(1, yy_.yyleng - 2);
+          return 35;
+          break;
+        case 29:
+          return 'INVALID';
+          break;
+        case 30:
+          /*ignore whitespace*/
+          break;
+        case 31:
+          this.popState();
+          return 37;
+          break;
+        case 32:
+          return 5;
+          break;
       }
     };
     lexer.rules = [/^(?:[^\x00]*?(?=(\{\{)))/, /^(?:[^\x00]+)/, /^(?:[^\x00]{2,}?(?=(\{\{|$)))/, /^(?:[\s\S]*?--\}\})/, /^(?:\{\{>)/, /^(?:\{\{#)/, /^(?:\{\{\/)/, /^(?:\{\{\^)/, /^(?:\{\{\s*else\b)/, /^(?:\{\{\{)/, /^(?:\{\{&)/, /^(?:\{\{!--)/, /^(?:\{\{![\s\S]*?\}\})/, /^(?:\{\{)/, /^(?:=)/, /^(?:\.(?=[} ]))/, /^(?:\.\.)/, /^(?:[\/.])/, /^(?:\s+)/, /^(?:\}\}\})/, /^(?:\}\})/, /^(?:"(\\["]|[^"])*")/, /^(?:'(\\[']|[^'])*')/, /^(?:@[a-zA-Z]+)/, /^(?:true(?=[}\s]))/, /^(?:false(?=[}\s]))/, /^(?:[0-9]+(?=[}\s]))/, /^(?:[a-zA-Z0-9_$-]+(?=[=}\s\/.]))/, /^(?:\[[^\]]*\])/, /^(?:.)/, /^(?:\s+)/, /^(?:[a-zA-Z0-9_$-/]+)/, /^(?:$)/];
@@ -1513,10 +1511,10 @@ Handlebars.print = function (ast) {
   };
 
   var verifyMatch = function (open, close) {
-      if (open.original !== close.original) {
-        throw new Handlebars.Exception(open.original + " doesn't match " + close.original);
-      }
-    };
+    if (open.original !== close.original) {
+      throw new Handlebars.Exception(open.original + " doesn't match " + close.original);
+    }
+  };
 
   Handlebars.AST.BlockNode = function (mustache, program, inverse, close) {
     verifyMatch(mustache.id, close);
@@ -1643,8 +1641,8 @@ Handlebars.SafeString.prototype.toString = function () {
   var possible = /[&<>"'`]/;
 
   var escapeChar = function (chr) {
-      return escape[chr] || "&amp;";
-    };
+    return escape[chr] || "&amp;";
+  };
 
   Handlebars.Utils = {
     escapeExpression: function (string) {
@@ -2087,8 +2085,8 @@ Handlebars.JavaScriptCompiler = function () {};
   };
 
   var Literal = function (value) {
-      this.value = value;
-    };
+    this.value = value;
+  };
 
   JavaScriptCompiler.prototype = {
     // PUBLIC API: You can override these methods in a subclass to provide

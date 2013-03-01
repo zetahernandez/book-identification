@@ -12,7 +12,7 @@ define(['module'], function (module) {
     'use strict';
 
     var text, fs,
-        progIds = ['Msxml2.XMLHTTP', 'Microsoft.XMLHTTP', 'Msxml2.XMLHTTP.4.0'],
+    progIds = ['Msxml2.XMLHTTP', 'Microsoft.XMLHTTP', 'Msxml2.XMLHTTP.4.0'],
         xmlRegExp = /^\s*<\?xml(\s)+version=[\'\"](\d)*.(\d)*[\'\"](\s)*\?>/im,
         bodyRegExp = /<body[^>]*>\s*([\s\S]+)\s*<\/body>/im,
         hasLocation = typeof location !== 'undefined' && location.href,
@@ -65,7 +65,7 @@ define(['module'], function (module) {
                     } catch (e) {}
 
                     if (xhr) {
-                        progIds = [progId];  // so faster next time
+                        progIds = [progId]; // so faster next time
                         break;
                     }
                 }
@@ -83,7 +83,8 @@ define(['module'], function (module) {
          * where strip is a boolean.
          */
         parseName: function (name) {
-            var strip = false, index = name.indexOf("."),
+            var strip = false,
+                index = name.indexOf("."),
                 modName = name.substring(0, index),
                 ext = name.substring(index + 1, name.length);
 
@@ -114,7 +115,7 @@ define(['module'], function (module) {
          */
         useXhr: function (url, protocol, hostname, port) {
             var uProtocol, uHostName, uPort,
-                match = text.xdRegExp.exec(url);
+            match = text.xdRegExp.exec(url);
             if (!match) {
                 return true;
             }
@@ -125,9 +126,7 @@ define(['module'], function (module) {
             uPort = uHostName[1];
             uHostName = uHostName[0];
 
-            return (!uProtocol || uProtocol === protocol) &&
-                   (!uHostName || uHostName.toLowerCase() === hostname.toLowerCase()) &&
-                   ((!uPort && !uHostName) || uPort === port);
+            return (!uProtocol || uProtocol === protocol) && (!uHostName || uHostName.toLowerCase() === hostname.toLowerCase()) && ((!uPort && !uHostName) || uPort === port);
         },
 
         finishLoad: function (name, strip, content, onLoad) {
@@ -158,8 +157,7 @@ define(['module'], function (module) {
             var parsed = text.parseName(name),
                 nonStripName = parsed.moduleName + '.' + parsed.ext,
                 url = req.toUrl(nonStripName),
-                useXhr = (masterConfig.useXhr) ||
-                         text.useXhr;
+                useXhr = (masterConfig.useXhr) || text.useXhr;
 
             //Load the text. Use XHR if possible and in a browser.
             if (!hasLocation || useXhr(url, defaultProtocol, defaultHostName, defaultPort)) {
@@ -177,7 +175,7 @@ define(['module'], function (module) {
                 //!strip part to avoid file system issues.
                 req([nonStripName], function (content) {
                     text.finishLoad(parsed.moduleName + '.' + parsed.ext,
-                                    parsed.strip, content, onLoad);
+                    parsed.strip, content, onLoad);
                 });
             }
         },
@@ -186,9 +184,8 @@ define(['module'], function (module) {
             if (buildMap.hasOwnProperty(moduleName)) {
                 var content = text.jsEscape(buildMap[moduleName]);
                 write.asModule(pluginName + "!" + moduleName,
-                               "define(function () { return '" +
-                                   content +
-                               "';});\n");
+                    "define(function () { return '" + content +
+                    "';});\n");
             }
         },
 
@@ -197,8 +194,7 @@ define(['module'], function (module) {
                 nonStripName = parsed.moduleName + '.' + parsed.ext,
                 //Use a '.js' file name so that it indicates it is a
                 //script that can be loaded across domains.
-                fileName = req.toUrl(parsed.moduleName + '.' +
-                                     parsed.ext) + '.js';
+                fileName = req.toUrl(parsed.moduleName + '.' + parsed.ext) + '.js';
 
             //Leverage own load() method to load plugin value, but only
             //write out values that do not have the strip argument,
@@ -219,10 +215,7 @@ define(['module'], function (module) {
         }
     };
 
-    if (masterConfig.env === 'node' || (!masterConfig.env &&
-            typeof process !== "undefined" &&
-            process.versions &&
-            !!process.versions.node)) {
+    if (masterConfig.env === 'node' || (!masterConfig.env && typeof process !== "undefined" && process.versions && !! process.versions.node)) {
         //Using special require.nodeRequire, something added by r.js.
         fs = require.nodeRequire('fs');
 
@@ -234,8 +227,7 @@ define(['module'], function (module) {
             }
             callback(file);
         };
-    } else if (masterConfig.env === 'xhr' || (!masterConfig.env &&
-            text.createXhr())) {
+    } else if (masterConfig.env === 'xhr' || (!masterConfig.env && text.createXhr())) {
         text.get = function (url, callback, errback) {
             var xhr = text.createXhr();
             xhr.open('GET', url, true);
@@ -263,12 +255,11 @@ define(['module'], function (module) {
             };
             xhr.send(null);
         };
-    } else if (masterConfig.env === 'rhino' || (!masterConfig.env &&
-            typeof Packages !== 'undefined' && typeof java !== 'undefined')) {
+    } else if (masterConfig.env === 'rhino' || (!masterConfig.env && typeof Packages !== 'undefined' && typeof java !== 'undefined')) {
         //Why Java, why is this so awkward?
         text.get = function (url, callback) {
             var stringBuffer, line,
-                encoding = "utf-8",
+            encoding = "utf-8",
                 file = new java.io.File(url),
                 lineSeparator = java.lang.System.getProperty("line.separator"),
                 input = new java.io.BufferedReader(new java.io.InputStreamReader(new java.io.FileInputStream(file), encoding)),

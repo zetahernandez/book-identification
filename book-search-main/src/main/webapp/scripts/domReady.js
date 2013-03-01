@@ -13,7 +13,7 @@ define(function () {
     'use strict';
 
     var isTop, testDiv, scrollIntervalId,
-        isBrowser = typeof window !== "undefined" && window.document,
+    isBrowser = typeof window !== "undefined" && window.document,
         isPageLoaded = !isBrowser,
         doc = isBrowser ? document : null,
         readyCalls = [];
@@ -40,6 +40,7 @@ define(function () {
     /**
      * Sets the page as loaded.
      */
+
     function pageLoaded() {
         if (!isPageLoaded) {
             isPageLoaded = true;
@@ -101,6 +102,7 @@ define(function () {
      * callback is called immediately.
      * @param {Function} callback
      */
+
     function domReady(callback) {
         if (isPageLoaded) {
             callback(doc);

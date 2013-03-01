@@ -13,10 +13,10 @@ define({
 			deps: ['jquery'],
 			exports: 'inview'
 		},
-		'handlebars' : {
+		'handlebars': {
 			exports: 'handlebars'
 		},
-		'bootstrap' : {
+		'bootstrap': {
 			deps: ['jquery']
 		},
 		waitSeconds: 15
@@ -35,6 +35,6 @@ define({
 		'handlebars': 'libs/handlebars',
 		'ember': 'libs/ember',
 		'ember_data': 'libs/ember-data',
-		'bootstrap' : 'libs/bootstrap/js/bootstrap'
+		'bootstrap': 'libs/bootstrap/js/bootstrap'
 	}
 });

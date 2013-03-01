@@ -1,6 +1,6 @@
 define(["ember"], function (Ember) {
 	var HeaderController = Ember.ArrayController.extend({
-		needs : ['searchVolume']
+		needs: ['searchVolume']
 	});
 
 	return HeaderController;

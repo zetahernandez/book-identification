@@ -1,7 +1,7 @@
-define(["ember"], function(Ember) {
+define(["ember"], function (Ember) {
 	var VolumeInfoDetailRoute = Ember.Route.extend({
 
-		renderTemplate: function(controller, model) {
+		renderTemplate: function (controller, model) {
 			this.render('volumeInfoDetail', {
 				outlet: 'center',
 				into: 'index',
@@ -9,7 +9,7 @@ define(["ember"], function(Ember) {
 				model: model
 			});
 		},
-		model: function(params) {
+		model: function (params) {
 			return BooksApp.Volume.find(params.volume_id);
 		}
 	});

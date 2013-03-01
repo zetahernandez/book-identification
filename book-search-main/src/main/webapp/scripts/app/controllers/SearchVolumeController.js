@@ -1,6 +1,6 @@
 define(["require", "ember"], function () {
 	var SearchVolumeController = Ember.ObjectController.extend({
-		needs : ['volumeList'],
+		needs: ['volumeList'],
 		searchText: '',
 
 		searchVolumes: function () {

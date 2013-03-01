@@ -20,7 +20,7 @@ define(["ember", "text!templates/volumeInfoTemplate.handlebars"], function (Embe
 				// FAIL totalHeight += $(this).css("margin-bottom");
 			});
 			// Set height to prevent instant jumpdown when max height is removed
-			console.log($sidebarBox);
+
 			$sidebarBox.css({
 				"height": $sidebarBox.height(),
 				"max-height": 9999
