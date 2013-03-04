@@ -24,6 +24,7 @@ define(["ember"], function (Ember) {
 				controller: volumeListController
 			});
 		}
+		
 	});
 	return IndexRoute;
 });

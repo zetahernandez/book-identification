@@ -2,7 +2,7 @@
 {{#if selectedCategory}}
 <li><a href="#"  {{action viewAllCategories target="controller"}} id="allCategories">All Categories</a></li>
 {{#each categoryParent in selectedCategories}}
-<li><a href="#"  {{bindAttr style="categoryParent.leftMarginStyle"}} {{action selectCategory categoryParent target="controller"}}>{{categoryParent.categoryName}}</a></li>
+<li><a href="#" {{bindAttr style="categoryParent.leftMarginStyle"}} {{action selectCategory categoryParent target="controller"}}>{{categoryParent.categoryName}}</a></li>
 {{/each}}
 {{/if}}
 {{#each category in controller}}

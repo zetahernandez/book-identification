@@ -24,7 +24,7 @@ define(["ember"], function(Ember) {
         drop: function(event) {
             event.stopPropagation();
             event.preventDefault();
-
+            this.$().removeClass('dropfocus');
             this.handleDrop(event);
         }
     });

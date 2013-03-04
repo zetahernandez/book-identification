@@ -4,12 +4,15 @@ define(["ember","models/FileToUpload"], function(Ember,FileToUpload) {
 		files: [],
 
 		processFiles: function(files) {
-			for (var i = files.length - 1; i >= 0; i--) {
+			for (var i = 0;  i < files.length; i++) {
 				tempFile = files[i];
 				if(tempFile.type === "application/pdf"){
-					this.get('files').pushObject(FileToUpload.create({file:tempFile}));
+					this.get('files').pushObject(FileToUpload.create({order:i, file:tempFile}));
 				}
 			}
+		},
+		clearListFile: function() {
+			this.set('files',[]);
 		}
 	});
 
