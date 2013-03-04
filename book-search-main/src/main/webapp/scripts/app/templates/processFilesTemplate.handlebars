@@ -1,0 +1,21 @@
+{{#if files}}
+<table class="table table-hover table-bordered">
+  <caption>Files Process</caption>
+  <thead>
+    <tr>
+      <th>File Name</th>
+      <th>Size</th>
+      <th>Identified</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each file in files}}
+    <tr>
+      <td>{{file.name}}</td>
+      <td>{{file.size}}</td>
+      <td>{{file.identified}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{/if}}

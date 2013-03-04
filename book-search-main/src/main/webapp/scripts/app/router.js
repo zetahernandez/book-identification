@@ -1,15 +1,15 @@
-define(["ember"], function (Ember) {
+ define(["ember"], function (Ember) {
 	var Router = function () {
 
 		this.resource('categories');
 
-		this.route("volumes", {
+		this.resource("volumes", {
 			path: "/volumes"
 		});
-		this.route("volumeInfoDetail", {
+		this.resource("volumeInfoDetail", {
 			path: "/volumes/:volume_id"
 		});
-		this.route("uploadBooks", {
+		this.resource("uploadBooks", {
 			path: "/uploadBook"
 		});
 	};

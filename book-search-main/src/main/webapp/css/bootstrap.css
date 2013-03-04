@@ -6236,3 +6236,24 @@ section {
  ::-webkit-scrollbar-track-piece{background-color:#FAFAFA;-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
  ::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#999;-webkit-border-radius:8px;}
  ::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#999;-webkit-border-radius:8px;}
+.dropbox {
+  height: 10em;
+  border: 2px solid #DDD;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background-color: #FEFFEC;
+  text-align: center;
+  color: #BBB;
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+}
+
+.roplabel {
+  position: relative;
+  top: 40%;
+}
+.dropfocus{
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0 none;  
+}

@@ -1,5 +1,5 @@
 define(["ember"], function (Ember) {
-	var HeaderController = Ember.ArrayController.extend({
+	var HeaderController = Ember.ObjectController.extend({
 		needs: ['searchVolume']
 	});
 
