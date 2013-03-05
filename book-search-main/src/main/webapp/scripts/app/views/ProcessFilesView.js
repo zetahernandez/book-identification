@@ -1,4 +1,4 @@
-define(["ember", "text!templates/processFilesTemplate.handlebars"], function(Ember, processFiles) {
+define(["ember", "text!templates/processFilesTemplate.handlebars","helpers/BindStyleHelper"], function(Ember, processFiles) {
 	var ProcessFilesView = Ember.View.extend({
 		tagName: "div",
 		classNames: ["ProcessFiles"],

@@ -60,7 +60,6 @@ function(IndexView, HeaderView, VolumeListView, CategoryListView, VolumeInfoView
 
 	DS.RESTAdapter.map('BooksApp.Category', {
 		subCategories: {
-
 			embedded: 'load'
 		}
 	});

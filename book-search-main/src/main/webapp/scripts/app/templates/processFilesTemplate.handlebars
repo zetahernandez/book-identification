@@ -8,19 +8,26 @@
         <th>File Name</th>
         <th>Size</th>
         <th>Progress</th>
-        <th>Identified</th>
       </tr>
     </thead>
     <tbody>
       {{#each file in files}}
       <tr>
-        <td>{{file.order}}</td>
+        <td>{{file.index}}</td>
         <td>{{file.name}}</td>
         <td>{{file.size}}</td>
         <td>
-          <div class="progress progress-striped active">
-            <div class="bar" style="width: 40%;"></div>
-          </div>
+          
+            {{#if file.isUploaded}}
+             <div><span class="label label-info">done!</span></div>
+            {{else}}  
+             {{#with  file}}
+              <div class="progress progress-striped active">
+                <div class="bar" {{bindStyle width="uploaded" width-unit="%"}}></div>
+              </div>
+              {{/with}}
+            {{/if}}  
+
         </td>
         <td>{{file.identified}}</td>
       </tr>
@@ -28,7 +35,7 @@
     </tbody>
   </table>
   <div class="btn-toolbar" style="margin: 0;">
-      <button class="btn btn-primary" type="button">Process</button>
+      <button class="btn btn-primary" type="button" {{action "uploadToServer"}}>Process</button>
       <button class="btn btn-danger " type="button" {{action "clearListFile"}}>Clear List</button>
   </div>
 </form>

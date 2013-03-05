@@ -15,15 +15,20 @@
 package com.book.identification.rest;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.queryParser.ParseException;
@@ -41,6 +46,7 @@ import com.book.identification.model.Volume;
 import com.book.identification.model.collections.Volumes;
 import com.book.identification.task.CreateTreeOfCategories;
 import com.book.identification.util.FileHashUtil;
+import com.sun.jersey.multipart.FormDataParam;
 
 @Path("volumes/")
 public class VolumeResource {
@@ -180,5 +186,23 @@ public class VolumeResource {
 		}
 		beginTransaction.commit();
 		return Response.ok("hashed").build();
+	}
+
+	@POST
+	@Consumes(MediaType.MULTIPART_FORM_DATA)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("upload/")
+	public Response upload(@FormDataParam("fileName") String filename,@FormDataParam("file") InputStream inputStream ) {
+		
+		String path;
+		try {
+			path = new File(".").getCanonicalPath() + File.separatorChar + "books" + File.separatorChar + filename;
+			FileUtils.copyInputStreamToFile(inputStream, new File(path));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return Response.ok("").build();
 	}
 }

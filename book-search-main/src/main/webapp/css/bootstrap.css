@@ -6237,7 +6237,7 @@ section {
  ::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#999;-webkit-border-radius:8px;}
  ::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#999;-webkit-border-radius:8px;}
 .dropbox {
-  height: 10em;
+  height: 4em;
   border: 2px solid #DDD;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;

@@ -1,9 +1,10 @@
 define(
 ["ember"], function (Ember) {
 	var FileToUpload = Ember.Object.extend({
-		order:null,
+		index: null,
 		file: null,
 		identified: false,
+		uploaded: 0,
 
 		name: function () {
 			return this.get('file.name');
@@ -35,7 +36,49 @@ define(
 			} else {
 				return bytes + ' B';
 			}
-		}.property('file.size')
+		}.property('file.size'),
+
+		readMe: function () {
+			var reader = new FileReader(),
+				_self = this;
+
+			reader.onload = function (event) {
+				_self.set('file.data', event.target.result);
+				_self.set('uploaded', 100);
+			};
+
+			reader.onprogress = function (event) {
+				if (event.lengthComputable) {
+					_self.set('uploaded', Math.round((event.loaded / event.total) * 100));
+				}
+			};
+			reader.readAsDataURL(this.get('file'));
+		},
+
+		isUploaded: function () {
+			return this.get('uploaded') == 100;
+		}.property('uploaded'),
+
+		uploadToServer: function () {
+
+			var formData = new FormData(),
+				_self = this;
+
+			formData.append('fileName', this.get('name'));
+			formData.append('file', this.get('file'));
+
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST', '/rest/volumes/upload', true);
+			xhr.upload.onprogress = function (event) {
+				if (event.lengthComputable) {
+					_self.set('uploaded', Math.round((event.loaded / event.total) * 100));
+				}
+			};
+			xhr.onload = function (event) {
+				_self.set('uploaded', 100);
+			};
+			xhr.send(formData);
+		}
 	});
 
 	return FileToUpload;

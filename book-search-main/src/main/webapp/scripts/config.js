@@ -28,6 +28,7 @@ define({
 		'routes': 'app/routes',
 		'controllers': 'app/controllers',
 		'templates': 'app/templates',
+		'helpers': 'app/helpers',
 
 		/* libs */
 		'jquery': 'libs/jquery',
