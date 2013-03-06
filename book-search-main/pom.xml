@@ -192,6 +192,8 @@
 			<artifactId>jetty</artifactId>
 			<version>${project.jetty.version}</version>
 		</dependency>
+	
+
 		<dependency>
 			<groupId>org.apache.tika</groupId>
 			<artifactId>tika-parsers</artifactId>
