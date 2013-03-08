@@ -20,6 +20,8 @@ import java.net.InetAddress;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import javax.servlet.ServletException;
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -32,7 +34,13 @@ public class Main {
 	/**
 	 * @param args	 */
 	public static void main(String[] args) {
-		JettyHttpServer httpServer = new JettyHttpServer();
+		JettyHttpServer httpServer = null;
+		try {
+			httpServer = new JettyHttpServer();
+		} catch (ServletException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		httpServer.start();
 		HibernateUtil.getSessionFactory();
 		try {

@@ -14,6 +14,15 @@
 
 package com.book.identification.httpserver;
 
+import java.util.Enumeration;
+import java.util.Properties;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+
+import org.atmosphere.cpr.AtmosphereServlet;
+import org.atmosphere.di.ServletContextHolder;
 import org.mortbay.jetty.Handler;
 import org.mortbay.jetty.Server;
 import org.mortbay.jetty.handler.HandlerList;
@@ -21,22 +30,20 @@ import org.mortbay.jetty.handler.ResourceHandler;
 import org.mortbay.jetty.servlet.Context;
 import org.mortbay.jetty.servlet.ServletHolder;
 
-import com.sun.jersey.api.core.PackagesResourceConfig;
-import com.sun.jersey.api.core.ResourceConfig;
-import com.sun.jersey.spi.container.servlet.ServletContainer;
-
 public class JettyHttpServer {
 
 	Server server = new Server(8080);
 
-	public JettyHttpServer() {
+	public JettyHttpServer() throws ServletException {
 		Context root = new Context(server, "/", Context.SESSIONS);
+		AtmosphereServlet atmosphereServlet = new AtmosphereServlet();
+		atmosphereServlet.init(new Config(root));
 		
 		//jersey servlet 
-		ResourceConfig rc = new PackagesResourceConfig("com.book.identification.rest");
+//		ResourceConfig rc = new PackagesResourceConfig("com.book.identification.rest");
 //		rc.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING,Boolean.TRUE);
-		ServletContainer servletContainer = new ServletContainer(rc);
-		ServletHolder restHolder = new ServletHolder(servletContainer);
+//		ServletContainer servletContainer = new ServletContainer(rc);
+		ServletHolder restHolder = new ServletHolder(atmosphereServlet);
 		root.addServlet(restHolder, "/rest/*");
 		
 		//
@@ -50,6 +57,40 @@ public class JettyHttpServer {
         server.setHandler(handlers);
 	}
 
+	 private static class Config implements ServletConfig
+	 {
+		 private Properties properties = new Properties();
+		private Context context;
+		 
+		 
+		public Config(Context context) {
+			super();
+			this.context = context; 
+			this.properties.setProperty("com.sun.jersey.config.property.packages", "com.book.identification.rest");
+		}
+
+		@Override
+		public String getServletName() {
+			
+			return "AtmosphereServlet";
+		}
+
+		@Override
+		public ServletContext getServletContext() {
+			return context.getServletContext();
+		}
+
+		@Override
+		public String getInitParameter(String name) {
+			return properties.getProperty(name);
+		}
+
+		@Override
+		public Enumeration getInitParameterNames() {
+			return properties.keys();
+		}
+	 }
+	
 	public void start() {
 		try {
 			server.start();

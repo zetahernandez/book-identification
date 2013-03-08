@@ -1,5 +1,5 @@
 define(
-["ember"], function (Ember) {
+["ember", "atmosphere"], function (Ember) {
 	var FileToUpload = Ember.Object.extend({
 		index: null,
 		file: null,
@@ -76,6 +76,14 @@ define(
 			};
 			xhr.onload = function (event) {
 				_self.set('uploaded', 100);
+				var socket = $.atmosphere;
+				var request = new $.atmosphere.AtmosphereRequest();
+				request.url = document.location.toString() + 'chat';
+				request.contentType = "application/json";
+				request.transport = 'websocket';
+				request.fallbackTransport = 'long-polling';
+				var subSocket = socket.subscribe(request);
+				subSocket.push(data);
 			};
 			xhr.send(formData);
 		}

@@ -19,6 +19,9 @@ define({
 		'bootstrap': {
 			deps: ['jquery']
 		},
+		'atmosphere':{
+			deps: ['jquery']
+		},
 		waitSeconds: 15
 	},
 	paths: {
@@ -36,6 +39,7 @@ define({
 		'handlebars': 'libs/handlebars',
 		'ember': 'libs/ember',
 		'ember_data': 'libs/ember-data',
-		'bootstrap': 'libs/bootstrap/js/bootstrap'
+		'bootstrap': 'libs/bootstrap/js/bootstrap',
+		'atmosphere': 'libs/jquery.atmosphere'
 	}
 });

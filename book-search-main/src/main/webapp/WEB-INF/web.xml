@@ -6,7 +6,8 @@
 	<display-name>Book Search</display-name>
 	<servlet>
 		<servlet-name>Jersey REST Service</servlet-name>
-		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		 <servlet-class>org.atmosphere.cpr.AtmosphereServlet</servlet-class>
+<!-- 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class> -->
 		<init-param>
 			<param-name>com.sun.jersey.config.property.packages</param-name>
 			<param-value>com.book.identification.rest</param-value>
