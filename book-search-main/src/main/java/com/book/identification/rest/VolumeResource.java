@@ -35,6 +35,8 @@ import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.util.Version;
+import org.atmosphere.annotation.Broadcast;
+import org.atmosphere.annotation.Suspend;
 import org.hibernate.Transaction;
 import org.hibernate.search.FullTextQuery;
 import org.hibernate.search.FullTextSession;
@@ -199,10 +201,32 @@ public class VolumeResource {
 			path = new File(".").getCanonicalPath() + File.separatorChar + "books" + File.separatorChar + filename;
 			FileUtils.copyInputStreamToFile(inputStream, new File(path));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		return Response.ok("").build();
 	}
+	@GET
+	@Suspend
+    @Produces(MediaType.APPLICATION_JSON)
+	@Path("chat/")
+	public Response chat() {
+		
+		String path;
+		
+
+		return Response.ok("").build();
+	}
+	/**
+     * Broadcast the received message object to all suspended response. Do not write back the message to the calling connection.
+     * @param message
+     * @return a {@link Response}
+     */
+    @Broadcast(writeEntity = false)
+    @Produces(MediaType.APPLICATION_JSON)
+    @POST
+	@Path("chat/")
+    public Response broadcast() {
+        return Response.ok("").build();
+    }
 }

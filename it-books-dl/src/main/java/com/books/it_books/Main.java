@@ -40,7 +40,7 @@ public class Main {
 		HttpClient httpClient = new DefaultHttpClient();
 
 		for (int i = 1740; i < 1767; i += MAX_REQUEST) {
-			List<String> urls  = new ArrayList<String>();
+			List<String> urls = new ArrayList<String>();
 
 			for (int j = i; j < i + MAX_REQUEST; j++) {
 				HttpGet httpGet = new HttpGet(IT_BOOKS_URL
@@ -49,21 +49,21 @@ public class Main {
 					HttpResponse httpResponse = httpClient.execute(httpGet);
 					HttpEntity httpEntity = httpResponse.getEntity();
 					String xml = EntityUtils.toString(httpEntity);
-					int start = StringUtils.lastIndexOf(xml,"<a id=\"dl\" href=\"") + 17;
+					int start = StringUtils.lastIndexOf(xml,
+							"<a id=\"dl\" href=\"") + 17;
 					int end = StringUtils.indexOf(xml, "\"", start);
-					
+
 					urls.add(StringUtils.substring(xml, start, end));
 				} catch (ClientProtocolException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
-			
+
 			ExecutorService fixedThreadPool = Executors.newFixedThreadPool(10);
-			for (Iterator iterator = urls.iterator(); iterator.hasNext();) {
+			for (@SuppressWarnings("rawtypes")
+			Iterator iterator = urls.iterator(); iterator.hasNext();) {
 				String url = (String) iterator.next();
 				fixedThreadPool.submit(new DownloaderFile(url));
 			}
@@ -91,7 +91,6 @@ public class Main {
 		try {
 
 			DocumentBuilder db = dbf.newDocumentBuilder();
-			
 
 			InputSource is = new InputSource();
 			is.setCharacterStream(new StringReader(xml));
@@ -108,32 +107,35 @@ public class Main {
 		return doc;
 	}
 
-	public static final String getElementValue( Node elem , boolean html) {
-         Node child;
-         if( elem != null){
-             if (elem.hasChildNodes()){
-                 for( child = elem.getFirstChild(); child != null; child = child.getNextSibling() ){
-                     if( child.getNodeType() == Node.TEXT_NODE  ){
-                         //return child.getNodeValue();
-                         return child.getNodeValue();
-                     }
-                 }
-             }
-         }
-         return "";
-     }
+	public static final String getElementValue(Node elem, boolean html) {
+		Node child;
+		if (elem != null) {
+			if (elem.hasChildNodes()) {
+				for (child = elem.getFirstChild(); child != null; child = child
+						.getNextSibling()) {
+					if (child.getNodeType() == Node.TEXT_NODE) {
+						// return child.getNodeValue();
+						return child.getNodeValue();
+					}
+				}
+			}
+		}
+		return "";
+	}
 
-     /**
-      * Getting node value
-      * @param Element node
-      * @param key string
-      * */
+	/**
+	 * Getting node value
+	 * 
+	 * @param Element
+	 *            node
+	 * @param key
+	 *            string
+	 * */
 
-     public static String getValue(Element item, String str) {     
-            NodeList n = item.getElementsByTagName(str);    
+	public static String getValue(Element item, String str) {
+		NodeList n = item.getElementsByTagName(str);
 
-            return getElementValue(n.item(0), false);
-        }
-
+		return getElementValue(n.item(0), false);
+	}
 
 }

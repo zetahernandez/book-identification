@@ -38,8 +38,7 @@ public class Main {
 		try {
 			httpServer = new JettyHttpServer();
 		} catch (ServletException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			logger.error(e1);
 		}
 		httpServer.start();
 		HibernateUtil.getSessionFactory();

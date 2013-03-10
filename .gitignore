@@ -5,6 +5,8 @@
 book-search-main/target/*
 book-search-main/db/*
 book-search-assembly/target/*
+*.pdf
+*.chm
 .hg/*
 #################
 book-search-main/db/*

@@ -78,12 +78,12 @@ define(
 				_self.set('uploaded', 100);
 				var socket = $.atmosphere;
 				var request = new $.atmosphere.AtmosphereRequest();
-				request.url = document.location.toString() + 'chat';
+				request.url = "rest/volumes/chat";
 				request.contentType = "application/json";
-				request.transport = 'websocket';
+				request.transport = 'long-polling';
 				request.fallbackTransport = 'long-polling';
 				var subSocket = socket.subscribe(request);
-				subSocket.push(data);
+				subSocket.push(JSON.stringify({hole:'hola'}));
 			};
 			xhr.send(formData);
 		}

@@ -22,7 +22,6 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
 import org.atmosphere.cpr.AtmosphereServlet;
-import org.atmosphere.di.ServletContextHolder;
 import org.mortbay.jetty.Handler;
 import org.mortbay.jetty.Server;
 import org.mortbay.jetty.handler.HandlerList;
@@ -85,6 +84,7 @@ public class JettyHttpServer {
 			return properties.getProperty(name);
 		}
 
+		@SuppressWarnings("rawtypes")
 		@Override
 		public Enumeration getInitParameterNames() {
 			return properties.keys();
