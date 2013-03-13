@@ -19,11 +19,12 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.URI;
 import java.net.URISyntaxException;
-
-import javax.servlet.ServletException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.atmosphere.cpr.AtmosphereServlet;
 
 import com.book.identification.httpserver.JettyHttpServer;
 
@@ -34,13 +35,16 @@ public class Main {
 	/**
 	 * @param args	 */
 	public static void main(String[] args) {
-		JettyHttpServer httpServer = null;
 		try {
-			httpServer = new JettyHttpServer();
-		} catch (ServletException e1) {
+			JettyHttpServer.init();
+			Map<String,String> properties = new HashMap<String, String>();
+			properties.put("com.sun.jersey.config.property.packages","com.book.identification.rest");
+			JettyHttpServer.registerServlet(AtmosphereServlet.class, "/rest/*",properties);
+			JettyHttpServer.start();
+		} catch (Exception e1) {
 			logger.error(e1);
+			System.exit(0);
 		}
-		httpServer.start();
 		HibernateUtil.getSessionFactory();
 		try {
 			InetAddress localHost = InetAddress.getLocalHost();

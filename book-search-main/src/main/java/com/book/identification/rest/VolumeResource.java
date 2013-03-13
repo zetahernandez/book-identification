@@ -206,27 +206,4 @@ public class VolumeResource {
 
 		return Response.ok("").build();
 	}
-	@GET
-	@Suspend
-    @Produces(MediaType.APPLICATION_JSON)
-	@Path("chat/")
-	public Response chat() {
-		
-		String path;
-		
-
-		return Response.ok("").build();
-	}
-	/**
-     * Broadcast the received message object to all suspended response. Do not write back the message to the calling connection.
-     * @param message
-     * @return a {@link Response}
-     */
-    @Broadcast(writeEntity = false)
-    @Produces(MediaType.APPLICATION_JSON)
-    @POST
-	@Path("chat/")
-    public Response broadcast() {
-        return Response.ok("").build();
-    }
 }

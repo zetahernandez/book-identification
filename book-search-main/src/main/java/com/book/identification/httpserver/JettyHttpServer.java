@@ -14,96 +14,89 @@
 
 package com.book.identification.httpserver;
 
-import java.util.Enumeration;
-import java.util.Properties;
+import java.util.HashMap;
+import java.util.Map;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-
-import org.atmosphere.cpr.AtmosphereServlet;
-import org.mortbay.jetty.Handler;
-import org.mortbay.jetty.Server;
-import org.mortbay.jetty.handler.HandlerList;
-import org.mortbay.jetty.handler.ResourceHandler;
-import org.mortbay.jetty.servlet.Context;
-import org.mortbay.jetty.servlet.ServletHolder;
+import org.eclipse.jetty.server.Connector;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.server.handler.HandlerList;
+import org.eclipse.jetty.server.handler.ResourceHandler;
+import org.eclipse.jetty.server.nio.SelectChannelConnector;
+import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
 
 public class JettyHttpServer {
 
-	Server server = new Server(8080);
+	// all Jetty objects required to start
+	private static final Server server = new Server();
+	private static final ServletContextHandler context = new ServletContextHandler(server, "/");
+	private static final SelectChannelConnector connector = new SelectChannelConnector();
+	private static final HandlerList mainHandler = new HandlerList();
+	private static int port = 8080;
+//	private static ServletHandler servletHandler = new ServletHandler();
 
-	public JettyHttpServer() throws ServletException {
-		Context root = new Context(server, "/", Context.SESSIONS);
-		AtmosphereServlet atmosphereServlet = new AtmosphereServlet();
-		atmosphereServlet.init(new Config(root));
-		
-		//jersey servlet 
-//		ResourceConfig rc = new PackagesResourceConfig("com.book.identification.rest");
-//		rc.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING,Boolean.TRUE);
-//		ServletContainer servletContainer = new ServletContainer(rc);
-		ServletHolder restHolder = new ServletHolder(atmosphereServlet);
-		root.addServlet(restHolder, "/rest/*");
-		
-		//
+	// local lists storing the servlets
+//	private static final List<ServletHolder> holders = new ArrayList<ServletHolder>();
+//	private static final List<ServletMapping> mappings = new ArrayList<ServletMapping>();
+
+	// protocol bits
+	private static boolean initAlreadyCalled = false;
+
+
+	/** Initializes the server */
+	public static void init() throws Exception {
+		if (initAlreadyCalled) {
+			throw new RuntimeException("init() already called");
+		}
+		// init config
+		connector.setPort(port);
+		Connector[] c = { connector };
+		server.setConnectors(c);
+
+		// serving static files
+		// "./src/JettyServer.java" is accessible at
+		// "http://localhost:8080/src/JettyServer.java"
 		ResourceHandler resourceHandler = new ResourceHandler();
 		resourceHandler.setResourceBase("src/main/webapp/");
 		resourceHandler.setWelcomeFiles(new String[] {"index.html"});
-		resourceHandler.setServer(server);
+		// recall that Jetty takes into account
+		// the first handler which matches the requested URI
+		mainHandler.addHandler(resourceHandler);
+		mainHandler.addHandler(context);
+		server.setHandler(mainHandler);
+
+		initAlreadyCalled = true;
+	}
+
+	/** Starts the server */
+	public static void start() throws Exception {
+		if (!initAlreadyCalled) {
+			throw new RuntimeException("init() must be called before start()");
+		}
+//		servletHandler.setServlets(holders.toArray(new ServletHolder[0]));
+//		servletHandler.setServletMappings(mappings.toArray(new ServletMapping[0]));
+		server.start();
+	}
+
+	/**
+	 * Registers a servlet in the server on the given path. Example:
+	 * registerServlet(foo.CommentingServlet.class, "/c/*");
+	 * */
+	public static void registerServlet(Class<?> servlet, String path, Map<String, String> parameters) {
+		if (!initAlreadyCalled) {
+			throw new RuntimeException(
+					"init() must be called before registerServlet()");
+		}
+		ServletHolder holder = new ServletHolder();
+		holder.setName(servlet.getName());
+		holder.setClassName(servlet.getName());
 		
-		HandlerList handlers = new HandlerList();
-        handlers.setHandlers(new Handler[] { resourceHandler,root });
-        server.setHandler(handlers);
+		if(parameters == null){
+			parameters = new HashMap<String, String>();
+		}
+		holder.setInitParameters(parameters);
+		context.addServlet(holder, path);
+		
 	}
-
-	 private static class Config implements ServletConfig
-	 {
-		 private Properties properties = new Properties();
-		private Context context;
-		 
-		 
-		public Config(Context context) {
-			super();
-			this.context = context; 
-			this.properties.setProperty("com.sun.jersey.config.property.packages", "com.book.identification.rest");
-		}
-
-		@Override
-		public String getServletName() {
-			
-			return "AtmosphereServlet";
-		}
-
-		@Override
-		public ServletContext getServletContext() {
-			return context.getServletContext();
-		}
-
-		@Override
-		public String getInitParameter(String name) {
-			return properties.getProperty(name);
-		}
-
-		@SuppressWarnings("rawtypes")
-		@Override
-		public Enumeration getInitParameterNames() {
-			return properties.keys();
-		}
-	 }
 	
-	public void start() {
-		try {
-			server.start();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void stop() {
-		try {
-			server.stop();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 }

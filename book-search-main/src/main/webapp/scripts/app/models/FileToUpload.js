@@ -78,12 +78,15 @@ define(
 				_self.set('uploaded', 100);
 				var socket = $.atmosphere;
 				var request = new $.atmosphere.AtmosphereRequest();
-				request.url = "rest/volumes/chat";
+				request.url = "rest/supervise";
 				request.contentType = "application/json";
-				request.transport = 'long-polling';
+				request.transport = 'websocket';
 				request.fallbackTransport = 'long-polling';
 				var subSocket = socket.subscribe(request);
 				subSocket.push(JSON.stringify({hole:'hola'}));
+				request.onmessage = function() {
+					console.log("mensaje");
+				};
 			};
 			xhr.send(formData);
 		}

@@ -32,27 +32,12 @@
 
 					<!-- Configure the webapp -->
 					<contextPath>/</contextPath>
-					<!--<tmpDir>target/not/necessary</tmpDir> -->
-					<!--<webDefaultXml>src/main/resources/webdefault.xml</webDefaultXml> 
-						<overrideWebXml>src/main/resources/override-web.xml</overrideWebXml> -->
-
-					<!-- OR, as of jetty6.1.6rc0, you can use the webAppConfig element instead 
-						<webAppConfig> <contextPath>/test</contextPath> <tempDirectory>${project.build.directory}/work</tempDirectory> 
-						<defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor> 
-						<overrideDescriptor>src/main/resources/override-web.xml</overrideDescriptor> 
-						</webAppConfig> -->
-
-					<!-- configure the container -->
-					<!--<jettyConfig>/my/special/jetty.xml</jettyConfig> -->
 					<connectors>
 						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
 							<port>8080</port>
 							<maxIdleTime>60000</maxIdleTime>
 						</connector>
 					</connectors>
-					<!--<userRealms> <userRealm implementation="org.mortbay.jetty.security.HashUserRealm"> 
-						<name>Test Realm</name> <config>etc/realm.properties</config> </userRealm> 
-						</userRealms> -->
 					<requestLog implementation="org.mortbay.jetty.NCSARequestLog">
 						<filename>target/yyyy_mm_dd.request.log</filename>
 						<retainDays>90</retainDays>
@@ -187,10 +172,30 @@
 			<version>4.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.mortbay.jetty</groupId> -->
+		<!-- <artifactId>jetty</artifactId> -->
+		<!-- <version>${project.jetty.version}</version> -->
+		<!-- </dependency> -->
 		<dependency>
-			<groupId>org.mortbay.jetty</groupId>
-			<artifactId>jetty</artifactId>
-			<version>${project.jetty.version}</version>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>${jetty.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-http</artifactId>
+			<version>${jetty.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-websocket</artifactId>
+			<version>8.1.9.v20130131</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlet</artifactId>
+			<version>${jetty.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.atmosphere</groupId>
@@ -224,8 +229,8 @@
 		<project.http.version>1.12.0-beta</project.http.version>
 		<project.oauth.version>1.12.0-beta</project.oauth.version>
 		<project.hibernate.version>4.1.7.Final</project.hibernate.version>
-		<!-- <project.jetty.version>9.0.0.M0</project.jetty.version> -->
 		<project.jetty.version>7.0.0.pre5</project.jetty.version>
+		<jetty.version>8.1.9.v20130131</jetty.version>
 		<maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>

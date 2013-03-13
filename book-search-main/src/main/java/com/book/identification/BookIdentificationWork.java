@@ -36,12 +36,9 @@ public class BookIdentificationWork extends Thread {
 	BlockingQueue<BookFile> fileISBNs = new ArrayBlockingQueue<BookFile>(10);
 	BlockingQueue<Volume> volumesQueue = new ArrayBlockingQueue<Volume>(10);
 
-	PersistVolumes persistVolumes = new PersistVolumes("PersistVolumesThread",
-			volumesQueue, volumesQueue, null);
-	VolumeInfoSearch volumeInfoSearch = new VolumeInfoSearch(
-			"VolumeInfoSearchThread", fileISBNs, volumesQueue, persistVolumes);
-	BookReader bookReader = new BookReader("BookReaderThread",
-			fileBlockingQueue, fileISBNs, volumeInfoSearch);
+	PersistVolumes persistVolumes = new PersistVolumes("PersistVolumesThread",volumesQueue, volumesQueue, null);
+	VolumeInfoSearch volumeInfoSearch = new VolumeInfoSearch("VolumeInfoSearchThread", fileISBNs, volumesQueue, persistVolumes);
+	BookReader bookReader = new BookReader("BookReaderThread",fileBlockingQueue, fileISBNs, volumeInfoSearch);
 
 	public BookIdentificationWork(String name, String[] folders) {
 		this.folders = folders;
