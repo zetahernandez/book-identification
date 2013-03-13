@@ -76,17 +76,6 @@ define(
 			};
 			xhr.onload = function (event) {
 				_self.set('uploaded', 100);
-				var socket = $.atmosphere;
-				var request = new $.atmosphere.AtmosphereRequest();
-				request.url = "rest/supervise";
-				request.contentType = "application/json";
-				request.transport = 'websocket';
-				request.fallbackTransport = 'long-polling';
-				var subSocket = socket.subscribe(request);
-				subSocket.push(JSON.stringify({hole:'hola'}));
-				request.onmessage = function() {
-					console.log("mensaje");
-				};
 			};
 			xhr.send(formData);
 		}
