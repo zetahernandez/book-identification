@@ -1,0 +1,20 @@
+<section id="section">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		{{outlet header}}	
+	</div>
+	<div class="container-fluid no-overflow no-padding content">
+		<div class="row-fluid max-height">
+			<div class="span2 scrollable">
+				{{outlet left}}
+			</div>
+			<div  class="span10 scrollable scrollable-content">
+				{{outlet center}}
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+      <div class="container">
+      	<p class="muted credit text-center">Courtesy of <a href="mailto:zetahernandez@gmail.com">Zeta</a></p>
+      </div>
+    </div>
+</section>

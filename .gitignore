@@ -1,0 +1,53 @@
+#################
+## Project
+#################
+
+book-search-main/target/*
+book-search-main/db/*
+book-search-assembly/target/*
+*.pdf
+*.chm
+.hg/*
+#################
+book-search-main/db/*
+book-search-main/.project
+book-search-assembly/*
+book-search-main/.settings/*
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+*~target/*
+# External tool builders
+.externalToolBuilders/
+*.log
+# Locally stored "Eclipse launch configurations"
+
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+
+
+
+############
+## Windows
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+.DS_Store

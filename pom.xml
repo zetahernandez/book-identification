@@ -1,0 +1,134 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.book.identification</groupId>
+	<artifactId>book-search</artifactId>
+	<packaging>pom</packaging>
+	<version>0.1.beta</version>
+	<name>BookSearch</name>
+
+	 <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+    <developers>
+		<developer>
+			<name>Zeta Hernandez</name>
+			<email>zetahernandez@gmail.com</email>
+		</developer>
+		<developer>
+			<name>Mariano Abdala</name>
+		</developer>
+	</developers>
+    
+    <scm>
+        <connection>scm:git:git@github.com:zetahernandez/book-identification.git</connection>
+        <developerConnection>scm:git:git@github.com:zetahernandez/book-identification.git</developerConnection>
+        <url>https://github.com/zetahernandez/book-identification.git</url>
+    </scm>
+
+	<properties>
+		<failOnDependencyWarning>true</failOnDependencyWarning>
+		<project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
+	</properties>
+
+	<ciManagement>
+		<system>continuum</system>
+		<notifiers>
+			<notifier>
+				<type>mail</type>
+				<configuration>
+					<address>zetahernandez@gmail.com</address>
+				</configuration>
+			</notifier>
+		</notifiers>
+	</ciManagement>
+
+	
+
+	<modules>
+		<module>book-search-main</module>
+		<module>book-search-assembly</module>
+	</modules>
+
+	<profiles>
+		<profile>
+			<id>full</id>
+			<modules>
+				<module>book-search-assembly</module>
+			</modules>
+		</profile>
+
+	</profiles>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>2.2.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>1.6</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>buildnumber-maven-plugin</artifactId>
+					<version>1.0</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>ISO-8859-1</encoding>
+					<verbose>false</verbose>
+					<compilerVersion>1.7</compilerVersion>
+					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+
+			<!--<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>analyze</id>
+						<goals>
+							<goal>analyze-only</goal>
+						</goals>
+						<configuration>
+							<failOnWarning>${failOnDependencyWarning}</failOnWarning>
+							<ignoreNonCompile>true</ignoreNonCompile>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>-->
+
+		</plugins>
+	</build>
+
+</project>
