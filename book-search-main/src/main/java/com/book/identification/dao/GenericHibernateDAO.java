@@ -46,7 +46,7 @@ public abstract class GenericHibernateDAO<T, ID extends Serializable>
 	 */
 	public Session getSession() {
 		if (session == null || !session.isOpen()) {
-			session = HibernateUtil.getSessionFactory().openSession();
+			session = HibernateUtil.getCurrentSession();
 		}
 		return session;
 	}

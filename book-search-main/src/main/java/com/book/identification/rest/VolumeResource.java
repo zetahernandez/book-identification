@@ -18,6 +18,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.UUID;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -35,19 +36,18 @@ import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.util.Version;
-import org.atmosphere.annotation.Broadcast;
-import org.atmosphere.annotation.Suspend;
 import org.hibernate.Transaction;
 import org.hibernate.search.FullTextQuery;
 import org.hibernate.search.FullTextSession;
 
+import com.book.identification.BookIdentification;
 import com.book.identification.BookIdentificationWork;
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.dao.VolumeDAO;
 import com.book.identification.model.Volume;
 import com.book.identification.model.collections.Volumes;
-import com.book.identification.task.CreateTreeOfCategories;
 import com.book.identification.util.FileHashUtil;
+import com.book.identification.volumes.CreateTreeOfCategories;
 import com.sun.jersey.multipart.FormDataParam;
 
 @Path("volumes/")
@@ -194,16 +194,31 @@ public class VolumeResource {
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("upload/")
-	public Response upload(@FormDataParam("fileName") String filename,@FormDataParam("file") InputStream inputStream ) {
-		
+	public Response upload(@FormDataParam("fileName") String filename,@FormDataParam("file") InputStream inputStream ) throws Exception {
+		String uuid = UUID.randomUUID().toString();
 		String path;
 		try {
-			path = new File(".").getCanonicalPath() + File.separatorChar + "books" + File.separatorChar + filename;
+			path = new File(".").getCanonicalPath() + File.separatorChar + "books" + File.separatorChar + uuid + ".pdf";
 			FileUtils.copyInputStreamToFile(inputStream, new File(path));
 		} catch (IOException e) {
 			e.printStackTrace();
+			throw new Exception();   
 		}
+		
+		return Response.ok(uuid).build();
 
-		return Response.ok("").build();
 	}
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("loadVolume/")
+	public Response loadVolume(@QueryParam("uuid") String uuid) throws IOException, InterruptedException{
+		
+		String path = new File(".").getCanonicalPath() + File.separatorChar + "books" + File.separatorChar + uuid + ".pdf";
+		BookIdentification bookIdentification = new BookIdentification(path);
+		String isbn = bookIdentification.identificate();
+
+		return Response.ok(isbn).build();
+
+	}
+	
 }

@@ -22,35 +22,29 @@ import org.apache.log4j.Logger;
 import org.hibernate.criterion.Restrictions;
 
 import com.book.identification.BookFile;
-import com.book.identification.FileType;
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.model.Volume;
-import com.book.identification.task.base.ProducerConsumer;
-import com.book.identification.task.base.ProducerConsumerManager;
-import com.book.identification.task.base.ProducerThread;
+import com.book.identification.task.base.Worker;
+import com.book.identification.task.base.WorkerManager;
+import com.book.identification.task.base.Work;
 
 
-public class BookReader extends ProducerConsumerManager<ProducerThread<BookFile>,BookFile, BookFile> {
+public class BookReader extends WorkerManager<Work<BookFile>,BookFile, BookFile> {
 	
 	final static Logger logger = LogManager.getLogger(BookReader.class);
 
 	public BookReader(String name, BlockingQueue<BookFile> input,
 			BlockingQueue<BookFile> output,
-			ProducerConsumer nextProducerConsumer) {
+			Worker nextProducerConsumer) {
 		super(name, input, output, nextProducerConsumer);
 	}
 
 
 	@Override
-	protected ProducerThread<BookFile> createConsumerWork(BookFile take,
+	protected Work<BookFile> createConsumerWork(BookFile take,
 			BlockingQueue<BookFile> output) {
 
-			SearchISBN searchISBN = null;
-			if(take.getFileType().equals(FileType.PDF)){
-				searchISBN = new PDFSearchISBN(take, output);
-			}else{
-				searchISBN = new CHMSearchISBN(take, output);
-			}
+			SearchISBN searchISBN = new SearchISBN(take, output);;
 			return searchISBN;
 		
 	}

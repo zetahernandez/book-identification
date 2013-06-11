@@ -34,7 +34,7 @@ public class JAXBContextResolver implements ContextResolver<JAXBContext> {
 	private JAXBContext contextDefault;
 
 	private Class<?>[] types = { Volume.class, Category.class,
-			VolumeInfo.class, ImageLinks.class, IndustryIdentifiers.class,  Volumes.class,Categories.class};
+			VolumeInfo.class, ImageLinks.class, IndustryIdentifiers.class,  Volumes.class,Categories.class,Message.class};
 
 	public JAXBContextResolver() throws Exception {
 		this.contextDefault = new JSONJAXBContext(JSONConfiguration.natural()
