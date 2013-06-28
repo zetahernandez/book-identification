@@ -1,4 +1,4 @@
-package com.book.identification.volumes;
+package com.book.identification.work;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -6,8 +6,6 @@ import java.util.regex.Pattern;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-
-import com.book.identification.BookFile;
 
 public abstract class ISBNExtractor implements ISBNExtract {
 	final static Logger logger = LogManager.getLogger(GoogleBooksRetrieveVolumeInfo.class);

@@ -17,6 +17,9 @@ package com.book.identification.rest;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -29,30 +32,34 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.util.Version;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONException;
 import org.hibernate.Transaction;
 import org.hibernate.search.FullTextQuery;
 import org.hibernate.search.FullTextSession;
 
-import com.book.identification.BookIdentification;
 import com.book.identification.BookIdentificationWork;
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.dao.VolumeDAO;
 import com.book.identification.model.Volume;
 import com.book.identification.model.collections.Volumes;
-import com.book.identification.util.FileHashUtil;
-import com.book.identification.volumes.CreateTreeOfCategories;
+import com.book.identification.work.CreateTreeOfCategories;
 import com.sun.jersey.multipart.FormDataParam;
 
 @Path("volumes/")
 public class VolumeResource {
-
+	
+	private Logger logger = LogManager.getLogger(VolumeResource.class);
 	private static final int PAGE_LENGTH = 10;
 
 	@SuppressWarnings("unchecked")
@@ -178,12 +185,12 @@ public class VolumeResource {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("hash/")
-	public Response hashing() {
+	public Response hashing() throws IOException {
 		VolumeDAO volumeDAO = DAOFactory.getInstance().getVolumeDAO();
 		List<Volume> findAll = volumeDAO.findAll();
 		Transaction beginTransaction = volumeDAO.getSession().beginTransaction();
 		for (Volume volume : findAll) {
-			String fileSHA1 = FileHashUtil.getFileSHA1(new File(volume.getPath()));
+			String fileSHA1 = DigestUtils.shaHex(FileUtils.openInputStream(new File(volume.getPath())));
 			volume.setHashSH1(fileSHA1);
 		}
 		beginTransaction.commit();
@@ -192,32 +199,50 @@ public class VolumeResource {
 
 	@POST
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
-	@Produces(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.TEXT_PLAIN)
 	@Path("upload/")
-	public Response upload(@FormDataParam("fileName") String filename,@FormDataParam("file") InputStream inputStream ) throws Exception {
-		String uuid = UUID.randomUUID().toString();
-		String path;
-		try {
-			path = new File(".").getCanonicalPath() + File.separatorChar + "books" + File.separatorChar + uuid + ".pdf";
-			FileUtils.copyInputStreamToFile(inputStream, new File(path));
-		} catch (IOException e) {
-			e.printStackTrace();
-			throw new Exception();   
-		}
+	public Response upload(@FormDataParam("file") InputStream inputStream ) throws Exception {
+		//Save in temporal file
+		File tempFile = File.createTempFile(UUID.randomUUID().toString(),".temp");
+		FileUtils.copyInputStreamToFile(inputStream, tempFile);
+
+		String md5Hex = DigestUtils.md5Hex(FileUtils.openInputStream(tempFile));
 		
-		return Response.ok(uuid).build();
+		
+		java.nio.file.Path path = new File(System.getProperty("user.dir")).toPath().resolve("books");
+		if(!Files.exists(path)){
+			Files.createDirectory(path);
+		}
+		java.nio.file.Path filePath = path.resolve(md5Hex);
+
+		try {
+			Files.copy(tempFile.toPath(), filePath, StandardCopyOption.REPLACE_EXISTING);
+		} catch (IOException e) {
+			return Response.serverError().build();
+		}
+		return Response.ok(md5Hex).build();
 
 	}
+	
 	@GET
+	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("loadVolume/")
-	public Response loadVolume(@QueryParam("uuid") String uuid) throws IOException, InterruptedException{
+	@Path("identificateFiles/")
+	public Response identificateFiles(@QueryParam("uuids") JSONArray uuids) {
+		List<java.nio.file.Path> paths = new ArrayList<>();
+		for (int i = 0; i < uuids.length(); i++) {
+			 try {
+				 String uuid = (String) uuids.get(i);
+				 paths.add(new File(System.getProperty("user.dir")).toPath().resolve("books").resolve(uuid));
+			} catch (JSONException e) {
+				return Response.serverError().build();
+			}
+		}
+		IdentificateBooks idBooks = new IdentificateBooks(paths);
 		
-		String path = new File(".").getCanonicalPath() + File.separatorChar + "books" + File.separatorChar + uuid + ".pdf";
-		BookIdentification bookIdentification = new BookIdentification(path);
-		String isbn = bookIdentification.identificate();
-
-		return Response.ok(isbn).build();
+		IdentificationResult identificationResult = idBooks.startIdentification();
+		logger.info(identificationResult.getResult());
+		return Response.ok(identificationResult.getResult()).build();
 
 	}
 	

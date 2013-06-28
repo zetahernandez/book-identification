@@ -6,6 +6,11 @@ define(["ember"], function (Ember) {
 
       categoryListController.set('content', BooksApp.Category.find());
       volumeListController.set('content', BooksApp.Volume.find());
+      this.render('index');
+      this.render('header', {
+        outlet: 'header',
+        into: 'index'
+      });
       this.render('categoryList', {
         outlet: 'left',
         into: 'index',

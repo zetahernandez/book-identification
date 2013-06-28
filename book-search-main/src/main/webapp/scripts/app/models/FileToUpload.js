@@ -4,6 +4,12 @@ define(["ember", "jquery", "atmosphere"], function (Ember, jQuery) {
     file: null,
     identified: false,
     uploaded: 0,
+    uuid: null,
+    status: "",
+    identificateError: undefined,
+    errorType: "",
+    volume: null,
+
 
     /*
         return file.name value 
@@ -17,7 +23,7 @@ define(["ember", "jquery", "atmosphere"], function (Ember, jQuery) {
     */
     size: function () {
       var result,
-      bytes = this.get('file.size'),
+        bytes = this.get('file.size'),
         precision = 2,
         kilobyte = 1024,
         megabyte = kilobyte * 1024,
@@ -65,9 +71,7 @@ define(["ember", "jquery", "atmosphere"], function (Ember, jQuery) {
 
     isUploadComplete: function () {
       return this.get('uploaded') === 100;
-    }.property('uploaded'),
-
-
+    }.property('uploaded')
   });
 
   return FileToUpload;

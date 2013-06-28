@@ -15,11 +15,13 @@
 package com.book.identification.task;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentSkipListSet;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.filefilter.SuffixFileFilter;
@@ -28,13 +30,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import com.book.identification.FileFilter;
 import com.book.identification.BookFile;
+import com.book.identification.FileFilter;
 import com.book.identification.FileType;
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.model.Volume;
 import com.book.identification.task.base.Worker;
-import com.book.identification.util.FileHashUtil;
 
 public class BookSearch extends Thread {
 
@@ -64,8 +65,14 @@ public class BookSearch extends Thread {
 			indexedFiles.add(new File(volume.getPath()));
 		}
 		Collection<File> entries = FileUtils.listFiles(root, new SuffixFileFilter(new String[]{".pdf",".chm" }),TrueFileFilter.INSTANCE);
-		for (File fileToProcces : entries) {
-			String fileSHA1 = FileHashUtil.getFileSHA1(fileToProcces);
+		for (File fileToProcces : entries) { 
+			
+			String fileSHA1 = null;
+			try {
+				fileSHA1 = DigestUtils.shaHex(FileUtils.openInputStream(fileToProcces));
+			} catch (IOException e1) {
+				continue;
+			}
 			logger.info("Accepted file -> " + fileToProcces.getName() + " Hash -> " + fileSHA1);
 			FileType fileType = FileType.valueOf(StringUtils.upperCase(FilenameUtils.getExtension(fileToProcces.getName())));
 			try {

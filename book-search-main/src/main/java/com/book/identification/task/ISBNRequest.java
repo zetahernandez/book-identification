@@ -14,6 +14,7 @@
 
 package com.book.identification.task;
 
+import java.io.IOException;
 import java.util.concurrent.BlockingQueue;
 
 import org.apache.log4j.LogManager;
@@ -21,13 +22,15 @@ import org.apache.log4j.Logger;
 
 import com.book.identification.BookFile;
 import com.book.identification.task.base.Work;
-import com.book.identification.volumes.GoogleBooksRetrieveVolumeInfo;
+import com.book.identification.work.GoogleBooksRetrieveVolumeInfo;
+import com.book.identification.work.exceptions.VolumeNotFoundExecption;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
 
 public class ISBNRequest extends
 		Work<com.book.identification.model.Volume> {
 	final static Logger logger = LogManager.getLogger(ISBNRequest.class);
+	
 	private NetHttpTransport netHttpTransport = new NetHttpTransport();
 	private JacksonFactory jacksonFactory = new JacksonFactory();
 	/**
@@ -47,7 +50,12 @@ public class ISBNRequest extends
 	@Override
 	public void run() {
 		GoogleBooksRetrieveVolumeInfo googleBooksRetrieveVolumeInfo = new GoogleBooksRetrieveVolumeInfo(netHttpTransport, jacksonFactory);
-		com.book.identification.model.Volume volumeInfo = googleBooksRetrieveVolumeInfo.retriveVolumeInfo(fileIsbn);
+		com.book.identification.model.Volume volumeInfo = null;
+		try {
+			volumeInfo = googleBooksRetrieveVolumeInfo.retriveVolumeInfo(fileIsbn);
+		} catch (IOException | VolumeNotFoundExecption e1) {
+			logger.error(e1);
+		}
 		if (volumeInfo != null) {
 			logger.debug("found Volume: ----- >\n" + volumeInfo.toString());
 			try {

@@ -1,4 +1,4 @@
-package com.book.identification.volumes;
+package com.book.identification.work;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;

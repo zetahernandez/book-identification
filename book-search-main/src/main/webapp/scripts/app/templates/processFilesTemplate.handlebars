@@ -29,7 +29,9 @@
             {{/if}}  
 
         </td>
-        <td>{{file.identified}}</td>
+        {{#if file.identificateError}}
+          <td>{{file.errorType}}</td>
+       {{/if}}
       </tr>
       {{/each}}
     </tbody>
@@ -39,5 +41,4 @@
       <button class="btn btn-danger " type="button" {{action "clearListFile"}}>Clear List</button>
   </div>
 </form>
-
 {{/if}}

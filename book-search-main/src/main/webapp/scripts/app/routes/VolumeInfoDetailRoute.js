@@ -2,6 +2,7 @@ define(["ember"], function (Ember) {
   var VolumeInfoDetailRoute = Ember.Route.extend({
 
     renderTemplate: function (controller, model) {
+      this.render('index');
       this.render('volumeInfoDetail', {
         outlet: 'center',
         into: 'index',

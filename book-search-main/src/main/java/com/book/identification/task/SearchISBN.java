@@ -21,8 +21,10 @@ import org.apache.log4j.Logger;
 
 import com.book.identification.BookFile;
 import com.book.identification.task.base.Work;
-import com.book.identification.volumes.ISBNExtract;
-import com.book.identification.volumes.ISBNExtractorFactory;
+import com.book.identification.work.ISBNExtract;
+import com.book.identification.work.ISBNExtractorFactory;
+import com.book.identification.work.exceptions.CantOpenFileException;
+import com.book.identification.work.exceptions.ISBNNotFoundExecption;
 
 public class SearchISBN extends Work<BookFile> {
 	Logger logger = LogManager.getLogger(SearchISBN.class);
@@ -40,7 +42,14 @@ public class SearchISBN extends Work<BookFile> {
 	@Override
 	public void run() {
 		ISBNExtract isbnExtractor = ISBNExtractorFactory.getIsbnExtractor(file.getFileType());
-		String isbn = isbnExtractor.searchISBN(file);
+		String isbn;
+		try {
+			isbn = isbnExtractor.foundISBN(file.getFile());
+		} catch (CantOpenFileException | ISBNNotFoundExecption e1) {
+			//TODO: Recuperate to error
+			logger.error(e1);
+			isbn = null;
+		}
 		file.setIsbn(isbn);
 		if( file.hasISBN()){
 			 try {

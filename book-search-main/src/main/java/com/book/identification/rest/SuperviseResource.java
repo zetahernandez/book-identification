@@ -20,7 +20,7 @@ public class SuperviseResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response chat() {
 
-		String path;
+//		String path;
 
 		return Response.ok("").build();
 	}

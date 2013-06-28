@@ -1,4 +1,4 @@
-package com.book.identification.volumes;
+package com.book.identification.work;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 
 import com.book.identification.BookFile;
 import com.book.identification.ClientCredentials;
-import com.book.identification.model.VolumeInfo;
+import com.book.identification.work.exceptions.VolumeNotFoundExecption;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.books.Books;
@@ -30,7 +30,7 @@ public class GoogleBooksRetrieveVolumeInfo implements RetrieveVolumeInfo {
 	}
 
 	@Override
-	public com.book.identification.model.Volume retriveVolumeInfo(BookFile fileIsbn) {
+	public com.book.identification.model.Volume retriveVolumeInfo(BookFile fileIsbn) throws IOException, VolumeNotFoundExecption {
 		com.book.identification.model.Volume foundVolume = null;
 		Books books = new Books.Builder(netHttpTransport,
 				jacksonFactory, null)
@@ -40,32 +40,29 @@ public class GoogleBooksRetrieveVolumeInfo implements RetrieveVolumeInfo {
 				.build();
 
 		Volumes volumes = null;
-		try {
-			volumes = books.volumes().list("isbn:" + isbnNumber(fileIsbn.getIsbn())).setFields("totalItems,items/id")
-					.execute();
 
-			if (volumes != null && volumes.getTotalItems() != null && volumes.getTotalItems() > 0) {
-					Volume volume = volumes.getItems().get(0);
-					logger.info("Search on goolge api book with isbn:" + fileIsbn.getIsbn());
-					Volume execute = books.volumes().get(volume.getId()).setProjection("full").execute();
-					Gson gson = new GsonBuilder().create();
-					try {
-						foundVolume = gson.fromJson(execute.toString(),com.book.identification.model.Volume.class);
-						foundVolume.setPath(fileIsbn.getFile().getAbsolutePath());
-						foundVolume.setFileName(fileIsbn.getFile().getName());
-						foundVolume.setHashSH1(fileIsbn.getHash());
-						foundVolume.setFileType(fileIsbn.getFileType());
-					} catch (Exception e) {
-						logger.error(e);
-					}
+		volumes = books.volumes().list("isbn:" + isbnNumber(fileIsbn.getIsbn())).setFields("totalItems,items/id")
+				.execute();
 
-			}
-		} catch (IOException e) {
-			logger.error(e.getMessage());
-		} catch (Exception e) {
-			logger.error(e.getMessage());
+		if (volumes != null && volumes.getTotalItems() != null && volumes.getTotalItems() > 0) {
+				Volume volume = volumes.getItems().get(0);
+				logger.info("Search on goolge api book with isbn:" + fileIsbn.getIsbn());
+				Volume execute = books.volumes().get(volume.getId()).setProjection("full").execute();
+				if(execute == null){
+					throw new VolumeNotFoundExecption();
+				}
+				Gson gson = new GsonBuilder().create();
+
+				foundVolume = gson.fromJson(execute.toString(),com.book.identification.model.Volume.class);
+				foundVolume.setPath(fileIsbn.getFile().getAbsolutePath());
+				foundVolume.setFileName(fileIsbn.getFile().getName());
+				foundVolume.setHashSH1(fileIsbn.getHash());
+				foundVolume.setFileType(fileIsbn.getFileType());
+
+		}else{
+			throw new VolumeNotFoundExecption();
 		}
-		
+	
 		return foundVolume;
 	}
 	private String isbnNumber(String isbn2) {

@@ -1,7 +1,12 @@
-package com.book.identification.volumes;
+package com.book.identification.work;
 
-import com.book.identification.BookFile;
+import java.io.File;
+
+import com.book.identification.work.exceptions.CantOpenFileException;
+import com.book.identification.work.exceptions.ISBNNotFoundExecption;
 
 public interface ISBNExtract {
-	 String searchISBN(BookFile take);
+	String foundISBN(File take) throws CantOpenFileException,
+			ISBNNotFoundExecption;
+
 }

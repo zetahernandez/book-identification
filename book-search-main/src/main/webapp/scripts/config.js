@@ -22,6 +22,9 @@ define({
     'atmosphere': {
       deps: ['jquery']
     },
+    'modernizr': {
+      exports: 'modernizr'
+    },
     waitSeconds: 15
   },
   paths: {
@@ -40,6 +43,7 @@ define({
     'ember': 'libs/ember',
     'ember_data': 'libs/ember-data',
     'bootstrap': 'libs/bootstrap/js/bootstrap',
+    'modernizr': 'libs/modernizr',
     'atmosphere': 'libs/jquery.atmosphere'
   }
 });
