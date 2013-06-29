@@ -55,3 +55,7 @@ Desktop.ini
 book-search-main/books/ef477c98793cccbf1f8a99080c650715
 
 book-search-main/book-identification.log.1
+
+*.orig
+
+*.orig
