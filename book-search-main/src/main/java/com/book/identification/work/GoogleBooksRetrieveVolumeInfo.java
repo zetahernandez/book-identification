@@ -49,7 +49,7 @@ public class GoogleBooksRetrieveVolumeInfo implements RetrieveVolumeInfo {
 				logger.info("Search on goolge api book with isbn:" + fileIsbn.getIsbn());
 				Volume execute = books.volumes().get(volume.getId()).setProjection("full").execute();
 				if(execute == null){
-					throw new VolumeNotFoundExecption();
+					throw new VolumeNotFoundExecption(fileIsbn.getIsbn());
 				}
 				Gson gson = new GsonBuilder().create();
 
@@ -60,11 +60,12 @@ public class GoogleBooksRetrieveVolumeInfo implements RetrieveVolumeInfo {
 				foundVolume.setFileType(fileIsbn.getFileType());
 
 		}else{
-			throw new VolumeNotFoundExecption();
+			throw new VolumeNotFoundExecption(fileIsbn.getIsbn());
 		}
 	
 		return foundVolume;
 	}
+	
 	private String isbnNumber(String isbn2) {
 		StringBuilder stringBuilder = new StringBuilder();
 		String replace = StringUtils
@@ -76,6 +77,8 @@ public class GoogleBooksRetrieveVolumeInfo implements RetrieveVolumeInfo {
 			char c = charArray[i];
 			if (Character.isDigit(c) || Character.valueOf(c).equals('X')) {
 				stringBuilder.append(Character.toString(c));
+			}else if(c == '\n' || c == '\t'){
+				break;
 			}
 
 		}

@@ -37,6 +37,10 @@ class SaveVolume extends Work<Volume>{
 
 	@Override
 	public void run() {
+		saveNewVolume();
+	}
+
+	private void saveNewVolume() {
 		VolumeDAO volumeDAO = DAOFactory.getInstance().getVolumeDAO();
 		try{
 				volumeDAO.getSession().getTransaction().begin();

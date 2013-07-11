@@ -19,8 +19,9 @@ define({
     'bootstrap': {
       deps: ['jquery']
     },
-    'atmosphere': {
-      deps: ['jquery']
+    'spin': {
+      deps: ['jquery'],
+      exports: 'spin'
     },
     'modernizr': {
       exports: 'modernizr'
@@ -44,6 +45,6 @@ define({
     'ember_data': 'libs/ember-data',
     'bootstrap': 'libs/bootstrap/js/bootstrap',
     'modernizr': 'libs/modernizr',
-    'atmosphere': 'libs/jquery.atmosphere'
+    'spin': 'libs/spin'
   }
 });

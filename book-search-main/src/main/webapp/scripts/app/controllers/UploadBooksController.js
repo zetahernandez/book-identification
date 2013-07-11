@@ -51,7 +51,7 @@ define(["ember", "models/FileToUpload", "jquery"], function (Ember, FileToUpload
               var result = results[file.get('uuid')];
               if (result.error) {
                 file.set('identificateError', true);
-                file.set('errorType', result.result);
+                file.set('error', result.error);
               } else {
                 file.set('identificateError', false);
                 file.set('volume', BooksApp.Volume.createRecord(result.result));
@@ -75,6 +75,7 @@ define(["ember", "models/FileToUpload", "jquery"], function (Ember, FileToUpload
         url: '/rest/volumes/upload',
         type: 'POST',
         data: formData,
+        blocker: true,
         success: function (data, textStatus, xhr) {
           file.set('uploaded', 100);
           file.set('uuid', data);

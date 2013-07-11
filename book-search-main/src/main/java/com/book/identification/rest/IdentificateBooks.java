@@ -12,11 +12,14 @@ import org.apache.log4j.Logger;
 import com.book.identification.BookFile;
 import com.book.identification.FileType;
 import com.book.identification.model.Volume;
+import com.book.identification.volumes.CheckNoRepitAndSaveVolume;
 import com.book.identification.work.GoogleBooksRetrieveVolumeInfo;
 import com.book.identification.work.ISBNExtract;
 import com.book.identification.work.ISBNExtractorFactory;
 import com.book.identification.work.exceptions.CantOpenFileException;
 import com.book.identification.work.exceptions.ISBNNotFoundExecption;
+import com.book.identification.work.exceptions.NotPersistExeption;
+import com.book.identification.work.exceptions.VolumeExistExeption;
 import com.book.identification.work.exceptions.VolumeNotFoundExecption;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
@@ -58,12 +61,15 @@ public class IdentificateBooks {
 			try {
 				String isbn = isbnExtractor.foundISBN(path.toFile());
 				bookFile.setIsbn(isbn);
+				
 				Volume volume = googleBooksRetrieveVolumeInfo.retriveVolumeInfo(bookFile);
-				result.addResultVolume(path,volume);
-			} catch (CantOpenFileException | ISBNNotFoundExecption | VolumeNotFoundExecption e) {
+				
+				new CheckNoRepitAndSaveVolume().checNoRepeatAndSave(volume);
+				result.addResultVolume(path, volume);
+			} catch (CantOpenFileException | ISBNNotFoundExecption | VolumeNotFoundExecption | NotPersistExeption | VolumeExistExeption e) {
 				result.addErrorTo(path,e);
 			} catch (IOException e) {
-				result.addErrorTo(path,new VolumeNotFoundExecption());
+				result.addErrorTo(path,new VolumeNotFoundExecption("0"));
 			}
 		}
 		return result;

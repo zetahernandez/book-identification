@@ -531,23 +531,6 @@ p.continued {
 /* 	} */
 
 /**Estilo para el loading del scroll infinito*/
-.endless_scroll_loader {
-	position: fixed;
-	bottom: 5%;
-	right: 50px;
-}
-
-.loading {
-	background-image: url("../img/ajax-loader.gif");
-	width: 100px;
-	height: 100px;
-}
-
-#infiniteScroll {
-	height: 720px;
-	overflow-x: hidden;
-	overflow-y: scroll;
-}
 
 
 	

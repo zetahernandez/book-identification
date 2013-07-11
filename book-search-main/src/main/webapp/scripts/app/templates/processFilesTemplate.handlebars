@@ -7,7 +7,10 @@
         <th>#</th>
         <th>File Name</th>
         <th>Size</th>
-        <th>Progress</th>
+        <th>Status</th>
+        {{#if file.isIdenticating}}
+          <th>Identification Result</th>
+        {{/if}}
       </tr>
     </thead>
     <tbody>
@@ -29,9 +32,14 @@
             {{/if}}  
 
         </td>
+        
         {{#if file.identificateError}}
-          <td>{{file.errorType}}</td>
-       {{/if}}
+          <td><div><span class="label label-info">{{file.error.errorType}}</span></div></td> 
+        {{else}}
+         {{#if file.isSaved}}
+           <td><div><span class="label label-info">{{file.error.errorType}}</span></div></td> 
+         {{/if}}
+        {{/if}}
       </tr>
       {{/each}}
     </tbody>

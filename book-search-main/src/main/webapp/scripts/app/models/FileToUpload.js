@@ -1,4 +1,4 @@
-define(["ember", "jquery", "atmosphere"], function (Ember, jQuery) {
+define(["ember", "jquery"], function (Ember, jQuery) {
   var FileToUpload = Ember.Object.extend({
     index: null,
     file: null,
@@ -7,16 +7,30 @@ define(["ember", "jquery", "atmosphere"], function (Ember, jQuery) {
     uuid: null,
     status: "",
     identificateError: undefined,
-    errorType: "",
+    error: "",
     volume: null,
-
-
     /*
         return file.name value 
     */
     name: function () {
       return this.get('file.name');
     }.property('file.name'),
+
+    isUploadComplete: function () {
+      return this.get('uploaded') === 100;
+    }.property('uploaded'),
+
+    isISBNNotFoundError: function () {
+      return this.get('identificateError').errorTpye === 'ISBNNotFoundError';
+    }.property('identificateError'),
+
+    isVolumeNotFound: function () {
+      return this.get('identificateError').errorTpye === 'ISBNNotFoundError';
+    }.property('identificateError'),
+
+    isIrrecuperableError: function () {
+      return this.get('identificateError').errorTpye === 'ISBNNotFoundError';
+    }.property('identificateError'),
 
     /*
       Convert and return  file.size bytes size value on meagabytes
@@ -49,29 +63,8 @@ define(["ember", "jquery", "atmosphere"], function (Ember, jQuery) {
         result = bytes + ' B';
       }
       return result;
-    }.property('file.size'),
+    }.property('file.size')
 
-    //read file UNUSED
-    readMe: function () {
-      var reader = new FileReader(),
-        _self = this;
-
-      reader.onload = function (event) {
-        _self.set('file.data', event.target.result);
-        _self.set('uploaded', 100);
-      };
-
-      reader.onprogress = function (event) {
-        if (event.lengthComputable) {
-          _self.set('uploaded', Math.round((event.loaded / event.total) * 100));
-        }
-      };
-      reader.readAsDataURL(this.get('file'));
-    },
-
-    isUploadComplete: function () {
-      return this.get('uploaded') === 100;
-    }.property('uploaded')
   });
 
   return FileToUpload;

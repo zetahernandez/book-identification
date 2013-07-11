@@ -211,7 +211,7 @@ public class VolumeResource {
 		
 		java.nio.file.Path path = new File(System.getProperty("user.dir")).toPath().resolve("books");
 		if(!Files.exists(path)){
-			Files.createDirectory(path);
+			Files.createDirectories(path);
 		}
 		java.nio.file.Path filePath = path.resolve(md5Hex);
 
