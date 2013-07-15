@@ -13,9 +13,6 @@ define(["ember"], function (Ember) {
 			this.route('general');
 			this.route('upload');
 		});
-		this.route("uploadBooks", {
-			path: "/uploadBook"
-		});
 	};
 	return Router;
 });

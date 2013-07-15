@@ -2,16 +2,18 @@
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		{{outlet header}}	
 	</div>
-	<div class="container-fluid no-overflow no-padding content">
-		<div class="row-fluid max-height">
+	<div class="container-fluid">
+		<div class="row-fluid">
 			<div class="span2">
-				<ul class="nav nav-pills nav-stacked">
-          			<li>{{#linkTo 'settings.general'}}General{{/linkTo}}</li>
-          			<li>{{#linkTo 'settings.upload'}}Upload Books{{/linkTo}}</li>
-    			</ul>
+				<div class="">
+					<ul class="nav nav-tabs nav-stacked">
+	          			<li>{{#linkTo 'settings.general'}}<i class="icon-cog"></i> General{{/linkTo}}</li>
+	          			<li>{{#linkTo 'settings.upload'}}<i class="icon-book"></i> Upload Books{{/linkTo}}</li>
+	    			</ul>
+    			</div>
 			</div>
-			<div  class="span10 scrollable scrollable-content">
-				{{outlet center}}
+			<div  class="span10">
+				{{outlet settingContent}}
 			</div>
 		</div>
 	</div>

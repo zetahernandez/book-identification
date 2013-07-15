@@ -6,10 +6,6 @@ define(["ember"], function (Ember) {
 				outlet: 'header',
 				into: 'settings'
 			});
-			this.render('settingsGeneral', {
-				outlet: 'settingContent',
-				into: 'settings'
-			});
 		}
 	});
 	return SettingsRoute;

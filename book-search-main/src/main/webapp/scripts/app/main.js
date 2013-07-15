@@ -1,6 +1,6 @@
-define(["views/IndexView", "views/HeaderView", "views/VolumeListView", "views/CategoryListView", "views/VolumeInfoView", "views/VolumeInfoDetailView", "views/NavigationView", "views/SearchVolumeView", "views/LoadMoreView", "views/FileDropBoxView", "views/UploadBooksView", "views/ProcessFilesView", "views/SettingsView", "controllers/IndexController", "controllers/HeaderController", "controllers/VolumeListController", "controllers/CategoryListController", "controllers/VolumeInfoDetailController", "controllers/SearchVolumeController", "controllers/LoadMoreController", "controllers/UploadBooksController", "controllers/SettingsController", "models/Volume", "models/VolumeInfo", "models/Category", "models/ImageLink", "models/IndustryIdentifier", "app/router", "routes/IndexRoute", "routes/VolumeInfoDetailRoute", "routes/VolumesRoute", "routes/UploadBooksRoute", "routes/SettingsRoute", "routes/SettingsGeneralRoute", "routes/SettingsUploadRoute"],
+define(["views/IndexView", "views/HeaderView", "views/VolumeListView", "views/CategoryListView", "views/VolumeInfoView", "views/VolumeInfoDetailView", "views/SearchVolumeView", "views/LoadMoreView", "views/FileDropBoxView", "views/UploadBooksView", "views/ProcessFilesView", "views/SettingsView", "controllers/IndexController", "controllers/HeaderController", "controllers/VolumeListController", "controllers/CategoryListController", "controllers/VolumeInfoDetailController", "controllers/SearchVolumeController", "controllers/LoadMoreController", "controllers/UploadBooksController", "controllers/SettingsController", "models/Volume", "models/VolumeInfo", "models/Category", "models/ImageLink", "models/IndustryIdentifier", "app/router", "routes/IndexRoute", "routes/VolumeInfoDetailRoute", "routes/VolumesRoute", "routes/SettingsRoute", "routes/SettingsGeneralRoute", "routes/SettingsUploadRoute"],
 
-  function (IndexView, HeaderView, VolumeListView, CategoryListView, VolumeInfoView, VolumeInfoDetailView, NavigationView, SearchVolumeView, LoadMoreView, FileDropBoxView, UploadBooksView, ProcessFilesView, SettingsView, IndexController, HeaderController, VolumeListController, CategoryListController, VolumeInfoDetailController, SearchVolumeController, LoadMoreController, UploadBooksController, SettingsController, Volume, VolumeInfo, Category, ImageLink, IndustryIdentifier, Router, IndexRoute, VolumeInfoDetailRoute, VolumesRoute, UploadBooksRoute, SettingsRoute, SettingsGeneralRoute, SettingsUploadRoute) { /* Module Pattern */
+  function (IndexView, HeaderView, VolumeListView, CategoryListView, VolumeInfoView, VolumeInfoDetailView, SearchVolumeView, LoadMoreView, FileDropBoxView, UploadBooksView, ProcessFilesView, SettingsView, IndexController, HeaderController, VolumeListController, CategoryListController, VolumeInfoDetailController, SearchVolumeController, LoadMoreController, UploadBooksController, SettingsController, Volume, VolumeInfo, Category, ImageLink, IndustryIdentifier, Router, IndexRoute, VolumeInfoDetailRoute, VolumesRoute, SettingsRoute, SettingsGeneralRoute, SettingsUploadRoute) { /* Module Pattern */
     var App = Ember.Application.create({
       LOG_TRANSITIONS: true
     });
@@ -10,7 +10,6 @@ define(["views/IndexView", "views/HeaderView", "views/VolumeListView", "views/Ca
     App.CategoryListView = CategoryListView;
     App.VolumeInfoView = VolumeInfoView;
     App.VolumeInfoDetailView = VolumeInfoDetailView;
-    App.NavigationView = NavigationView;
     App.SearchVolumeView = SearchVolumeView;
     App.LoadMoreView = LoadMoreView;
     App.FileDropBoxView = FileDropBoxView;
@@ -35,7 +34,6 @@ define(["views/IndexView", "views/HeaderView", "views/VolumeListView", "views/Ca
     App.IndexRoute = IndexRoute;
     App.VolumeInfoDetailRoute = VolumeInfoDetailRoute;
     App.VolumesRoute = VolumesRoute;
-    App.UploadBooksRoute = UploadBooksRoute;
     App.SettingsRoute = SettingsRoute;
     App.SettingsGeneralRoute = SettingsGeneralRoute;
     App.SettingsUploadRoute = SettingsUploadRoute;

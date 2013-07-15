@@ -61,3 +61,5 @@ book-search-main/book-identification.log.1
 *.orig
 
 book-search-main/src/main/webapp/html5-dnd-example/*
+
+book-search-main/books/*
