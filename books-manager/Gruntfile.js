@@ -17,8 +17,8 @@ module.exports = function (grunt) {
 
   // configurable paths
   var yeomanConfig = {
-    app: 'app',
-    dist: 'dist'
+    app: 'public/app',
+    dist: 'public/dist'
   };
 
   grunt.initConfig({
@@ -35,6 +35,23 @@ module.exports = function (grunt) {
       prod: {
         options: {
           script: 'server.js'
+        }
+      }
+    },
+    connect: {
+      options: {
+        port: 5000,
+        // change this to '0.0.0.0' to access the server from outside
+        hostname: 'localhost'
+      },
+      test: {
+        options: {
+          middleware: function (connect) {
+            return [
+              mountFolder(connect, '.tmp'),
+              mountFolder(connect, 'test')
+            ];
+          }
         }
       }
     },
@@ -134,15 +151,15 @@ module.exports = function (grunt) {
     compass: {
       options: {
         sassDir: '<%= yeoman.app %>/styles',
-        cssDir: '.tmp/styles',
-        generatedImagesDir: '.tmp/images/generated',
+        cssDir: 'public/.tmp/styles',
+        generatedImagesDir: 'public/.tmp/images/generated',
         imagesDir: '<%= yeoman.app %>/images',
         javascriptsDir: '<%= yeoman.app %>/scripts',
         fontsDir: '<%= yeoman.app %>/styles/fonts',
-        importPath: 'app/bower_components',
-        httpImagesPath: '/images',
-        httpGeneratedImagesPath: '/images/generated',
-        httpFontsPath: '/styles/fonts',
+        importPath: 'public/app/bower_components',
+        httpImagesPath: 'public/images',
+        httpGeneratedImagesPath: 'public/images/generated',
+        httpFontsPath: 'public/styles/fonts',
         relativeAssets: false
       },
       dist: {},
@@ -212,7 +229,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= yeoman.dist %>/styles/main.css': [
-            '.tmp/styles/{,*/}*.css',
+            'public/.tmp/styles/{,*/}*.css',
             '<%= yeoman.app %>/styles/{,*/}*.css'
           ]
         }
@@ -290,7 +307,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '.tmp/scripts/compiled-templates.js': '<%= yeoman.app %>/templates/{,*/}*.hbs'
+          'public/.tmp/scripts/compiled-templates.js': '<%= yeoman.app %>/templates/{,*/}*.hbs'
         }
       }
     },
@@ -298,11 +315,11 @@ module.exports = function (grunt) {
       app: {
         options: {
           filepathTransform: function (filepath) {
-            return 'app/' + filepath;
+            return 'public/app/' + filepath;
           }
         },
         src: '<%= yeoman.app %>/scripts/app.js',
-        dest: '.tmp/scripts/combined-scripts.js'
+        dest: 'public/.tmp/scripts/combined-scripts.js'
       }
     }
   });
@@ -327,6 +344,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'concurrent:test',
+    'connect:test',
     'neuter:app',
     'mocha'
   ]);

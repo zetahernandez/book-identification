@@ -19,10 +19,10 @@ app.use(app.router);
 
 // development only
 if ('production' == app.get('env')) {
-  app.use(express.static(path.join(__dirname, 'dist')));
+  app.use(express.static(path.join(__dirname, 'public/dist')));
 } else {
-  app.use(express.static(path.join(__dirname, 'app')));
-  app.use(express.static(path.join(__dirname, '.tmp')));
+  app.use(express.static(path.join(__dirname, 'public/app')));
+  app.use(express.static(path.join(__dirname, 'public/.tmp')));
   app.use(express.errorHandler());
 }
 
