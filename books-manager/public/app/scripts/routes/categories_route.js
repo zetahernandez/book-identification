@@ -1,0 +1,1 @@
+BooksManager.CategoriesRoute = Ember.Route.extend({});
