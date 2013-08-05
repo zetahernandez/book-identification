@@ -4,7 +4,8 @@
 
 var express = require('express'),
   http = require('http'),
-  path = require('path');
+  path = require('path'),
+  api = require('./resources');
 
 var app = express();
 
@@ -15,18 +16,21 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
+app.disable('strict routing');
 app.use(app.router);
+
+
 app.use(express.errorHandler());
 
 // development only
 if ('production' === app.get('env')) {
-  app.use(express.static(path.join(__dirname, 'public/dist')));
+  app.use(express.static(path.join(__dirname, '../public/dist')));
 } else {
-  app.use(express.static(path.join(__dirname, 'public/app')));
-  app.use(express.static(path.join(__dirname, 'public/.tmp')));
+  app.use(express.static(path.join(__dirname, '../public/app')));
+  app.use(express.static(path.join(__dirname, '../public/.tmp')));
 }
-
-
+app = api.base.mapRoutes(app);
+app = api.volumes.mapRoutes(app);
 http.createServer(app).listen(app.get('port'), function () {
   console.log("Express server listening on port %d in %s mode", app.get('port'), app.get('env'));
 });
