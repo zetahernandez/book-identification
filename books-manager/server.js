@@ -16,15 +16,16 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
+app.use(express.errorHandler());
 
 // development only
-if ('production' == app.get('env')) {
+if ('production' === app.get('env')) {
   app.use(express.static(path.join(__dirname, 'public/dist')));
 } else {
   app.use(express.static(path.join(__dirname, 'public/app')));
   app.use(express.static(path.join(__dirname, 'public/.tmp')));
-  app.use(express.errorHandler());
 }
+
 
 http.createServer(app).listen(app.get('port'), function () {
   console.log("Express server listening on port %d in %s mode", app.get('port'), app.get('env'));

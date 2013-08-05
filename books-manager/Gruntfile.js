@@ -29,12 +29,12 @@ module.exports = function (grunt) {
       },
       dev: {
         options: {
-          script: 'server.js'
+          script: 'lib/server.js'
         }
       },
       prod: {
         options: {
-          script: 'server.js'
+          script: 'lib/server.js'
         }
       }
     },
@@ -81,8 +81,9 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/*.html',
           '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          'server.js',
-          'server/{,*//*}*.{js,json}'
+          'lib/server.js',
+          'lib/resources/{,*//*}*.{js,json}',
+          'lib/{,*//*}*.{js,json}'
         ],
         tasks: ['express:dev'],
         options: {
