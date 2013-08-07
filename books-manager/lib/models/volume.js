@@ -1,7 +1,8 @@
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema,
   ObjectId = Schema.ObjectId;
-mongoose.connect('mongodb://localhost/test');
+
+  mongoose.connect('mongodb://localhost/books');
 
 var VolumeSchema = new Schema({
   kind: String,
@@ -19,8 +20,12 @@ var VolumeSchema = new Schema({
       identifier: String
     }],
     pageCount: Number,
+    dimensions: {
+      height: String
+    },
     printType: String,
-    averageRating: String,
+    categories: [String],
+    averageRating: Number,
     ratingsCount: Number,
     contentVersion: String,
     imageLinks: {
