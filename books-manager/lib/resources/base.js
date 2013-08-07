@@ -1,6 +1,6 @@
 var api = require('./');
 
-function mapRoutes(app) {
+function mapRoutes(app,models) {
   app.get('/api/', function (req, res) {
     res.send({
       resources: [{
