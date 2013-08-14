@@ -69,7 +69,9 @@ module.exports = function (mongoose) {
     volume.save();
   };
 
-  
+  var listAll = function (callback) {
+    Volume.find();
+  };
 
   return {
     addVolume: addVolume,
