@@ -83,6 +83,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           'lib/server.js',
           'lib/resources/{,*//*}*.{js,json}',
+          'lib/models/{,*//*}*.{js,json}',
           'lib/{,*//*}*.{js,json}'
         ],
         tasks: ['express:dev'],

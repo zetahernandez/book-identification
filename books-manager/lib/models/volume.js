@@ -1,18 +1,19 @@
 module.exports = function (mongoose) {
 
   var Schema = mongoose.Schema,
-    ObjectId = mongoose.Schema;
+    ObjectId = Schema.ObjectId;
 
   var VolumeSchema = new Schema({
     kind: String,
-    id: ObjectId,
+    _id: ObjectId,
+    id: String,
     etag: String,
     selfLink: String,
     volumeInfo: {
       title: String,
       authors: [String],
       publisher: String,
-      publishedDate: Number,
+      publishedDate: Date,
       description: String,
       industryIdentifiers: [{
         type: String,
@@ -61,12 +62,14 @@ module.exports = function (mongoose) {
     }
   });
 
+  var Volume = mongoose.model('Volume', VolumeSchema);
+
   var addVolume = function (volume, callback) {
-    volume = new VolumeSchema(volume);
+    volume = new Volume(volume);
     volume.save();
   };
 
-  var Volume = mongoose.model('Volume', VolumeSchema);
+  
 
   return {
     addVolume: addVolume,
