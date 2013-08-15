@@ -34,9 +34,9 @@ BooksManager.VolumeListController = Ember.ArrayController.extend(
 
     removeVolume: function (volume) {
       this.get('currentVolumes').forEach(function (item, i, currentVolumes) {
-        if (item.get('id') == comment.get('id')) {
-          currentVolumes.removeAt(i, 1);
-        }
+        // if (item.get('id') == comment.get('id')) {
+        //   currentVolumes.removeAt(i, 1);
+        // }
       });
     },
 
@@ -77,7 +77,7 @@ BooksManager.VolumeListController = Ember.ArrayController.extend(
     },
 
     more: function () {
-      _self = this;
+      var _self = this;
       if (this.get('moreVolumes') !== null && this.get('moreVolumes').isLoaded) {
         if (this.get('content') === null) {
           this.set('content', this.get('moreVolumes'));

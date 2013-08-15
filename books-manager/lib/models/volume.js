@@ -2,7 +2,10 @@ module.exports = function (mongoose) {
 
   var Schema = mongoose.Schema,
     ObjectId = Schema.ObjectId;
-
+  /**
+   * [VolumeSchema description]
+   * @type {Schema}
+   */
   var VolumeSchema = new Schema({
     kind: String,
     _id: ObjectId,
@@ -64,17 +67,44 @@ module.exports = function (mongoose) {
 
   var Volume = mongoose.model('Volume', VolumeSchema);
 
+  /**
+   * Add a new volume Save it in mongodb
+   *
+   * @param Volume     volume
+   * @param {Function} callback (err,result)
+   */
   var addVolume = function (volume, callback) {
     volume = new Volume(volume);
-    volume.save();
+    volume.save(callback);
   };
 
-  var listAll = function (callback) {
-    Volume.find();
+  /**
+   * List all volumes
+   *
+   * @param  {Function} callback (err,results)
+   * @return {void}
+   */
+  var findAll = function (callback) {
+    Volume.find(callback);
+  };
+
+  /**
+   * Find a volume with id passed in the parameter
+   *
+   * @param  {String}   _id
+   * @param  {Function} callback (err, volume)
+   * @return {void}
+   */
+  var findById = function (_id, callback) {
+    Volume.findOne({
+      id: _id
+    }, callback);
   };
 
   return {
     addVolume: addVolume,
+    findAll: findAll,
+    findById: findById,
     Volume: Volume
   };
 };

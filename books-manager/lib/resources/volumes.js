@@ -2,16 +2,51 @@ var api = require('./'),
   models = require('../models').db();
 
 function mapRoutes(app) {
+  /**
+   * Maping the endpoint for obtain a volume with specific id
+   * in param id, this search on mongodb to obtain a volume and
+   * respond to request with the volume searched
+   *
+   * @param  {Request} req
+   * @param  {Response} res
+   * @return {void}
+   */
   app.get('/api/volumes/:id', function (req, res) {
-    debugger;
     var volumeId = req.param("id");
-    res.send(volumeId);
+    models.Volume.findById(volumeId, function (err, volume) {
+      res.send(volume);
+    });
   });
 
+  /**
+   * Maping the endpoint for obtain all volumes
+   * this search on mongodb to obtain all volumes and
+   * respond to request with the volumes searched
+   *
+   * @param  {Request} req
+   * @param  {Response} res
+   * @return {void}
+   */
+
+  app.get('/api/volumes/', function (req, res) {
+    models.Volume.findAll(function (err, volumes) {
+      res.send({
+        volumes: volumes
+      });
+    });
+  });
+
+  /**
+   * Maping the endpoint for save volume
+   *
+   * @param  {Request} req
+   * @param  {Response} res
+   * @return {void}
+   */
   app.post('/api/volumes', function (req, res) {
-    debugger;
-    models.Volume.addVolume(req.body);
-    res.send('sarasa');
+    models.Volume.addVolume(req.body, function (err, volume) {
+      res.send(volume);
+    });
   });
 
   return app;

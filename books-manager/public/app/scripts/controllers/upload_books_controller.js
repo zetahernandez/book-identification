@@ -7,12 +7,12 @@ BooksManager.UploadBooksController = Ember.ObjectController.extend({
     var _self = this;
     jQuery.each(files, function (index, file) {
       if (file.type === "application/pdf") {
-        _self.get('files').pushObject(FileToUpload.create({
+        _self.get('files').pushObject(BooksManager.FileToUpload.create({
           index: index,
           file: file
         }));
       } else {
-        _self.get('ignoredFiles').pushObject(FileToUpload.create({
+        _self.get('ignoredFiles').pushObject(BooksManager.FileToUpload.create({
           index: index,
           file: file
         }));

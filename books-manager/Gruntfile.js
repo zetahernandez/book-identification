@@ -48,8 +48,8 @@ module.exports = function (grunt) {
         options: {
           middleware: function (connect) {
             return [
-              mountFolder(connect, '.tmp'),
-              mountFolder(connect, 'test')
+              mountFolder(connect, 'public/.tmp'),
+              mountFolder(connect, 'public/test')
             ];
           }
         }
@@ -96,6 +96,9 @@ module.exports = function (grunt) {
     open: {
       server: {
         path: 'http://localhost:<%= express.options.port %>'
+      },
+      test: {
+        path: 'http://localhost:<%= connect.options.port %>'
       }
     },
     clean: {
@@ -348,6 +351,7 @@ module.exports = function (grunt) {
     'concurrent:test',
     'connect:test',
     'neuter:app',
+    'open:test',
     'mocha'
   ]);
 
