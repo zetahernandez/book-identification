@@ -49,6 +49,32 @@ function mapRoutes(app) {
     });
   });
 
+  /**
+   * Maping the endpoint for update volume
+   *
+   * @param  {Request} req
+   * @param  {Response} res
+   * @return {void}
+   */
+  app.update('/api/volumes/:id', function (req, res) {
+    var volumeId = req.param("id");
+    models.Volume.updateVolume(volumeId, req.body, function (err, volume) {
+      res.send(volume);
+    });
+  });
+
+  /**
+   * Maping the endpoint for delete volume
+   *
+   * @param  {Request} req
+   * @param  {Response} res
+   * @return {void}
+   */
+  app.delet('/api/volumes/:id', function (req, res) {
+    models.Volume.removeVolume(req.body, function (err, volume) {
+      res.send(volume);
+    });
+  });
   return app;
 }
 module.exports.mapRoutes = mapRoutes;
