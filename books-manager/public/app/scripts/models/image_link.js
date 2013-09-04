@@ -1,4 +1,4 @@
-BooksManager.IamgeLink = DS.Model.extend({
+BooksManager.ImageLink = DS.Model.extend({
   thumbnail: DS.attr('string'),
   smallThumbnail: DS.attr('string'),
   small: DS.attr('string'),

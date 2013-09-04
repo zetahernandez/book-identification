@@ -1,10 +1,7 @@
 <div class="thumbnails">
-  {{#each volume in currentVolumes}}
+  {{#each volume in content}}
     {{view BooksManager.VolumeInfoView eventBinding="volume"  contentBinding="this" target="volume"}}
   {{/each}}
-</div>
-<div>
-  {{view BooksManager.LoadMoreView controllerBinding="controller"}}
 </div>
 <div id="modal"></div>
 

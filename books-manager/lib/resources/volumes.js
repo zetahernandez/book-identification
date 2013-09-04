@@ -28,7 +28,7 @@ function mapRoutes(app) {
    * @return {void}
    */
 
-  app.get('/api/volumes/', function (req, res) {
+  app.get('/api/volumes', function (req, res) {
     models.Volume.findAll(function (err, volumes) {
       res.send({
         volumes: volumes
@@ -56,7 +56,7 @@ function mapRoutes(app) {
    * @param  {Response} res
    * @return {void}
    */
-  app.update('/api/volumes/:id', function (req, res) {
+  app.put('/api/volumes/:id', function (req, res) {
     var volumeId = req.param("id");
     models.Volume.updateVolume(volumeId, req.body, function (err, volume) {
       res.send(volume);
@@ -70,7 +70,7 @@ function mapRoutes(app) {
    * @param  {Response} res
    * @return {void}
    */
-  app.delet('/api/volumes/:id', function (req, res) {
+  app.delete('/api/volumes/:id', function (req, res) {
     models.Volume.removeVolume(req.body, function (err, volume) {
       res.send(volume);
     });

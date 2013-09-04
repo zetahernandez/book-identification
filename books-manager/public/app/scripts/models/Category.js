@@ -1,8 +1,8 @@
 BooksManager.Category = DS.Model.extend({
   level: DS.attr('number'),
   categoryName: DS.attr('string'), //{ key: 'thumbnailUrl' }
-  parent: DS.belongsTo('BooksManager.Category'),
-  subCategories: DS.hasMany('BooksManager.Category'),
+  parent: DS.belongsTo('category'),
+  subCategories: DS.hasMany('category'),
 
   haveParent: function () {
     return this.get('parent') !== null && this.get('parent') !== undefined;

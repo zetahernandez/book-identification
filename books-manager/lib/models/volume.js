@@ -2,6 +2,16 @@ module.exports = function (mongoose) {
 
   var Schema = mongoose.Schema,
     ObjectId = Schema.ObjectId;
+
+  /**
+   * [imageSchema description]
+   * @type {Schema}
+   */
+  var IndustryIdentifier = new Schema({
+    type: String,
+    identifier: String
+  });
+
   /**
    * [VolumeSchema description]
    * @type {Schema}
@@ -18,10 +28,7 @@ module.exports = function (mongoose) {
       publisher: String,
       publishedDate: Date,
       description: String,
-      industryIdentifiers: [{
-        type: String,
-        identifier: String
-      }],
+      industryIdentifiers: [IndustryIdentifier],
       pageCount: Number,
       dimensions: {
         height: String

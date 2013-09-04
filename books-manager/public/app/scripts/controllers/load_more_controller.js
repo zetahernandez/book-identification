@@ -1,1 +1,0 @@
-BooksManager.LoadMoreController = Ember.ArrayController.extend({});

@@ -1,5 +1,4 @@
 BooksManager.Router.map(function () {
-  this.route('categories');
 
   this.route("volumes", {
     path: "/volumes"

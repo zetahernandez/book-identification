@@ -1,14 +1,14 @@
-BooksManager.Volumeinfo = DS.Model.extend({
-  authors: DS.attr('string'),
-  description: DS.attr('string'),
-  imageLinks: DS.belongsTo('BooksManager.ImageLink'),
-  industryIdentifiers: DS.hasMany('BooksManager.IndustryIdentifier'),
+BooksManager.VolumeInfo = DS.Model.extend({
+  authors: DS.attr(),
+  description: DS.attr( ),
+  imageLinks: DS.belongsTo('image-link'),
+  industryIdentifiers: DS.hasMany('industry-identifier'),
   title: DS.attr('string'),
   subtitle: DS.attr('string'),
   publisher: DS.attr('string'),
   pages: DS.attr('number'),
   publishedDate: DS.attr('date'),
-  categories: DS.hasMany('BooksManager.Category'),
+  categories: DS.hasMany('category'),
 
   unescapedDescription: function () {
     return this.get('description').htmlSafe();

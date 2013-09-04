@@ -1,5 +1,4 @@
-BooksManager.VolumeListController = Ember.ArrayController.extend(
-  BooksManager.LoadMoreMixin, {
+BooksManager.VolumeListController = Ember.ArrayController.extend({
     content: [],
     currentVolumes: [],
 

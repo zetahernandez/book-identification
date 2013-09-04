@@ -1,1 +1,1 @@
- BooksManager.IndexController = Ember.ArrayController.extend();
+ BooksManager.IndexController = Ember.ArrayController.extend({});

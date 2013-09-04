@@ -1,6 +1,6 @@
 BooksManager.Volume = DS.Model.extend({
-  bookId: DS.attr('string'),
-  kind: DS.attr('string'),
-  path: DS.attr('string'),
-  volumeInfo: DS.belongsTo('BooksManager.VolumeInfo')
+  bookId: DS.attr({ type: 'string' }),
+  kind: DS.attr({ type: 'string' }),
+  path: DS.attr({ type: 'string' }),
+  volumeInfo: DS.belongsTo('volume-info')
 });

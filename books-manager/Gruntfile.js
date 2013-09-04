@@ -341,7 +341,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'neuter:app',
       'express:dev',
-      'open',
+      'open:server',
       'watch'
     ]);
   });

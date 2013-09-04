@@ -2,10 +2,12 @@ BooksManager.IndexRoute = Ember.Route.extend({
 
   renderTemplate: function (controller, model) {
     var categoryListController = this.controllerFor('categoryList'),
-      volumeListController = this.controllerFor('volumeList');
+      volumeListController = this.controllerFor('volumeList'),
+      categories = this.get('store').findAll('category'),
+      volumes = this.get('store').findAll('volume');
 
-    categoryListController.set('content', BooksManager.Category.find());
-    volumeListController.set('content', BooksManager.Volume.find());
+    categoryListController.set('model', categories);
+    volumeListController.set('model', volumes);
 
     this.render('index');
     this.render('header', {

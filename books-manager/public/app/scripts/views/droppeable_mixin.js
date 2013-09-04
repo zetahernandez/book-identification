@@ -1,4 +1,5 @@
 BooksManager.DroppableMixin = Ember.Mixin.create({
+  
   dragEnter: function (event) {
     event.stopPropagation();
     event.preventDefault();
@@ -25,4 +26,5 @@ BooksManager.DroppableMixin = Ember.Mixin.create({
     this.$().removeClass('dropfocus');
     this.handleDrop(event);
   }
+  
 });
