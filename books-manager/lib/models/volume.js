@@ -23,6 +23,7 @@ module.exports = function (mongoose) {
     etag: String,
     selfLink: String,
     volumeInfo: {
+      _id: ObjectId,
       title: String,
       authors: [String],
       publisher: String,

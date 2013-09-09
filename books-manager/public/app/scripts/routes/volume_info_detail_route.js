@@ -10,6 +10,6 @@ BooksManager.VolumeInfoDetailRoute = Ember.Route.extend({
     });
   },
   model: function (params) {
-    return BooksManager.Volume.find(params.volume_id);
+    return [];//BooksManager.Volume.findAll(params.volume_id);
   }
 });

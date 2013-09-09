@@ -1,4 +1,4 @@
-BooksManager.FileToUpload = Ember.Object.extend({
+ n    BooksManager.FileToUpload = Ember.Object.extend({
   index: null,
   file: null,
   identified: false,

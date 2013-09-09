@@ -3,8 +3,8 @@ BooksManager.VolumesRoute = Ember.Route.extend({
     var categoryListController = this.controllerFor('categoryList'),
       volumeListController = this.controllerFor('volumeList');
 
-    categoryListController.set('content', BooksManager.Category.find());
-    volumeListController.set('content', BooksManager.Volume.find());
+    // categoryListController.set('content', BooksManager.Category.find());
+    volumeListController.set('content', BooksManager.Volume.findAll());
     this.render('index');
     this.render('header', {
       outlet: 'header',

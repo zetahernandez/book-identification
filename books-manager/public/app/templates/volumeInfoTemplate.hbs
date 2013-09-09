@@ -1,4 +1,4 @@
-<div id="main--{{unbound volume.id}}" class="row-fluid">
+<div class="row-fluid">
   <div class="span2">
     {{#if volume.volumeInfo.imageLinks.thumbnail}}    
         <img border="0" {{bindAttr src="volume.volumeInfo.imageLinks.thumbnail"}} {{action "openVolume"  volume}} {{ bindAttr title="volume.volumeInfo.title"}} {{ bindAttr alt="unbound volume.volumeInfo.title"}}>
@@ -17,12 +17,12 @@
             <a href="#">
                <span dir="ltr">{{unbound volume.volumeInfo.authors}}</span>
             </a> 
-            - {{volume.volumeInfo.formattedPublishedDate}} -
+            - {{volume.formattedPublishedDate}} -
           </span>
         </span> 
         {{#if volume.volumeInfo.description}}
           <div class="sidebar-box">
-            <p class="description">{{volume.volumeInfo.unescapedDescription}}</p>
+            <p class="description">{{volume.unescapedDescription}}</p>
             
           </div>
           <p class="text-right"><button class="btn btn-link" type="button" {{action "readMore" target=view}}>Read More</button></p> 
