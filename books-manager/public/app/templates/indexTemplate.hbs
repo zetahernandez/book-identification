@@ -2,15 +2,8 @@
   <div class="navbar navbar-inverse navbar-fixed-top">
     {{outlet header}} 
   </div>
-  <div class="container-fluid no-overflow no-padding content">
-    <div class="row-fluid max-height">
-      <div class="span2 scrollable">
-        {{outlet left}}
-      </div>
-      <div  class="span10 scrollable scrollable-content">
-        {{outlet center}}
-      </div>
-    </div>
+  <div class="container-fluid">
+   {{outlet}}
   </div>
   <div id="footer">
       <div class="container">
