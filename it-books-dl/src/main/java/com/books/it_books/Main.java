@@ -2,25 +2,21 @@ package com.books.it_books;
 
 import java.io.IOException;
 import java.io.StringReader;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.RejectedExecutionHandler;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.apache.commons.lang3.StringUtils;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -30,50 +26,75 @@ import org.xml.sax.SAXException;
 
 public class Main {
 
-	private static final int MAX_REQUEST = 10;
-	public static final String IT_BOOKS_URL = "http://it-ebooks.info/book/";
-
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		HttpClient httpClient = new DefaultHttpClient();
 
-		for (int i = 1740; i < 1767; i += MAX_REQUEST) {
-			List<String> urls = new ArrayList<String>();
+		final BlockingQueue<String> urls = new LinkedBlockingQueue<String>();
+		ExtractBookFileUrl bookFileUrl = new ExtractBookFileUrl(urls, Integer
+				.valueOf(args[0]).intValue(), Integer.valueOf(args[1])
+				.intValue());
+		new Thread(bookFileUrl).start();
 
-			for (int j = i; j < i + MAX_REQUEST; j++) {
-				HttpGet httpGet = new HttpGet(IT_BOOKS_URL
-						+ String.valueOf(j + 1));
+		// Get the ThreadFactory implementation to use
+
+		ThreadFactory threadFactory = Executors.defaultThreadFactory();
+
+		// creating the ThreadPoolExecutor
+
+		final ThreadPoolExecutor executorPool = new ThreadPoolExecutor(10, Integer.MAX_VALUE, 10,
+				TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(10),
+				threadFactory, new RejectedExecutionHandler() {
+
+					public void rejectedExecution(Runnable r,
+							ThreadPoolExecutor executor) {
+						System.out.println(r.toString() + " is rejected");
+
+					}
+				});
+		MyMonitor myMonitor = new MyMonitor(executorPool, 3);
+		myMonitor.start();
+		Runnable runnable = new Runnable() {
+			
+			public void run() {
+				HttpClient httpClient = new HttpClient(new MultiThreadedHttpConnectionManager());
 				try {
-					HttpResponse httpResponse = httpClient.execute(httpGet);
-					HttpEntity httpEntity = httpResponse.getEntity();
-					String xml = EntityUtils.toString(httpEntity);
-					int start = StringUtils.lastIndexOf(xml,
-							"<a id=\"dl\" href=\"") + 17;
-					int end = StringUtils.indexOf(xml, "\"", start);
-
-					urls.add(StringUtils.substring(xml, start, end));
-				} catch (ClientProtocolException e) {
+					String url = null;
+					while (!"END".equals(url)) {
+						url = urls.take();
+						executorPool.execute(new DownloaderFile(url,httpClient));
+					}
+					 
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
 					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+				}		
 			}
-
-			ExecutorService fixedThreadPool = Executors.newFixedThreadPool(10);
-			for (@SuppressWarnings("rawtypes")
-			Iterator iterator = urls.iterator(); iterator.hasNext();) {
-				String url = (String) iterator.next();
-				fixedThreadPool.submit(new DownloaderFile(url));
-			}
-			try {
-				fixedThreadPool.shutdown();
-				fixedThreadPool.awaitTermination(40, TimeUnit.MINUTES);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
+			
+		};
+		Thread thread = new Thread(runnable);
+		thread.start();
+		
+		//
+		// for (int i = 2028; i < 2178; i += MAX_REQUEST) {
+		// for (int j = i; j < i + MAX_REQUEST; j++) {
+		//
+		// }
+		//
+		// ExecutorService fixedThreadPool = Executors.newFixedThreadPool(10);
+		// for (@SuppressWarnings("rawtypes")
+		// Iterator iterator = urls.iterator(); iterator.hasNext();) {
+		// String url = (String) iterator.next();
+		// fixedThreadPool.submit(new DownloaderFile(url));
+		// }
+		// try {
+		// fixedThreadPool.shutdown();
+		// fixedThreadPool.awaitTermination(40, TimeUnit.MINUTES);
+		// } catch (InterruptedException e) {
+		// e.printStackTrace();
+		// }
+		// }
 
 	}
 
