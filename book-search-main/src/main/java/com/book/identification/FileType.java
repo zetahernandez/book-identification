@@ -14,6 +14,17 @@
 
 package com.book.identification;
 
+import java.io.File;
+
+import org.apache.commons.io.FilenameUtils;
+
 public enum FileType {
 	PDF, CHM;
+	
+	
+	public static FileType valueOf(File file){
+		String extension = FilenameUtils.getExtension(file.getName());
+		return 	FileType.valueOf(extension.toUpperCase());
+		
+	}
 }

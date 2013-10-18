@@ -1,0 +1,113 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1373" measuredH="635" mockupW="1293" mockupH="588">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="80" y="47" w="1293" h="588" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>book-identification.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Canvas" x="80" y="113" w="1292" h="54" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::LinkBar" x="242" y="125" w="-1" h="-1" measuredW="239" measuredH="30" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <markup>true</markup>
+        <size>24</size>
+        <text>Home%2C%20About%2C%20Upload</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Title" x="94" y="119" w="-1" h="-1" measuredW="140" measuredH="43" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+        <text>BOOKS</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="523" y="127" w="492" h="-1" measuredW="55" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+        <text>Search</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="249" y="167" w="-1" h="431" measuredW="16" measuredH="100" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Link" x="94" y="207" w="-1" h="-1" measuredW="66" measuredH="19" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Computers</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Link" x="109" y="226" w="-1" h="-1" measuredW="54" measuredH="19" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Software</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Link" x="95" y="245" w="-1" h="-1" measuredW="78" measuredH="19" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Programming</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Link" x="109" y="264" w="-1" h="-1" measuredW="27" measuredH="19" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Java</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Link" x="109" y="283" w="-1" h="-1" measuredW="36" measuredH="19" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>HYML</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Link" x="124" y="306" w="-1" h="-1" measuredW="61" measuredH="19" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>JAvascript</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Label" x="94" y="177" w="-1" h="-1" measuredW="116" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>CATEGORY%20FILTER</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Link" x="450" y="188" w="-1" h="-1" measuredW="361" measuredH="38" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>HOW%20PROGRAM%20IN%20JAVA</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Image" x="323" y="207" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>book%20image</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1356" y="167" w="-1" h="431" measuredW="16" measuredH="100" zOrder="15" locked="false" isInGroup="-1"/>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Paragraph" x="456" y="228" w="885" h="81" measuredW="200" measuredH="80" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Applications%20in%20enterprises%20need%20to%20communicate%2C%20most%20commonly%20done%20by%20messaging.%20Apache%20ActiveMQ%20is%20an%20open-source%20implementation%20of%20the%20Java%20Message%20Service%20%28JMS%29%2C%20which%20provides%20messaging%20in%20Java%20applications.%0A%20%0AActiveMQ%20in%20Action%20is%20a%20thorough%2C%20practical%20guide%20to%20implementing%20message-oriented%20systems%20using%20ActiveMQ%20and%20Java.%20Co-authored%20by%20one%20of%20the%20leading%20ActiveMQ%20developers%2C%20Bruce%20Snyder%2C%20the%20book%20starts%20with%20the%20anatomy%20of%20a%20core%20Java%20message%2C%20then%20moves%20quickly%20through%20fundamentals%20including%20data%20persistence%2C%20authentication%20and%20authorization.%20Later%20chapters%20cover%20advanced%20features%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Link" x="450" y="332" w="-1" h="-1" measuredW="717" measuredH="38" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>Multithreaded%20Programming%20With%20Java%20Technology</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Image" x="323" y="351" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>book%20image</text>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::Paragraph" x="456" y="372" w="885" h="81" measuredW="200" measuredH="80" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Applications%20in%20enterprises%20need%20to%20communicate%2C%20most%20commonly%20done%20by%20messaging.%20Apache%20ActiveMQ%20is%20an%20open-source%20implementation%20of%20the%20Java%20Message%20Service%20%28JMS%29%2C%20which%20provides%20messaging%20in%20Java%20applications.%0A%20%0AActiveMQ%20in%20Action%20is%20a%20thorough%2C%20practical%20guide%20to%20implementing%20message-oriented%20systems%20using%20ActiveMQ%20and%20Java.%20Co-authored%20by%20one%20of%20the%20leading%20ActiveMQ%20developers%2C%20Bruce%20Snyder%2C%20the%20book%20starts%20with%20the%20anatomy%20of%20a%20core%20Java%20message%2C%20then%20moves%20quickly%20through%20fundamentals%20including%20data%20persistence%2C%20authentication%20and%20authorization.%20Later%20chapters%20cover%20advanced%20features%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::Link" x="1276" y="306" w="-1" h="-1" measuredW="65" measuredH="19" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Read%20more</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Link" x="1276" y="453" w="-1" h="-1" measuredW="65" measuredH="19" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Read%20more</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

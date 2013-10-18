@@ -24,11 +24,10 @@ import java.util.ArrayList;
 
 @XmlRootElement
 public class Volumes {
-	
-	
+
 	private List<Volume> volumes = new ArrayList<Volume>();
 
-	@XmlElement(name="volumes")
+	@XmlElement(name = "volumes")
 	public List<Volume> getVolumes() {
 		return volumes;
 	}
@@ -36,6 +35,5 @@ public class Volumes {
 	public void setVolumes(List<Volume> volumes) {
 		this.volumes = volumes;
 	}
-	
-	
+
 }

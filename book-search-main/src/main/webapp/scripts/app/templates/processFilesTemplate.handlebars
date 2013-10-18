@@ -7,7 +7,10 @@
         <th>#</th>
         <th>File Name</th>
         <th>Size</th>
-        <th>Progress</th>
+        <th>Status</th>
+        {{#if file.isIdenticating}}
+          <th>Identification Result</th>
+        {{/if}}
       </tr>
     </thead>
     <tbody>
@@ -18,7 +21,7 @@
         <td>{{file.size}}</td>
         <td>
           
-            {{#if file.isUploaded}}
+            {{#if file.isUploadComplete}}
              <div><span class="label label-info">done!</span></div>
             {{else}}  
              {{#with  file}}
@@ -29,7 +32,14 @@
             {{/if}}  
 
         </td>
-        <td>{{file.identified}}</td>
+        
+        {{#if file.identificateError}}
+          <td><div><span class="label label-info">{{file.error.errorType}}</span></div></td> 
+        {{else}}
+         {{#if file.isSaved}}
+           <td><div><span class="label label-info">{{file.error.errorType}}</span></div></td> 
+         {{/if}}
+        {{/if}}
       </tr>
       {{/each}}
     </tbody>
@@ -39,5 +49,4 @@
       <button class="btn btn-danger " type="button" {{action "clearListFile"}}>Clear List</button>
   </div>
 </form>
-
 {{/if}}

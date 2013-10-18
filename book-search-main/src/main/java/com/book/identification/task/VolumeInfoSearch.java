@@ -18,21 +18,21 @@ import java.util.concurrent.BlockingQueue;
 
 import com.book.identification.BookFile;
 import com.book.identification.model.Volume;
-import com.book.identification.task.base.ProducerConsumer;
-import com.book.identification.task.base.ProducerConsumerManager;
-import com.book.identification.task.base.ProducerThread;
+import com.book.identification.task.base.Worker;
+import com.book.identification.task.base.WorkerManager;
+import com.book.identification.task.base.Work;
 
-public class VolumeInfoSearch extends ProducerConsumerManager<ProducerThread<Volume>, Volume, BookFile> {
+public class VolumeInfoSearch extends WorkerManager<Work<Volume>, Volume, BookFile> {
 
 
 	public VolumeInfoSearch(String name, BlockingQueue<BookFile> input,
-			BlockingQueue<Volume> output, ProducerConsumer nextProducerConsumer) {
+			BlockingQueue<Volume> output, Worker nextProducerConsumer) {
 		super(name, input, output, nextProducerConsumer);
 	}
 
 
 	@Override
-	protected ProducerThread<Volume> createConsumerWork(BookFile take,
+	protected Work<Volume> createConsumerWork(BookFile take,
 			BlockingQueue<Volume> output) {
 		return new ISBNRequest(take,output);
 	}

@@ -20,9 +20,9 @@ import org.apache.log4j.Logger;
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.dao.VolumeDAO;
 import com.book.identification.model.Volume;
-import com.book.identification.task.base.ProducerThread;
+import com.book.identification.task.base.Work;
 
-class SaveVolume extends ProducerThread<Volume>{
+class SaveVolume extends Work<Volume>{
 
 	private Logger logger = LogManager.getLogger(SaveVolume.class);
 	/**
@@ -37,6 +37,10 @@ class SaveVolume extends ProducerThread<Volume>{
 
 	@Override
 	public void run() {
+		saveNewVolume();
+	}
+
+	private void saveNewVolume() {
 		VolumeDAO volumeDAO = DAOFactory.getInstance().getVolumeDAO();
 		try{
 				volumeDAO.getSession().getTransaction().begin();

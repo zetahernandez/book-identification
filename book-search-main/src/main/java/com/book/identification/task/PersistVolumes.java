@@ -23,22 +23,22 @@ import org.hibernate.criterion.Restrictions;
 
 import com.book.identification.dao.DAOFactory;
 import com.book.identification.model.Volume;
-import com.book.identification.task.base.ProducerConsumer;
-import com.book.identification.task.base.ProducerConsumerManager;
-import com.book.identification.task.base.ProducerThread;
+import com.book.identification.task.base.Worker;
+import com.book.identification.task.base.WorkerManager;
+import com.book.identification.task.base.Work;
 
-public class PersistVolumes  extends ProducerConsumerManager<ProducerThread<Volume>, Volume, Volume> {
+public class PersistVolumes  extends WorkerManager<Work<Volume>, Volume, Volume> {
 	
 	final static Logger logger = LogManager.getLogger(PersistVolumes.class);
 
 	public PersistVolumes(String name, BlockingQueue<Volume> input,
-			BlockingQueue<Volume> output, ProducerConsumer nextProducerConsumer) {
+			BlockingQueue<Volume> output, Worker nextProducerConsumer) {
 		super(name, input, output, nextProducerConsumer);
 	}
 
 
 	@Override
-	protected ProducerThread<Volume> createConsumerWork(Volume take,
+	protected Work<Volume> createConsumerWork(Volume take,
 			BlockingQueue<Volume> output) {
 		return new SaveVolume(take);
 	}

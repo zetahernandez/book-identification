@@ -31,6 +31,7 @@ import com.book.identification.task.VolumeInfoSearch;
 public class BookIdentificationWork extends Thread {
 	private static Logger logger = LogManager.getLogger(BookIdentificationWork.class);
 	private String[] folders;
+	
 	BlockingQueue<BookFile> fileBlockingQueue = new ArrayBlockingQueue<BookFile>(
 			10);
 	BlockingQueue<BookFile> fileISBNs = new ArrayBlockingQueue<BookFile>(10);

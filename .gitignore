@@ -50,3 +50,20 @@ Thumbs.db
 
 # Folder config file
 Desktop.ini
+.DS_Store
+
+book-search-main/books/ef477c98793cccbf1f8a99080c650715
+
+book-search-main/book-identification.log.1
+
+*.orig
+
+*.orig
+
+book-search-main/src/main/webapp/html5-dnd-example/*
+
+book-search-main/books/*
+.c9revisions/*
+books-manager/public/app/.temp/*
+
+books-manager/public/app/bower_components/sass-bootstrap/*

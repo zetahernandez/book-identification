@@ -45,7 +45,7 @@ public class Main {
 			logger.error(e1);
 			System.exit(0);
 		}
-		HibernateUtil.getSessionFactory();
+		HibernateUtil.getCurrentSession();
 		try {
 			InetAddress localHost = InetAddress.getLocalHost();
 			URI uri = new java.net.URI( "http://"+localHost.getHostName()+":8080" );

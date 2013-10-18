@@ -1,85 +1,71 @@
-define(
-["ember", "atmosphere"], function (Ember) {
-	var FileToUpload = Ember.Object.extend({
-		index: null,
-		file: null,
-		identified: false,
-		uploaded: 0,
+define(["ember", "jquery"], function (Ember, jQuery) {
+  var FileToUpload = Ember.Object.extend({
+    index: null,
+    file: null,
+    identified: false,
+    uploaded: 0,
+    uuid: null,
+    status: "",
+    identificateError: undefined,
+    error: "",
+    volume: null,
+    /*
+        return file.name value 
+    */
+    name: function () {
+      return this.get('file.name');
+    }.property('file.name'),
 
-		name: function () {
-			return this.get('file.name');
-		}.property('file.name'),
+    isUploadComplete: function () {
+      return this.get('uploaded') === 100;
+    }.property('uploaded'),
 
-		size: function () {
-			var bytes = this.get('file.size'),
-				precision = 2,
-				kilobyte = 1024,
-				megabyte = kilobyte * 1024,
-				gigabyte = megabyte * 1024,
-				terabyte = gigabyte * 1024;
+    isISBNNotFoundError: function () {
+      return this.get('identificateError').errorTpye === 'ISBNNotFoundError';
+    }.property('identificateError'),
 
-			if ((bytes >= 0) && (bytes < kilobyte)) {
-				return bytes + ' B';
+    isVolumeNotFound: function () {
+      return this.get('identificateError').errorTpye === 'ISBNNotFoundError';
+    }.property('identificateError'),
 
-			} else if ((bytes >= kilobyte) && (bytes < megabyte)) {
-				return (bytes / kilobyte).toFixed(precision) + ' KB';
+    isIrrecuperableError: function () {
+      return this.get('identificateError').errorTpye === 'ISBNNotFoundError';
+    }.property('identificateError'),
 
-			} else if ((bytes >= megabyte) && (bytes < gigabyte)) {
-				return (bytes / megabyte).toFixed(precision) + ' MB';
+    /*
+      Convert and return  file.size bytes size value on meagabytes
+    */
+    size: function () {
+      var result,
+        bytes = this.get('file.size'),
+        precision = 2,
+        kilobyte = 1024,
+        megabyte = kilobyte * 1024,
+        gigabyte = megabyte * 1024,
+        terabyte = gigabyte * 1024;
 
-			} else if ((bytes >= gigabyte) && (bytes < terabyte)) {
-				return (bytes / gigabyte).toFixed(precision) + ' GB';
+      if ((bytes >= 0) && (bytes < kilobyte)) {
+        result = bytes + ' B';
 
-			} else if (bytes >= terabyte) {
-				return (bytes / terabyte).toFixed(precision) + ' TB';
+      } else if ((bytes >= kilobyte) && (bytes < megabyte)) {
+        result = (bytes / kilobyte).toFixed(precision) + ' KB';
 
-			} else {
-				return bytes + ' B';
-			}
-		}.property('file.size'),
+      } else if ((bytes >= megabyte) && (bytes < gigabyte)) {
+        result = (bytes / megabyte).toFixed(precision) + ' MB';
 
-		readMe: function () {
-			var reader = new FileReader(),
-				_self = this;
+      } else if ((bytes >= gigabyte) && (bytes < terabyte)) {
+        result = (bytes / gigabyte).toFixed(precision) + ' GB';
 
-			reader.onload = function (event) {
-				_self.set('file.data', event.target.result);
-				_self.set('uploaded', 100);
-			};
+      } else if (bytes >= terabyte) {
+        result = (bytes / terabyte).toFixed(precision) + ' TB';
 
-			reader.onprogress = function (event) {
-				if (event.lengthComputable) {
-					_self.set('uploaded', Math.round((event.loaded / event.total) * 100));
-				}
-			};
-			reader.readAsDataURL(this.get('file'));
-		},
+      } else {
+        result = bytes + ' B';
+      }
+      return result;
+    }.property('file.size')
 
-		isUploaded: function () {
-			return this.get('uploaded') == 100;
-		}.property('uploaded'),
+  });
 
-		uploadToServer: function () {
-
-			var formData = new FormData(),
-				_self = this;
-
-			formData.append('fileName', this.get('name'));
-			formData.append('file', this.get('file'));
-
-			var xhr = new XMLHttpRequest();
-			xhr.open('POST', '/rest/volumes/upload', true);
-			xhr.upload.onprogress = function (event) {
-				if (event.lengthComputable) {
-					_self.set('uploaded', Math.round((event.loaded / event.total) * 100));
-				}
-			};
-			xhr.onload = function (event) {
-				_self.set('uploaded', 100);
-			};
-			xhr.send(formData);
-		}
-	});
-
-	return FileToUpload;
+  return FileToUpload;
 });
