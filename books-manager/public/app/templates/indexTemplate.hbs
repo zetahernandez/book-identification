@@ -1,7 +1,6 @@
 <section id="section">
   <div class="navbar navbar-inverse navbar-fixed-top">
-    {{outlet header}} 
-  </div>
+    {{view BooksManager.HeaderView controllerBinding=controllers.header}}
   <div class="container-fluid">
    {{outlet}}
   </div>

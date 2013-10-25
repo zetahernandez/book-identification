@@ -7,10 +7,6 @@ BooksManager.VolumesRoute = Ember.Route.extend({
     // categoryListController.set('model', categories);
 
     this.render('index');
-    this.render('header', {
-      outlet: 'header',
-      into: 'index'
-    });
   }
 });
 

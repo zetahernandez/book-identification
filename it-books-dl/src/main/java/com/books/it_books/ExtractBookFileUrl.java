@@ -9,6 +9,8 @@ package com.books.it_books;
 
 import java.io.IOException;
 import java.util.concurrent.BlockingQueue;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpStatus;
@@ -23,15 +25,15 @@ import org.apache.commons.lang3.StringUtils;
  *
  */
 public class ExtractBookFileUrl implements Runnable {
-	BlockingQueue<String> urls;
+	BlockingQueue<String[]> urls;
 	
 	public static final String IT_BOOKS_URL = "http://it-ebooks.info/book/";
-	public static final String PATTERN = "<a id=\"dl\" href=\"";
+	public static final String PATTERN = "http://filepi.com";
 	
 	HttpClient httpClient = new HttpClient(new MultiThreadedHttpConnectionManager());
 	private int init;
 	private int stop;
-	public ExtractBookFileUrl(BlockingQueue<String> urls,int init, int stop) {
+	public ExtractBookFileUrl(BlockingQueue<String[]> urls,int init, int stop) {
 		this.urls = urls;
 		this.init = init;
 		this.stop = stop;
@@ -48,11 +50,20 @@ public class ExtractBookFileUrl implements Runnable {
 				int statusCode = httpClient.executeMethod(httpGet);
 				if(statusCode == HttpStatus.SC_OK){
 					String xml = IOUtils.toString(httpGet.getResponseBodyAsStream());
-					int start = StringUtils.lastIndexOf(xml,
-							PATTERN) + PATTERN.length();
-					int end = StringUtils.indexOf(xml, "\"", start);
-		
-					urls.add(StringUtils.substring(xml, start, end));
+					Pattern compile = java.util.regex.Pattern.compile("((http\\://|https\\://|ftp\\://)|(www.))+(fil)+(([a-zA-Z0-9\\.-]+\\.[a-zA-Z]{2,4})|([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}))(/[a-zA-Z0-9%:/-_\\?\\.~]*)?");
+					Matcher matcher = compile.matcher(xml);
+					boolean find = matcher.find();
+					if(find){
+						String url = matcher.group();				
+						urls.add(new String[]{url,httpGet.getURI().toString()});
+					}
+
+//					int start = StringUtils.lastIndexOf(xml,
+//							PATTERN);
+//					int end = StringUtils.indexOf(xml, "'", start);
+//					String url = StringUtils.substring(xml, start, end);
+					
+//					urls.add(StringUtils.substring(xml, start, end));
 				}
 //				HttpEntity httpEntity = httpResponse.getEntity();
 //				String xml = EntityUtils.toString(httpEntity);
@@ -61,7 +72,7 @@ public class ExtractBookFileUrl implements Runnable {
 				e.printStackTrace();
 			}
 		}
-		urls.add("END");
+		urls.add(null);
 	}
 
 }

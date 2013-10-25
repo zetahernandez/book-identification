@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.RejectedExecutionHandler;
@@ -31,7 +33,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 
-		final BlockingQueue<String> urls = new LinkedBlockingQueue<String>();
+		final BlockingQueue<String[]> urls = new LinkedBlockingQueue<String[]>();
 		ExtractBookFileUrl bookFileUrl = new ExtractBookFileUrl(urls, Integer
 				.valueOf(args[0]).intValue(), Integer.valueOf(args[1])
 				.intValue());
@@ -39,43 +41,50 @@ public class Main {
 
 		// Get the ThreadFactory implementation to use
 
-		ThreadFactory threadFactory = Executors.defaultThreadFactory();
+//		ThreadFactory threadFactory = Executors.defaultThreadFactory();
 
 		// creating the ThreadPoolExecutor
 
-		final ThreadPoolExecutor executorPool = new ThreadPoolExecutor(10, Integer.MAX_VALUE, 10,
-				TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(10),
-				threadFactory, new RejectedExecutionHandler() {
-
-					public void rejectedExecution(Runnable r,
-							ThreadPoolExecutor executor) {
-						System.out.println(r.toString() + " is rejected");
-
-					}
-				});
-		MyMonitor myMonitor = new MyMonitor(executorPool, 3);
-		myMonitor.start();
+//		final ThreadPoolExecutor executorPool = new ThreadPoolExecutor(10,
+//				Integer.MAX_VALUE, 10, TimeUnit.SECONDS,
+//				new ArrayBlockingQueue<Runnable>(10), threadFactory,
+//				new RejectedExecutionHandler() {
+//
+//					public void rejectedExecution(Runnable r,
+//							ThreadPoolExecutor executor) {
+//						System.out.println(r.toString() + " is rejected");
+//
+//					}
+//				});
+//		MyMonitor myMonitor = new MyMonitor(executorPool, 3);
+//		myMonitor.start();
+		final ExecutorService threadPool = Executors.newFixedThreadPool(10);
 		Runnable runnable = new Runnable() {
 			
 			public void run() {
-				HttpClient httpClient = new HttpClient(new MultiThreadedHttpConnectionManager());
+				HttpClient httpClient = new HttpClient(
+						new MultiThreadedHttpConnectionManager());
 				try {
-					String url = null;
-					while (!"END".equals(url)) {
+					String[] url = {"",""};
+					while (url!=null) {
 						url = urls.take();
-						executorPool.execute(new DownloaderFile(url,httpClient));
+						if(url != null){
+							
+					threadPool.submit(new DownloaderFile(url,
+									httpClient));
+						}
 					}
-					 
+
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}		
+				}
 			}
-			
+
 		};
 		Thread thread = new Thread(runnable);
 		thread.start();
-		
+
 		//
 		// for (int i = 2028; i < 2178; i += MAX_REQUEST) {
 		// for (int j = i; j < i + MAX_REQUEST; j++) {
